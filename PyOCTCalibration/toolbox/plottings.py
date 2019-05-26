@@ -2,6 +2,7 @@
 '''_____Standard imports_____'''
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.widgets import Slider, Button, RadioButtons
 
 
 '''_____Project imports_____'''
@@ -143,6 +144,54 @@ def phase_dispersion_plot(exp_dispersion, fit_dispersion):
 
 
 
+def Bscan_plots(Spectra, Bscan):
 
+    Bscan = np.array(Bscan)
+    dBscan = 10*np.log(Bscan)
+
+    fig = plt.figure(figsize=(16,10))
+
+    ax0 = fig.add_subplot(221)
+    ax0.grid()
+    ax0.set_ylabel('Magnitude [dB]')
+    ax0.set_xlabel('Wavenumber k [U.A]')
+    ax0.set_title("Spectra")
+    ax0.plot(Spectra[200])
+
+    ax1 = fig.add_subplot(222)
+    ax1.grid()
+    ax1.set_ylabel('Magnitude [dB]')
+    ax1.set_xlabel('Wavenumber k [U.A]')
+    ax1.set_title("Aline")
+    ref = np.min(dBscan[200])
+    ax1.plot(Bscan[400])
+    ax1.invert_xaxis()
+
+    ax2 = fig.add_subplot(223)
+    l = ax2.imshow(dBscan.T,
+                   cmap = "gray",
+                   vmin=None,
+                   vmax=None)
+    ax2.invert_yaxis()
+    ax2.set_title("Processed Bscan")
+
+    axVmin = plt.axes([0.5, 0.1, 0.3, 0.03])
+    axVmax = plt.axes([0.5, 0.15, 0.3, 0.03])
+
+    SVmin = Slider(axVmin, 'Vmin', 0, np.max(dBscan)*1.5, valinit=np.min(dBscan), valstep=0.5)
+    SVmax = Slider(axVmax, 'Vmax', 0, np.max(dBscan), valinit=np.max(dBscan), valstep=0.5)
+
+
+    def update(val):
+        Vmax = SVmax.val
+        Vmin = SVmin.val
+        l.set_clim(vmin=Vmin, vmax=Vmax)
+        fig.canvas.draw_idle()
+
+
+    SVmin.on_changed(update)
+    SVmax.on_changed(update)
+
+    plt.show()
 
 # -
