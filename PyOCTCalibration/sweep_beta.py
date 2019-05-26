@@ -2,36 +2,50 @@
 '''_____Standard imports_____'''
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.signal import butter
-from scipy import signal
 import copy
 import json
-from scipy.interpolate import interp1d
 import argparse
 
 
 '''_____Project imports_____'''
-from tools import *
-from PySpectra import Spectra
-from parsing import parse_arguments
+from toolbox.PySpectra import Spectra
+from toolbox.parsing import parse_arguments
+from toolbox.loadings import load_Bscan_spectra
+from toolbox.spectra_processing import process_Bscan
 
 
 
 args = parse_arguments()
 
 
-B1= -0.5433615672020556
-B2= 0.0019722375486931633
-B3= -5.040153501008985e-06
-B4= 6.095879607615912e-09
-B5= -2.340301943551366e-12
+Beta = {'B1': -0.4151697340967216,
+        'B2': 0.0004651524028133154,
+        'B3': 4.1227160200685674e-07,
+        'B4': -5.30274776612886e-10,
+        'B5': 2.165488418343404e-13}
+
 
 x = np.arange(1024)
 
+betaN = None
+for i in range(100):
 
-for i in range(20):
-    B5 *= (1+0.01)
-    sim_dispersion = B1 * x + B2 * x **2 + B3 * x **3 + B4 * x **4 + B5 * x**5
+
+    if betaN is None or factor is None:
+        betaN = input("What beta?")
+
+    factor = input("What multiplicative factor for betaN? [type q to quit or press to change betaN]")
+
+    if factor == 'q':
+        break
+
+    if betaN is None or factor is '':
+        betaN = input("What beta?")
+        factor = input("What multiplicative factor for betaN? [type q to quit or press to change betaN]")
+
+    print(betaN)
+    Beta[betaN] *= eval(factor)
+    sim_dispersion = Beta['B1'] * x + Beta['B2'] * x **2 + Beta['B3'] * x **3 + Beta['B4'] * x **4 + Beta['B5'] * x**5
 
 
     file = "/Volumes/USBEBE/data/" + args.input_file + '.raw'
@@ -66,13 +80,12 @@ for i in range(20):
     #ax1.set_xlim([400,500])
 
 
-    print(B5)
     fig.canvas.draw()
-    input( '\n B1:{0},\n B2:{1},\n B3:{2},\n B4:{3},\n B5:{4},\n Next iteration?\n'.format(B1,
-                                                                                           B2,
-                                                                                           B3,
-                                                                                           B4,
-                                                                                           B5) )
+    print( '{ \n B1:{0},\n B2:{1},\n B3:{2},\n B4:{3},\n B5:{4},\n Next iteration?\n }'.format(Beta['B1'],
+                                                                                           Beta['B2'],
+                                                                                           Beta['B3'],
+                                                                                           Beta['B4'],
+                                                                                           Beta['B5']) )
 
 
 

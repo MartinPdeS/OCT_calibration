@@ -89,6 +89,8 @@ def interactive_shift(spectra1, param1, spectra2, param2):
             param2[2] += shift2
         plt.close()
 
+    return param1[2], param2[2]
+
 
 def shifted_spectra_plots(spectra1, param1, spectra2, param2):
 
@@ -144,7 +146,7 @@ def phase_dispersion_plot(exp_dispersion, fit_dispersion):
 
 
 
-def Bscan_plots(Spectra, Bscan):
+def Bscan_plots(Spectra, Bscan, args=None):
 
     Bscan = np.array(Bscan)
     dBscan = 10*np.log(Bscan)
@@ -192,7 +194,8 @@ def Bscan_plots(Spectra, Bscan):
     SVmin.on_changed(update)
     SVmax.on_changed(update)
 
+    if args.save_plots:
+        plt.savefig(args.input_file, bbox='tight')
     plt.show()
-    #plt.savefig("example",bbox='tight')
 
 # -

@@ -40,14 +40,14 @@ def shift_spectra(spectra1, spectra2, N_pad, plot=True, args=None):
     shift2_condition = False
 
 
-    interactive_shift( ff1,
-                       [z_space, *coeff1],
-                       ff2,
-                       [z_space, *coeff2] )
+    coeff1[1], coeff2[1] = interactive_shift(ff1,
+                                             [z_space, *coeff1],
+                                             ff2,
+                                             [z_space, *coeff2])
 
 
 
-    x_shift = ( coeff1[1] + coeff2[1])/2
+    x_shift = ( coeff1[1] + coeff2[1]) / 2
 
     c1 = ( -coeff1[1] + x_shift )
     c2 = ( -coeff2[1] + x_shift )

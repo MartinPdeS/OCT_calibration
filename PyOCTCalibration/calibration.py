@@ -1,15 +1,12 @@
 
 '''_____Standard imports_____'''
 import numpy as np
-import matplotlib.pyplot as plt
-from scipy import signal
-import copy
 import json
 import sys
 
 
 '''_____Project imports_____'''
-from PySpectra import Spectra
+from toolbox.PySpectra import Spectra
 from toolbox.parsing import parse_arguments
 from toolbox.spectra_processing import compute_dispersion, k_linearization, shift_spectra
 from toolbox.loadings import load_data
@@ -20,7 +17,7 @@ args = parse_arguments()
 
 
 calibration_dir = "/Volumes/USBEBE/data/calibration/"
-calibration_dir = "calibration/spectra/16_mai/"
+calibration_dir = "calibration/spectra/20_mai/"
 
 
 Mirror1 = Spectra(data_dir=calibration_dir + "mirror-.txt",

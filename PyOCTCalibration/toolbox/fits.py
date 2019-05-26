@@ -31,7 +31,7 @@ def fit_dispersion(Pdispersion):
 
     sim_dispersion = B1 * x + B2 * x**2 + B3 * x**3 + B4 * x**4 + B5 * x**5
 
-    print(' B1: {0},\n B2: {1},\n B3: {2},\n B4: {3}\n B5:{4}'.format(coeff[0],
+    print('\n B1: {0},\n B2: {1},\n B3: {2},\n B4: {3}\n B5:{4}'.format(coeff[0],
                                                                       coeff[1],
                                                                       coeff[2],
                                                                       coeff[3],

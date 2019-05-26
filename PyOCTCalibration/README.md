@@ -64,6 +64,14 @@ Markup : * Bullet --dispersion : shows debug printout
 
 
 
+Here is an example of output give by:
+
+```console
+
+>>> python3 process_Bscan.py -f=cible_6 -d=anormal
+
+```
+
 ![Alt text](results/example.png?raw=true "Title")
 
 ## Pep8 coding convention
