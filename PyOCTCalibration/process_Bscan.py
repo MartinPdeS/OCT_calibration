@@ -20,7 +20,7 @@ from toolbox.maths import apodization
 from toolbox.loadings import load_Bscan_spectra
 
 
-with open("calibration_parameters.json") as json_file:
+with open("calibration/calibration_parameters.json") as json_file:
     calibration = json.load(json_file)
 
 args = parse_arguments()
@@ -66,6 +66,7 @@ print(np.min(data), np.max(data))
 ax2.imshow( data, cmap='gray', vmin=10, vmax= np.max(data) )
 ax2.set_title("Processed Bscan")
 ax2.invert_yaxis()
+
 
 plt.show()
 

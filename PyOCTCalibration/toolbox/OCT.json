@@ -1,0 +1,9 @@
+
+
+
+
+Callisto = {"Wavelength": 930,
+            "Bandwidth": 55 }
+
+Tellesto = {"Wavelength": 1300,
+            "Bandwidth": 60 }
