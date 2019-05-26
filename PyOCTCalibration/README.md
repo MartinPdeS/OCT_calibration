@@ -64,6 +64,8 @@ Markup : * Bullet --dispersion : shows debug printout
 
 
 
+![Alt text](results/example.png?raw=true "Title")
+
 ## Pep8 coding convention
 
 In order to keep a clean and consistent code, one can follow the convention as presented in the following link:

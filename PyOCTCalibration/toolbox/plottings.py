@@ -193,5 +193,6 @@ def Bscan_plots(Spectra, Bscan):
     SVmax.on_changed(update)
 
     plt.show()
+    #plt.savefig("example",bbox='tight')
 
 # -
