@@ -10,7 +10,7 @@ from scipy.optimize import curve_fit
 from toolbox.maths import unwrap_phase, apodization
 from toolbox.spectra_processing import shift_spectra
 from toolbox.loadings import load_data
-from toolbox.filters import butter_lowpass_filter, butter_highpass_filter
+from toolbox.filters import butter_lowpass_filter, butter_highpass_filter, compressor
 
 
 class Spectra(object):
@@ -60,7 +60,7 @@ class Spectra(object):
         self.sub_ref()
         self.raw = apodization(self.raw)
         self.raw = butter_highpass_filter(self.raw,
-                                          cutoff=2000,
+                                          cutoff=6000,
                                           fs=80000,
                                           order=4)
 

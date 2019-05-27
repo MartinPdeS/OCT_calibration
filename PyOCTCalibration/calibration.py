@@ -17,7 +17,7 @@ args = parse_arguments()
 
 
 calibration_dir = "/Volumes/USBEBE/data/calibration/"
-calibration_dir = "calibration/spectra/20_mai/"
+#calibration_dir = "calibration/spectra/20_mai/"
 
 
 Mirror1 = Spectra(data_dir=calibration_dir + "mirror-.txt",

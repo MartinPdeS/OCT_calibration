@@ -10,7 +10,7 @@ from scipy.interpolate import interp1d
 from toolbox.plottings import interactive_shift, phase_dispersion_plot
 from toolbox.fits import gauss, make_poly_fit, fit_dispersion
 from toolbox.maths import hilbert, unwrap_phase, apodization, spectra2aline
-from toolbox.filters import butter_lowpass_filter, butter_highpass_filter
+from toolbox.filters import butter_lowpass_filter, butter_highpass_filter, compressor
 from toolbox.loadings import load_calibration
 
 
@@ -29,6 +29,9 @@ def shift_spectra(spectra1, spectra2, N_pad, plot=True, args=None):
 
     ff1 = ff1[len(ff1)//2:-1]
     ff2 = ff2[len(ff2)//2:-1]
+
+    ff1 = compressor(ff1)
+    ff2 = compressor(ff2)
 
     p0 = [10., 0., 1.]
 

@@ -2,6 +2,7 @@
 
 '''_____Standard imports_____'''
 from scipy import signal
+import numpy as np
 
 
 
@@ -57,8 +58,24 @@ def image_high_pass(data, axis):
 
 
 
+def compressor(data, factor=3, threshold=None):
 
+    data = np.array(data)
 
+    max = np.max(data)
+    min = np.min(data)
+    if threshold is None:
+        threshold = (max - min) / 3
+
+    tmp = []
+
+    for i, array in enumerate(data):
+        if array < threshold:
+            array /= factor
+
+        tmp.append(array)
+
+    return tmp
 
 
 

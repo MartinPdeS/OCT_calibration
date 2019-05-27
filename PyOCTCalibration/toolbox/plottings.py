@@ -80,7 +80,7 @@ def interactive_shift(spectra1, param1, spectra2, param2):
                                spectra2,
                                param2 )
 
-        shift2 = input("Shift mirror1? [>0:Left, 0:None, <0:Right]")
+        shift2 = input("Shift mirror2? [>0:Left, 0:None, <0:Right]")
         shift2 = eval(shift2)
 
         if shift2 == 0:
@@ -169,8 +169,9 @@ def Bscan_plots(Spectra, Bscan, args=None):
     ax1.plot(Bscan[400])
     ax1.invert_xaxis()
 
+    data = dBscan.T
     ax2 = fig.add_subplot(223)
-    l = ax2.imshow(dBscan.T,
+    l = ax2.imshow(data,
                    cmap = "gray",
                    vmin=None,
                    vmax=None)
@@ -180,8 +181,10 @@ def Bscan_plots(Spectra, Bscan, args=None):
     axVmin = plt.axes([0.5, 0.1, 0.3, 0.03])
     axVmax = plt.axes([0.5, 0.15, 0.3, 0.03])
 
-    SVmin = Slider(axVmin, 'Vmin', 0, np.max(dBscan)*1.5, valinit=np.min(dBscan), valstep=0.5)
-    SVmax = Slider(axVmax, 'Vmax', 0, np.max(dBscan), valinit=np.max(dBscan), valstep=0.5)
+    Min, Max = np.min(data)*0.7, np.max(data)*1.2
+    Nstep = (Max - Min)/100
+    SVmin = Slider(axVmin, 'Vmin', Min, Max, valinit=Min, valstep=Nstep)
+    SVmax = Slider(axVmax, 'Vmax', Min, Max, valinit=Max, valstep=Nstep)
 
 
     def update(val):
