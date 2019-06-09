@@ -9,7 +9,7 @@ from matplotlib.widgets import Slider, Button, RadioButtons
 from toolbox.fits import gauss
 
 
-def dB_plot(data1, data2=None):
+def dB_plot(data1, data2=None, arguments=None):
 
     fig = plt.figure(figsize=(15, 6))
 
@@ -21,6 +21,7 @@ def dB_plot(data1, data2=None):
         ax.grid()
         ax.set_ylabel('Magnitude [dB]')
         ax.set_xlabel('Wavenumber k [U.A]')
+
 
     else:
         ax0 = fig.add_subplot(121)
@@ -38,6 +39,7 @@ def dB_plot(data1, data2=None):
         ax0.set_ylabel('Magnitude [dB]')
         ax0.set_xlabel('Wavenumber k [U.A]')
 
+
         ax1.plot(dB2)
         ax1.set_title('Raw Aline')
         ax1.grid()
@@ -49,7 +51,7 @@ def dB_plot(data1, data2=None):
     plt.close()
 
 
-def interactive_shift(spectra1, param1, spectra2, param2):
+def interactive_shift(spectra1, param1, spectra2, param2, arguments=None):
 
 
     shift1_condition = False
@@ -131,7 +133,7 @@ def phase_dispersion_plot(exp_dispersion, fit_dispersion):
     ax0 = fig.add_subplot(111)
 
     ax0.plot(fit_dispersion, label = 'fitted ')
-    ax0.plot(exp_dispersion,'*',label = 'experimental')
+    ax0.plot(exp_dispersion,'-',label = 'experimental')
 
     ax0.set_ylabel('Unwrapped phase [U.A]')
     ax0.set_title('System phase dispersion')
@@ -143,10 +145,7 @@ def phase_dispersion_plot(exp_dispersion, fit_dispersion):
     plt.close()
 
 
-
-
-
-def Bscan_plots(Spectra, Bscan, args=None):
+def Bscan_plots(Spectra, Bscan, arguments=None):
 
     Bscan = np.array(Bscan)
     dBscan = 10*np.log(Bscan)
@@ -178,13 +177,16 @@ def Bscan_plots(Spectra, Bscan, args=None):
     ax2.invert_yaxis()
     ax2.set_title("Processed Bscan")
 
-    axVmin = plt.axes([0.5, 0.1, 0.3, 0.03])
-    axVmax = plt.axes([0.5, 0.15, 0.3, 0.03])
+    axVmin = plt.axes([0.6, 0.1, 0.3, 0.03])
+    axVmax = plt.axes([0.6, 0.15, 0.3, 0.03])
+    axsave = plt.axes([0.7, 0.25, 0.1, 0.075])
 
     Min, Max = np.min(data)*0.7, np.max(data)*1.2
     Nstep = (Max - Min)/100
+
     SVmin = Slider(axVmin, 'Vmin', Min, Max, valinit=Min, valstep=Nstep)
     SVmax = Slider(axVmax, 'Vmax', Min, Max, valinit=Max, valstep=Nstep)
+    bsave = Button(axsave, 'Save Bscan')
 
 
     def update(val):
@@ -193,12 +195,62 @@ def Bscan_plots(Spectra, Bscan, args=None):
         l.set_clim(vmin=Vmin, vmax=Vmax)
         fig.canvas.draw_idle()
 
+    def save(event):
+        extent = ax2.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
+        plt.savefig('Bscan.png', bbox_inches=extent)
 
+
+    bsave.on_clicked(save)
     SVmin.on_changed(update)
     SVmax.on_changed(update)
 
-    if args.save_plots:
-        plt.savefig(args.input_file, bbox='tight')
     plt.show()
+
+
+def plots_signals(data, sub_data, ref, sample, dark):
+
+    fig = plt.figure()
+    ax0 = fig.add_subplot(111)
+    ax0.plot(data, label='raw data')
+    ax0.plot(sub_data, 'k', label='substracted raw data')
+    ax0.plot(ref, 'r', label='reference noise')
+    ax0.plot(sample, 'b', label='sample noise')
+    ax0.plot(dark, 'g', label='background noise')
+
+    plt.grid()
+    plt.legend()
+    print("click the image to exit")
+    plt.waitforbuttonpress()
+    plt.close()
+
+
+
+
+def plot_klinearization(phase1, phase2, Plin, Pfit=None):
+
+    plt.ion()
+    fig = plt.figure(figsize=(8,10))
+    ax = fig.add_subplot(111)
+
+    ax.plot(phase1,'r', label='Mirror1')
+    ax.plot(phase2,'b', label='Mirror2')
+    ax.plot(Plin, 'k', label='Linear phase')
+    if Pfit is not None:
+        ax.plot(Pfit, 'g', label='Fitted linear phase')
+    plt.grid()
+    ax.set_ylabel('Phase [rad]')
+    ax.set_xlabel('Points space [U.A]')
+    plt.legend()
+    print("click the image to exit")
+    plt.waitforbuttonpress()
+    plt.close()
+
+
+
+
+
+
+
+
 
 # -

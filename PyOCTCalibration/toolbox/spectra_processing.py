@@ -3,20 +3,41 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
-
+from numpy import inf
 from scipy.interpolate import interp1d
 
 '''_____Project imports_____'''
-from toolbox.plottings import interactive_shift, phase_dispersion_plot
+from toolbox.plottings import interactive_shift, phase_dispersion_plot, plot_klinearization, dB_plot
 from toolbox.fits import gauss, make_poly_fit, fit_dispersion
 from toolbox.maths import hilbert, unwrap_phase, apodization, spectra2aline
 from toolbox.filters import butter_lowpass_filter, butter_highpass_filter, compressor
 from toolbox.loadings import load_calibration
 
 
-def shift_spectra(spectra1, spectra2, N_pad, plot=True, args=None):
+def shift_spectra(spectra1, spectra2, N_pad, arguments=None):
+    """ This method find the relative position of the FFT of the two spectras
+    in order to later k-linearize.
 
+    Args:
+        :param spectra1: OCT spectra of first mirror.
+        :type spectra1: list
 
+        :param spectra2: OCT spectra of second mirror.
+        :type spectra2: list
+
+        :param N_pad: Padding for the FFT.
+        :type N_pad: int
+
+    Return:
+        :rname: Zspace: - pi to pi linear vector space
+        :rtype: list
+
+        :rname: shift_1: spectral relative shift for mirror_1
+        :rtype: float
+
+        :rname: shift_2: spectral relative shift for mirror_2
+        :rtype: float
+    """
     L = len(spectra1)
     x = np.arange(L)
     j = complex(0,1)
@@ -38,128 +59,174 @@ def shift_spectra(spectra1, spectra2, N_pad, plot=True, args=None):
     coeff1, var_matrix1 = curve_fit(gauss, z_space, ff1, p0=p0, maxfev = 20000)
     coeff2, var_matrix2 = curve_fit(gauss, z_space, ff2, p0=p0, maxfev = 20000)
 
-
     shift1_condition = False
     shift2_condition = False
 
-
-    coeff1[1], coeff2[1] = interactive_shift(ff1,
-                                             [z_space, *coeff1],
-                                             ff2,
-                                             [z_space, *coeff2])
-
-
+    if arguments.interactive:
+        coeff1[1], coeff2[1] = interactive_shift(ff1,
+                                                 [z_space, *coeff1],
+                                                 ff2,
+                                                 [z_space, *coeff2],
+                                                 arguments=arguments)
 
     x_shift = ( coeff1[1] + coeff2[1]) / 2
 
-    c1 = ( -coeff1[1] + x_shift )
-    c2 = ( -coeff2[1] + x_shift )
+    shift_1 = ( -coeff1[1] + x_shift )
+    shift_2 = ( -coeff2[1] + x_shift )
 
-    shifted_spectra1 = np.real( hilbert(spectra1) * np.exp(j * x * c1 ) )
-    shifted_spectra2 = np.real( hilbert(spectra2) * np.exp(j * x * c2 ) )
+    shifted_spectra1 = np.real( hilbert(spectra1) * np.exp(j * x * shift_1 ) )
+    shifted_spectra2 = np.real( hilbert(spectra2) * np.exp(j * x * shift_2 ) )
 
-    return z_space, shifted_spectra1, shifted_spectra2, c1, c2
+    return z_space, shifted_spectra1, shifted_spectra2, shift_1, shift_2
 
 
-def compute_dispersion(spectra1, spectra2, c1, c2, sign_dispersion, plot=True, args=None):
-    """ Compute and conpense dispersion
+def compute_dispersion(spectra1, spectra2, shift_1, shift_2, plot=True, arguments=None):
+    """ This method compute the dispersion on a k-linearized OCT spectra of
+    two mirror exactly opposed relative to the zero delay point.
 
+    Args:
+        :param spectra1: OCT spectra of first mirror.
+        :type spectra1: list
+
+        :param spectra2: OCT spectra of second mirror.
+        :type spectra2: list
+
+        :param shift_1: spectral relative shift for mirror_1.
+        :type float
+
+        :name shift_2: spectral relative shift for mirror_2.
+        :type float
+
+    Return:
+        :rname: Pdispersion: The phase dispersion.
+        :rtype: list
     """
-
     j = complex(0,1)
     x = np.arange( len(spectra1) )
 
-    p1 = unwrap_phase(spectra1) + np.arange(len(spectra2))*c1
-    p2 = unwrap_phase(spectra2) + np.arange(len(spectra2))*c2
+    p1 = unwrap_phase(spectra1) + np.arange(len(spectra2))*shift_1
+    p2 = unwrap_phase(spectra2) + np.arange(len(spectra2))*shift_2
 
     Pdisp = (p1-p2)/2
-    fit_disp = make_poly_fit( x = x, y = Pdisp, order = 7 )
+    Pdisp -= Pdisp[0]
+
+
+    fit_disp = make_poly_fit( x = x, y = Pdisp, order = 5 )
 
     Pdispersion = fit_disp(x)
-    Pdispersion = Pdispersion - Pdispersion[0]
 
     sim_dispersion = fit_dispersion(Pdispersion)
 
-    compensated_spectra1 = compensate_dispersion(spectra1, args.dispersion * Pdispersion)
-    compensated_spectra2 = compensate_dispersion(spectra2, -args.dispersion *  Pdispersion)
-
 
     if plot:
-        phase_dispersion_plot(Pdispersion, sim_dispersion)
+        phase_dispersion_plot(Pdisp, sim_dispersion)
 
 
-    return compensated_spectra1, compensated_spectra2, Pdispersion
+    return Pdispersion
 
 
 
-def k_linearization(spectra1, spectra2, args=None):
+def k_linearization(spectra1, spectra2, arguments=None):
+    """ This method compute the k-linear fractional indexes and interpolate
+    the two spectras in order to compensate it.
 
-    phase1 = unwrap_phase(spectra1)
-    phase2 = unwrap_phase(spectra2)
+    Args:
+        :param spectra1: OCT spectra of first mirror.
+        :type spectra1: list
+
+        :param spectra2: OCT spectra of second mirror.
+        :type spectra2: list
+
+
+    Return:
+        :rname: x_klinear: The fractional indexes.
+        :rtype: list
+
+        :rname: interpolated_spectra1: First k-linear intepolated spectra.
+        :rtype: list
+
+        :rname: interpolated_spectra2: Second k-linear intepolated spectra.
+        :rtype: list
+
+    """
+    phase1, phase2 = unwrap_phase(spectra1), unwrap_phase(spectra2)
+
+    phase1 -= phase1[0]
+    phase2 -= phase2[0]
 
     x = np.arange( len(phase1) )
+
     Plin = (phase1 + phase2) / 2
 
-    fit_x = make_poly_fit( x=Plin, y = x, order = 6 )
+    fit_Plin = make_poly_fit( x=x, y = Plin, order = 5)
+
+    Plin = fit_Plin( x )
+
+    plot_klinearization(phase1, phase2, Plin)
+
+    weight = np.ones(len(Plin))
+
+    fit_x = make_poly_fit( x=Plin, y = x, order = 5, weight=weight )
+
     x_klinear = fit_x( np.linspace( Plin[0], Plin[-1], len(Plin) ) )
+
+    coefs3 = np.polynomial.polynomial.polyfit(x_klinear, x, 5)
+
+    ffit3 = np.poly1d(coefs3[::-1])
+
+    x_klinear = ffit3(  x )[1:-1]
 
     interpolated_spectra1 = linearize_spectra(spectra1, x_klinear)
     interpolated_spectra2 = linearize_spectra(spectra2, x_klinear)
 
-
     return x_klinear, interpolated_spectra1, interpolated_spectra2
 
 
-
 def linearize_spectra(spectra, x_klinear):
+    """ This method interpolate the input spectra with the input list.
 
+    Args:
+        :param spectra: OCT spectra of mirror.
+        :type spectra1: list
+
+        :name x_klinear: The fractional indexes.
+        :type list
+
+    Return:
+        :rname: klinear_spectra: The interpolated spectra.
+        :rtype: list
+
+    """
     x = np.arange( len(spectra) )
-    phase = unwrap_phase(spectra)
 
-    interpolation = interp1d(x, spectra)
-    klinear_spectra = interpolation(x_klinear)
+    interpolation = interp1d(x, spectra, kind='cubic')
 
+
+    klinear_spectra = interpolation(x_klinear[:-5])
 
     return klinear_spectra
 
 
 def compensate_dispersion(spectra, Pdispersion):
+    """ This method compensate the input spectra with the input phase dispersion.
 
+    Args:
+        :param spectra: OCT spectra of mirror.
+        :type spectra1: list
+
+        :name Pdispersion: The phase dispersion.
+        :type list
+
+    Return:
+        :rname: compensated_spectra : The compensated spectra.
+        :rtype: list
+
+    """
     j = complex(0,1)
 
-    tmp = np.real( hilbert(spectra) * np.exp( j * Pdispersion ) )
+    compensated_spectra = np.real( hilbert(spectra) * np.exp( j * Pdispersion ) )
 
-    return tmp
-
-
-def process_Bscan(Bscan_spectra, sign_dispersion, Pdispersion=None):
-
-
-    calibration = load_calibration()
-
-    if Pdispersion is None:
-        Pdispersion = np.array( calibration['dispersion'] )
-
-    Bscan = []
-    Spectra = []
-
-    for i, spectra in enumerate(Bscan_spectra):
-
-        #spectra = np.array(spectra)  - np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) + np.array(calibration['dark_sample'])
-        spectra = apodization(spectra)
-        spectra = butter_highpass_filter(spectra, cutoff=800, fs=30000, order=6)
-        spectra = butter_lowpass_filter(spectra, cutoff=5000, fs=30000, order=6)
-        spectra = linearize_spectra(spectra, calibration['klinear'])
-        spectra = compensate_dispersion( np.array(spectra), sign_dispersion * Pdispersion )
-        Spectra.append(spectra)
-        Aline = spectra2aline(spectra)
-        Aline = Aline[0:len(Aline)//2]
-        Bscan.append(Aline)
-
-    return Bscan, Spectra
-
-
-
+    return compensated_spectra
 
 
 

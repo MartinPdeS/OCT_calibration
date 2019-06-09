@@ -16,10 +16,11 @@ def parse_arguments():
                         default='test.raw',
                         required=False)
 
-    parser.add_argument('-s',
-                        '--save-plots',
-                        help='save plots',
-                        dest='save_plots',
+    parser.add_argument('-i',
+                        '--interactive_shift-plots',
+                        help='interactive_shift',
+                        dest='interactive',
+                        default = False,
                         action='store_true',
                         required=False)
 
@@ -31,14 +32,14 @@ def parse_arguments():
                         default='pos',
                         required=False)
 
-    args = parser.parse_args()
+    arguments = parser.parse_args()
 
-    if args.dispersion == 'normal':
-        args.dispersion = 1
-    elif args.dispersion == 'anormal':
-        args.dispersion = -1
+    if arguments.dispersion == 'normal':
+        arguments.dispersion = 1
+    elif arguments.dispersion == 'anormal':
+        arguments.dispersion = -1
     else:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
 
-    return args
+    return arguments

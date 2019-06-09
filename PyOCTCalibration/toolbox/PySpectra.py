@@ -7,14 +7,14 @@ from scipy.interpolate import interp1d
 from scipy.optimize import curve_fit
 
 '''_____Project imports_____'''
-from toolbox.maths import unwrap_phase, apodization
+from toolbox.maths import unwrap_phase, apodization, spectra2aline
 from toolbox.spectra_processing import shift_spectra
 from toolbox.loadings import load_data
 from toolbox.filters import butter_lowpass_filter, butter_highpass_filter, compressor
+from toolbox.plottings import plots_signals
 
 
 class Spectra(object):
-
 
     def __init__(self, data_dir, background_dir = None, ref_dir = None, sample_dir = None):
 
@@ -36,57 +36,37 @@ class Spectra(object):
 
     def get_phase(self):
 
-        self.phase = unwrap_phase(self.raw)
-        self.phase[0] = 0
+        self.phase = unwrap_phase(self.sub_raw)
+        self.phase -= self.phase[0] + 1
 
 
-    def plot_phase(self, plot=False):
+    def process_data(self, plot=True):
+
+        self.background = load_data(self.background_dir)
+        self.sample = load_data(self.sample_dir)
+        self.ref = load_data(self.ref_dir)
+        self.sub_raw = self.raw + self.background - self.ref - self.sample
+        #self.sub_raw = apodization(self.sub_raw)
+
+
+
+
+        if 1:
+            self.sub_raw = butter_highpass_filter(self.sub_raw,
+                                                  cutoff=280,
+                                                  fs=40000,
+                                                  order=4)
+
+
+        if 0:
+            self.sub_raw = butter_lowpass_filter(self.sub_raw,
+                                                 cutoff=5000,
+                                                 fs=40000,
+                                                 order=2)
 
         if plot:
-
-            fig = plt.figure()
-            ax = fig.add_subplot(111)
-            ax.plot(self.phase)
-            ax.set_ylabel('Phase [rad]')
-            ax.set_xlabel('Points space [U.A]')
-            plt.grid()
-            plt.waitforbuttonpress()
-            plt.close()
-
-
-    def process_data(self):
-        self.sub_background()
-        self.sub_sample()
-        self.sub_ref()
-        self.raw = apodization(self.raw)
-        self.raw = butter_highpass_filter(self.raw,
-                                          cutoff=6000,
-                                          fs=80000,
-                                          order=4)
-
-        #self.raw = butter_lowpass_filter(self.raw,
-        #                                 cutoff=3000,
-        #                                 fs=30000,
-        #                                 order=2)
-        self.get_phase()
-
-
-    def sub_background(self):
-
-        background = load_data(self.background_dir)
-
-        self.raw = self.raw + background
-
-
-    def sub_sample(self):
-
-        sample = load_data(self.sample_dir)
-
-        self.raw = self.raw - sample
-
-
-    def sub_ref(self):
-
-        ref = load_data(self.ref_dir)
-
-        self.raw = self.raw - ref
+            plots_signals(self.raw,
+                          self.sub_raw,
+                          self.ref,
+                          self.sample,
+                          self.background)

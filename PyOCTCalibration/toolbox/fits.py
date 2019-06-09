@@ -14,9 +14,9 @@ def beta(x, *p):
     return B1 * x + B2 * x**2 + B3 * x**3 + B4 * x**4 + B5 * x**5
 
 
-def make_poly_fit(x=[],y=[], order = 5):
+def make_poly_fit(x=[],y=[], order = 5, weight=None):
 
-    coefs = np.polynomial.polynomial.polyfit(x, y, order)
+    coefs = np.polynomial.polynomial.polyfit(x, y, order, w=weight)
     ffit = np.poly1d(coefs[::-1])
     return ffit
 
