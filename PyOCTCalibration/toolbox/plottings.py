@@ -196,8 +196,9 @@ def Bscan_plots(Spectra, Bscan, arguments=None):
         fig.canvas.draw_idle()
 
     def save(event):
+        save_dir = "results/"
         extent = ax2.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-        plt.savefig('Bscan.png', bbox_inches=extent)
+        plt.savefig(save_dir + arguments.input_file, bbox_inches=extent)
 
 
     bsave.on_clicked(save)

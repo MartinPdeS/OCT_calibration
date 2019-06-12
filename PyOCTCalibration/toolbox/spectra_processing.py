@@ -174,7 +174,7 @@ def k_linearization(spectra1, spectra2, arguments=None):
 
     ffit3 = np.poly1d(coefs3[::-1])
 
-    x_klinear = ffit3(  x )[1:-1]
+    x_klinear = ffit3(x)[1:-1]
 
     interpolated_spectra1 = linearize_spectra(spectra1, x_klinear)
     interpolated_spectra2 = linearize_spectra(spectra2, x_klinear)
@@ -227,6 +227,40 @@ def compensate_dispersion(spectra, Pdispersion):
     compensated_spectra = np.real( hilbert(spectra) * np.exp( j * Pdispersion ) )
 
     return compensated_spectra
+
+
+
+def compute_PSF(aline):
+
+    N_max = np.argmax(aline)
+
+    N_start = N_max - 12
+    N_end = N_max + 12
+
+    kernel = aline[N_start:N_end]
+
+    x = np.arange(len(kernel))
+
+    fit_kernel = make_poly_fit( x=x, y = kernel, order = 8 )
+
+    kernel = fit_kernel( x )
+
+    return kernel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
