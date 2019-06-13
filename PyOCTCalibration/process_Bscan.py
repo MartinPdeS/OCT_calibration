@@ -3,11 +3,12 @@
 import numpy as np
 import json
 import scipy.fftpack as fp
-from skimage import restoration
+import matplotlib.pyplot as plt
+#from skimage import restoration
 
 
 '''_____Project imports_____'''
-from toolbox.parsing import parse_arguments
+from toolbox.parsing import Bscan_parse_arguments
 from toolbox.loadings import load_Bscan_spectra, load_calibration
 from toolbox.plottings import Bscan_plots
 from toolbox.fits import get_fit_curve
@@ -16,21 +17,20 @@ from toolbox.spectra_processing import linearize_spectra, compensate_dispersion
 from toolbox.maths import spectra2aline
 
 
-arguments = parse_arguments()
+arguments = Bscan_parse_arguments()
 
 
-Bscan_dir = "/Volumes/Untitled/Calibrations/Bscan/"
-file = Bscan_dir + arguments.input_file
+Bscan_file = arguments.input_file
+calibration_file = arguments.calibration_file
 
-Bscan_spectra = load_Bscan_spectra(file)
+Bscan_spectra = load_Bscan_spectra(Bscan_file)
 
-calibration = load_calibration(dir = "/Volumes/Untitled/OCT_calibration/PyOCTCalibration/calibration/calibration_parameters.json")
+calibration = load_calibration(dir = calibration_file)
 
 Pdispersion = np.array( calibration['dispersion'] )
 
 psf_kernel = np.array([calibration["psf_kernel"]])
 
-print(psf_kernel.shape)
 
 Bscan = []
 Spectra = []
@@ -69,14 +69,10 @@ F2[500:540,:], F2[511,:] = 0, 0
 half_w, half_h = int(w/2), int(h/2)
 
 F2[0 :1024, half_h -1 : half_h + 1] = 0
-#plt.figure(figsize=(10,10))
-#plt.imshow( (20*np.log10( 0.1 + F2)).astype(int))
-#plt.show()
 
 Bscan = np.abs(fp.ifft2(fp.ifftshift(F2)).real)
 
-
-#Bscan_plots(Spectra, Bscan, arguments=arguments)
+Bscan_plots(Spectra, Bscan, arguments=arguments)
 
 
 
