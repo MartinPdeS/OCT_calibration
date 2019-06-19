@@ -6,19 +6,26 @@ import sys
 import matplotlib.pyplot as plt
 
 
+'''_____Add package_____'''
+p = os.path.abspath('.')
+if p not in sys.path:
+    sys.path.append(p)
+
+
 '''_____Project imports_____'''
 from toolbox.PySpectra import Spectra
 from toolbox.parsing import Calibration_parse_arguments
-from toolbox.spectra_processing import compute_dispersion, k_linearization, shift_spectra, compensate_dispersion, compute_PSF
+from toolbox.calibration_processing import compute_dispersion, k_linearization, shift_spectra, compensate_dispersion, compute_PSF
 from toolbox.loadings import load_data
 from toolbox.plottings import dB_plot
 from toolbox.maths import spectra2aline, apodization
+import toolbox.directories as directories
 
 arguments = Calibration_parse_arguments()
 
 
-input_dir = "/Volumes/Untitled/Calibrations/lanterne/LP11/"
-calibration_dir = "/Volumes/Untitled/OCT_calibration/PyOCTCalibration/calibration/"
+input_dir = arguments
+calibration_dir = directories.calib
 
 input_dir = arguments.input_dir
 output_dir = arguments.output_dir

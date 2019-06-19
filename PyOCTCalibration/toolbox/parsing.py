@@ -54,6 +54,9 @@ def Calibration_parse_arguments():
     else:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
+    arguments.if_file = directories.calib + "spectra/" + arguments.if_file
+
+    print(arguments.if_file)
 
     return arguments
 
