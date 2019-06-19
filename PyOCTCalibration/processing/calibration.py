@@ -25,17 +25,17 @@ import toolbox.directories as directories
 arguments = Calibration_parse_arguments()
 
 Mirror1 = Spectra(data_dir      = arguments.input_dir + "mirror1.txt",
-                  background_dir= arguments.input_dir + "dark_not.txt",
-                  sample_dir    = arguments.input_dir + "dark_sample1.txt",
-                  ref_dir       = arguments.input_dir + "dark_ref.txt")
+                  background_dir= None,#arguments.input_dir + "dark_not.txt",
+                  sample_dir    = None,#arguments.input_dir + "dark_sample1.txt",
+                  ref_dir       = None)#arguments.input_dir + "dark_ref.txt")
 
 Mirror1.load_data()
 Mirror1.process_data()
 
 Mirror2 = Spectra(data_dir       = arguments.input_dir + "mirror2.txt",
-                  background_dir = arguments.input_dir + "dark_not.txt",
-                  sample_dir     = arguments.input_dir + "dark_sample2.txt",
-                  ref_dir        = arguments.input_dir + "dark_ref.txt")
+                  background_dir = None,#arguments.input_dir + "dark_not.txt",
+                  sample_dir     = None,#arguments.input_dir + "dark_sample2.txt",
+                  ref_dir        = None)#arguments.input_dir + "dark_ref.txt")
 
 Mirror2.load_data()
 Mirror2.process_data()
