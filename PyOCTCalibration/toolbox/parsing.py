@@ -11,8 +11,8 @@ def Calibration_parse_arguments():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-if',
-                        '--input-dir',
+    parser.add_argument('-id',
+                        '--input-file',
                         help='Input calibration files directory',
                         dest='input_dir',
                         type=str,
@@ -54,13 +54,16 @@ def Calibration_parse_arguments():
     else:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
-    arguments.if_file = directories.calib + "spectra/" + arguments.if_file
 
-    print(arguments.if_file)
+    arguments.output_file = directories.calib + "calibration_parameters_" + arguments.input_dir + ".json"
+
+    arguments.input_dir = directories.calib + "spectra/" + arguments.input_dir + "/"
+
+    print(arguments.output_file)
+
+
 
     return arguments
-
-
 
 
 def Bscan_parse_arguments():
@@ -112,6 +115,23 @@ def Bscan_parse_arguments():
 
 
     arguments.calibration_file = directories.calib + arguments.calibration_file
+    if ".raw" in arguments.input_file:
+        arguments.input_file = directories.raw + arguments.input_file
+    if ".img" in arguments.input_file:
+        arguments.input_file = directories.img + arguments.input_file
 
 
     return arguments
+
+
+
+
+
+
+
+
+
+
+
+
+# --

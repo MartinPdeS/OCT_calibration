@@ -2,15 +2,11 @@
 '''_____Standard imports_____'''
 import numpy as np
 import matplotlib.pyplot as plt
-import copy
-from scipy.interpolate import interp1d
-from scipy.optimize import curve_fit
 
 '''_____Project imports_____'''
-from toolbox.maths import unwrap_phase, apodization, spectra2aline
-from toolbox.spectra_processing import shift_spectra
+from toolbox.maths import unwrap_phase
 from toolbox.loadings import load_data
-from toolbox.filters import butter_lowpass_filter, butter_highpass_filter, compressor
+from toolbox.filters import butter_highpass_filter
 from toolbox.plottings import plots_signals
 
 
@@ -58,13 +54,19 @@ class Spectra(object):
 
         """
 
-        self.background = load_data(self.background_dir)
+        self.sub_raw = self.raw
 
-        self.sample = load_data(self.sample_dir)
+        if self.background_dir:
+            self.background = load_data(self.background_dir)
+            self.sub_raw += self.background
 
-        self.ref = load_data(self.ref_dir)
+        if self.sample_dir:
+            self.sample = load_data(self.sample_dir)
+            self.sub_raw -= self.sample
 
-        self.sub_raw = self.raw + self.background - self.ref - self.sample
+        if self.ref_dir:
+            self.ref = load_data(self.ref_dir)
+            self.sub_raw -= self.ref
 
         self.sub_raw = butter_highpass_filter(self.sub_raw,
                                               cutoff=280,

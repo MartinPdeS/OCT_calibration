@@ -66,5 +66,18 @@ def denoise_Bscan(Bscan):
 
 
 
+def process_Cscan(Cscan_spectra):
+
+    for iteration, Bscan_spectra in enumerate(Cscan_spectra):
+
+        print( '################## [{0}/{1}]'.format( iteration, length ) )
+
+        Bscan = process_Bscan(Bscan_spectra, calibration, arguments)
+
+        Bscan = denoise_Bscan(Bscan)
+
+        output_Cscan.append(Bscan)
+
+    return output_Cscan
 
 # ---

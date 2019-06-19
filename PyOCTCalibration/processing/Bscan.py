@@ -27,11 +27,16 @@ arguments = Bscan_parse_arguments()
 
 Bscan_spectra = load_Bscan_spectra(arguments.input_file)
 
-calibration = load_calibration(dir =  arguments.calibration_file)
+if ".raw" in arguments.input_file:
 
-Bscan = process_Bscan(Bscan_spectra, calibration, arguments)
+    calibration = load_calibration(dir =  arguments.calibration_file)
 
-Bscan = denoise_Bscan(Bscan)
+    Bscan = process_Bscan(Bscan_spectra, calibration, arguments)
+
+    Bscan = denoise_Bscan(Bscan)
+
+else:
+    Bscan = Bscan_spectra
 
 Bscan_plots(Bscan, arguments=arguments)
 
