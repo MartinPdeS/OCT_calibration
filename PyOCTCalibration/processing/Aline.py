@@ -9,9 +9,15 @@ import json
 from scipy.interpolate import interp1d
 
 
+'''_____Add package_____'''
+p = os.path.abspath('.')
+if p not in sys.path:
+    sys.path.append(p)
+
+
 '''_____Project imports_____'''
-from tools import *
 from PySpectra import Spectra
+from toolbox.Bscan_processing import process_Aline
 
 dir = "data/mirror-.txt"
 

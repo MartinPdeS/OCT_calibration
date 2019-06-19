@@ -5,17 +5,17 @@ import json
 import matplotlib.pyplot as plt
 import sys
 from pandas import DataFrame
-#from skimage import restoration
 
+
+'''_____Add package_____'''
+p = os.path.abspath('.')
+if p not in sys.path:
+    sys.path.append(p)
 
 '''_____Project imports_____'''
 from toolbox.parsing import Bscan_parse_arguments
 from toolbox.loadings import load_Bscan_spectra, load_calibration
-from toolbox.fits import get_fit_curve
-from toolbox.filters import butter_highpass_filter
-from toolbox.spectra_processing import linearize_spectra, compensate_dispersion
-from toolbox.maths import spectra2aline
-from toolbox.Bscan_processing import process_Bscan, clean_Bscan
+from toolbox.spectra_processing import process_Bscan, clean_Bscan
 
 
 

@@ -15,7 +15,7 @@ from toolbox.fits import get_fit_curve
 from toolbox.filters import butter_highpass_filter
 from toolbox.spectra_processing import linearize_spectra, compensate_dispersion
 from toolbox.maths import spectra2aline
-from toolbox.Bscan_processing import process_Bscan, clean_Bscan
+from toolbox.Bscan_processing import process_Bscan, denoise_Bscan
 
 
 
@@ -39,8 +39,8 @@ calibration_LP11 = load_calibration(dir = Calibration_LP11_dir)
 Bscan_LP01 = process_Bscan(Bscan_spectra_LP01, calibration_LP01, arguments)
 Bscan_LP11 = process_Bscan(Bscan_spectra_LP11, calibration_LP01, arguments)
 
-I_01 = clean_Bscan(Bscan_LP01)
-I_11 = clean_Bscan(Bscan_LP11)
+I_01 = denoise_Bscan(Bscan_LP01)
+I_11 = denoise_Bscan(Bscan_LP11)
 
 
 I_norm = np.mean(I_01 + I_11)

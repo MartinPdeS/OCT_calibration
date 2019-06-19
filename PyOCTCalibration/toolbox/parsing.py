@@ -1,7 +1,10 @@
 
-
+'''_____Standard imports_____'''
 import argparse
 import sys
+
+'''_____Project imports_____'''
+import toolbox.directories as directories
 
 
 def Calibration_parse_arguments():
@@ -103,6 +106,9 @@ def Bscan_parse_arguments():
         arguments.dispersion = -1
     else:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
+
+
+    arguments.calibration_file = directories.calib + arguments.calibration_file
 
 
     return arguments

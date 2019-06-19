@@ -145,7 +145,7 @@ def phase_dispersion_plot(exp_dispersion, fit_dispersion):
     plt.close()
 
 
-def Bscan_plots(fig1, fig2, Bscan, arguments=None):
+def Bscan_plots(Bscan, arguments=None):
 
     Bscan = np.array(Bscan)
     dBscan = 10*np.log(Bscan)
@@ -155,21 +155,20 @@ def Bscan_plots(fig1, fig2, Bscan, arguments=None):
 
     ax0 = fig.add_subplot(221)
     ax0.grid()
-    ax0.set_ylabel('Magnitude [dB]')
+    ax0.set_ylabel('Aline depth Intensity [U.A]')
     ax0.set_xlabel('Wavenumber k [U.A]')
     ax0.set_title("Spectra")
-    ax0.plot(fig1)
+    ax0.plot(Bscan[200])
 
 
 
     ax1 = fig.add_subplot(222)
     ax1.grid()
-    ax1.set_ylabel('Magnitude [dB]')
+    ax1.set_ylabel('Aline depth Magnitude [dB]')
     ax1.set_xlabel('Wavenumber k [U.A]')
     ax1.set_title("Aline")
     ref = np.min(dBscan[200])
-    ax1.plot(fig2)
-    #ax1.invert_xaxis()
+    ax1.plot(dBscan[200])
 
 
     data = dBscan.T
