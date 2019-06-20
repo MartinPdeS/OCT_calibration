@@ -5,7 +5,8 @@ import json
 import os
 import sys
 import matplotlib.pyplot as plt
-
+import pprint
+pp = pprint.PrettyPrinter(width=41, compact=True)
 
 '''_____Add package_____'''
 p = os.path.abspath('.')
@@ -25,17 +26,17 @@ import toolbox.directories as directories
 arguments = Calibration_parse_arguments()
 
 Mirror1 = Spectra(data_dir      = arguments.input_dir + "mirror1.txt",
-                  background_dir= None,#arguments.input_dir + "dark_not.txt",
-                  sample_dir    = None,#arguments.input_dir + "dark_sample1.txt",
-                  ref_dir       = None)#arguments.input_dir + "dark_ref.txt")
+                  background_dir= arguments.input_dir + "dark_not.txt",
+                  sample_dir    = arguments.input_dir + "dark_sample1.txt",
+                  ref_dir       = arguments.input_dir + "dark_ref.txt")
 
 Mirror1.load_data()
 Mirror1.process_data()
 
 Mirror2 = Spectra(data_dir       = arguments.input_dir + "mirror2.txt",
-                  background_dir = None,#arguments.input_dir + "dark_not.txt",
-                  sample_dir     = None,#arguments.input_dir + "dark_sample2.txt",
-                  ref_dir        = None)#arguments.input_dir + "dark_ref.txt")
+                  background_dir = arguments.input_dir + "dark_not.txt",
+                  sample_dir     = arguments.input_dir + "dark_sample2.txt",
+                  ref_dir        = arguments.input_dir + "dark_ref.txt")
 
 Mirror2.load_data()
 Mirror2.process_data()
@@ -93,17 +94,16 @@ calib_dict = {"klinear":     list(x_new),
               "dark_not":    load_data(arguments.input_dir + "dark_not.txt"),
               "dark_ref":    load_data(arguments.input_dir + "dark_ref.txt"),
               "dark_sample": load_data(arguments.input_dir + "dark_sample1.txt"),
+              "peak_shift1": shift_1,
+              "peak_shift2": shift_2,
               "psf_kernel" : list(kernel)
               }
 
+pp.pprint(calib_dict)
 
 sys.stdout.write('Writting json file...')
 with open(arguments.output_file, 'w') as outfile:
     json.dump(calib_dict, outfile)
-
-
-
-
 
 
 

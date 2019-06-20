@@ -31,7 +31,7 @@ if ".raw" in arguments.input_file:
 
     calibration = load_calibration(dir =  arguments.calibration_file)
 
-    Bscan = process_Bscan(Bscan_spectra, calibration, arguments)
+    Bscan = process_Bscan(Bscan_spectra, calibration, shift=0, arguments=arguments)
 
     Bscan = denoise_Bscan(Bscan)
 

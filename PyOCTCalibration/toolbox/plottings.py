@@ -252,7 +252,7 @@ def plot_klinearization(phase1, phase2, Plin, Pfit=None):
 
 
 
-class Bscan_vizualiser(object):
+class Lantern_vizualiser(object):
 
 
     def __init__(self, fig1, Bscan_LP01, Bscan_LP11, arguments=None):

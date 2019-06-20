@@ -55,7 +55,7 @@ class Spectra(object):
         """
 
         self.sub_raw = self.raw
-        self.sub_raw -= self.sub_raw[0]
+        
         if self.background_dir:
             self.background = load_data(self.background_dir)
             self.sub_raw += self.background
@@ -78,12 +78,13 @@ class Spectra(object):
 
             plots_signals(self.raw,
                           self.sub_raw,
-                          [1],
-                          [1],
-                          [1])
-            """
-            plots_signals(self.raw,
-                          self.sub_raw,
                           self.ref,
                           self.sample,
-                          self.background)"""
+                          self.background)
+
+
+
+
+
+
+# 0

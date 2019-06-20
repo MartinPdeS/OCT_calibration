@@ -9,16 +9,20 @@ import sys
 '''_____Project imports_____'''
 from toolbox.filters import butter_highpass_filter
 from toolbox.calibration_processing import linearize_spectra, compensate_dispersion
-from toolbox.maths import spectra2aline
+from toolbox.maths import spectra2aline, hilbert
 
 
-def process_Aline(spectra, calibration, arguments):
+def process_Aline(spectra, calibration, shift, arguments):
 
     spectra = np.array(spectra) + np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) - np.array(calibration['dark_sample'])
 
     spectra = butter_highpass_filter(spectra, cutoff=180, fs=30000, order=5)
 
     spectra = linearize_spectra(spectra, calibration['klinear'])
+
+    j = complex(0,1)
+
+    spectra = np.real( hilbert(spectra) * np.exp(j * np.arange(len(spectra)) * shift ) )
 
     spectra = compensate_dispersion( np.array(spectra), arguments.dispersion * np.array( calibration['dispersion'] ) )
 
@@ -29,15 +33,13 @@ def process_Aline(spectra, calibration, arguments):
     return Aline
 
 
-def process_Bscan(Spectra, calibration, arguments):
+def process_Bscan(Spectra, calibration, shift=0, arguments=None):
 
     Bscan = []
 
     for i, spectra in enumerate(Spectra):
 
-        spectra = Spectra[i]
-
-        Aline = process_Aline(spectra, calibration, arguments)
+        Aline = process_Aline(spectra, calibration, shift=shift, arguments=arguments)
 
         Bscan.append(Aline)
 
@@ -67,7 +69,7 @@ def denoise_Bscan(Bscan):
 
 def process_Cscan(Cscan_spectra):
 
-    output_Cscan []
+    output_Cscan = []
 
     for iteration, Bscan_spectra in enumerate(Cscan_spectra):
 
@@ -80,5 +82,16 @@ def process_Cscan(Cscan_spectra):
         output_Cscan.append(Bscan)
 
     return output_Cscan
+
+
+# LP01
+# 'peak_shift1': -0.03944804706418892,
+# 'peak_shift2': 0.039448047064188974,
+# LP11
+# 'peak_shift1': 0.0040863554464394825,
+#'peak_shift2': -0.004086355446439427,
+
+
+
 
 # ---
