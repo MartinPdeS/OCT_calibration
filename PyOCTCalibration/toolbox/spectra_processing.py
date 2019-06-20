@@ -34,6 +34,7 @@ def process_Bscan(Spectra, calibration, arguments):
     Bscan = []
 
     for i, spectra in enumerate(Spectra):
+
         spectra = Spectra[i]
 
         Aline = process_Aline(spectra, calibration, arguments)
@@ -64,9 +65,9 @@ def denoise_Bscan(Bscan):
     return Bscan
 
 
-
-
 def process_Cscan(Cscan_spectra):
+
+    output_Cscan []
 
     for iteration, Bscan_spectra in enumerate(Cscan_spectra):
 
