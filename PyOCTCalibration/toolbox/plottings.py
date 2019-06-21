@@ -7,6 +7,7 @@ from matplotlib.widgets import Slider, Button, RadioButtons
 
 '''_____Project imports_____'''
 from toolbox.fits import gauss
+import toolbox.directories as directories
 
 
 def dB_plot(data1, data2=None, arguments=None):
@@ -199,9 +200,9 @@ def Bscan_plots(Bscan, arguments=None):
         fig.canvas.draw_idle()
 
     def save(event):
-        save_dir = "results/"
+        save_dir = directories.png + "image.png"
         extent = ax2.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-        plt.savefig(save_dir + arguments.input_file, bbox_inches=extent)
+        plt.savefig(save_dir, bbox_inches=extent)
 
 
     bsave.on_clicked(save)

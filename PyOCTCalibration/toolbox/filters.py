@@ -82,7 +82,13 @@ def compressor(data, factor=3, threshold=None):
 
 
 
+def CV_denoise(img):
 
+    img =  cv2.fastNlMeansDenoising(src=image,
+                                   dst=None,
+                                   h=0,
+                                   templateWindowSize=7,
+                                   searchWindowSize=21)
 
 
 
