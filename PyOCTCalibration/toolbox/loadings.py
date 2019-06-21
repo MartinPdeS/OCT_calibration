@@ -23,20 +23,16 @@ def load_Bscan_spectra(file_dir, block_start=276, dimension=(1,1049,1024)):
     data = data[header_size:]
     data = data[:-foot_size]
 
-    import matplotlib.pyplot as plt
-
-    fig, ax = plt.subplots()
-
     begin = 0
     end = 1024*1049
 
     tmp = []
 
-    for iter in range(dimension[0]-1):
+    for iter in range(dimension[0]):
+        print(data[begin:end])
+        tmp.append( np.reshape( data[begin:end],[1049,1024] ) )
         begin = end + 20
         end = begin + 1024*1049
-        tmp.append( np.reshape( data[begin:end],[1049,1024] ) )
-
 
     return tmp
 

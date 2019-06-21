@@ -25,7 +25,7 @@ from toolbox.spectra_processing import process_Bscan, denoise_Bscan
 
 arguments = Bscan_parse_arguments()
 
-dimension = (10, 1049,1024)
+dimension = (1, 1049,1024)
 
 Bscan_spectra = load_Bscan_spectra(arguments.input_file, dimension = dimension)
 
@@ -36,7 +36,7 @@ Bscan = []
 
 if len(dimension) >= 3:
 
-    for iteration in range(dimension[0]-9):
+    for iteration in range(dimension[0]):
 
         print( "########## iteration [{0}/{1}]".format( iteration, dimension[0] ) )
 
@@ -45,7 +45,24 @@ if len(dimension) >= 3:
         Bscan.append( denoise_Bscan(tmp) )
 
 Bscan_output = np.mean(Bscan, axis=0)
-Bscan_plots(Bscan_output, arguments=arguments)
+import cv2
+
+print(np.shape(Bscan_output))
+from PIL import Image
+import matplotlib
+import matplotlib.colors as colors
+matplotlib.image.imsave('name.png', np.log(Bscan_output))
+img = cv2.imread('name.png')
+
+img =  cv2.fastNlMeansDenoisingColored(img,None,10,10,7,21)
+
+img=-np.array(img).T[0]
+
+plt.imshow(img, cmap="gray",vmin=0, vmax=255)
+plt.show()
+
+
+#Bscan_plots(img, arguments=arguments)
 
 
 
