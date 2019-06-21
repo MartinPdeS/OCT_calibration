@@ -123,6 +123,14 @@ def Bscan_parse_arguments():
                         default='test.raw',
                         required=False)
 
+    parser.add_argument('-m',
+                        '--mean',
+                        help='Number of Bscan',
+                        dest='mean_number',
+                        type=int,
+                        default=1,
+                        required=False)
+
     parser.add_argument('-c',
                         '--calibration_file',
                         help='Calibration json file.',

@@ -12,15 +12,33 @@ def load_data(dir):
     return data
 
 
-def load_Bscan_spectra(file_dir, block_start=276, block_end = 632084, shape1=617, shape2=1024):
+def load_Bscan_spectra(file_dir, block_start=276, dimension=(1,1049,1024)):
 
     data = np.fromfile(file_dir, dtype = np.uint16)
 
-    block_end = block_start + 1024*1024
+    header_size = 276
+    foot_size = 4096
+    buffer_size = 19
 
-    block_data = data[block_start: block_end]
-    Bscan_spectra = block_data.reshape([1024,1024])
-    return Bscan_spectra
+    data = data[header_size:]
+    data = data[:-foot_size]
+
+    import matplotlib.pyplot as plt
+
+    fig, ax = plt.subplots()
+
+    begin = 0
+    end = 1024*1049
+
+    tmp = []
+
+    for iter in range(dimension[0]-1):
+        begin = end + 20
+        end = begin + 1024*1049
+        tmp.append( np.reshape( data[begin:end],[1049,1024] ) )
+
+
+    return tmp
 
 
 def load_calibration(dir=None):

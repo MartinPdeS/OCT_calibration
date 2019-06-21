@@ -25,20 +25,27 @@ from toolbox.spectra_processing import process_Bscan, denoise_Bscan
 
 arguments = Bscan_parse_arguments()
 
-Bscan_spectra = load_Bscan_spectra(arguments.input_file)
+dimension = (10, 1049,1024)
 
-if ".raw" in arguments.input_file:
+Bscan_spectra = load_Bscan_spectra(arguments.input_file, dimension = dimension)
 
-    calibration = load_calibration(dir =  arguments.calibration_file)
 
-    Bscan = process_Bscan(Bscan_spectra, calibration, shift=0, arguments=arguments)
+calibration = load_calibration(dir =  arguments.calibration_file)
 
-    Bscan = denoise_Bscan(Bscan)
+Bscan = []
 
-else:
-    Bscan = Bscan_spectra
+if len(dimension) >= 3:
 
-Bscan_plots(Bscan, arguments=arguments)
+    for iteration in range(dimension[0]-9):
+
+        print( "########## iteration [{0}/{1}]".format( iteration, dimension[0] ) )
+
+        tmp = process_Bscan(Bscan_spectra[iteration], calibration, shift=0, arguments=arguments)
+
+        Bscan.append( denoise_Bscan(tmp) )
+
+Bscan_output = np.mean(Bscan, axis=0)
+Bscan_plots(Bscan_output, arguments=arguments)
 
 
 
