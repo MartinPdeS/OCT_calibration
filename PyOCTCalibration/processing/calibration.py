@@ -9,9 +9,10 @@ import pprint
 pp = pprint.PrettyPrinter(width=41, compact=True)
 
 '''_____Add package_____'''
-p = os.path.abspath('.')
+p = os.path.abspath('../')
 if p not in sys.path:
     sys.path.append(p)
+
 
 
 '''_____Project imports_____'''
@@ -24,7 +25,7 @@ from toolbox.maths import spectra2aline, apodization
 import toolbox.directories as directories
 
 arguments = Calibration_parse_arguments()
-
+print(arguments.input_dir)
 Mirror1 = Spectra(data_dir      = arguments.input_dir + "mirror1.txt",
                   background_dir= arguments.input_dir + "dark_not.txt",
                   sample_dir    = arguments.input_dir + "dark_sample1.txt",

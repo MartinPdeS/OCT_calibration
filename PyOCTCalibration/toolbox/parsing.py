@@ -16,7 +16,7 @@ def Calibration_parse_arguments():
                         help='Input calibration files directory',
                         dest='input_dir',
                         type=str,
-                        default='',
+                        default= directories.calib + "spectra/" ,
                         required=False)
 
     parser.add_argument('-of',
@@ -24,7 +24,7 @@ def Calibration_parse_arguments():
                         help='Output calibration files directory',
                         dest='output_dir',
                         type=str,
-                        default='./',
+                        default='directories.calib + "calibration_parameters_"',
                         required=False)
 
     parser.add_argument('-i',
@@ -55,9 +55,9 @@ def Calibration_parse_arguments():
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
 
-    arguments.output_file = directories.calib + "calibration_parameters_" + arguments.input_dir + ".json"
+    arguments.output_file = arguments.output_dir + ".json"
 
-    arguments.input_dir = directories.calib + "spectra/" + arguments.input_dir + "/"
+    arguments.input_dir = arguments.input_dir
 
     print(arguments.output_file)
 
