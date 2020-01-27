@@ -627,12 +627,8 @@ class Lantern_Cscan_vizualiser(object):
 
     def update_intensity(self, event):
 
-        print('&&&&&&&& range 1',self.SVmin.val, self.SVmax.val)
-        print('&&&&&&&& event', event)
         self.l_LP11.set_clim(vmin=self.SVmin.val, vmax=self.SVmax.val)
         self.l_LP01.set_clim(vmin=self.SVmin.val, vmax=self.SVmax.val)
-        print('&&&&&&&& range 2', self.SVmin.val, self.SVmax.val)
-        print('\n')
 
         self.fig.canvas.draw_idle()
 
@@ -666,21 +662,45 @@ class Lantern_Cscan_vizualiser(object):
 
     def normalize_image(self):
 
+        self.dBscan -= np.mean(self.dBscan) - 255/2
+
         self.ax3.cla()
-        self.ax3.hist(self.dBscan.ravel(),256)
+        self.ax3.hist(self.dBscan.ravel(),255)
 
-        self.SVmin.ax.set_xlim(self.ax3.get_xlim()[0],
-                               self.ax3.get_xlim()[1])
+        range = max( np.abs(np.max(self.dBscan)-255/2), np.abs(np.min(self.dBscan)-255/2) )
+        std_range = 3 * np.std(self.dBscan)
+        range = 5 * std_range
+        print(std_range)
 
-        self.SVmin.val = self.ax3.get_xlim()[0]
-        self.SVmax.val = self.ax3.get_xlim()[1]
-        print('###',self.SVmin.val,self.SVmax.val)
+        self.ax3.set_xlim(255/2 - range,255/2 + range)
 
-        self.l_LP01.set_clim(vmin=self.ax3.get_xlim()[0],
-                             vmax=self.ax3.get_xlim()[1])
 
-        self.l_LP11.set_clim(vmin=self.ax3.get_xlim()[0],
-                             vmax=self.ax3.get_xlim()[1])
+
+
+        self.SVmin.valmin = 255/2 - range
+        self.SVmin.valmax = 255/2 + range
+        self.SVmax.valmin = 255/2 - range
+        self.SVmax.valmax = 255/2 + range
+
+        self.SVmin.ax.set_xlim(self.SVmin.valmin,
+                               self.SVmin.valmax)
+
+        self.SVmax.ax.set_xlim(self.SVmax.valmin,
+                               self.SVmax.valmax)
+
+
+
+        self.SVmin.val = 255/2 - std_range
+        self.SVmax.val = 255/2 + std_range
+        self.SVmax.set_value = 1
+
+
+        self.l_LP01.set_clim(vmin=255/2 - std_range,
+                             vmax=255/2 + std_range)
+
+        self.l_LP11.set_clim(vmin=255/2 - std_range,
+                             vmax=255/2 + std_range)
+
 
 
     def previous(self, event):
