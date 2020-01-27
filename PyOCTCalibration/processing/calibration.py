@@ -9,7 +9,7 @@ import pprint
 pp = pprint.PrettyPrinter(width=41, compact=True)
 
 '''_____Add package_____'''
-p = os.path.abspath('../')
+p = os.path.abspath('.')
 if p not in sys.path:
     sys.path.append(p)
 

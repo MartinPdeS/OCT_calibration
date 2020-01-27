@@ -2,6 +2,7 @@
 '''_____Standard imports_____'''
 import numpy as np
 import json
+import os
 import matplotlib.pyplot as plt
 import sys
 from pandas import DataFrame
@@ -17,33 +18,58 @@ from toolbox.parsing import Cscan_parse_arguments
 from toolbox.loadings import load_calibration
 from toolbox.spectra_processing import process_Cscan
 import toolbox.directories as directories
-
+from toolbox.spectra_processing import *
 
 
 arguments = Cscan_parse_arguments()
 
 raw_data = np.fromfile(arguments.input_file, dtype = np.uint16)
 
-dim = (512,1049,1024)
+print(np.shape(raw_data))
 
 start_block = 276
-end_block = start_block + dim[0]*dim[1]*dim[2]
+end_block = 4096
+tampon_block = 20
+Spectrum_block = 1024
+Bscan_block = 512 + 25
+Cscan_block = 512
 
-data = raw_data[start_block:end_block]
+dim = (Cscan_block, Bscan_block, Spectrum_block)
+
+
+
+
+
+
+
+data = raw_data[start_block:-end_block]
+
+tampon = []
+for i in range(1, Cscan_block):
+    tampon_start = Spectrum_block * Bscan_block* i + tampon_block * (i-1)
+    tampon_end = tampon_start + tampon_block
+    tampon = tampon + list(range(tampon_start, tampon_end))
+
+data = np.delete(data,tampon)
+
 
 Cscan_spectra = data.reshape(dim, order='C')
+
+print('############00')
+print(np.shape(Cscan_spectra))
+
 
 Cscan_spectra = np.array(Cscan_spectra)
 
 calibration = load_calibration(dir = arguments.calibration_file)
 
-C_scan = process_Cscan(Cscan_spectra)
+C_scan = process_Cscan(Cscan_spectra, calibration, arguments)
 
-sys.stdout.write('%%%%%%%%%%%__ saving into csv file__%%%%%%%%%%% \n shape of file : {0}'.format(np.shape(Bscan.tolist() ) ) )
+sys.stdout.write('%%%%%%%%%%%__ saving into csv file__%%%%%%%%%%% \n shape of file : {0}'.format(np.shape(C_scan ) ) )
 
-df = DataFrame(np.array(output_Cscan).reshape(length,1049*508))
 
-df.to_pickle(arguments.output_file)
+np.save('array', [C_scan])
+
 
 
 

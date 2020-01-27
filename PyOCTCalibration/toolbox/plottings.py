@@ -2,8 +2,8 @@
 '''_____Standard imports_____'''
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.widgets import Slider, Button, RadioButtons
-
+from matplotlib.widgets import Slider, Button, RadioButtons, TextBox
+import matplotlib.gridspec as gridspec
 
 '''_____Project imports_____'''
 from toolbox.fits import gauss
@@ -253,7 +253,7 @@ def plot_klinearization(phase1, phase2, Plin, Pfit=None):
 
 
 
-class Lantern_vizualiser(object):
+class Lantern_Bscan_vizualiser(object):
 
 
     def __init__(self, fig1, Bscan_LP01, Bscan_LP11, arguments=None):
@@ -338,7 +338,7 @@ class Lantern_vizualiser(object):
 
 
         self.ax1 = self.fig.add_subplot(221)
-        self.l_LP01 = self.ax1.imshow(self.dBscan_LP01[0].T,
+        self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,
                                 cmap = "gray",
                                 vmin=None,
                                 vmax=None)
@@ -347,7 +347,7 @@ class Lantern_vizualiser(object):
         self.ax1.set_title("Processed Bscan LP01")
 
         self.ax2 = self.fig.add_subplot(223)
-        self.l_LP11 = self.ax2.imshow(self.dBscan_LP11[0].T,
+        self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,
                                    cmap = "gray",
                                    vmin=None,
                                    vmax=None)
@@ -370,6 +370,424 @@ class Lantern_vizualiser(object):
 
         plt.show()
 
+
+
+
+
+class Lantern_Bscan_vizualiser(object):
+
+
+    def __init__(self, fig1, Bscan_LP01, Bscan_LP11, arguments=None):
+        self.fig1 = fig1
+        self.Bscan_LP01 = Bscan_LP01
+        self.Bscan_LP11 = Bscan_LP11
+        self.arguments = arguments
+
+
+    def update_intensity(self, event):
+        Vmax_LP11 = self.SVmax_LP11.val
+        Vmin_LP11 = self.SVmin_LP11.val
+        self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)
+        Vmax_LP01 = self.SVmax_LP11.val
+        Vmin_LP01 = self.SVmin_LP11.val
+        self.l_LP01.set_clim(vmin=Vmin_LP01, vmax=Vmax_LP01)
+        self.fig.canvas.draw_idle()
+
+
+    def next(self, event):
+        self.N_plot += 1
+        self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
+        self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
+        self.fig.canvas.draw_idle()
+
+
+    def previous(self, event):
+        self.N_plot -= 1
+        self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
+        self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
+        self.fig.canvas.draw_idle()
+
+
+    def save_LP11(self, event):
+        save_dir = "results/"
+        extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
+        plt.savefig(save_dir + "figure_" + 'LP11', bbox_inches=extent)
+
+
+    def save_LP01(self, event):
+        save_dir = "results/"
+        extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
+        plt.savefig(save_dir + "figure_" + 'LP01', bbox_inches=extent)
+
+
+    def Bscan_lanterne_plots(self):
+
+        self.Bscan_LP01 = np.array(self.Bscan_LP01)
+        self.Bscan_LP11 = np.array(self.Bscan_LP11)
+
+        self.dBscan_LP11 = 10*np.log(self.Bscan_LP11)
+        self.dBscan_LP01 = 10*np.log(self.Bscan_LP01)
+
+        self.fig = plt.figure(figsize=(16,10))
+
+        self.N_plot = 0
+
+
+        axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])
+        axVmax_intensity = plt.axes([0.6, 0.15, 0.3, 0.03])
+        axsave_LP11 = plt.axes([0.7, 0.25, 0.1, 0.075])
+
+        axsave_LP01 = plt.axes([0.7, 0.80, 0.1, 0.075])
+
+        axnext = plt.axes([0.8, 0.5, 0.1, 0.075])
+        axprevious = plt.axes([0.6, 0.5, 0.1, 0.075])
+
+        Min_LP11, Max_LP11 = np.min(self.dBscan_LP11)*0.7, np.max(self.dBscan_LP11)*1.2
+        Min_LP01, Max_LP01 = np.min(self.dBscan_LP01)*0.7, np.max(self.dBscan_LP01)*1.2
+
+        Nstep_LP11 = (Max_LP11 - Min_LP11)/100
+        Nstep_LP01 = (Max_LP01 - Min_LP01)/100
+
+        self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)
+        self.SVmax_LP11 = Slider(axVmax_intensity, 'Vmax', Min_LP11, Max_LP11, valinit=Max_LP11, valstep=Nstep_LP11)
+        bsave_LP11 = Button(axsave_LP11, 'Save Bscan')
+
+        bsave_LP01 = Button(axsave_LP01, 'Save Bscan')
+
+        self.Bnext = Button(axnext, 'Next')
+        self.Bprevious = Button(axprevious, 'Previous')
+
+
+        self.ax1 = self.fig.add_subplot(221)
+        self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,
+                                cmap = "gray",
+                                vmin=None,
+                                vmax=None)
+        self.ax1.invert_yaxis()
+
+        self.ax1.set_title("Processed Bscan LP01")
+
+        self.ax2 = self.fig.add_subplot(223)
+        self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,
+                                   cmap = "gray",
+                                   vmin=None,
+                                   vmax=None)
+        self.ax2.invert_yaxis()
+        self.ax2.set_title("Processed Bscan LP11")
+
+
+
+
+        bsave_LP11.on_clicked(self.save_LP11)
+        self.SVmin_LP11.on_changed(self.update_intensity)
+        self.SVmax_LP11.on_changed(self.update_intensity)
+
+        bsave_LP01.on_clicked(self.save_LP01)
+        #self.SVmin_LP01.on_changed(self.update_LP01)
+        #self.SVmax_LP01.on_changed(self.update_LP01)
+
+        self.Bnext.on_clicked(self.next)
+        self.Bprevious.on_clicked(self.previous)
+
+        plt.show()
+
+
+
+
+
+
+class Lantern_Bscan_vizualiser(object):
+
+
+    def __init__(self, fig1, Bscan_LP01, Bscan_LP11, arguments=None):
+        self.fig1 = fig1
+        self.Bscan_LP01 = Bscan_LP01
+        self.Bscan_LP11 = Bscan_LP11
+        self.arguments = arguments
+
+
+    def update_intensity(self, event):
+        Vmax_LP11 = self.SVmax_LP11.val
+        Vmin_LP11 = self.SVmin_LP11.val
+        self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)
+        Vmax_LP01 = self.SVmax_LP11.val
+        Vmin_LP01 = self.SVmin_LP11.val
+        self.l_LP01.set_clim(vmin=Vmin_LP01, vmax=Vmax_LP01)
+        self.fig.canvas.draw_idle()
+
+
+    def next(self, event):
+        self.N_plot += 1
+        self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
+        self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
+        self.fig.canvas.draw_idle()
+
+
+    def previous(self, event):
+        self.N_plot -= 1
+        self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
+        self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
+        self.fig.canvas.draw_idle()
+
+
+    def save_LP11(self, event):
+        save_dir = "results/"
+        extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
+        plt.savefig(save_dir + "figure_" + 'LP11', bbox_inches=extent)
+
+
+    def save_LP01(self, event):
+        save_dir = "results/"
+        extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
+        plt.savefig(save_dir + "figure_" + 'LP01', bbox_inches=extent)
+
+
+    def Bscan_lanterne_plots(self):
+
+        self.Bscan_LP01 = np.array(self.Bscan_LP01)
+        self.Bscan_LP11 = np.array(self.Bscan_LP11)
+
+        self.dBscan_LP11 = 10*np.log(self.Bscan_LP11)
+        self.dBscan_LP01 = 10*np.log(self.Bscan_LP01)
+
+        self.fig = plt.figure(figsize=(16,10))
+
+        self.N_plot = 0
+
+
+        axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])
+        axVmax_intensity = plt.axes([0.6, 0.15, 0.3, 0.03])
+        axsave_LP11 = plt.axes([0.7, 0.25, 0.1, 0.075])
+
+        axsave_LP01 = plt.axes([0.7, 0.80, 0.1, 0.075])
+
+        axnext = plt.axes([0.8, 0.5, 0.1, 0.075])
+        axprevious = plt.axes([0.6, 0.5, 0.1, 0.075])
+
+        Min_LP11, Max_LP11 = np.min(self.dBscan_LP11)*0.7, np.max(self.dBscan_LP11)*1.2
+        Min_LP01, Max_LP01 = np.min(self.dBscan_LP01)*0.7, np.max(self.dBscan_LP01)*1.2
+
+        Nstep_LP11 = (Max_LP11 - Min_LP11)/100
+        Nstep_LP01 = (Max_LP01 - Min_LP01)/100
+
+        self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)
+        self.SVmax_LP11 = Slider(axVmax_intensity, 'Vmax', Min_LP11, Max_LP11, valinit=Max_LP11, valstep=Nstep_LP11)
+        bsave_LP11 = Button(axsave_LP11, 'Save Bscan')
+
+        bsave_LP01 = Button(axsave_LP01, 'Save Bscan')
+
+        self.Bnext = Button(axnext, 'Next')
+        self.Bprevious = Button(axprevious, 'Previous')
+
+
+        self.ax1 = self.fig.add_subplot(221)
+        self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,
+                                cmap = "gray",
+                                vmin=None,
+                                vmax=None)
+        self.ax1.invert_yaxis()
+
+        self.ax1.set_title("Processed Bscan LP01")
+
+        self.ax2 = self.fig.add_subplot(223)
+        self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,
+                                   cmap = "gray",
+                                   vmin=None,
+                                   vmax=None)
+        self.ax2.invert_yaxis()
+        self.ax2.set_title("Processed Bscan LP11")
+
+
+
+
+        bsave_LP11.on_clicked(self.save_LP11)
+        self.SVmin_LP11.on_changed(self.update_intensity)
+        self.SVmax_LP11.on_changed(self.update_intensity)
+
+        bsave_LP01.on_clicked(self.save_LP01)
+        #self.SVmin_LP01.on_changed(self.update_LP01)
+        #self.SVmax_LP01.on_changed(self.update_LP01)
+
+        self.Bnext.on_clicked(self.next)
+        self.Bprevious.on_clicked(self.previous)
+
+        plt.show()
+
+
+
+class Lantern_Cscan_vizualiser(object):
+
+
+    def __init__(self, fig1, Cscan_LP01, Cscan_LP11, arguments=None):
+        self.fig1 = fig1
+        self.dCscan_LP01 = np.array(10*np.log(Cscan_LP01))
+        self.dCscan_LP11 = np.array(10*np.log(Cscan_LP11))
+        self.arguments = arguments
+
+
+    def update_intensity(self, event):
+
+        print('&&&&&&&& range 1',self.SVmin.val, self.SVmax.val)
+        print('&&&&&&&& event', event)
+        self.l_LP11.set_clim(vmin=self.SVmin.val, vmax=self.SVmax.val)
+        self.l_LP01.set_clim(vmin=self.SVmin.val, vmax=self.SVmax.val)
+        print('&&&&&&&& range 2', self.SVmin.val, self.SVmax.val)
+        print('\n')
+
+        self.fig.canvas.draw_idle()
+
+
+    def submit(self, text):
+        self.N_plot = eval(text)
+        self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T
+
+        self.l_LP01.set_data(self.dBscan)
+        self.l_LP11.set_data(self.dBscan)
+
+        self.normalize_image()
+
+
+        self.textbox.set_val(self.N_plot)
+        self.fig.canvas.draw_idle()
+
+
+    def next(self, event):
+        self.N_plot += 1
+
+        self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T
+
+        self.normalize_image()
+
+        self.l_LP01.set_data(self.dBscan - np.mean(self.dBscan))
+        self.l_LP11.set_data(self.dBscan - np.mean(self.dBscan))
+        self.textbox.set_val(self.N_plot)
+        self.fig.canvas.draw_idle()
+
+
+    def normalize_image(self):
+
+        self.ax3.cla()
+        self.ax3.hist(self.dBscan.ravel(),256)
+
+        self.SVmin.ax.set_xlim(self.ax3.get_xlim()[0],
+                               self.ax3.get_xlim()[1])
+
+        self.SVmin.val = self.ax3.get_xlim()[0]
+        self.SVmax.val = self.ax3.get_xlim()[1]
+        print('###',self.SVmin.val,self.SVmax.val)
+
+        self.l_LP01.set_clim(vmin=self.ax3.get_xlim()[0],
+                             vmax=self.ax3.get_xlim()[1])
+
+        self.l_LP11.set_clim(vmin=self.ax3.get_xlim()[0],
+                             vmax=self.ax3.get_xlim()[1])
+
+
+    def previous(self, event):
+        self.N_plot -= 1
+
+        self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T
+
+        self.normalize_image()
+
+
+        self.l_LP01.set_data(self.dBscan)
+        self.l_LP11.set_data(self.dBscan)
+
+        self.textbox.set_val(self.N_plot)
+        self.fig.canvas.draw_idle()
+
+
+    def save_LP11(self, event):
+        save_dir = "results/"
+        extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
+        plt.savefig(save_dir + "figure_" + 'LP11', bbox_inches=extent)
+
+
+    def save_LP01(self, event):
+        save_dir = "results/"
+        extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
+        plt.savefig(save_dir + "figure_" + 'LP01', bbox_inches=extent)
+
+
+    def Bscan_lanterne_plots(self):
+
+        self.fig = plt.figure(figsize=(16,10))
+        gs = gridspec.GridSpec(5,5)
+
+        self.N_plot = 0
+        self.dBscan = self.dCscan_LP11[:,:,self.N_plot].T
+
+
+        self.ax3 = self.fig.add_subplot(gs[4,0:5])
+        self.l_hist = self.ax3.hist(self.dBscan.ravel(),256)
+
+        axVmin_intensity = plt.axes([0.1, 0.01, 0.8, 0.03])
+        axVmax_intensity = plt.axes([0.1, 0.05, 0.8, 0.03])
+
+        axsave_LP11 = plt.axes([0.8, 0.79, 0.1, 0.075])
+        axsave_LP01 = plt.axes([0.8, 0.9, 0.1, 0.075])
+
+        axnext = plt.axes([0.8, 0.3, 0.1, 0.075])
+        axprevious = plt.axes([0.8, 0.41, 0.1, 0.075])
+
+        Min_LP11, Max_LP11 = np.min(self.dBscan)*1, np.max(self.dBscan)*1.
+        Min_LP01, Max_LP01 = np.min(self.dBscan)*1, np.max(self.dBscan)*1.
+
+        Nstep_LP11 = (Max_LP11 - Min_LP11)/200
+        Nstep_LP01 = (Max_LP01 - Min_LP01)/200
+
+        self.SVmin = Slider(axVmin_intensity, 'Vmin', 0, 255, valinit=Min_LP11, valstep=Nstep_LP11)
+        self.SVmax = Slider(axVmax_intensity, 'Vmax', 0, 255, valinit=Max_LP11, valstep=Nstep_LP11)
+
+        temp_descr = 'wow'
+        axLabel = plt.axes([0.5, 0.9, 0.11, 0.075])
+        self.textbox = TextBox(axLabel, '# Scan: ', temp_descr)
+
+        self.textbox.set_val(self.N_plot)
+
+        bsave_LP11 = Button(axsave_LP11, 'Save Bscan')
+
+        bsave_LP01 = Button(axsave_LP01, 'Save Bscan')
+
+        self.Bnext = Button(axnext, 'Next')
+        self.Bprevious = Button(axprevious, 'Previous')
+
+
+        self.ax1 = self.fig.add_subplot(gs[1:4,0:2])
+        self.l_LP01 = self.ax1.imshow(self.dBscan,
+                                cmap = "gray",
+                                vmin=None,
+                                vmax=None)
+        self.ax1.invert_yaxis()
+
+
+
+
+        self.ax1.set_title("Processed Bscan LP01")
+
+        self.ax2 = self.fig.add_subplot(gs[1:4,2:4])
+        self.l_LP11 = self.ax2.imshow(self.dBscan,
+                                   cmap = "gray",
+                                   vmin=None,
+                                   vmax=None)
+        self.ax2.invert_yaxis()
+        self.ax2.set_title("Processed Bscan LP11")
+
+
+
+        self.SVmin.on_changed(self.update_intensity)
+        self.SVmax.on_changed(self.update_intensity)
+
+        self.textbox.on_submit(self.submit)
+
+        bsave_LP11.on_clicked(self.save_LP11)
+        bsave_LP01.on_clicked(self.save_LP01)
+
+        self.Bnext.on_clicked(self.next)
+        self.Bprevious.on_clicked(self.previous)
+
+        plt.show()
 
 
 

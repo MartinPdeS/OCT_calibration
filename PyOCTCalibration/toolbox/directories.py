@@ -1,8 +1,14 @@
+import os
+import sys
 
+p = os.path.abspath('.')
+print(p)
+if p not in sys.path:
+    sys.path.append(p)
 
-raw = "./data/raw/"
-img = "./data/img/"
-temp = "./data/temp/"
-calib = "./data/calibration/"
-csv = "./data/csv/"
-png = "./data/png/"
+raw = p + "/data/raw/"
+img = p + "/data/img/"
+temp = p + "/data/temp/"
+calib = p + "/data/calibration/"
+csv = p + "/data/csv/"
+png = p + "/data/png/"

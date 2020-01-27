@@ -14,7 +14,7 @@ from toolbox.maths import spectra2aline, hilbert
 
 def process_Aline(spectra, calibration, shift, arguments):
 
-    spectra = np.array(spectra) + np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) - np.array(calibration['dark_sample'])
+    #spectra = np.array(spectra) + np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) - np.array(calibration['dark_sample'])
 
     spectra = butter_highpass_filter(spectra, cutoff=180, fs=30000, order=5)
 
@@ -67,30 +67,23 @@ def denoise_Bscan(Bscan):
     return Bscan
 
 
-def process_Cscan(Cscan_spectra):
+def process_Cscan(Cscan_spectra, calibration, arguments):
 
     output_Cscan = []
 
     for iteration, Bscan_spectra in enumerate(Cscan_spectra):
 
-        print( '################## [{0}/{1}]'.format( iteration, length ) )
+        sys.stdout.write('Computing Cscan {0}{1}\n'.format(iteration, np.shape(Cscan_spectra)) )
 
-        Bscan = process_Bscan(Bscan_spectra, calibration, arguments)
+        Bscan = process_Bscan(Bscan_spectra, calibration, 0, arguments)
+
+
 
         Bscan = denoise_Bscan(Bscan)
 
         output_Cscan.append(Bscan)
 
     return output_Cscan
-
-
-# LP01
-# 'peak_shift1': -0.03944804706418892,
-# 'peak_shift2': 0.039448047064188974,
-# LP11
-# 'peak_shift1': 0.0040863554464394825,
-#'peak_shift2': -0.004086355446439427,
-
 
 
 
