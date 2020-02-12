@@ -16,7 +16,7 @@ from toolbox.loadings import load_Bscan_spectra, load_calibration
 from toolbox.plottings import Lantern_Cscan_vizualiser
 import toolbox.directories as directories
 
-data = np.load('array.npy')[0]
+data = np.load('citrus_LP11.npy')
 print(np.shape(data))
 
 
@@ -25,7 +25,10 @@ arguments = Bscan_parse_arguments()
 data_LP01 = data
 data_LP11 = data
 
-A = Lantern_Cscan_vizualiser(fig1=[0,1,2], Cscan_LP01=data_LP01[:,:,1::3], Cscan_LP11=data_LP11[:,:,1:200], arguments=arguments)
+A = Lantern_Cscan_vizualiser( fig1=[0,1,2],
+                              Cscan_LP01=data_LP01[:,:,1:200],
+                              Cscan_LP11=data_LP11[:,:,1:200],
+                              arguments=arguments)
 
 A.Bscan_lanterne_plots()
 

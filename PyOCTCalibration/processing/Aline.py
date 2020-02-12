@@ -23,6 +23,6 @@ spectra = load_data(dir)
 
 calibration = load_calibration(dir =  arguments.calibration_file)
 
-Aline = process_Aline(spectra, calibration, arguments)
+Aline = process_Aline(spectra, calibration, shift=0, arguments=arguments)
 
 dB_plot(Aline)

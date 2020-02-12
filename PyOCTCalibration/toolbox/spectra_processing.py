@@ -67,7 +67,7 @@ def denoise_Bscan(Bscan):
     return Bscan
 
 
-def process_Cscan(Cscan_spectra, calibration, arguments):
+def process_Cscan(Cscan_spectra, calibration, shift, arguments):
 
     output_Cscan = []
 
@@ -75,9 +75,7 @@ def process_Cscan(Cscan_spectra, calibration, arguments):
 
         sys.stdout.write('Computing Cscan {0}{1}\n'.format(iteration, np.shape(Cscan_spectra)) )
 
-        Bscan = process_Bscan(Bscan_spectra, calibration, 0, arguments)
-
-
+        Bscan = process_Bscan(Bscan_spectra, calibration, shift=shift, arguments=arguments)
 
         Bscan = denoise_Bscan(Bscan)
 

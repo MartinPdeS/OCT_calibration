@@ -18,7 +18,7 @@ if p not in sys.path:
 '''_____Project imports_____'''
 from toolbox.PySpectra import Spectra
 from toolbox.parsing import Calibration_parse_arguments
-from toolbox.calibration_processing import compute_dispersion, k_linearization, shift_spectra, compensate_dispersion, compute_PSF
+from toolbox.calibration_processing import compute_dispersion, k_linearization, shift_spectra, compensate_dispersion, compute_PSF, shift_1_spectra
 from toolbox.loadings import load_data
 from toolbox.plottings import dB_plot
 from toolbox.maths import spectra2aline, apodization
@@ -56,14 +56,25 @@ dB_plot(data1=spectra2aline(interpolated_spectra_2),
         data2=spectra2aline(Mirror2.sub_raw),
         arguments=arguments)
 
+#fig = plt.figure()
+#ax1 = fig.add_subplot(121)
+#ax1.plot( spectra2aline(interpolated_spectra_1[::-1]) )
+#ax1.grid()
 
+#ax2 = fig.add_subplot(122)
+#ax2.plot(spectra2aline( shift_1_spectra(interpolated_spectra_1,-0.004)) )
+#ax2.grid()
+
+
+
+#plt.show()
 
 sys.stdout.write('Procesing spectral shift')
 z_space, shifted_spectra_1, shifted_spectra_2, shift_1, shift_2 = shift_spectra(interpolated_spectra_1,
                                                                                 interpolated_spectra_2,
                                                                                 N_pad=100,
                                                                                 arguments=arguments)
-
+print(shift_1)
 sys.stdout.write('Computing dispersion')
 Pdispersion = compute_dispersion(interpolated_spectra_1,
                                  interpolated_spectra_2,
@@ -100,9 +111,9 @@ calib_dict = {"klinear":     list(x_new),
               "psf_kernel" : list(kernel)
               }
 
-pp.pprint(calib_dict)
+#pp.pprint(calib_dict)
 
-sys.stdout.write('Writting json file...')
+sys.stdout.write('Writting json file to {}...'.format(arguments.output_file))
 with open(arguments.output_file, 'w') as outfile:
     json.dump(calib_dict, outfile)
 

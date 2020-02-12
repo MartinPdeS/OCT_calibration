@@ -55,7 +55,7 @@ data = np.delete(data,tampon)
 
 Cscan_spectra = data.reshape(dim, order='C')
 
-print('############00')
+print('#######################')
 print(np.shape(Cscan_spectra))
 
 
@@ -63,12 +63,14 @@ Cscan_spectra = np.array(Cscan_spectra)
 
 calibration = load_calibration(dir = arguments.calibration_file)
 
-C_scan = process_Cscan(Cscan_spectra, calibration, arguments)
-
-sys.stdout.write('%%%%%%%%%%%__ saving into csv file__%%%%%%%%%%% \n shape of file : {0}'.format(np.shape(C_scan ) ) )
+C_scan = process_Cscan(Cscan_spectra, calibration, shift=-0.004, arguments=arguments)
 
 
-np.save('array', [C_scan])
+save_dir = p + 'array.npy'
+
+_Cscan = np.array(C_scan)
+sys.stdout.write(' saving into {0} file \n shape of file : {1}'.format(save_dir, np.shape(_Cscan ) ) )
+np.save('citrus_LP11', C_scan)
 
 
 

@@ -54,7 +54,7 @@ def shift_spectra(spectra1, spectra2, N_pad, arguments=None):
     ff1 = compressor(ff1)
     ff2 = compressor(ff2)
 
-    p0 = [10., 0., 1.]
+    p0 = [10., 0., 0.1]
 
     coeff1, var_matrix1 = curve_fit(gauss, z_space, ff1, p0=p0, maxfev = 20000)
     coeff2, var_matrix2 = curve_fit(gauss, z_space, ff2, p0=p0, maxfev = 20000)
@@ -78,6 +78,38 @@ def shift_spectra(spectra1, spectra2, N_pad, arguments=None):
     shifted_spectra2 = np.real( hilbert(spectra2) * np.exp(j * x * shift_2 ) )
 
     return z_space, shifted_spectra1, shifted_spectra2, shift_1, shift_2
+
+
+
+
+
+def shift_1_spectra(spectra, shift, arguments=None):
+    """ This method find the relative position of the FFT of the two spectras
+    in order to later k-linearize.
+
+    Args:
+        :param spectra1: OCT spectra of first mirror.
+        :type spectra1: list
+
+
+    Return:
+        :rname: Zspace: - pi to pi linear vector space
+        :rtype: list
+
+
+    """
+    L = len(spectra)
+    mean = np.max(spectra)
+    x = np.arange(L)
+    j = complex(0,1)
+
+    shifted_spectra = np.real( hilbert(spectra) * np.exp(j * x * shift ) )
+    shift_mean = np.max(shifted_spectra)
+    shifted_spectra = (shifted_spectra / shift_mean) * mean
+
+    return shifted_spectra
+
+
 
 
 def compute_dispersion(spectra1, spectra2, shift_1, shift_2, plot=True, arguments=None):

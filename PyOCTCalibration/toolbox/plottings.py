@@ -2,6 +2,8 @@
 '''_____Standard imports_____'''
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('qt4agg')
 from matplotlib.widgets import Slider, Button, RadioButtons, TextBox
 import matplotlib.gridspec as gridspec
 
@@ -622,6 +624,7 @@ class Lantern_Cscan_vizualiser(object):
         self.fig1 = fig1
         self.dCscan_LP01 = np.array(10*np.log(Cscan_LP01))
         self.dCscan_LP11 = np.array(10*np.log(Cscan_LP11))
+        #self.dCscan_LP11 = np.swapaxes(self.dCscan_LP11,1,2)
         self.arguments = arguments
 
 
@@ -739,6 +742,7 @@ class Lantern_Cscan_vizualiser(object):
         self.dBscan = self.dCscan_LP11[:,:,self.N_plot].T
 
 
+
         self.ax3 = self.fig.add_subplot(gs[4,0:5])
         self.l_hist = self.ax3.hist(self.dBscan.ravel(),256)
 
@@ -775,7 +779,8 @@ class Lantern_Cscan_vizualiser(object):
 
 
         self.ax1 = self.fig.add_subplot(gs[1:4,0:2])
-        self.l_LP01 = self.ax1.imshow(self.dBscan,
+        print(np.shape(self.dBscan))
+        self.l_LP01 = self.ax1.imshow(self.dBscan[:,:],
                                 cmap = "gray",
                                 vmin=None,
                                 vmax=None)
@@ -787,7 +792,7 @@ class Lantern_Cscan_vizualiser(object):
         self.ax1.set_title("Processed Bscan LP01")
 
         self.ax2 = self.fig.add_subplot(gs[1:4,2:4])
-        self.l_LP11 = self.ax2.imshow(self.dBscan,
+        self.l_LP11 = self.ax2.imshow(self.dBscan[:,:],
                                    cmap = "gray",
                                    vmin=None,
                                    vmax=None)
