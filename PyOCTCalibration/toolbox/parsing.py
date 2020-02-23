@@ -1,7 +1,7 @@
 
 '''_____Standard imports_____'''
 import argparse
-import sys
+import sys, os
 
 '''_____Project imports_____'''
 import toolbox.directories as directories
@@ -12,19 +12,18 @@ def Calibration_parse_arguments():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-id',
-                        '--input-file',
-                        help='Input calibration files directory',
+                        '--input-dir',
+                        help='Input calibration files directory [DIRECTORY]',
                         dest='input_dir',
                         type=str,
                         default= directories.calib + "spectra/" ,
                         required=False)
 
     parser.add_argument('-of',
-                        '--output-dir',
-                        help='Output calibration files directory',
-                        dest='output_dir',
-                        type=str,
-                        default='directories.calib + "calibration_parameters_"',
+                        '--output-file',
+                        help='Output calibration files directory [JSON]',
+                        dest='output_file',
+                        default=None,
                         required=False)
 
     parser.add_argument('-i',
@@ -37,31 +36,25 @@ def Calibration_parse_arguments():
 
     parser.add_argument('-d',
                         '--dispersion',
-                        help='Dispersion normal or anormal',
+                        help='Dispersion normal[1] or anormal[-1]',
                         dest='dispersion',
-                        type=str,
-                        default='pos',
+                        type=float,
+                        default=1,
                         required=False)
 
 
 
     arguments = parser.parse_args()
 
-    if arguments.dispersion == 'normal':
-        arguments.dispersion = 1
-    elif arguments.dispersion == 'anormal':
-        arguments.dispersion = -1
-    else:
+    if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
-
-    arguments.output_file = arguments.output_dir + ".json"
+    if arguments.output_file:
+        arguments.output_file = os.path.join(arguments.output_dir + ".json")
 
     arguments.input_dir = arguments.input_dir
 
     print(arguments.output_file)
-
-
 
     return arguments
 

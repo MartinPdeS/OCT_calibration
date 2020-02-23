@@ -2,6 +2,7 @@
 '''_____Standard imports_____'''
 import numpy as np
 import matplotlib.pyplot as plt
+import os, sys
 
 
 '''_____Add package_____'''
@@ -11,15 +12,14 @@ if p not in sys.path:
 
 
 '''_____Project imports_____'''
-from toolbox.Bscan_processing import process_Aline
+from toolbox.spectra_processing import process_Aline
 from toolbox.parsing import Aline_parse_arguments
 from toolbox.loadings import load_data, load_calibration
-
-dir = "data/mirror-.txt"
+from toolbox.plottings import dB_plot
 
 arguments = Aline_parse_arguments()
 
-spectra = load_data(dir)
+spectra = load_data(arguments.input_file)
 
 calibration = load_calibration(dir =  arguments.calibration_file)
 

@@ -56,25 +56,11 @@ dB_plot(data1=spectra2aline(interpolated_spectra_2),
         data2=spectra2aline(Mirror2.sub_raw),
         arguments=arguments)
 
-#fig = plt.figure()
-#ax1 = fig.add_subplot(121)
-#ax1.plot( spectra2aline(interpolated_spectra_1[::-1]) )
-#ax1.grid()
-
-#ax2 = fig.add_subplot(122)
-#ax2.plot(spectra2aline( shift_1_spectra(interpolated_spectra_1,-0.004)) )
-#ax2.grid()
-
-
-
-#plt.show()
-
 sys.stdout.write('Procesing spectral shift')
 z_space, shifted_spectra_1, shifted_spectra_2, shift_1, shift_2 = shift_spectra(interpolated_spectra_1,
                                                                                 interpolated_spectra_2,
                                                                                 N_pad=100,
                                                                                 arguments=arguments)
-print(shift_1)
 sys.stdout.write('Computing dispersion')
 Pdispersion = compute_dispersion(interpolated_spectra_1,
                                  interpolated_spectra_2,
@@ -110,12 +96,13 @@ calib_dict = {"klinear":     list(x_new),
               "peak_shift2": shift_2,
               "psf_kernel" : list(kernel)
               }
+if arguments.output_file:
+    sys.stdout.write('Writting json file to {}...'.format(arguments.output_file))
+    with open(arguments.output_file, 'w') as outfile:
+        json.dump(calib_dict, outfile)
+else:
+    sys.stdout.write('Calibration file not saved... no output file declared')
 
-#pp.pprint(calib_dict)
-
-sys.stdout.write('Writting json file to {}...'.format(arguments.output_file))
-with open(arguments.output_file, 'w') as outfile:
-    json.dump(calib_dict, outfile)
 
 
 
