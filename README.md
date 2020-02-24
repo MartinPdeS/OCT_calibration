@@ -63,7 +63,7 @@ In order to run a calibration example one can tape the following command on comm
 
 ```console
 
->>> python3 processing/calibration.py --dispersion=1 --input-dir = ../ --output-file=test.json
+>>> python3 processing/calibration.py --dispersion=1 --input-dir=./data/calibration/spectra/example/ --output-file=calib.json
 
 ```
 
@@ -71,10 +71,14 @@ Arguments for processing/calibration.py are:
 
 * --dispersion : [1] for normal dispersion, [-1] for anormal
 * --input-dir : directory of the input files for calibration
-* --output-file : directory for the output .json file containing all the calibration parameters
+* --output-file : name of the output .json file containing all the calibration parameters which is saved in same directory as input-dir
 
-Reference-style:
-![alt text][doc/images/Figure_1.png]
+Here an example of the output of the de-noising process.
+
+<img src="Figure_1.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+
 
 ### Aline
 
@@ -137,7 +141,9 @@ Here is an example of output give by:
 >>> python3 process_Bscan.py -f=cible_6 -d=-1
 
 ```
+## For citing this project in scientific papers
 
+<a href="https://zenodo.org/badge/latestdoi/188613450"><img src="https://zenodo.org/badge/188613450.svg" alt="DOI"></a>
 
 ## Pep8 coding convention
 
