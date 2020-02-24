@@ -73,6 +73,7 @@ Arguments for processing/calibration.py are:
 * --input-dir : directory of the input files for calibration
 * --output-file : directory for the output .json file containing all the calibration parameters
 
+Reference-style:
 ![alt text][doc/images/Figure_1.png]
 
 ### Aline
