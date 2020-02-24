@@ -50,20 +50,39 @@ The folder architecture is presented as :
 
 ## Run example
 
-In order to run example one can tape the following command on command prompt:
+### Calibration
+
+In order to run a calibration example one can tape the following command on command prompt:
 
 ```console
 
->>> python3 calibration.py --dispersion=normal --input-dir = ../ --output-file=test.json
->>> python process_Bscan --dispersion=normal --input-file=example
+>>> python3 processing/calibration.py --dispersion=1 --input-dir = ../ --output-file=test.json
 
 ```
 
-Arguments are:
+Arguments for processing/calibration.py are:
 
-..* Bullet --dispersion : [1] for normal dispersion, [-1] for anormal
-..* Bullet --input-dir : directory of the input files for calibration
-..* Bullet --output-file : directory for the output .json file containing all the calibration parameters
+* Bullet --dispersion : [1] for normal dispersion, [-1] for anormal
+* Bullet --input-dir : directory of the input files for calibration
+* Bullet --output-file : directory for the output .json file containing all the calibration parameters
+
+
+
+### Aline
+
+In order to process one example of Aline, one can tape the following command on command prompt:
+
+```console
+
+>>> python3 processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json
+
+```
+
+Arguments for processing/Aline.py are:
+
+* Bullet --dispersion : [1] for normal dispersion, [-1] for anormal
+* Bullet --input-file : directory of the input Aline file
+* Bullet --calibration : directory for the output .json file containing all the calibration parameters
 
 
 
