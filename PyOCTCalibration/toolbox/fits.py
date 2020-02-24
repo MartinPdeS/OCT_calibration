@@ -26,7 +26,7 @@ def fit_dispersion(Pdispersion):
     p0 = [0., 0., 0., 0., 0.]
     x = np.arange( len(Pdispersion) )
 
-    coeff, var_matrix = curve_fit(beta, x, Pdispersion, p0=p0, maxfev = 20000)
+    coeff, var_matrix = curve_fit(beta, x, Pdispersion, p0=p0, maxfev = 80000)
     B1, B2, B3, B4, B5 = coeff[0], coeff[1], coeff[2], coeff[3], coeff[4]
 
     sim_dispersion = B1 * x + B2 * x**2 + B3 * x**3 + B4 * x**4 + B5 * x**5

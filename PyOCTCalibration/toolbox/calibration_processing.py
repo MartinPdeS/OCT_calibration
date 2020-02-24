@@ -147,11 +147,8 @@ def compute_dispersion(spectra1, spectra2, shift_1, shift_2, plot=True, argument
 
     Pdispersion = fit_disp(x)
 
-    sim_dispersion = fit_dispersion(Pdispersion)
-
-
     if plot:
-        phase_dispersion_plot(Pdisp, sim_dispersion)
+        phase_dispersion_plot(Pdisp, Pdispersion)
 
 
     return Pdispersion
