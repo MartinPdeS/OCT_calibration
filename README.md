@@ -39,7 +39,7 @@ Using pip3 one can use the following commands:
 The folder architecture is presented as :
 
 ```
-    PyOCTCalibration/
+      src/
             - data/                         (contain all data)
                 - calibration/
                 - img/
@@ -63,11 +63,11 @@ In order to run a calibration example one can tape the following command on comm
 
 ```console
 
->>> python3 processing/calibration.py --dispersion=1 --input-dir=./data/calibration/spectra/example/ --output-file=calib.json
+>>> python3 src/processing/calibration.py --dispersion=1 --input-dir=./data/calibration/spectra/example/ --output-file=calib.json
 
 ```
 
-Arguments for processing/calibration.py are:
+Arguments for src/processing/calibration.py are:
 
 * --dispersion : [1] for normal dispersion, [-1] for anormal
 * --input-dir : directory of the input files for calibration
@@ -86,11 +86,11 @@ In order to process one example of Aline, one can tape the following command on 
 
 ```console
 
->>> python3 processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json
+>>> python3 src/processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json
 
 ```
 
-Arguments for processing/Aline.py are:
+Arguments for src/processing/Aline.py are:
 
 * --dispersion : [1] for normal dispersion, [-1] for anormal
 * --input-file : directory of the input Aline file
@@ -103,11 +103,11 @@ In order to process one example of Bscan, one can tape the following command on 
 
 ```console
 
->>> python3 processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
+>>> python3 src/processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
 
 ```
 
-Arguments for processing/Aline.py are:
+Arguments for src/processing/Aline.py are:
 
 * --dispersion : [1] for normal dispersion, [-1] for anormal
 * --input-file : directory of the input Aline file
@@ -122,11 +122,11 @@ In order to process one example of Aline, one can tape the following command on 
 
 ```console
 
->>> python3 processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
+>>> python3 src/processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
 
 ```
 
-Arguments for processing/Aline.py are:
+Arguments for src/processing/Aline.py are:
 
 * --dispersion : [1] for normal dispersion, [-1] for anormal
 * --input-file : directory of the input Aline file
