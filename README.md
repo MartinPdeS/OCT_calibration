@@ -75,8 +75,8 @@ Arguments for processing/calibration.py are:
 
 Here an example of the output of the de-noising process.
 
-<img src="./doc/images/Figure_1.png"
-     alt="Markdown Monster icon"
+<img src=".\doc\images\Figure_1.png"
+     alt="spectrum de-noising"
      style="float: left; margin-right: 10px;" />
 
 
