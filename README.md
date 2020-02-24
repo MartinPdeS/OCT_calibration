@@ -1,8 +1,15 @@
 # Py-OCT-Calibration
 
-This project aims to produce an easy to use tool to calibrate any SD or SS-OCT. By calibrate I mean substracting background - k-linearize spectra - evaluate and compensate dispersion.
+This project aims to produce an easy to use tool to calibrate any SD or SS-OCT. By calibrate I mean substracting background - k-linearize spectra - evaluate and compensate dispersion. In order to compute the calibration the algorithm need multiple measurements:
+* mirror1.txt         (OCT interferogram with mirror in one side of the zero delay as sample)
+* dark_sample.txt     (OCT interferogram with ref arm blocked)
+* mirror2.txt         (OCT interferogram with mirror in the other side of the zero delay as sample)
+* dark_ref.txt        (OCT interferogram with sample arm blocked)
+* dark_not.txt        (OCT interferogram with both arm blocked)
 
-## Packages depedencies
+Those .txt file should be saved into a file in data/spectra/<dir-name> directory.
+
+## Packages dependencies
 
 In order to use the Py-OCT-Calibration Library, one must have installed the following packages:
 
@@ -66,7 +73,7 @@ Arguments for processing/calibration.py are:
 * --input-dir : directory of the input files for calibration
 * --output-file : directory for the output .json file containing all the calibration parameters
 
-
+![alt text][doc/images/Figure_1.png]
 
 ### Aline
 
