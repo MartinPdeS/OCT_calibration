@@ -62,9 +62,9 @@ In order to run a calibration example one can tape the following command on comm
 
 Arguments for processing/calibration.py are:
 
-* Bullet --dispersion : [1] for normal dispersion, [-1] for anormal
-* Bullet --input-dir : directory of the input files for calibration
-* Bullet --output-file : directory for the output .json file containing all the calibration parameters
+* --dispersion : [1] for normal dispersion, [-1] for anormal
+* --input-dir : directory of the input files for calibration
+* --output-file : directory for the output .json file containing all the calibration parameters
 
 
 
@@ -80,10 +80,46 @@ In order to process one example of Aline, one can tape the following command on 
 
 Arguments for processing/Aline.py are:
 
-* Bullet --dispersion : [1] for normal dispersion, [-1] for anormal
-* Bullet --input-file : directory of the input Aline file
-* Bullet --calibration : directory for the output .json file containing all the calibration parameters
+* --dispersion : [1] for normal dispersion, [-1] for anormal
+* --input-file : directory of the input Aline file
+* --calibration : directory for the output .json file containing all the calibration parameters
+* --output-file : directory for the processed Aline file
 
+### Bscan
+
+In order to process one example of Bscan, one can tape the following command on command prompt:
+
+```console
+
+>>> python3 processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
+
+```
+
+Arguments for processing/Aline.py are:
+
+* --dispersion : [1] for normal dispersion, [-1] for anormal
+* --input-file : directory of the input Aline file
+* --calibration : directory for the output .json file containing all the calibration parameters
+* --output-file : directory for the processed Bscan file
+
+
+
+### Cscan
+
+In order to process one example of Aline, one can tape the following command on command prompt:
+
+```console
+
+>>> python3 processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
+
+```
+
+Arguments for processing/Aline.py are:
+
+* --dispersion : [1] for normal dispersion, [-1] for anormal
+* --input-file : directory of the input Aline file
+* --calibration : directory for the output .json file containing all the calibration parameters
+* --output-file : directory for the processed Cscan file
 
 
 Here is an example of output give by:
@@ -94,7 +130,6 @@ Here is an example of output give by:
 
 ```
 
-![Alt text](results/example.png?raw=true "Title")
 
 ## Pep8 coding convention
 
