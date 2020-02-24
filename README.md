@@ -32,16 +32,18 @@ Using pip3 one can use the following commands:
 The folder architecture is presented as :
 
 ```
-    OCT/
-        - dispersion/                   (contain the compiled code)
-            - .temporary_data/          (contain temporary json data from geometry and solver)
-            - calibration/              (this folder is to contain .png image for uploading index profil)
-            - results/                  (contain python classes and functions)
-            - toolbox/                  (contain files to actually run geometry, solver, and data collector)
-            - src/                      (contain Unittest for gitlab continous integration)
-            - Examples/                 (contain python code to run simulation)
+    PyOCTCalibration/
+            - data/                         (contain all data)
+                - calibration/
+                - img/
+            - processing/                
+                - calibration.py            (compute the k-linear., dispersion, spectrum shift, noise)
+                - Aline.py                  (process one Aline)
+                - Bscan.py                  (process one Bscan)
+                - Cscan.py                  (process one Cscan)
+            - toolbox/                      (contain tools to do all the processing)
 
-        - Doc/                          (contain documentation)
+            - Doc/                          (not yet added)
 
 ```
 
@@ -52,15 +54,16 @@ In order to run example one can tape the following command on command prompt:
 
 ```console
 
->>> python3 calibration.py --dispersion=normal
+>>> python3 calibration.py --dispersion=normal --input-dir = ../ --output-file=test.json
 >>> python process_Bscan --dispersion=normal --input-file=example
 
 ```
 
 Arguments are:
 
-Markup : * Bullet --dispersion : shows debug printout
-         * Bullet --input-file : print computed propagation modes
+..* Bullet --dispersion : [1] for normal dispersion, [-1] for anormal
+..* Bullet --input-dir : directory of the input files for calibration
+..* Bullet --output-file : directory for the output .json file containing all the calibration parameters
 
 
 
@@ -68,7 +71,7 @@ Here is an example of output give by:
 
 ```console
 
->>> python3 process_Bscan.py -f=cible_6 -d=anormal
+>>> python3 process_Bscan.py -f=cible_6 -d=-1
 
 ```
 
