@@ -39,21 +39,24 @@ Using pip3 one can use the following commands:
 The folder architecture is presented as :
 
 ```
-      src/
-            - data/                         (contain all data)
+    - data/                             (contain all data)
                 - calibration/
-                - img/
-            - processing/                
-                - calibration.py            (compute the k-linear., dispersion, spectrum shift, noise)
-                - Aline.py                  (process one Aline)
-                - Bscan.py                  (process one Bscan)
-                - Cscan.py                  (process one Cscan)
-            - toolbox/                      (contain tools to do all the processing)
+                - Aline/
+                - Bscan/
+                - Cscan/
+    - src/
+        - processing/                
+            - calibration.py            (compute the k-linear., dispersion, spectrum shift, noise)
+            - Aline.py                  (process one Aline)
+            - Bscan.py                  (process one Bscan)
+            - Cscan.py                  (process one Cscan)
+        - toolbox/                      (contain tools to do all the processing)
 
-            - Doc/                          (not yet added)
+        - Doc/                          (not yet fully developped)
+            - images/                   (images for README.md)
 
 ```
-
+Python init.py files are not depicted here.
 
 ## Run example
 
@@ -86,7 +89,7 @@ In order to process one example of Aline, one can tape the following command on 
 
 ```console
 
->>> python3 src/processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json
+>>> python3 src/processing/Aline.py --dispersion=1 --input-file = data/Aline/example.txt --calibration=calib.json
 
 ```
 
@@ -101,17 +104,18 @@ Arguments for src/processing/Aline.py are:
      alt="spectrum de-noising"
      style="float: left; margin-right: 10px;" />
 
+
 ### Bscan
 
 In order to process one example of Bscan, one can tape the following command on command prompt:
 
 ```console
 
->>> python3 src/processing/Aline.py --dispersion=1 --input-dir = data/Aline/example.txt --calibration=data/calibration/spectra/example/calib.json --output-file=...
+>>> python3 src/processing/Bscan.py --dispersion=1 --input-dir = data/Bscan/example.txt --calibration=data/calibration/spectra/example/calib.json --output-file=...
 
 ```
 
-Arguments for src/processing/Aline.py are:
+Arguments for src/processing/Bscan.py are:
 
 * --dispersion : [1] for normal dispersion, [-1] for anormal
 * --input-file : directory of the input Aline file
@@ -122,15 +126,15 @@ Arguments for src/processing/Aline.py are:
 
 ### Cscan
 
-In order to process one example of Aline, one can tape the following command on command prompt:
+In order to process one example of Cscan, one can tape the following command on command prompt:
 
 ```console
 
->>> python3 src/processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
+>>> python3 src/processing/Cscan.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
 
 ```
 
-Arguments for src/processing/Aline.py are:
+Arguments for src/processing/Cscan.py are:
 
 * --dispersion : [1] for normal dispersion, [-1] for anormal
 * --input-file : directory of the input Aline file
@@ -138,13 +142,6 @@ Arguments for src/processing/Aline.py are:
 * --output-file : directory for the processed Cscan file
 
 
-Here is an example of output give by:
-
-```console
-
->>> python3 process_Bscan.py -f=cible_6 -d=-1
-
-```
 ## For citing this project in scientific papers
 
 <a href="https://zenodo.org/badge/latestdoi/188613450"><img src="https://zenodo.org/badge/188613450.svg" alt="DOI"></a>
