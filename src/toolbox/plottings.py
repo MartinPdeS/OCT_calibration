@@ -8,8 +8,8 @@ from matplotlib.widgets import Slider, Button, RadioButtons, TextBox
 import matplotlib.gridspec as gridspec
 
 '''_____Project imports_____'''
-from toolbox.fits import gauss
-import toolbox.directories as directories
+from src.toolbox.fits import gauss
+import src.toolbox.directories as directories
 
 
 def dB_plot(data1, data2=None, arguments=None):

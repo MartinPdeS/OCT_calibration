@@ -14,11 +14,11 @@ if p not in sys.path:
     sys.path.append(p)
 
 '''_____Project imports_____'''
-from toolbox.parsing import Cscan_parse_arguments
-from toolbox.loadings import load_calibration
-from toolbox.spectra_processing import process_Cscan
-import toolbox.directories as directories
-from toolbox.spectra_processing import *
+from src.toolbox.parsing import Cscan_parse_arguments
+from src.toolbox.loadings import load_calibration
+from src.toolbox.spectra_processing import process_Cscan
+import src.toolbox.directories as directories
+from src.toolbox.spectra_processing import *
 
 
 arguments = Cscan_parse_arguments()

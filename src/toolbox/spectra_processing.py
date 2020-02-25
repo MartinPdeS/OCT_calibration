@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 import sys
 
 '''_____Project imports_____'''
-from toolbox.filters import butter_highpass_filter
-from toolbox.calibration_processing import linearize_spectra, compensate_dispersion
-from toolbox.maths import spectra2aline, hilbert
+from src.toolbox.filters import butter_highpass_filter
+from src.toolbox.calibration_processing import linearize_spectra, compensate_dispersion
+from src.toolbox.maths import spectra2aline, hilbert
 
 
 def process_Aline(spectra, calibration, shift, arguments):

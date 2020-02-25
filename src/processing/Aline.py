@@ -12,10 +12,10 @@ if p not in sys.path:
 
 
 '''_____Project imports_____'''
-from toolbox.spectra_processing import process_Aline
-from toolbox.parsing import Aline_parse_arguments
-from toolbox.loadings import load_data, load_calibration
-from toolbox.plottings import dB_plot
+from src.toolbox.spectra_processing import process_Aline
+from src.toolbox.parsing import Aline_parse_arguments
+from src.toolbox.loadings import load_data, load_calibration
+from src.toolbox.plottings import dB_plot
 
 arguments = Aline_parse_arguments()
 

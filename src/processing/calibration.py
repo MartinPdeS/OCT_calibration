@@ -16,13 +16,13 @@ if p not in sys.path:
 
 
 '''_____Project imports_____'''
-from toolbox.PySpectra import Spectra
-from toolbox.parsing import Calibration_parse_arguments
-from toolbox.calibration_processing import compute_dispersion, k_linearization, shift_spectra, compensate_dispersion, compute_PSF, shift_1_spectra
-from toolbox.loadings import load_data
-from toolbox.plottings import dB_plot
-from toolbox.maths import spectra2aline, apodization
-import toolbox.directories as directories
+from src.toolbox.PySpectra import Spectra
+from src.toolbox.parsing import Calibration_parse_arguments
+from src.toolbox.calibration_processing import compute_dispersion, k_linearization, shift_spectra, compensate_dispersion, compute_PSF, shift_1_spectra
+from src.toolbox.loadings import load_data
+from src.toolbox.plottings import dB_plot
+from src.toolbox.maths import spectra2aline, apodization
+import src.toolbox.directories as directories
 
 arguments = Calibration_parse_arguments()
 print(arguments.input_dir)

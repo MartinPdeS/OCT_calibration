@@ -103,7 +103,7 @@ In order to process one example of Bscan, one can tape the following command on 
 
 ```console
 
->>> python3 src/processing/Aline.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
+>>> python3 src/processing/Aline.py --dispersion=1 --input-dir = data/Aline/example.txt --calibration=data/calibration/spectra/example/calib.json --output-file=...
 
 ```
 

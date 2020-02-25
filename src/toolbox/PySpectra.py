@@ -4,10 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 '''_____Project imports_____'''
-from toolbox.maths import unwrap_phase
-from toolbox.loadings import load_data
-from toolbox.filters import butter_highpass_filter
-from toolbox.plottings import plots_signals
+from src.toolbox.maths import unwrap_phase
+from src.toolbox.loadings import load_data
+from src.toolbox.filters import butter_highpass_filter
+from src.toolbox.plottings import plots_signals
 
 
 class Spectra(object):
@@ -55,7 +55,7 @@ class Spectra(object):
         """
 
         self.sub_raw = self.raw
-        
+
         if self.background_dir:
             self.background = load_data(self.background_dir)
             self.sub_raw += self.background

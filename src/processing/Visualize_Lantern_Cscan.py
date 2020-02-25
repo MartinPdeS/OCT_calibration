@@ -11,10 +11,10 @@ if p not in sys.path:
     sys.path.append(p)
 
 '''_____Project imports_____'''
-from toolbox.parsing import Bscan_parse_arguments
-from toolbox.loadings import load_Bscan_spectra, load_calibration
-from toolbox.plottings import Lantern_Cscan_vizualiser
-import toolbox.directories as directories
+from src.toolbox.parsing import Bscan_parse_arguments
+from src.toolbox.loadings import load_Bscan_spectra, load_calibration
+from src.toolbox.plottings import Lantern_Cscan_vizualiser
+import src.toolbox.directories as directories
 
 data = np.load('citrus_LP11.npy')
 print(np.shape(data))
