@@ -52,9 +52,6 @@ def Calibration_parse_arguments():
     if arguments.output_file:
         arguments.output_file = os.path.join(arguments.output_dir + ".json")
 
-    arguments.input_dir = arguments.input_dir
-
-    print(arguments.output_file)
 
     return arguments
 
@@ -81,25 +78,19 @@ def Aline_parse_arguments():
 
     parser.add_argument('-d',
                         '--dispersion',
-                        help='Dispersion normal or anormal',
+                        help='Dispersion normal[1] or anormal[-1]',
                         dest='dispersion',
-                        type=str,
-                        default='pos',
+                        type=float,
+                        default=1,
                         required=False)
 
 
 
     arguments = parser.parse_args()
 
-    if arguments.dispersion == 'normal':
-        arguments.dispersion = 1
-    elif arguments.dispersion == 'anormal':
-        arguments.dispersion = -1
-    else:
+    if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
-
-    arguments.calibration_file = directories.calib + arguments.calibration_file
 
     return arguments
 
@@ -134,21 +125,17 @@ def Bscan_parse_arguments():
 
     parser.add_argument('-d',
                         '--dispersion',
-                        help='Dispersion normal or anormal',
+                        help='Dispersion normal[1] or anormal[-1]',
                         dest='dispersion',
-                        type=str,
-                        default='pos',
+                        type=float,
+                        default=1,
                         required=False)
 
 
 
     arguments = parser.parse_args()
 
-    if arguments.dispersion == 'normal':
-        arguments.dispersion = 1
-    elif arguments.dispersion == 'anormal':
-        arguments.dispersion = -1
-    else:
+    if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
 
@@ -194,21 +181,17 @@ def Cscan_parse_arguments():
 
     parser.add_argument('-d',
                         '--dispersion',
-                        help='Dispersion normal or anormal',
+                        help='Dispersion normal[1] or anormal[-1]',
                         dest='dispersion',
-                        type=str,
-                        default='pos',
+                        type=float,
+                        default=1,
                         required=False)
 
 
 
     arguments = parser.parse_args()
 
-    if arguments.dispersion == 'normal':
-        arguments.dispersion = 1
-    elif arguments.dispersion == 'anormal':
-        arguments.dispersion = -1
-    else:
+    if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
 

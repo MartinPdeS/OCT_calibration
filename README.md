@@ -97,6 +97,10 @@ Arguments for src/processing/Aline.py are:
 * --calibration : directory for the output .json file containing all the calibration parameters
 * --output-file : directory for the processed Aline file
 
+<img src=".\doc\images\Figure_2.png"
+     alt="spectrum de-noising"
+     style="float: left; margin-right: 10px;" />
+
 ### Bscan
 
 In order to process one example of Bscan, one can tape the following command on command prompt:
