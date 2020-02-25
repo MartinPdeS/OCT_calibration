@@ -25,7 +25,7 @@ from src.toolbox.spectra_processing import process_Bscan, denoise_Bscan
 
 arguments = Bscan_parse_arguments()
 
-dimension = (1, 1049,1024)
+dimension = (1,3147,1024)
 
 Bscan_spectra = load_Bscan_spectra(arguments.input_file, dimension = dimension)
 

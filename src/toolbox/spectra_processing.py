@@ -45,7 +45,13 @@ def process_Bscan(Spectra, calibration, shift=0, arguments=None):
 
     Bscan = np.array(Bscan)
 
-    return Bscan
+    temp = np.fft.fftshift(np.fft.fft2(Bscan))
+    mid = np.shape(temp)[0]//2
+    print(mid)
+    temp[mid-10:mid+10,:]=0
+    temp = np.fft.fft2(temp)
+
+    return np.abs(temp[:,::-1])
 
 
 def denoise_Bscan(Bscan):

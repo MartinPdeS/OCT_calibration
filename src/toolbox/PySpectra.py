@@ -28,15 +28,10 @@ class Spectra(object):
         dark_sample.
 
         """
+
         self.raw = []
 
-        file = open(self.data_dir,'r')
-
-        for line in file:
-
-            self.raw.append(float(line))
-
-        self.raw = np.array(self.raw)
+        self.raw = np.load(self.data_dir)
 
 
     def get_phase(self):
@@ -55,6 +50,7 @@ class Spectra(object):
         """
 
         self.sub_raw = self.raw
+
 
         if self.background_dir:
             self.background = load_data(self.background_dir)

@@ -3,38 +3,21 @@
 import numpy as np
 import json
 
-def load_data(dir):
+def load_data(dir, type=float):
 
     data = []
-    file = open(dir,'r')
-    for line in file:
-        data.append(float(line))
+
+    data = np.load(dir)
+
     return data
 
 
-def load_Bscan_spectra(file_dir, block_start=276, dimension=(1,1049,1024)):
+def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):
 
-    data = np.fromfile(file_dir, dtype = np.uint16)
+    data = np.load(file_dir)
+    data = np.reshape(data, dimension)
 
-    header_size = 276
-    foot_size = 4096
-    buffer_size = 19
-
-    data = data[header_size:]
-    data = data[:-foot_size]
-
-    begin = 0
-    end = 1024*1049
-
-    tmp = []
-
-    for iter in range(dimension[0]):
-        print(data[begin:end])
-        tmp.append( np.reshape( data[begin:end],[1049,1024] ) )
-        begin = end + 20
-        end = begin + 1024*1049
-
-    return tmp
+    return data
 
 
 def load_calibration(dir=None):

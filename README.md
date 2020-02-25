@@ -122,6 +122,9 @@ Arguments for src/processing/Bscan.py are:
 * --calibration : directory for the output .json file containing all the calibration parameters
 * --output-file : directory for the processed Bscan file
 
+<img src=".\doc\images\Figure_3.png"
+     alt="spectrum de-noising"
+     style="float: left; margin-right: 10px;" />
 
 
 ### Cscan

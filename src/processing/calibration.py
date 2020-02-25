@@ -26,18 +26,18 @@ import src.toolbox.directories as directories
 
 arguments = Calibration_parse_arguments()
 print(arguments.input_dir)
-Mirror1 = Spectra(data_dir      = arguments.input_dir + "mirror1.txt",
-                  background_dir= arguments.input_dir + "dark_not.txt",
-                  sample_dir    = arguments.input_dir + "dark_sample1.txt",
-                  ref_dir       = arguments.input_dir + "dark_ref.txt")
+Mirror1 = Spectra(data_dir      = arguments.input_dir + "mirror1.npy",
+                  background_dir= arguments.input_dir + "dark_not.npy",
+                  sample_dir    = arguments.input_dir + "dark_sample1.npy",
+                  ref_dir       = arguments.input_dir + "dark_ref.npy")
 
 Mirror1.load_data()
 Mirror1.process_data()
 
-Mirror2 = Spectra(data_dir       = arguments.input_dir + "mirror2.txt",
-                  background_dir = arguments.input_dir + "dark_not.txt",
-                  sample_dir     = arguments.input_dir + "dark_sample2.txt",
-                  ref_dir        = arguments.input_dir + "dark_ref.txt")
+Mirror2 = Spectra(data_dir       = arguments.input_dir + "mirror2.npy",
+                  background_dir = arguments.input_dir + "dark_not.npy",
+                  sample_dir     = arguments.input_dir + "dark_sample2.npy",
+                  ref_dir        = arguments.input_dir + "dark_ref.npy")
 
 Mirror2.load_data()
 Mirror2.process_data()
@@ -89,15 +89,15 @@ dB_plot(data1=spectra2aline(compensated_spectra_2),
 
 calib_dict = {"klinear":     list(x_new),
               "dispersion":  list(Pdispersion),
-              "dark_not":    load_data(arguments.input_dir + "dark_not.txt"),
-              "dark_ref":    load_data(arguments.input_dir + "dark_ref.txt"),
-              "dark_sample": load_data(arguments.input_dir + "dark_sample1.txt"),
+              "dark_not":    str(load_data(arguments.input_dir + "dark_not.npy")),
+              "dark_ref":    str(load_data(arguments.input_dir + "dark_ref.npy")),
+              "dark_sample": str(load_data(arguments.input_dir + "dark_sample1.npy")),
               "peak_shift1": shift_1,
               "peak_shift2": shift_2,
               "psf_kernel" : list(kernel)
               }
 if arguments.output_file:
-    sys.stdout.write('Writting json file to {}...'.format(arguments.output_file))
+    sys.stdout.write('Writting json file to {0}...'.format(arguments.output_file))
     with open(arguments.output_file, 'w') as outfile:
         json.dump(calib_dict, outfile)
 else:
