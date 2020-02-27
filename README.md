@@ -111,14 +111,14 @@ In order to process one example of Bscan, one can tape the following command on 
 
 ```console
 
->>> python3 src/processing/Bscan.py --dispersion=1 --input-dir = data/Bscan/example.txt --calibration=data/calibration/spectra/example/calib.json --output-file=...
+>>> python3 src/processing/Bscan.py --dispersion=1 --input-dir = data/Bscan/example.npy --calibration=data/calibration/spectra/example/calib.json --output-file=...
 
 ```
 
 Arguments for src/processing/Bscan.py are:
 
 * --dispersion : [1] for normal dispersion, [-1] for anormal
-* --input-file : directory of the input Aline file
+* --input-file : directory of the input Bscan file
 * --calibration : directory for the output .json file containing all the calibration parameters
 * --output-file : directory for the processed Bscan file
 

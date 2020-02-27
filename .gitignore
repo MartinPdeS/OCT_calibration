@@ -38,3 +38,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Files too large #
+##################
+data/Cscan/*
