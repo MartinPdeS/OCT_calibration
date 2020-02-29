@@ -230,7 +230,6 @@ def linearize_spectra(spectra, x_klinear):
 
     interpolation = interp1d(x, spectra, kind='cubic')
 
-
     klinear_spectra = interpolation(x_klinear[:-5])
 
     return klinear_spectra

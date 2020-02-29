@@ -148,10 +148,10 @@ def Cscan_parse_arguments():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-if',
-                        '--input-file',
-                        help='Input .Raw Cscan file',
-                        dest='input_file',
+    parser.add_argument('-id',
+                        '--input-directory',
+                        help='Input .npy Cscan file',
+                        dest='input_directory',
                         type=str,
                         default='test.raw',
                         required=False)
@@ -188,15 +188,6 @@ def Cscan_parse_arguments():
     if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
-
-    arguments.calibration_file = directories.calib + arguments.calibration_file
-    arguments.output_file = directories.csv + arguments.output_file
-
-
-    if ".raw" in arguments.input_file:
-        arguments.input_file = directories.raw + arguments.input_file
-    if ".img" in arguments.input_file:
-        arguments.input_file = directories.img + arguments.input_file
 
 
     return arguments

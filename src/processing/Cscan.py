@@ -23,54 +23,40 @@ from src.toolbox.spectra_processing import *
 
 arguments = Cscan_parse_arguments()
 
-raw_data = np.fromfile(arguments.input_file, dtype = np.uint16)
-
-print(np.shape(raw_data))
-
-start_block = 276
-end_block = 4096
-tampon_block = 20
-Spectrum_block = 1024
-Bscan_block = 512 + 25
-Cscan_block = 512
-
-dim = (Cscan_block, Bscan_block, Spectrum_block)
-
-
-
-
-
-
-
-data = raw_data[start_block:-end_block]
-
-tampon = []
-for i in range(1, Cscan_block):
-    tampon_start = Spectrum_block * Bscan_block* i + tampon_block * (i-1)
-    tampon_end = tampon_start + tampon_block
-    tampon = tampon + list(range(tampon_start, tampon_end))
-
-data = np.delete(data,tampon)
-
-
-Cscan_spectra = data.reshape(dim, order='C')
-
-print('#######################')
-print(np.shape(Cscan_spectra))
-
-
-Cscan_spectra = np.array(Cscan_spectra)
+dimension = (1,537,1024)
 
 calibration = load_calibration(dir = arguments.calibration_file)
 
-C_scan = process_Cscan(Cscan_spectra, calibration, shift=-0.004, arguments=arguments)
+Bscan_list = os.listdir(arguments.input_directory)
+
+Bscan_list = [os.path.join(arguments.input_directory, s) for s in Bscan_list]
+
+Cscan = []
+
+print(np.shape(Bscan_list))
+
+for n_i, Bscan in enumerate(Bscan_list):
+
+    sys.stdout.write('Bscan processing ... [{0}/{1}] \n'.format(n_i, len(Bscan_list) ) )
+
+
+
+    raw_Bscan = np.load(Bscan)
+
+    raw_Bscan = np.reshape(raw_Bscan, dimension)
+
+    Bscan = process_Bscan(raw_Bscan[0], calibration, shift=0, arguments=arguments)
+
+    #Bscan = denoise_Bscan(Bscan)
+
+    Cscan.append(Bscan)
 
 
 save_dir = p + 'array.npy'
 
-_Cscan = np.array(C_scan)
-sys.stdout.write(' saving into {0} file \n shape of file : {1}'.format(save_dir, np.shape(_Cscan ) ) )
-np.save('citrus_LP11', C_scan)
+
+#sys.stdout.write(' saving into {0} file \n shape of file : {1}'.format(save_dir, np.shape(Cscan ) ) )
+np.save('citrus_LP01', Cscan)
 
 
 
