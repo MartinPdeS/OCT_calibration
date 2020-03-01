@@ -33,13 +33,9 @@ Bscan_list = [os.path.join(arguments.input_directory, s) for s in Bscan_list]
 
 Cscan = []
 
-print(np.shape(Bscan_list))
-
 for n_i, Bscan in enumerate(Bscan_list):
 
     sys.stdout.write('Bscan processing ... [{0}/{1}] \n'.format(n_i, len(Bscan_list) ) )
-
-
 
     raw_Bscan = np.load(Bscan)
 
@@ -51,12 +47,9 @@ for n_i, Bscan in enumerate(Bscan_list):
 
     Cscan.append(Bscan)
 
+sys.stdout.write(' saving into {0} file \n shape of file : {1}'.format(arguments.output_file, str( np.shape( Cscan ) ) ) )
 
-save_dir = p + 'array.npy'
-
-
-#sys.stdout.write(' saving into {0} file \n shape of file : {1}'.format(save_dir, np.shape(Cscan ) ) )
-np.save('citrus_LP01', Cscan)
+np.save(arguments.output_file, Cscan)
 
 
 

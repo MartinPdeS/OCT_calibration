@@ -23,7 +23,7 @@ def convert_calib_files(dir):
 #dir0 = "data/Bscan/example.data"
 #dir1 = "data/Bscan/example.npy"
 
-input_path = "data/Cscan/LP01"
+input_path = "data/Cscan/LP11"
 file_list = os.listdir(input_path)
 
 for n_i, input_file_name in enumerate(file_list):

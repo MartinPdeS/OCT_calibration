@@ -96,10 +96,10 @@ class Ui_MainWindow(object):
         self.LP11_widget.ax.clear()
         self.widget_ratio.ax.clear()
 
-        frame_number = 300
+        frame_number = 400
 
-        LP01_data = self.LP01_Cscan[:,:,frame_number]
-        LP11_data = self.LP11_Cscan[:,:,frame_number+50]
+        LP01_data = np.log(self.LP01_Cscan[:,:,frame_number])
+        LP11_data = np.log(self.LP11_Cscan[:,:,frame_number])
         ratio_data = LP01_data - LP11_data
 
         self.LP01_widget.ax.imshow(LP01_data, cmap='gray')
@@ -121,7 +121,6 @@ class Ui_MainWindow(object):
                                 density=1
                                 )
 
-
         self.histo_LP11.ax.hist(LP11_data.ravel(),
                                 bins=255,
                                 orientation='horizontal',
@@ -135,9 +134,9 @@ class Ui_MainWindow(object):
                                 )
 
 
-        self.histo_LP01.ax.set_ylim([0, LP01_data.max()])
-        self.histo_LP11.ax.set_ylim([0, LP11_data.max()])
-        self.histo_ratio.ax.set_ylim([0, ratio_data.max()])
+        self.histo_LP01.ax.set_ylim([LP01_data.min(), LP01_data.max()])
+        self.histo_LP11.ax.set_ylim([LP11_data.min(), LP11_data.max()])
+        self.histo_ratio.ax.set_ylim([ratio_data.min(), ratio_data.max()])
 
         self.LP01_widget.show()
         self.LP11_widget.show()
