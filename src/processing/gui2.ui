@@ -24,6 +24,7 @@
      </rect>
     </property>
    </widget>
+
    <widget class="QPushButton" name="Update_button">
     <property name="geometry">
      <rect>
@@ -44,6 +45,53 @@
      <string>update</string>
     </property>
    </widget>
+
+
+   <widget class="QPushButton" name="Update_Vmin_button">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>310</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>update_Vmin</string>
+    </property>
+   </widget>
+
+
+   <widget class="QPushButton" name="Update_Vmax_button">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>430</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>update_Vmax</string>
+    </property>
+   </widget>
+
+
+
    <widget class="Canvas" name="LP11_widget" native="true">
     <property name="geometry">
      <rect>

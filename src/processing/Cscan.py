@@ -23,7 +23,7 @@ from src.toolbox.spectra_processing import *
 
 arguments = Cscan_parse_arguments()
 
-dimension = (1,537,1024)
+dimension = (1,512,1024)
 
 calibration = load_calibration(dir = arguments.calibration_file)
 

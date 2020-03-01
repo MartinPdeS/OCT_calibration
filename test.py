@@ -18,19 +18,18 @@ def convert_calib_files(dir):
     plt.show()
 
 
+def pre_process_data(input_path, dimension=[537,1024]):
+    file_list = os.listdir(input_path)
+
+    for n_i, input_file_name in enumerate(file_list):
+        input_file = os.path.join(input_path, input_file_name)
+        output_file = os.path.join(input_path, str(n_i) )
+        data = np.fromfile(input_file, dtype=np.float32)#.reshape([537,1024])
+        plt.plot(data[-50000:])
+        plt.show()
+        data = data[25:,:].ravel()
+        #np.save(output_file, np.array(data))
 
 
-#dir0 = "data/Bscan/example.data"
-#dir1 = "data/Bscan/example.npy"
-
-input_path = "data/Cscan/LP11"
-file_list = os.listdir(input_path)
-
-for n_i, input_file_name in enumerate(file_list):
-    input_file = os.path.join(input_path, input_file_name)
-    output_file = os.path.join(input_path, str(n_i) )
-    data = np.fromfile(input_file, dtype=np.float32)
-    np.save(output_file, np.array(data))
-
-#data = np.fromfile(dir0,dtype="float32")
-#np.save(dir1, data)
+if __name__ == "__main__":
+    pre_process_data("data/Cscan/LP01")

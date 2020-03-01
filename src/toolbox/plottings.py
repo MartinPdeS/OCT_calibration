@@ -713,7 +713,6 @@ class Lantern_Cscan_vizualiser(object):
 
         self.normalize_image()
 
-
         self.l_LP01.set_data(self.dBscan)
         self.l_LP11.set_data(self.dBscan)
 
