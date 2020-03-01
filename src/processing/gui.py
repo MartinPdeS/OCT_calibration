@@ -18,7 +18,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
-        self.csvbutton.clicked.connect(self.plot)
+        self.update_button.clicked.connect(self.set_plot)
 
 
     def load_data(self):
@@ -28,21 +28,24 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def update(self):
 
-        #self.canvas.figure.cla()  # clear the axes content
-        self.ax_LP01.imshow(self.Cscan[:,:,4],cmap='gray')
-        self.canvas.figure.draw_idle()  # actually draw the new content
+        self.ax_LP01.clear()
+        self.ax_LP11.clear()
+        self.ax_LP01.imshow(self.Cscan[:,:,40],cmap='gray')
+        self.ax_LP11.imshow(self.Cscan[:,:,40],cmap='gray')
+        self.ax_LP01.axis('off')
+        self.ax_LP11.axis('off')
+        self.ax_LP11.set_title('LP11 en-face')
+        self.ax_LP01.set_title('LP01 en-face')
+        #self.fig.canvas.draw_idle()  # actually draw the new content
 
 
-    def plot(self):
+    def set_plot(self):
 
         self.ax_LP01 = self.canvas.figure.add_subplot(121)
-        self.ax_LP01.set_title('LP01 en-face')
 
         self.ax_LP11 = self.canvas.figure.add_subplot(122)
-        self.ax_LP11.set_title('LP11 en-face')
 
-        self.ax_LP01.imshow(self.Cscan[:,:,350],cmap='gray')
-        self.ax_LP11.imshow(self.Cscan[:,:,350], cmap='gray')
+
         self.canvas.draw()
 
 
@@ -52,6 +55,6 @@ if __name__ == "__main__":
     window = MyApp()
     window.show()
     window.load_data()
-    window.plot()
+    window.set_plot()
     window.update()
     sys.exit(app.exec_())

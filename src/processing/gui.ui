@@ -13,8 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="csvbutton">
+   <widget class="QPushButton" name="update_button">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -24,7 +25,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>csvbutton</string>
+     <string>update</string>
     </property>
    </widget>
    <widget class="Canvas" name="canvas" native="true">
