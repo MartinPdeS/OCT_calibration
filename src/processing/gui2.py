@@ -9,9 +9,12 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import numpy as np
+from functools import partial
 
 class Ui_MainWindow(object):
+
     def setupUi(self, MainWindow):
+        self.frame_number = 400
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(914, 602)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -39,6 +42,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.Next_button.setFont(font)
         self.Next_button.setObjectName("Next_button")
+        self.Next_button.clicked.connect(self.Next)
         self.Previous_button = QtWidgets.QPushButton(self.centralwidget)
         self.Previous_button.setGeometry(QtCore.QRect(460, 500, 93, 28))
         font = QtGui.QFont()
@@ -47,6 +51,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.Previous_button.setFont(font)
         self.Previous_button.setObjectName("Previous_button")
+        self.Previous_button.clicked.connect(self.Previous)
         self.widget_ratio = Canvas(self.centralwidget)
         self.widget_ratio.setGeometry(QtCore.QRect(460, 10, 251, 251))
         self.widget_ratio.setObjectName("widget_ratio")
@@ -83,20 +88,35 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
     def load_data(self):
-        dir_LP01 = "citrus_LP01.npy"
-        dir_LP11 = "citrus_LP11.npy"
+        dir_LP01 = "citrus_bis_LP01.npy"
+        dir_LP11 = "citrus_bis_LP11.npy"
         self.LP01_Cscan = np.load(dir_LP01)
         self.LP11_Cscan = np.load(dir_LP11)
 
 
+    def Next(self):
+        self.frame_number += 1
+        self.update()
+
+
+    def Previous(self):
+        self.frame_number -= 1
+        self.update()
+
+
     def update(self, frame_number=0):
+        frame_number = self.frame_number
+        print(frame_number)
 
         self.LP01_widget.ax.clear()
         self.LP11_widget.ax.clear()
         self.widget_ratio.ax.clear()
 
-        frame_number = 400
+        self.histo_LP01.ax.clear()
+        self.histo_LP11.ax.clear()
+        self.histo_ratio.ax.clear()
 
         LP01_data = np.log(self.LP01_Cscan[:,:,frame_number])
         LP11_data = np.log(self.LP11_Cscan[:,:,frame_number])
@@ -138,9 +158,12 @@ class Ui_MainWindow(object):
         self.histo_LP11.ax.set_ylim([LP11_data.min(), LP11_data.max()])
         self.histo_ratio.ax.set_ylim([ratio_data.min(), ratio_data.max()])
 
-        self.LP01_widget.show()
-        self.LP11_widget.show()
-        self.histo_LP01.show()
+        self.LP01_widget.draw()
+        self.LP11_widget.draw()
+        self.widget_ratio.draw()
+        self.histo_LP01.draw()
+        self.histo_LP11.draw()
+        self.histo_ratio.draw()
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
