@@ -29,6 +29,7 @@
 *.sql
 *.sqlite
 
+
 # OS generated files #
 ######################
 .DS_Store
@@ -39,6 +40,14 @@
 ehthumbs.db
 Thumbs.db
 
+
 # Files too large #
 ##################
 data/Cscan/*
+
+
+# Future files #
+###############
+src/processing/segmentation.py
+src/processing/gui.py
+src/processing/gui.ui

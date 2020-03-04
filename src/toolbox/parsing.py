@@ -193,7 +193,20 @@ def Cscan_parse_arguments():
     return arguments
 
 
+def Post_processing_parse_arguments():
 
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('-if',
+                        '--input-file',
+                        help='Input Cscan file [FILE]',
+                        dest='input_file',
+                        type=str,
+                        default= None ,
+                        required=False)
+
+
+    return parser.parse_args()
 
 
 
