@@ -36,24 +36,25 @@ def process_Aline(spectra, calibration, shift, arguments):
     return Aline
 
 
-def process_Bscan(Spectra, calibration, shift=0, arguments=None):
+def process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
 
     Bscan = []
 
-    for i, spectra in enumerate(Spectra):
+    for i, spectrum in enumerate(Bscan_spectra):
 
-        Aline = process_Aline(spectra, calibration, shift=shift, arguments=arguments)
+        Aline = process_Aline(spectrum, calibration, shift=shift, arguments=arguments)
 
         Bscan.append(Aline)
 
     Bscan = np.array(Bscan)
 
-    temp = np.fft.fftshift(np.fft.fft2(Bscan))
-    mid = np.shape(temp)[0]//2
-    temp[mid-10:mid+10,:]=0
-    temp = np.fft.fft2(temp)
+    #temp = np.fft.fftshift(np.fft.fft2(Bscan))
+    #mid = np.shape(temp)[0]//2
+    #temp[mid-10:mid+10,:]=0
+    #temp = np.fft.fft2(temp)
 
-    return np.abs(temp[:,::-1])
+    #return np.abs(temp[:,::-1])
+    return Bscan
 
 
 def denoise_Bscan(Bscan):

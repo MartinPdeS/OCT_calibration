@@ -182,6 +182,15 @@ def Cscan_parse_arguments():
                         required=False)
 
 
+    parser.add_argument('-dim',
+                        '--dimension',
+                        help='Dimension of array',
+                        dest='dimension',
+                        type=int,
+                        default=None,
+                        required=True)
+
+
 
     arguments = parser.parse_args()
 

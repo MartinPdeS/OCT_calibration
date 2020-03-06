@@ -46,6 +46,11 @@ Thumbs.db
 data/Cscan/*
 
 
+# perso files #
+###############
+src/proccessing/_*
+
+
 # Future files #
 ###############
 src/processing/segmentation.py

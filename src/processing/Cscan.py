@@ -3,9 +3,8 @@
 import numpy as np
 import json
 import os
-import matplotlib.pyplot as plt
 import sys
-from pandas import DataFrame
+import scipy
 
 
 '''_____Add package_____'''
@@ -23,7 +22,7 @@ from src.toolbox.spectra_processing import *
 
 arguments = Cscan_parse_arguments()
 
-dimension = (1,1024,1024)
+dimension = (1,arguments.dimension,1024)
 
 calibration = load_calibration(dir = arguments.calibration_file)
 
@@ -33,19 +32,19 @@ Bscan_list = [os.path.join(arguments.input_directory, s) for s in Bscan_list]
 
 Cscan = []
 
-for n_i, Bscan in enumerate(Bscan_list):
+for n_i, Bscan_spectra in enumerate(Bscan_list):
 
     sys.stdout.write('Bscan processing ... [{0}/{1}] \n'.format(n_i, len(Bscan_list) ) )
 
-    raw_Bscan = np.load(Bscan)
+    raw_Bscan_spectra = np.load(Bscan_spectra)
 
-    raw_Bscan = np.reshape(raw_Bscan, dimension)
-
-    Bscan = process_Bscan(raw_Bscan[0], calibration, shift=0, arguments=arguments)
+    Bscan = process_Bscan(raw_Bscan_spectra, calibration, shift=0, arguments=arguments)
 
     #Bscan = denoise_Bscan(Bscan)
 
     Cscan.append(Bscan)
+
+Cscan = scipy.signal.detrend(Cscan, axis=0)
 
 sys.stdout.write(' saving into {0} file \n shape of file : {1}'.format(arguments.output_file, str( np.shape( Cscan ) ) ) )
 
