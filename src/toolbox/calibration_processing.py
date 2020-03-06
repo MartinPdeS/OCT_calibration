@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from numpy import inf
 from scipy.interpolate import interp1d
+from numba import jit
 
 '''_____Project imports_____'''
 from src.toolbox.plottings import interactive_shift, phase_dispersion_plot, plot_klinearization, dB_plot
@@ -230,7 +231,7 @@ def linearize_spectra(spectra, x_klinear):
 
     interpolation = interp1d(x, spectra, kind='cubic')
 
-    klinear_spectra = interpolation(x_klinear[:-5])
+    klinear_spectra = interpolation(x_klinear[:])
 
     return klinear_spectra
 

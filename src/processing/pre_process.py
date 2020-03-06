@@ -18,7 +18,7 @@ def convert_calib_files(dir):
     plt.show()
 
 
-def pre_process_data(input_path, dimension=[537,1024]):
+def pre_process_data(input_path, dimension=[1049,1024]):
     file_list = os.listdir(input_path)
 
     for n_i, input_file_name in enumerate(file_list):
@@ -27,9 +27,8 @@ def pre_process_data(input_path, dimension=[537,1024]):
         input_file = os.path.join(input_path, input_file_name)
         output_file = os.path.join(input_path, str(n_i) )
         data = np.fromfile(input_file, dtype=np.float32)#.reshape([537,1024])
-        #plt.plot(data[-50000:])
-        #plt.show()
-        #data = data[25:,:].ravel()
+        data = data.reshape([1049,1024])
+        data = data[25:,:]
         np.save(output_file, np.array(data))
 
 

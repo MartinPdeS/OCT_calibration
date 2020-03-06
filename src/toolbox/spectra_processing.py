@@ -5,6 +5,9 @@ import json
 import scipy.fftpack as fp
 import matplotlib.pyplot as plt
 import sys
+import sys
+import numba
+from numba import jit
 
 '''_____Project imports_____'''
 from src.toolbox.filters import butter_highpass_filter

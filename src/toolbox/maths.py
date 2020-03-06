@@ -2,13 +2,15 @@
 
 '''_____Standard imports_____'''
 import numpy as np
-
+import numba
+from numba import jit
 
 
 def hilbert(data):
-    tmp = np.fft.fft(data)
+    tmp = np.fft.fft(np.array(data))
     tmp[0: len(tmp)//2] = 0
     return np.fft.fft(tmp)
+
 
 def unwrap_phase(spectra):
 
@@ -20,6 +22,7 @@ def unwrap_phase(spectra):
     return unwrapped_phase
 
 
+@jit(nopython=True)
 def apodization(spectra):
 
     hanning = np.hanning( len(spectra) )
