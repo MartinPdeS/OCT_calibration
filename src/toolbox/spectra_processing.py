@@ -6,8 +6,7 @@ import scipy.fftpack as fp
 import matplotlib.pyplot as plt
 import sys
 import sys
-import numba
-from numba import jit
+import cupy as cp
 
 '''_____Project imports_____'''
 from src.toolbox.filters import butter_highpass_filter
@@ -15,7 +14,10 @@ from src.toolbox.calibration_processing import linearize_spectra, compensate_dis
 from src.toolbox.maths import spectra2aline, hilbert
 
 
-def process_Aline(spectra, calibration, shift, arguments):
+def _process_Aline(spectra, calibration, shift, arguments):
+    """
+    CPU based
+    """
 
     #spectra = np.array(spectra) + np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) - np.array(calibration['dark_sample'])
 
@@ -36,7 +38,54 @@ def process_Aline(spectra, calibration, shift, arguments):
     return Aline
 
 
+def process_Aline(spectra, calibration, shift, arguments):
+    """
+    GPU accelerated
+    """
+
+    #spectra = np.array(spectra) + np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) - np.array(calibration['dark_sample'])
+
+    spectra = butter_highpass_filter(spectra, cutoff=180, fs=30000, order=5)
+
+    spectra = linearize_spectra(spectra, calibration['klinear'])
+
+    j = complex(0,1)
+
+    spectra = np.real( hilbert(spectra) * np.exp(j * np.arange(len(spectra)) * shift ) )
+
+    spectra = compensate_dispersion( np.array(spectra), arguments.dispersion * np.array( calibration['dispersion'] ) )
+
+    return spectra
+
+
 def process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
+    """
+    GPU accelerated
+    """
+
+    Bscan = []
+
+    for i, spectrum in enumerate(Bscan_spectra):
+
+        Aline = process_Aline(spectrum, calibration, shift=shift, arguments=arguments)
+
+        Bscan.append(Aline)
+
+    Bscan = cp.array(Bscan)
+
+    data_output1  = cp.fft.fft(Bscan, axis=1)
+
+    cp.cuda.Device().synchronize()
+
+    Bscan = cp.asnumpy(data_output1)[:,:len(Bscan[0,:])//2]
+
+    return np.abs(Bscan)
+
+
+def _process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
+    """
+    CPU based
+    """
 
     Bscan = []
 

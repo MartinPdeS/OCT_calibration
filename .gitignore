@@ -48,7 +48,7 @@ data/Cscan/*
 
 # perso files #
 ###############
-src/proccessing/_*
+src/processing/_*
 
 
 # Future files #
