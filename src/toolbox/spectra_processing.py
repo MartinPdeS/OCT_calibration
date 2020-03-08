@@ -5,8 +5,9 @@ import json
 import scipy.fftpack as fp
 import matplotlib.pyplot as plt
 import sys
-import sys
+import scipy
 import cupy as cp
+from scipy.interpolate import interp1d
 
 '''_____Project imports_____'''
 from src.toolbox.filters import butter_highpass_filter
@@ -14,7 +15,7 @@ from src.toolbox.calibration_processing import linearize_spectra, compensate_dis
 from src.toolbox.maths import spectra2aline, hilbert
 
 
-def _process_Aline(spectra, calibration, shift, arguments):
+def process_Aline(spectra, calibration, shift, arguments):
     """
     CPU based
     """
@@ -38,38 +39,48 @@ def _process_Aline(spectra, calibration, shift, arguments):
     return Aline
 
 
-def process_Aline(spectra, calibration, shift, arguments):
+def _process_Aline(spectra, calibration, shift, arguments):
     """
     GPU accelerated
     """
 
     #spectra = np.array(spectra) + np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) - np.array(calibration['dark_sample'])
 
-    spectra = butter_highpass_filter(spectra, cutoff=180, fs=30000, order=5)
+    #spectra = butter_highpass_filter(spectra, cutoff=180, fs=30000, order=5)
 
-    spectra = linearize_spectra(spectra, calibration['klinear'])
+    #spectra = linearize_spectra(spectra, calibration['klinear'])
 
-    j = complex(0,1)
+    #j = complex(0,1)
 
-    spectra = np.real( hilbert(spectra) * np.exp(j * np.arange(len(spectra)) * shift ) )
+    #spectra = np.real( hilbert(spectra) * np.exp(j * np.arange(len(spectra)) * shift ) )
 
-    spectra = compensate_dispersion( np.array(spectra), arguments.dispersion * np.array( calibration['dispersion'] ) )
+    #spectra = compensate_dispersion( np.array(spectra), arguments.dispersion * np.array( calibration['dispersion'] ) )
 
     return spectra
 
 
-def process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
+def __process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
     """
     GPU accelerated
     """
 
     Bscan = []
+    j = complex(0,1)
+
 
     for i, spectrum in enumerate(Bscan_spectra):
 
-        Aline = process_Aline(spectrum, calibration, shift=shift, arguments=arguments)
+        spectra = _process_Aline(spectrum, calibration, shift=shift, arguments=arguments)
 
-        Bscan.append(Aline)
+        spectra = hilbert(spectra)
+
+        spectra = spectra * np.exp(j * np.arange(len(spectra)) * shift )
+
+        spectra = np.real( spectra )
+
+        #Aline = compensate_dispersion( np.array(spectra), arguments.dispersion * np.array( calibration['dispersion'] ) )
+
+        Bscan.append(spectra)
 
     Bscan = cp.array(Bscan)
 
@@ -82,7 +93,67 @@ def process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
     return np.abs(Bscan)
 
 
+
 def _process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
+    """
+    GPU accelerated
+    """
+
+    Bscan = []
+    j = complex(0,1)
+
+    Bscan_spectra = scipy.signal.detrend(Bscan_spectra, axis=1)
+
+    hil = operation1(Bscan_spectra)
+
+    spectrum_shift = np.exp(j * np.arange(len(Bscan_spectra[0,:])) * shift )
+
+    x = np.arange( len(Bscan_spectra[0,:]) )
+
+    interpolation = interp1d(x, Bscan_spectra, kind='cubic')
+
+    Bscan = interpolation(calibration['klinear'][:])
+
+    Bscan = operation1(Bscan)
+
+    Bscan = np.multiply(Bscan, spectrum_shift)
+
+    Bscan = np.real(Bscan)
+
+    Bscan = cp.array(Bscan)
+
+    data_output1  = cp.fft.fft(Bscan, axis=1)
+
+    cp.cuda.Device().synchronize()
+
+    Bscan = cp.asnumpy(data_output1)[:,:len(Bscan[0,:])//2]
+
+    return np.abs(Bscan)
+
+
+def operation1(Bscan_spectra):
+
+    temp = cp.array(Bscan_spectra)
+
+    data_output = cp.fft.fft(temp,axis=1)
+
+    cp.cuda.Device().synchronize()
+
+    temp = cp.asnumpy(data_output)
+
+    temp[:, 0: len(temp[0,:])//2] = 0
+
+    temp = cp.array(temp)
+
+    temp_output = cp.fft.fft(temp,axis=1)
+
+    cp.cuda.Device().synchronize()
+
+    hil = cp.asnumpy(temp_output)
+
+    return hil
+
+def process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
     """
     CPU based
     """

@@ -15,7 +15,7 @@ if p not in sys.path:
 '''_____Project imports_____'''
 from src.toolbox.parsing import Cscan_parse_arguments
 from src.toolbox.loadings import load_calibration
-from src.toolbox.spectra_processing import process_Cscan
+from src.toolbox.spectra_processing import  _process_Bscan
 import src.toolbox.directories as directories
 from src.toolbox.spectra_processing import *
 
@@ -38,7 +38,7 @@ for n_i, Bscan_spectra in enumerate(Bscan_list):
 
     raw_Bscan_spectra = np.load(Bscan_spectra)
 
-    Bscan = process_Bscan(raw_Bscan_spectra, calibration, shift=0, arguments=arguments)
+    Bscan = _process_Bscan(raw_Bscan_spectra, calibration, shift=0, arguments=arguments)
 
     #Bscan = denoise_Bscan(Bscan)
 
