@@ -61,7 +61,7 @@ def _process_Aline(spectra, calibration, shift, arguments):
 
 def __process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
     """
-    GPU accelerated
+    semi-GPU accelerated
     """
 
     Bscan = []
@@ -99,10 +99,9 @@ def _process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
     GPU accelerated
     """
 
-    Bscan = []
     j = complex(0,1)
 
-    Bscan_spectra = scipy.signal.detrend(Bscan_spectra, axis=1)
+    Bscan_spectra = scipy.signal.detrend(Bscan_spectra, axis=0)
 
     hil = operation1(Bscan_spectra)
 

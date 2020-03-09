@@ -182,17 +182,29 @@ def Cscan_parse_arguments():
                         required=False)
 
 
+    parser.add_argument('-gpu',
+                        '--gpu-accelerated',
+                        help='CUDA coding for accelerating, NVIDIA or NOT',
+                        dest='gpu',
+                        type=bool,
+                        default=False,
+                        required=None)
+
     parser.add_argument('-dim',
                         '--dimension',
-                        help='Dimension of array',
-                        dest='dimension',
-                        type=int,
-                        default=None,
-                        required=True)
+                        help="dimension",
+                        dest="dimension",
+                        required=True,
+                        nargs=3)
+
+
+
 
 
 
     arguments = parser.parse_args()
+
+    arguments.dimension = list(map(int,arguments.dimension))
 
     if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
@@ -216,6 +228,16 @@ def Post_processing_parse_arguments():
 
 
     return parser.parse_args()
+
+
+
+
+def coords(s):
+    try:
+        x, y, z = map(int, s.split(','))
+        return x, y, z
+    except:
+        raise argparse.ArgumentTypeError("Dimension must be x,y,z")
 
 
 
