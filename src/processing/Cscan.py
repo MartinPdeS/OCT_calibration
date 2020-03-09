@@ -40,7 +40,7 @@ f = tables.open_file(outfile, mode='w')
 
 atom = tables.Float64Atom()
 
-array_c = f.create_earray(f.root, 'data', atom, (0, 100, 512))
+array_c = f.create_earray(f.root, 'data', atom, (0, arguments.dimension[1], arguments.dimension[2]/2))
 
 for n_i, Bscan_spectra in enumerate(Bscan_list):
 
