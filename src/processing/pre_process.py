@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import os, sys
+import os, sys, re
 
 
 def convert_calib_files(dir):
@@ -18,19 +18,33 @@ def convert_calib_files(dir):
     plt.show()
 
 
+def pre_process_filename(input_path):
+    file_list = os.listdir(input_path)
+
+    for n_i, input_filename in enumerate(file_list):
+        number_string = re.findall(r'\d+', input_filename)
+        zero_filled_number = number_string[0].zfill(4)
+
+        output_filename = re.sub(r'\d+', zero_filled_number, input_filename, 1)
+
+        print(input_filename, output_filename)
+        os.rename(input_path + input_filename, input_path + output_filename)
+
+
+
 def pre_process_data(input_path, dimension=[1049,1024]):
     file_list = os.listdir(input_path)
 
     for n_i, input_file_name in enumerate(file_list):
-
-        sys.stdout.write("Pre processing ... [{0}/{1}] \n".format(n_i, len(file_list)))
         input_file = os.path.join(input_path, input_file_name)
+        sys.stdout.write("Pre processing file {2} ... [{0}/{1}] \n".format(n_i, len(file_list), input_file))
         output_file = os.path.join(input_path, '{:03d}'.format(n_i) )
         data = np.fromfile(input_file, dtype=np.float32)#.reshape([537,1024])
-        data = data.reshape([100+25,1024])
+        data = data.reshape([1024+25,1024])
         data = data[25:,:]
         np.save(output_file, np.array(data))
 
 
 if __name__ == "__main__":
-    pre_process_data("data/Cscan/example/")
+    pre_process_filename("data/Cscan/retina/LP01/")
+    pre_process_data("data/Cscan/retina/LP01/")
