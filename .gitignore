@@ -48,11 +48,3 @@ data/Cscan/*
 
 # perso files #
 ###############
-src/processing/_*
-
-
-# Future files #
-###############
-src/processing/segmentation.py
-src/processing/gui.py
-src/processing/gui.ui
