@@ -1,0 +1,182 @@
+'''_____Standard imports_____'''
+import numpy as np
+import matplotlib.pyplot as plt
+from functools import partial
+import napari
+from mpl_toolkits.mplot3d import Axes3D
+import os, sys, tables
+from matplotlib.ticker import LinearLocator
+napari.gui_qt()
+
+'''_____Add package_____'''
+p = os.path.abspath('.')
+if p not in sys.path:
+    sys.path.append(p)
+
+
+'''_____Project imports_____'''
+from src.toolbox.parsing import Post_processing_parse_arguments
+
+
+class Segment(object):
+    def __init__(self, dim=1024):
+        self.dim = dim
+
+    def load_data(self, dir):
+        f = tables.open_file(dir)
+        data = f.root.data
+        data = np.array(data) - np.min(data) + 1
+        print(np.max(data), np.min(data))
+        data = np.log(data)
+        data = data/np.max(data)*255
+
+        self.data = data.astype(np.int)
+        self.update_slices()
+
+    def update_slices(self):
+        self.slice_XZ = self.data[0,:,:].T
+        self.slice_YZ = self.data[:,0,:].T
+
+
+    def YZ_onclick(self, event):
+
+
+        self.YZ_coordinates.append((event.xdata, event.ydata))
+
+        if len(self.YZ_coordinates) == 4:
+            self.fig.canvas.mpl_disconnect(self.cid)
+            plt.close()
+        return
+
+
+    def XZ_onclick(self, event):
+
+        self.XZ_coordinates.append((event.xdata, event.ydata))
+
+        if len(self.XZ_coordinates) == 4:
+            self.fig.canvas.mpl_disconnect(self.cid)
+            plt.close()
+        return
+
+
+
+    def plot_Bscan(self):
+        fig = plt.figure()
+        ax = fig.add_subplot(111)
+        ax.imshow(self.data[0,:,:], cmap='gray')
+        plt.show()
+
+
+    def get_XZ_points(self, num=4):
+        self.num = num
+        self.XZ_coordinates = []
+
+        self.fig = plt.figure()
+        ax = self.fig.add_subplot(111)
+        ax.imshow(self.slice_XZ, cmap='gray')
+        ax.set_title('Click on 4 point for bottom segmentation in Y-Z plane')
+        self.cid = self.fig.canvas.mpl_connect('button_press_event', self.XZ_onclick)
+        plt.show()
+
+    def get_YZ_points(self, num=4):
+        self.num = num
+        self.YZ_coordinates = []
+        self.YZ_coordinates.append( (0, self.XZ_coordinates[0]) )
+
+        self.fig = plt.figure()
+        ax = self.fig.add_subplot(111)
+        ax.imshow(self.slice_YZ, cmap='gray')
+        ax.scatter([0], self.XZ_coordinates[0])
+        ax.set_title('Click on 4 point for bottom segmentation in Y-Z plane')
+        self.cid = self.fig.canvas.mpl_connect('button_press_event', self.YZ_onclick)
+        plt.show()
+
+
+    def make_XZ_fit(self):
+        self.XZ_coordinates = np.array(self.XZ_coordinates)
+        coef = np.polyfit(self.XZ_coordinates[:,0],
+                          self.XZ_coordinates[:,1],
+                          deg=self.num-1)
+        fit = np.poly1d(coef)
+        x = np.arange(self.dim)
+        self.XZ_coordinates = fit(x)
+        fig = plt.figure()
+        ax = fig.add_subplot(111)
+        ax.imshow(self.slice_XZ, cmap='gray')
+        ax.plot(x, self.XZ_coordinates)
+        plt.show()
+
+
+    def make_YZ_fit(self):
+        self.YZ_coordinates = np.array(self.YZ_coordinates)
+        coef = np.polyfit(self.YZ_coordinates[:,0],
+                          self.YZ_coordinates[:,1],
+                          deg=self.num-1)
+        fit = np.poly1d(coef)
+        x = np.arange(self.dim)
+        self.YZ_coordinates = fit(x)
+        fig = plt.figure()
+        ax = fig.add_subplot(111)
+        ax.imshow(self.slice_YZ, cmap='gray')
+        ax.plot(x, self.YZ_coordinates)
+        plt.show()
+
+
+    def def_lim_mesh(self):
+
+        XX = np.array([self.XZ_coordinates]*self.dim)
+        YY = np.array([self.YZ_coordinates]*self.dim) - self.YZ_coordinates[0]
+        t = np.linspace(0, self.dim, self.dim)
+        T, _ = np.meshgrid(t,t)
+        self.mesh = XX + YY.transpose()
+
+
+    def apply_limit(self, lim='bottom'):
+        print(np.shape(self.mesh))
+
+        if lim == 'bottom':
+            for i in range(self.dim):
+                for j in range(self.dim):
+                    self.data[j,i,int(self.mesh[j,i]):] = 0
+
+        if lim == 'top':
+            #min = np.min(mesh[i,j]))
+            for i in range(self.dim):
+                for j in range(self.dim):
+                    self.data[j,i,:int(self.mesh[j,i])] = 0
+
+        with napari.gui_qt():
+            viewer = napari.view_image(self.data)
+
+
+    def bound_bottom(self):
+        self.get_XZ_points()
+        self.make_XZ_fit()
+        self.get_YZ_points()
+        self.make_YZ_fit()
+        self.def_lim_mesh()
+        self.apply_limit('bottom')
+        self.update_slices()
+
+    def bound_top(self):
+        self.get_XZ_points()
+        self.make_XZ_fit()
+        self.get_YZ_points()
+        self.make_YZ_fit()
+        self.def_lim_mesh()
+        self.apply_limit('top')
+        self.update_slices()
+
+
+arguments = Post_processing_parse_arguments()
+
+obj = Segment()
+obj.load_data(arguments.input_file)
+obj.bound_bottom()
+obj.bound_top()
+
+"""
+
+
+np.save('data/Cscan/segmented_image_LP01.npy', data)
+"""
