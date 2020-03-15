@@ -1,6 +1,17 @@
+'''_____Standard imports_____'''
 import numpy as np
 import matplotlib.pyplot as plt
 import os, sys, re
+
+
+'''_____Add package_____'''
+p = os.path.abspath('.')
+if p not in sys.path:
+    sys.path.append(p)
+
+
+'''_____Project imports_____'''
+from src.toolbox.parsing import Pre_processing_parse_arguments
 
 
 def convert_calib_files(dir):
@@ -32,19 +43,25 @@ def pre_process_filename(input_path):
 
 
 
-def pre_process_data(input_path, dimension=[1049,1024]):
+def pre_process_data(input_path, output_path, dimension=[1049,1024]):
     file_list = os.listdir(input_path)
 
     for n_i, input_file_name in enumerate(file_list):
         input_file = os.path.join(input_path, input_file_name)
         sys.stdout.write("Pre processing file {2} ... [{0}/{1}] \n".format(n_i, len(file_list), input_file))
-        output_file = os.path.join(input_path, '{:03d}'.format(n_i) )
-        data = np.fromfile(input_file, dtype=np.float32)#.reshape([537,1024])
-        data = data.reshape([1024+25,1024])
+        output_file = os.path.join(output_path, '{:03d}'.format(n_i) )
+        data = np.fromfile(input_file, dtype=np.float32)
+        data = data.reshape(dimension)
         data = data[25:,:]
-        np.save(output_file, np.array(data))
+        np.save(output_file+'.npy', np.array(data))
 
 
 if __name__ == "__main__":
-    pre_process_filename("data/Cscan/retina/LP01/")
-    pre_process_data("data/Cscan/retina/LP01/")
+
+    arguments = Pre_processing_parse_arguments()
+    print(arguments.dimension)
+
+    #pre_process_filename(arguments.input_dir)
+    pre_process_data(input_path=arguments.input_dir,
+                     output_path=arguments.output_dir,
+                     dimension = np.array(arguments.dimension).astype(int))

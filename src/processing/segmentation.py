@@ -19,8 +19,11 @@ from src.toolbox.parsing import Post_processing_parse_arguments
 
 
 class Segment(object):
-    def __init__(self, dim=1024):
+
+
+    def __init__(self, dim=100):
         self.dim = dim
+
 
     def load_data(self, dir):
         f = tables.open_file(dir)
@@ -33,6 +36,13 @@ class Segment(object):
         self.data = data.astype(np.int)
         self.dim = np.shape(self.data)[0]
         self.update_slices()
+
+
+    def set_data(self, data):
+        self.data = data
+        self.dim = np.shape(self.data)[0]
+        self.update_slices()
+
 
     def update_slices(self):
         self.slice_XZ = self.data[0,:,:].T
@@ -179,14 +189,20 @@ class Segment(object):
 
 
 arguments = Post_processing_parse_arguments()
+dir1 = "data/Cscan/retina_LP01.h5"
+dir2 = "data/Cscan/retina_LP11.h5"
 
-obj = Segment()
-obj.load_data(arguments.input_file)
-obj.bound_bottom()
-obj.bound_top()
+sys.stdout.write('Creating object 1 from {0} \n'.format(dir1))
+obj1 = Segment()
+obj1.load_data(dir1)
 
-"""
+sys.stdout.write('Creating object 2 from {0} \n'.format(dir2))
+obj2 = Segment()
+obj2.load_data(dir2)
 
+obj3 = Segment()
+obj3.set_data(obj1.data - obj2.data)
+obj3.bound_bottom()
+obj3.bound_top()
 
-np.save('data/Cscan/segmented_image_LP01.npy', data)
-"""
+np.save('data/Cscan/segmented_image.npy', obj3.data)

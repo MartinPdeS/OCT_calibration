@@ -231,6 +231,39 @@ def Post_processing_parse_arguments():
 
 
 
+def Pre_processing_parse_arguments():
+
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('-id',
+                        '--input-directory',
+                        help='Input Cscan directory [DIRECTORY]',
+                        dest='input_dir',
+                        type=str,
+                        default= None ,
+                        required=True)
+
+    parser.add_argument('-od',
+                        '--output-directory',
+                        help='Output Cscan directory [DIRECTORY]',
+                        dest='output_dir',
+                        type=str,
+                        default= None,
+                        required=True)
+
+    parser.add_argument('-dim',
+                        '--dimension',
+                        help='Bscan dimension Z-axis last [2-values LIST]',
+                        dest='dimension',
+                        default= None,
+                        required=True,
+                        nargs=2)
+
+
+    return parser.parse_args()
+
+
+
 
 def coords(s):
     try:
