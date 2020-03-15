@@ -31,6 +31,7 @@ class Segment(object):
         data = data/np.max(data)*255
 
         self.data = data.astype(np.int)
+        self.dim = np.shape(self.data)[0]
         self.update_slices()
 
     def update_slices(self):
@@ -42,6 +43,7 @@ class Segment(object):
 
 
         self.YZ_coordinates.append((event.xdata, event.ydata))
+        print( event.xdata, event.ydata )
 
         if len(self.YZ_coordinates) == 4:
             self.fig.canvas.mpl_disconnect(self.cid)
@@ -52,6 +54,7 @@ class Segment(object):
     def XZ_onclick(self, event):
 
         self.XZ_coordinates.append((event.xdata, event.ydata))
+        print( event.xdata, event.ydata )
 
         if len(self.XZ_coordinates) == 4:
             self.fig.canvas.mpl_disconnect(self.cid)
@@ -100,6 +103,7 @@ class Segment(object):
         fit = np.poly1d(coef)
         x = np.arange(self.dim)
         self.XZ_coordinates = fit(x)
+        self.XZ_coordinates = np.clip(self.XZ_coordinates, a_max=511, a_min=1)
         fig = plt.figure()
         ax = fig.add_subplot(111)
         ax.imshow(self.slice_XZ, cmap='gray')
@@ -115,6 +119,7 @@ class Segment(object):
         fit = np.poly1d(coef)
         x = np.arange(self.dim)
         self.YZ_coordinates = fit(x)
+        self.YZ_coordinates = np.clip(self.YZ_coordinates, a_max=511, a_min=1)
         fig = plt.figure()
         ax = fig.add_subplot(111)
         ax.imshow(self.slice_YZ, cmap='gray')
@@ -135,15 +140,20 @@ class Segment(object):
         print(np.shape(self.mesh))
 
         if lim == 'bottom':
+            max = int( np.max(self.mesh) )
+            print(max)
             for i in range(self.dim):
                 for j in range(self.dim):
                     self.data[j,i,int(self.mesh[j,i]):] = 0
+            self.data = self.data[:,:,0:max]
 
         if lim == 'top':
-            #min = np.min(mesh[i,j]))
+            min = int( np.min(self.mesh) )
             for i in range(self.dim):
                 for j in range(self.dim):
                     self.data[j,i,:int(self.mesh[j,i])] = 0
+
+            self.data = self.data[:,:,min:]
 
         with napari.gui_qt():
             viewer = napari.view_image(self.data)
