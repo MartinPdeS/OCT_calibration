@@ -39,26 +39,6 @@ def process_Aline(spectra, calibration, shift, arguments):
     return Aline
 
 
-def _process_Aline(spectra, calibration, shift, arguments):
-    """
-    GPU accelerated
-    """
-
-    #spectra = np.array(spectra) + np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) - np.array(calibration['dark_sample'])
-
-    #spectra = butter_highpass_filter(spectra, cutoff=180, fs=30000, order=5)
-
-    #spectra = linearize_spectra(spectra, calibration['klinear'])
-
-    #j = complex(0,1)
-
-    #spectra = np.real( hilbert(spectra) * np.exp(j * np.arange(len(spectra)) * shift ) )
-
-    #spectra = compensate_dispersion( np.array(spectra), arguments.dispersion * np.array( calibration['dispersion'] ) )
-
-    return spectra
-
-
 def _process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
     """
     GPU accelerated
@@ -72,7 +52,7 @@ def _process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
 
     if arguments.shift:
         shift = calibration['peak_shift1']
-        
+
     spectrum_shift = np.exp(j * np.arange(len(Bscan_spectra[0,:])) * shift )
 
     x = np.arange( len(Bscan_spectra[0,:]) )
@@ -120,6 +100,7 @@ def operation1(Bscan_spectra):
 
     return hil
 
+
 def process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
     """
     CPU based
@@ -135,12 +116,6 @@ def process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
 
     Bscan = np.array(Bscan)
 
-    #temp = np.fft.fftshift(np.fft.fft2(Bscan))
-    #mid = np.shape(temp)[0]//2
-    #temp[mid-10:mid+10,:]=0
-    #temp = np.fft.fft2(temp)
-
-    #return np.abs(temp[:,::-1])
     return Bscan
 
 

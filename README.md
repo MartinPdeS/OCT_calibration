@@ -68,7 +68,7 @@ In order to run a calibration example one can tape the following command on comm
 
 ```console
 
->>> python3 src/processing/calibration.py --dispersion=1 --input-dir=./data/calibration/spectra/example/ --output-file=calib.json
+>>> python3 src/processing/calibration.py --dispersion=1 --input-dir=./data/calibration/example/ --output-file=calib.json
 
 ```
 
@@ -91,7 +91,7 @@ In order to process one example of Aline, one can tape the following command on 
 
 ```console
 
->>> python3 src/processing/Aline.py --dispersion=1 --input-file = data/Aline/example.txt --calibration=calib.json
+>>> python3 src/processing/Aline.py --dispersion=1 --input-file=data/Aline/example.txt --calibration-file=data/calibration/example/calib.json
 
 ```
 
@@ -113,7 +113,7 @@ In order to process one example of Bscan, one can tape the following command on 
 
 ```console
 
->>> python3 src/processing/Bscan.py --dispersion=1 --input-dir = data/Bscan/example.npy --calibration=data/calibration/spectra/example/calib.json --output-file=...
+>>> python3 src/processing/Bscan.py --dispersion=1 --input-file = data/Bscan/example.npy --calibration-file=data/calibration/example/calib.json --output-file=...
 
 ```
 
@@ -135,7 +135,7 @@ In order to process one example of Cscan, one can tape the following command on 
 
 ```console
 
->>> python3 src/processing/Cscan.py --dispersion=1 --input-dir = ../ --calibration=calib.json --output-file=...
+>>> python3 src/processing/Cscan.py --dispersion=1 --input-dir = ../ --calibration-file=data/calibration/example/calib.json --output-file=...
 
 ```
 

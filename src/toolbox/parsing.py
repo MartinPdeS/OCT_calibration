@@ -69,7 +69,7 @@ def Aline_parse_arguments():
                         required=False)
 
     parser.add_argument('-c',
-                        '--calibration_file',
+                        '--calibration-file',
                         help='Calibration json file.',
                         dest='calibration_file',
                         type=str,
@@ -99,12 +99,14 @@ def Bscan_parse_arguments():
 
     parser = argparse.ArgumentParser()
 
+    print('parsing')
+
     parser.add_argument('-if',
                         '--input-file',
                         help='Input .Raw Bscan file',
                         dest='input_file',
                         type=str,
-                        default='test.raw',
+                        default=None,
                         required=False)
 
     parser.add_argument('-m',
@@ -116,7 +118,7 @@ def Bscan_parse_arguments():
                         required=False)
 
     parser.add_argument('-c',
-                        '--calibration_file',
+                        '--calibration-file',
                         help='Calibration json file.',
                         dest='calibration_file',
                         type=str,
@@ -127,7 +129,7 @@ def Bscan_parse_arguments():
                         '--dispersion',
                         help='Dispersion normal[1] or anormal[-1]',
                         dest='dispersion',
-                        type=float,
+                        type=int,
                         default=1,
                         required=False)
 
@@ -165,7 +167,7 @@ def Cscan_parse_arguments():
                         required=False)
 
     parser.add_argument('-c',
-                        '--calibration_file',
+                        '--calibration-file',
                         help='Calibration json file.',
                         dest='calibration_file',
                         type=str,
