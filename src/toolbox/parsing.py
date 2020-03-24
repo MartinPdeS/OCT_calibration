@@ -197,6 +197,14 @@ def Cscan_parse_arguments():
                         required=True,
                         nargs=3)
 
+    parser.add_argument('-s',
+                        '--shift',
+                        help="shifting spectum",
+                        dest="shift",
+                        required=False,
+                        action="store_true",
+                        default=False)
+
 
 
 
@@ -224,6 +232,20 @@ def Post_processing_parse_arguments():
                         dest='input_file',
                         type=str,
                         default= None ,
+                        required=False)
+
+    parser.add_argument('-seg',
+                        '--segmentation',
+                        help='Segmentate Input Cscan file ',
+                        dest='segmentation',
+                        action="store_true",
+                        required=False)
+
+    parser.add_argument('-v',
+                        '--view',
+                        help='3D viewer if input Cscan file ',
+                        dest='view',
+                        action='store_true',
                         required=False)
 
 

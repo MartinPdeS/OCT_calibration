@@ -189,13 +189,30 @@ class Segment(object):
 
 
 arguments = Post_processing_parse_arguments()
-dir1 = "data/Cscan/retina_LP01.h5"
-dir2 = "data/Cscan/retina_LP11.h5"
+dir1 = "data/Cscan/example_notshifted.h5"
+dir2 = "data/Cscan/example_shifted.h5"
 
 sys.stdout.write('Creating object 1 from {0} \n'.format(dir1))
 obj1 = Segment()
 obj1.load_data(dir1)
 
+
+obj2 = Segment()
+#obj1.load_data(arguments.input_file)
+obj2.load_data(dir2)
+
+obj3 = Segment()
+obj3.set_data(obj1.data - obj2.data)
+
+if arguments.segmentation:
+    obj1.bound_bottom()
+    obj1.bound_top()
+
+if arguments.view:
+    with napari.gui_qt():
+        viewer = napari.view_image(obj3.data)
+
+"""
 sys.stdout.write('Creating object 2 from {0} \n'.format(dir2))
 obj2 = Segment()
 obj2.load_data(dir2)
@@ -206,3 +223,4 @@ obj3.bound_bottom()
 obj3.bound_top()
 
 np.save('data/Cscan/segmented_image.npy', obj3.data)
+"""

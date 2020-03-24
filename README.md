@@ -1,6 +1,8 @@
 # Py-OCT-Calibration
 
-This project aims to produce an easy to use tool to calibrate any SD or SS-OCT. By calibrate I mean substracting background - k-linearize spectra - evaluate and compensate dispersion. In order to compute the calibration the algorithm need multiple measurements:
+This project aims to produce an easy to use tool to calibrate any SD or SS-OCT.
+The processing is based on Attendu et al. "Simple and robust calibration procedure for k-linearization and dispersion compensation in optical coherence tomography." (doi: 10.1117/1.JBO.24.5.056001)
+By calibrate I mean substracting background - k-linearize spectra - evaluate and compensate dispersion. In order to compute the calibration the algorithm need multiple measurements:
 * mirror1.txt         (OCT interferogram with mirror in one side of the zero delay as sample)
 * dark_sample.txt     (OCT interferogram with ref arm blocked)
 * mirror2.txt         (OCT interferogram with mirror in the other side of the zero delay as sample)

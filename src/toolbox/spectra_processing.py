@@ -59,41 +59,6 @@ def _process_Aline(spectra, calibration, shift, arguments):
     return spectra
 
 
-def __process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
-    """
-    semi-GPU accelerated
-    """
-
-    Bscan = []
-    j = complex(0,1)
-
-
-    for i, spectrum in enumerate(Bscan_spectra):
-
-        spectra = _process_Aline(spectrum, calibration, shift=shift, arguments=arguments)
-
-        spectra = hilbert(spectra)
-
-        spectra = spectra * np.exp(j * np.arange(len(spectra)) * shift )
-
-        spectra = np.real( spectra )
-
-        #Aline = compensate_dispersion( np.array(spectra), arguments.dispersion * np.array( calibration['dispersion'] ) )
-
-        Bscan.append(spectra)
-
-    Bscan = cp.array(Bscan)
-
-    data_output1  = cp.fft.fft(Bscan, axis=1)
-
-    cp.cuda.Device().synchronize()
-
-    Bscan = cp.asnumpy(data_output1)[:,:len(Bscan[0,:])//2]
-
-    return np.abs(Bscan)
-
-
-
 def _process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
     """
     GPU accelerated
@@ -105,6 +70,9 @@ def _process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
 
     hil = operation1(Bscan_spectra)
 
+    if arguments.shift:
+        shift = calibration['peak_shift1']
+        
     spectrum_shift = np.exp(j * np.arange(len(Bscan_spectra[0,:])) * shift )
 
     x = np.arange( len(Bscan_spectra[0,:]) )
