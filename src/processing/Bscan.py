@@ -19,7 +19,7 @@ from src.toolbox.parsing import Bscan_parse_arguments
 from src.toolbox.loadings import load_Bscan_spectra, load_calibration
 from src.toolbox.plottings import Bscan_plots
 import src.toolbox.directories as directories
-from src.toolbox.spectra_processing import process_Bscan, denoise_Bscan
+from src.toolbox.main_processing import process_Bscan, denoise_Bscan
 
 
 

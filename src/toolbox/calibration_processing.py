@@ -155,7 +155,6 @@ def compute_dispersion(spectra1, spectra2, shift_1, shift_2, plot=True, argument
     return Pdispersion
 
 
-
 def k_linearization(spectra1, spectra2, arguments=None):
     """ This method compute the k-linear fractional indexes and interpolate
     the two spectras in order to compensate it.
@@ -204,7 +203,7 @@ def k_linearization(spectra1, spectra2, arguments=None):
 
     ffit3 = np.poly1d(coefs3[::-1])
 
-    x_klinear = ffit3(x)[1:-1]
+    x_klinear = ffit3(x)[0:]
 
     interpolated_spectra1 = linearize_spectra(spectra1, x_klinear)
     interpolated_spectra2 = linearize_spectra(spectra2, x_klinear)
@@ -229,7 +228,7 @@ def linearize_spectra(spectra, x_klinear):
     """
     x = np.arange( len(spectra) )
 
-    interpolation = interp1d(x, spectra, kind='cubic')
+    interpolation = interp1d(x, spectra, kind='cubic', fill_value="extrapolate")
 
     klinear_spectra = interpolation(x_klinear[:])
 

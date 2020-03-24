@@ -113,7 +113,7 @@ In order to process one example of Bscan, one can tape the following command on 
 
 ```console
 
->>> python3 src/processing/Bscan.py --dispersion=1 --input-file = data/Bscan/example.npy --calibration-file=data/calibration/example/calib.json --output-file=...
+>>> python3 src/processing/Bscan.py --dispersion=1 --input-file=data/Bscan/example.npy --calibration-file=data/calibration/example/calib.json --output-file=...
 
 ```
 

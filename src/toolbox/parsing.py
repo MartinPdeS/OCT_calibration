@@ -17,13 +17,13 @@ def Calibration_parse_arguments():
                         dest='input_dir',
                         type=str,
                         default= directories.calib + "spectra/" ,
-                        required=False)
+                        required=True)
 
     parser.add_argument('-of',
                         '--output-file',
                         help='Output calibration files directory [JSON]',
                         dest='output_file',
-                        default=None,
+                        default="temp_calibration.json",
                         required=False)
 
     parser.add_argument('-i',
@@ -40,7 +40,7 @@ def Calibration_parse_arguments():
                         dest='dispersion',
                         type=float,
                         default=1,
-                        required=False)
+                        required=True)
 
 
 
@@ -50,7 +50,7 @@ def Calibration_parse_arguments():
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
     if arguments.output_file:
-        arguments.output_file = os.path.join(arguments.output_file + ".json")
+        arguments.output_file = os.path.join(arguments.output_file)
 
 
     return arguments
@@ -99,15 +99,12 @@ def Bscan_parse_arguments():
 
     parser = argparse.ArgumentParser()
 
-    print('parsing')
-
     parser.add_argument('-if',
                         '--input-file',
                         help='Input .Raw Bscan file',
                         dest='input_file',
                         type=str,
-                        default=None,
-                        required=False)
+                        required=True)
 
     parser.add_argument('-m',
                         '--mean',
@@ -122,8 +119,7 @@ def Bscan_parse_arguments():
                         help='Calibration json file.',
                         dest='calibration_file',
                         type=str,
-                        default='.calibration/calibration_parameters.json',
-                        required=False)
+                        required=True)
 
     parser.add_argument('-d',
                         '--dispersion',
@@ -131,7 +127,7 @@ def Bscan_parse_arguments():
                         dest='dispersion',
                         type=int,
                         default=1,
-                        required=False)
+                        required=True)
 
 
 
@@ -160,10 +156,10 @@ def Cscan_parse_arguments():
 
     parser.add_argument('-of',
                         '--output-file',
-                        help='Output .csv Cscan file',
+                        help='Output .h5 Cscan file',
                         dest='output_file',
                         type=str,
-                        default='output.csv',
+                        default='Cscan_temp.h5',
                         required=False)
 
     parser.add_argument('-c',
@@ -171,17 +167,16 @@ def Cscan_parse_arguments():
                         help='Calibration json file.',
                         dest='calibration_file',
                         type=str,
-                        default='.calibration/calibration_parameters.json',
-                        required=False)
+                        required=True)
 
 
     parser.add_argument('-d',
                         '--dispersion',
                         help='Dispersion normal[1] or anormal[-1]',
                         dest='dispersion',
-                        type=float,
+                        type=int,
                         default=1,
-                        required=False)
+                        required=True)
 
 
     parser.add_argument('-gpu',
@@ -204,8 +199,7 @@ def Cscan_parse_arguments():
                         help="shifting spectum",
                         dest="shift",
                         required=False,
-                        action="store_true",
-                        default=False)
+                        action="store_true")
 
 
 

@@ -61,7 +61,8 @@ z_space, shifted_spectra_1, shifted_spectra_2, shift_1, shift_2 = shift_spectra(
                                                                                 interpolated_spectra_2,
                                                                                 N_pad=100,
                                                                                 arguments=arguments)
-sys.stdout.write('Computing dispersion')
+
+sys.stdout.write('Computing dispersion ...')
 Pdispersion = compute_dispersion(interpolated_spectra_1,
                                  interpolated_spectra_2,
                                  shift_1,

@@ -15,9 +15,9 @@ if p not in sys.path:
 '''_____Project imports_____'''
 from src.toolbox.parsing import Cscan_parse_arguments
 from src.toolbox.loadings import load_calibration
-from src.toolbox.spectra_processing import  _process_Bscan
+from src.toolbox.main_processing import  _process_Bscan
 import src.toolbox.directories as directories
-from src.toolbox.spectra_processing import *
+from src.toolbox.main_processing import *
 
 
 arguments = Cscan_parse_arguments()
