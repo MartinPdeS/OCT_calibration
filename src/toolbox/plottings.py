@@ -12,7 +12,8 @@ from src.toolbox.fits import gauss
 import src.toolbox.directories as directories
 
 
-def dB_plot(data1, data2=None, arguments=None):
+
+def dB_plot(data1, data2=None):
 
     fig = plt.figure(figsize=(15, 6))
 
@@ -54,7 +55,7 @@ def dB_plot(data1, data2=None, arguments=None):
     plt.close()
 
 
-def interactive_shift(spectra1, param1, spectra2, param2, arguments=None):
+def interactive_shift(spectra1, param1, spectra2, param2):
 
 
     shift1_condition = False
@@ -148,7 +149,7 @@ def phase_dispersion_plot(exp_dispersion, fit_dispersion):
     plt.close()
 
 
-def Bscan_plots(Bscan, arguments=None):
+def Bscan_plots(Bscan):
 
     Bscan = np.array(Bscan)
     dBscan = 10*np.log(Bscan)
@@ -258,11 +259,10 @@ def plot_klinearization(phase1, phase2, Plin, Pfit=None):
 class Lantern_Bscan_vizualiser(object):
 
 
-    def __init__(self, fig1, Bscan_LP01, Bscan_LP11, arguments=None):
+    def __init__(self, fig1, Bscan_LP01, Bscan_LP11):
         self.fig1 = fig1
         self.Bscan_LP01 = Bscan_LP01
         self.Bscan_LP11 = Bscan_LP11
-        self.arguments = arguments
 
 
     def update_intensity(self, event):
@@ -379,11 +379,10 @@ class Lantern_Bscan_vizualiser(object):
 class Lantern_Bscan_vizualiser(object):
 
 
-    def __init__(self, fig1, Bscan_LP01, Bscan_LP11, arguments=None):
+    def __init__(self, fig1, Bscan_LP01, Bscan_LP11):
         self.fig1 = fig1
         self.Bscan_LP01 = Bscan_LP01
         self.Bscan_LP11 = Bscan_LP11
-        self.arguments = arguments
 
 
     def update_intensity(self, event):
@@ -501,11 +500,10 @@ class Lantern_Bscan_vizualiser(object):
 class Lantern_Bscan_vizualiser(object):
 
 
-    def __init__(self, fig1, Bscan_LP01, Bscan_LP11, arguments=None):
+    def __init__(self, fig1, Bscan_LP01, Bscan_LP11):
         self.fig1 = fig1
         self.Bscan_LP01 = Bscan_LP01
         self.Bscan_LP11 = Bscan_LP11
-        self.arguments = arguments
 
 
     def update_intensity(self, event):
@@ -620,12 +618,10 @@ class Lantern_Bscan_vizualiser(object):
 class Lantern_Cscan_vizualiser(object):
 
 
-    def __init__(self, fig1, Cscan_LP01, Cscan_LP11, arguments=None):
+    def __init__(self, fig1, Cscan_LP01, Cscan_LP11):
         self.fig1 = fig1
         self.dCscan_LP01 = np.array(10*np.log(Cscan_LP01))
         self.dCscan_LP11 = np.array(10*np.log(Cscan_LP11))
-        #self.dCscan_LP11 = np.swapaxes(self.dCscan_LP11,1,2)
-        self.arguments = arguments
 
 
     def update_intensity(self, event):

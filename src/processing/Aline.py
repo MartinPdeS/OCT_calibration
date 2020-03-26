@@ -12,7 +12,7 @@ if p not in sys.path:
 
 
 '''_____Project imports_____'''
-from src.toolbox.spectra_processing import process_Aline
+from src.toolbox.main_processing import process_Aline
 from src.toolbox.parsing import Aline_parse_arguments
 from src.toolbox.loadings import load_data, load_calibration
 from src.toolbox.maths import spectra2aline

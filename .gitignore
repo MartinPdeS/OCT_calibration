@@ -7,7 +7,6 @@
 *.o
 *.so
 *.raw
-*.npy
 
 
 # Packages #
@@ -44,7 +43,16 @@ Thumbs.db
 # Files too large #
 ##################
 data/Cscan/*
+*.h5
 
 
 # perso files #
 ###############
+<<<<<<< HEAD
+=======
+src/processing/_*
+
+
+# Future files #
+###############
+>>>>>>> perso

@@ -14,33 +14,27 @@ if p not in sys.path:
 
 '''_____Project imports_____'''
 from src.toolbox.parsing import Cscan_parse_arguments
-from src.toolbox.loadings import load_calibration
-from src.toolbox.spectra_processing import  _process_Bscan
-import src.toolbox.directories as directories
-from src.toolbox.spectra_processing import *
-
-
 arguments = Cscan_parse_arguments()
+from src.toolbox.loadings import load_calibration
+from src.toolbox.main_processing import _process_Bscan, process_Bscan
+import src.toolbox.directories as directories
+from src.toolbox.main_processing import *
+from src.toolbox._arguments import Arguments
 
-calibration = load_calibration(dir = arguments.calibration_file)
 
-Bscan_list = os.listdir(arguments.input_directory)
+calibration = load_calibration(dir = Arguments.calibration_file)
 
-Bscan_list = [os.path.join(arguments.input_directory, s) for s in Bscan_list]
+Bscan_list = os.listdir(Arguments.input_directory)
 
-Cscan = []
+Bscan_list = [os.path.join(Arguments.input_directory, s) for s in Bscan_list]
 
-outfile = arguments.output_file
-
-ROW_SIZE = 100
-
-NUM_COLUMNS = 100
+outfile = Arguments.output_file
 
 f = tables.open_file(outfile, mode='w')
 
 atom = tables.Float64Atom()
 
-array_c = f.create_earray(f.root, 'data', atom, (0, arguments.dimension[1], arguments.dimension[2]/2))
+array_c = f.create_earray(f.root, 'data', atom, (0, Arguments.dimension[1], Arguments.dimension[2]/2))
 
 for n_i, Bscan_spectra in enumerate(Bscan_list):
 
@@ -48,23 +42,16 @@ for n_i, Bscan_spectra in enumerate(Bscan_list):
 
     raw_Bscan_spectra = np.load(Bscan_spectra)
 
-    if arguments.gpu:
-        Bscan = [_process_Bscan(raw_Bscan_spectra, calibration, shift=0, arguments=arguments)]
+    if Arguments.gpu:
+        Bscan = [_process_Bscan(raw_Bscan_spectra, calibration, shift=0)]
     else:
-        Bscan = [process_Bscan(raw_Bscan_spectra, calibration, shift=0, arguments=arguments)]
-
-    #Bscan = denoise_Bscan(Bscan)
+        Bscan = [process_Bscan(raw_Bscan_spectra, calibration, shift=0)]
 
     array_c.append(Bscan)
 
     del Bscan
 
-
-#Cscan = scipy.signal.detrend(Cscan, axis=0, type='constant')
-
-#Cscan = scipy.signal.detrend(Cscan, axis=1, type='constant')
-
-sys.stdout.write(' saving into {0} file \n shape of file : {1}'.format(arguments.output_file, str( np.shape( Cscan ) ) ) )
+sys.stdout.write(' saving into {0} file \n'.format(Arguments.output_file ) )
 
 f.close()
 
