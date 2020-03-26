@@ -3,6 +3,8 @@
 import numpy as np
 import json
 
+
+
 def load_data(dir, type=float):
 
     data = []

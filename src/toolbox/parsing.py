@@ -3,6 +3,7 @@
 import argparse
 import sys, os
 
+
 '''_____Project imports_____'''
 import src.toolbox.directories as directories
 
@@ -42,6 +43,11 @@ def Calibration_parse_arguments():
                         default=1,
                         required=True)
 
+    parser.add_argument('--silent',
+                        help='No verbose mode',
+                        dest='silent',
+                        action="store_true")
+
 
 
     arguments = parser.parse_args()
@@ -53,7 +59,9 @@ def Calibration_parse_arguments():
         arguments.output_file = os.path.join(arguments.output_file)
 
 
-    return arguments
+    with open('src/toolbox/_arguments.py', 'w') as f:
+        f.write('from argparse import Namespace \nglobal Arguments \nArguments = {0}'.format(arguments))
+
 
 
 def Aline_parse_arguments():
@@ -84,7 +92,10 @@ def Aline_parse_arguments():
                         default=1,
                         required=False)
 
-
+    parser.add_argument('--silent',
+                        help='No verbose mode',
+                        dest='silent',
+                        action="store_true")
 
     arguments = parser.parse_args()
 
@@ -129,16 +140,18 @@ def Bscan_parse_arguments():
                         default=1,
                         required=True)
 
-
+    parser.add_argument('--silent',
+                        help='No verbose mode',
+                        dest='silent',
+                        action="store_true")
 
     arguments = parser.parse_args()
 
     if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
 
-
-
-    return arguments
+    with open('src/toolbox/_arguments.py', 'w') as f:
+        f.write('from argparse import Namespace \nglobal Arguments \nArguments = {0}'.format(arguments))
 
 
 
@@ -202,7 +215,10 @@ def Cscan_parse_arguments():
                         action="store_true")
 
 
-
+    parser.add_argument('--silent',
+                        help='No verbose mode',
+                        dest='silent',
+                        action="store_true")
 
 
 

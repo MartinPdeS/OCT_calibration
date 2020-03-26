@@ -13,9 +13,10 @@ from scipy.interpolate import interp1d
 from src.toolbox.filters import butter_highpass_filter
 from src.toolbox.calibration_processing import linearize_spectra, compensate_dispersion
 from src.toolbox.maths import spectra2aline, hilbert
+from src.toolbox._arguments import Arguments
 
 
-def process_Aline(spectra, calibration, shift, arguments):
+def process_Aline(spectra, calibration, shift):
     """
     CPU based
     """
@@ -30,7 +31,7 @@ def process_Aline(spectra, calibration, shift, arguments):
 
     spectra = np.real( hilbert(spectra) * np.exp(j * np.arange(len(spectra)) * shift ) )
 
-    spectra = compensate_dispersion( np.array(spectra), arguments.dispersion * np.array( calibration['dispersion'] ) )
+    spectra = compensate_dispersion( np.array(spectra), Arguments.dispersion * np.array( calibration['dispersion'] ) )
 
     Aline = spectra2aline(spectra)
 
@@ -39,7 +40,7 @@ def process_Aline(spectra, calibration, shift, arguments):
     return Aline
 
 
-def _process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
+def _process_Bscan(Bscan_spectra, calibration, shift=0):
     """
     GPU accelerated
     """
@@ -50,7 +51,7 @@ def _process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
 
     hil = operation1(Bscan_spectra)
 
-    if arguments.shift:
+    if Arguments.shift:
         shift = calibration['peak_shift1']
 
     spectrum_shift = np.exp(j * np.arange(len(Bscan_spectra[0,:])) * shift )
@@ -101,7 +102,7 @@ def operation1(Bscan_spectra):
     return hil
 
 
-def process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
+def process_Bscan(Bscan_spectra, calibration, shift=0):
     """
     CPU based
     """
@@ -110,7 +111,7 @@ def process_Bscan(Bscan_spectra, calibration, shift=0, arguments=None):
 
     for i, spectrum in enumerate(Bscan_spectra):
 
-        Aline = process_Aline(spectrum, calibration, shift=shift, arguments=arguments)
+        Aline = process_Aline(spectrum, calibration, shift=shift)
 
         Bscan.append(Aline)
 
@@ -138,7 +139,7 @@ def denoise_Bscan(Bscan):
     return Bscan
 
 
-def process_Cscan(Cscan_spectra, calibration, shift, arguments):
+def process_Cscan(Cscan_spectra, calibration, shift):
 
     output_Cscan = []
 
@@ -146,7 +147,7 @@ def process_Cscan(Cscan_spectra, calibration, shift, arguments):
 
         sys.stdout.write('Computing Cscan {0}{1}\n'.format(iteration, np.shape(Cscan_spectra)) )
 
-        Bscan = process_Bscan(Bscan_spectra, calibration, shift=shift, arguments=arguments)
+        Bscan = process_Bscan(Bscan_spectra, calibration, shift=shift)
 
         Bscan = denoise_Bscan(Bscan)
 

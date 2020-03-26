@@ -13,9 +13,10 @@ from src.toolbox.fits import gauss, make_poly_fit, fit_dispersion
 from src.toolbox.maths import hilbert, unwrap_phase, apodization, spectra2aline
 from src.toolbox.filters import butter_lowpass_filter, butter_highpass_filter, compressor
 from src.toolbox.loadings import load_calibration
+from src.toolbox._arguments import Arguments
 
 
-def shift_spectra(spectra1, spectra2, N_pad, arguments=None):
+def shift_spectra(spectra1, spectra2, N_pad):
     """ This method find the relative position of the FFT of the two spectras
     in order to later k-linearize.
 
@@ -63,12 +64,11 @@ def shift_spectra(spectra1, spectra2, N_pad, arguments=None):
     shift1_condition = False
     shift2_condition = False
 
-    if arguments.interactive:
+    if Arguments.interactive:
         coeff1[1], coeff2[1] = interactive_shift(ff1,
                                                  [z_space, *coeff1],
                                                  ff2,
-                                                 [z_space, *coeff2],
-                                                 arguments=arguments)
+                                                 [z_space, *coeff2])
 
     x_shift = ( coeff1[1] + coeff2[1]) / 2
 
@@ -84,7 +84,7 @@ def shift_spectra(spectra1, spectra2, N_pad, arguments=None):
 
 
 
-def shift_1_spectra(spectra, shift, arguments=None):
+def shift_1_spectra(spectra, shift):
     """ This method find the relative position of the FFT of the two spectras
     in order to later k-linearize.
 
@@ -113,7 +113,7 @@ def shift_1_spectra(spectra, shift, arguments=None):
 
 
 
-def compute_dispersion(spectra1, spectra2, shift_1, shift_2, plot=True, arguments=None):
+def compute_dispersion(spectra1, spectra2, shift_1, shift_2):
     """ This method compute the dispersion on a k-linearized OCT spectra of
     two mirror exactly opposed relative to the zero delay point.
 
@@ -148,14 +148,15 @@ def compute_dispersion(spectra1, spectra2, shift_1, shift_2, plot=True, argument
 
     Pdispersion = fit_disp(x)
 
-    if plot:
+    if Arguments.silent is False:
+
         phase_dispersion_plot(Pdisp, Pdispersion)
 
 
     return Pdispersion
 
 
-def k_linearization(spectra1, spectra2, arguments=None):
+def k_linearization(spectra1, spectra2):
     """ This method compute the k-linear fractional indexes and interpolate
     the two spectras in order to compensate it.
 
@@ -191,7 +192,9 @@ def k_linearization(spectra1, spectra2, arguments=None):
 
     Plin = fit_Plin( x )
 
-    plot_klinearization(phase1, phase2, Plin)
+    if Arguments.silent is False:
+
+        plot_klinearization(phase1, phase2, Plin)
 
     weight = np.ones(len(Plin))
 

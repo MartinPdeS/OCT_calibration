@@ -43,7 +43,7 @@ class Spectra(object):
         self.phase -= self.phase[0]
 
 
-    def process_data(self, plot=True):
+    def process_data(self):
         """ This method compute the processing of data, i.e,
         background removal + high pass filter.
 
@@ -69,14 +69,13 @@ class Spectra(object):
                                               fs=40000,
                                               order=4)
 
+    def plot(self):
 
-        if plot:
-
-            plots_signals(self.raw,
-                          self.sub_raw,
-                          self.ref,
-                          self.sample,
-                          self.background)
+        plots_signals(self.raw,
+                      self.sub_raw,
+                      self.ref,
+                      self.sample,
+                      self.background)
 
 
 
