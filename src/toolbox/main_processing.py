@@ -58,7 +58,7 @@ def _process_Bscan(Bscan_spectra, calibration, shift=0):
 
     x = np.arange( len(Bscan_spectra[0,:]) )
 
-    interpolation = interp1d(x, Bscan_spectra, kind='cubic')
+    interpolation = interp1d(x, Bscan_spectra, kind='cubic', fill_value="extrapolate")
 
     Bscan = interpolation(calibration['klinear'][:])
 
@@ -76,7 +76,7 @@ def _process_Bscan(Bscan_spectra, calibration, shift=0):
 
     Bscan = cp.asnumpy(data_output1)[:,:len(Bscan[0,:])//2]
 
-    return np.abs(Bscan)
+    return np.flip( np.abs(Bscan), 1)
 
 
 def operation1(Bscan_spectra):
@@ -108,6 +108,8 @@ def process_Bscan(Bscan_spectra, calibration, shift=0):
     """
 
     Bscan = []
+
+    Bscan_spectra = scipy.signal.detrend(Bscan_spectra, axis=0)
 
     for i, spectrum in enumerate(Bscan_spectra):
 

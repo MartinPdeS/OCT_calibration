@@ -1,8 +1,7 @@
 
 '''_____Standard imports_____'''
 import numpy as np
-import json
-
+import pickle
 
 
 def load_data(dir, type=float):
@@ -24,10 +23,6 @@ def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):
 
 def load_calibration(dir=None):
 
-    if dir is None:
-        dir = "calibration/calibration_parameters.json"
-
-    with open(dir) as json_file:
-        calibration = json.load(json_file)
+    calibration = pickle.load( open( dir, "rb" ) )
 
     return calibration

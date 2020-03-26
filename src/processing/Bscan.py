@@ -20,7 +20,7 @@ arguments = Bscan_parse_arguments()
 from src.toolbox.loadings import load_Bscan_spectra, load_calibration
 from src.toolbox.plottings import Bscan_plots
 import src.toolbox.directories as directories
-from src.toolbox.main_processing import process_Bscan, denoise_Bscan
+from src.toolbox.main_processing import _process_Bscan, process_Bscan, denoise_Bscan
 from src.toolbox._arguments import Arguments
 
 
@@ -36,9 +36,13 @@ for iteration in range(dimension[0]):
 
     print( "########## iteration [{0}/{1}]".format( iteration + 1, dimension[0] ) )
 
-    tmp = process_Bscan(Bscan_spectra[iteration], calibration, shift=0)
+    if Arguments.gpu:
+        tmp = _process_Bscan(Bscan_spectra[iteration], calibration, shift=0)
+    else:
+        tmp = process_Bscan(Bscan_spectra[iteration], calibration, shift=0)
 
     Bscan.append( denoise_Bscan(tmp) )
+
 
 Bscan_output = np.mean(Bscan, axis=0)
 

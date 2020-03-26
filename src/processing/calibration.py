@@ -6,6 +6,7 @@ import os
 import sys
 import matplotlib.pyplot as plt
 import pprint
+import pickle
 pp = pprint.PrettyPrinter(width=41, compact=True)
 
 '''_____Add package_____'''
@@ -99,17 +100,17 @@ if Arguments.silent is False:
 
 calib_dict = {"klinear":     list(x_new),
               "dispersion":  list(Pdispersion),
-              "dark_not":    str(load_data(Arguments.input_dir + "dark_not.npy")),
-              "dark_ref":    str(load_data(Arguments.input_dir + "dark_ref.npy")),
-              "dark_sample": str(load_data(Arguments.input_dir + "dark_sample1.npy")),
+              "dark_not":    list(load_data(Arguments.input_dir + "dark_not.npy")),
+              "dark_ref":    list(load_data(Arguments.input_dir + "dark_ref.npy")),
+              "dark_sample": list(load_data(Arguments.input_dir + "dark_sample1.npy")),
               "peak_shift1": shift_1,
               "peak_shift2": shift_2,
               "psf_kernel" : list(kernel)
               }
 if Arguments.output_file:
     sys.stdout.write('Writting json file to {0}...'.format(Arguments.output_file))
-    with open(Arguments.output_file, 'w') as outfile:
-        json.dump(calib_dict, outfile)
+    with open(Arguments.output_file, 'wb') as outfile:
+        pickle.dump(calib_dict, outfile, protocol=pickle.HIGHEST_PROTOCOL)
 else:
     sys.stdout.write('Calibration file not saved... no output file declared')
 

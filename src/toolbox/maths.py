@@ -12,6 +12,7 @@ def hilbert(data):
     return np.fft.fft(tmp)
 
 
+@jit(nopython=False)
 def unwrap_phase(spectra):
 
     spectra = np.array(spectra)

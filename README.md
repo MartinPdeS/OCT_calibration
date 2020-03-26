@@ -135,7 +135,7 @@ In order to process one example of Cscan, one can tape the following command on 
 
 ```console
 
->>> python3 src/processing/Cscan.py --dispersion=1 --input-dir = ../ --calibration-file=data/calibration/example/calib.json --output-file=...
+>>> python3 src/processing/Cscan.py --dispersion=1 --input-dir=Cscan/example/ --calibration-file=data/calibration/example/calib.json --dimension 100 100 1024
 
 ```
 
