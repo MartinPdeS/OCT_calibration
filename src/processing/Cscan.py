@@ -4,7 +4,6 @@ import numpy as np
 import os
 import tables
 import sys
-import scipy
 
 
 '''_____Add package_____'''
@@ -16,9 +15,7 @@ if p not in sys.path:
 from src.toolbox.parsing import Cscan_parse_arguments
 arguments = Cscan_parse_arguments()
 from src.toolbox.loadings import load_calibration
-import src.toolbox.directories as directories
 from src.toolbox.main_processing import *
-from src.toolbox.filters import denoise_Bscan
 from src.toolbox._arguments import Arguments
 
 if Arguments.gpu:
