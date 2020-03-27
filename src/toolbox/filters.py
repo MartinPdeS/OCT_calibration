@@ -3,6 +3,7 @@
 '''_____Standard imports_____'''
 from scipy import signal
 import numpy as np
+import scipy.fftpack as fp
 
 
 
@@ -56,7 +57,23 @@ def image_high_pass(data, axis):
     return data
 
 
+def denoise_Bscan(Bscan):
 
+    F1 = fp.fft2((Bscan).astype(float))
+
+    F2 = fp.fftshift(F1)
+
+    F2[500:530,:] = 0
+
+    (w, h) = Bscan.shape
+
+    half_w, half_h = int(w/2), int(h/2)
+
+    F2[0 :1024, half_h -1 : half_h + 1] = 0
+
+    Bscan = np.abs(fp.ifft2(fp.ifftshift(F2)).real)
+
+    return Bscan
 
 def compressor(data, factor=3, threshold=None):
 

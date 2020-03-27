@@ -16,11 +16,15 @@ if p not in sys.path:
 from src.toolbox.parsing import Cscan_parse_arguments
 arguments = Cscan_parse_arguments()
 from src.toolbox.loadings import load_calibration
-from src.toolbox.main_processing import _process_Bscan, process_Bscan
 import src.toolbox.directories as directories
 from src.toolbox.main_processing import *
+from src.toolbox.filters import denoise_Bscan
 from src.toolbox._arguments import Arguments
 
+if Arguments.gpu:
+    from src.toolbox.main_processing_gpu import process_Bscan
+else:
+    from src.toolbox.main_processing_cpu import process_Bscan
 
 calibration = load_calibration(dir = Arguments.calibration_file)
 

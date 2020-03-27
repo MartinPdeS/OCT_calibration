@@ -1,7 +1,6 @@
 
 '''_____Standard imports_____'''
 import numpy as np
-import matplotlib.pyplot as plt
 
 '''_____Project imports_____'''
 from src.toolbox.maths import unwrap_phase

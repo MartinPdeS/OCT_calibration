@@ -43,6 +43,7 @@ Thumbs.db
 # Files too large #
 ##################
 data/Cscan/*
+!data/Cscan/example
 *.h5
 
 
