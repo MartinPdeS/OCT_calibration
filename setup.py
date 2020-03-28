@@ -4,8 +4,16 @@ from Cython.Distutils import build_ext
 from Cython.Build import cythonize
 
 ext_modules=[
-    Extension("test_fits",            ["src/toolbox/fits.pyx"]),
-    Extension("test_filters",         ["src/toolbox/filters.pyx"]),
+    Extension("cython_fits",                     ["src/toolbox/fits.pyx"]),
+    Extension("cython_filters",                  ["src/toolbox/filters.pyx"]),
+    Extension("cython_maths",                    ["src/toolbox/maths.pyx"]),
+    Extension("cython_loadings",                 ["src/toolbox/loadings.pyx"]),
+    Extension("cython_main_processing_cpu",      ["src/toolbox/main_processing_cpu.pyx"]),
+    Extension("cython_main_processing_gpu",      ["src/toolbox/main_processing_gpu.pyx"]),
+    Extension("cython_plottings",                ["src/toolbox/plottings.pyx"]),
+    Extension("cython_calibration_processing",   ["src/toolbox/calibration_processing.pyx"]),
+    Extension("cython_parsing",                  ["src/toolbox/parsing.pyx"]),
+    Extension("cython_PySpectra",                ["src/toolbox/PySpectra.pyx"]),
 ]
 
 setup(

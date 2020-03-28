@@ -3,7 +3,6 @@
 '''_____Standard imports_____'''
 from scipy import signal
 import numpy as np
-import cv2
 import scipy.fftpack as fp
 
 

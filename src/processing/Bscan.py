@@ -14,15 +14,15 @@ if p not in sys.path:
 '''_____Project imports_____'''
 from src.toolbox.parsing import Bscan_parse_arguments
 arguments = Bscan_parse_arguments()
-from src.toolbox.loadings import load_Bscan_spectra, load_calibration
-from src.toolbox.plottings import Bscan_plots
+from src.toolbox.cython_loadings import load_Bscan_spectra, load_calibration
+from src.toolbox.cython_plottings import Bscan_plots
 from src.toolbox._arguments import Arguments
-from src.toolbox.filters import denoise_Bscan
+from src.toolbox.cython_filters import denoise_Bscan
 
 if Arguments.gpu:
     from src.toolbox.main_processing_gpu import process_Bscan
 else:
-    from src.toolbox.main_processing_cpu import process_Bscan
+    from src.toolbox.cython_main_processing_cpu import process_Bscan
 
 
 dimension = (1,3147,1024)
