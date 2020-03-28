@@ -9,7 +9,7 @@ test_Calibration:
 		rm --force temp_calibration.json.json
 
 test_Bscan_cpu:
-		python src/processing/Bscan.py -d=1 -if=data/Bscan/example.npy -c=data/calibration/example/calib.json --silent
+		python src/processing/Bscan.py -d=1 -if=data/Bscan/example.npy -c=data/calibration/example/calib.json 
 
 test_Bscan_gpu:
 		python src/processing/Bscan.py -gpu -d=1 -if=data/Bscan/example.npy -c=data/calibration/example/calib.json --silent
