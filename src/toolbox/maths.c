@@ -1069,6 +1069,15 @@ typedef npy_double __pyx_t_5numpy_double_t;
  * ctypedef npy_cfloat      cfloat_t
  */
 typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
+
+/* "src/toolbox/maths.pyx":8
+ * 
+ * ctypedef cnp.cdouble_t CDTYPE_t
+ * ctypedef cnp.double_t DTYPE_t             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+typedef __pyx_t_5numpy_double_t __pyx_t_12cython_maths_DTYPE_t;
 /* Declarations.proto */
 #if CYTHON_CCOMPLEX
   #ifdef __cplusplus
@@ -1131,6 +1140,15 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  * cdef inline object PyArray_MultiIterNew1(a):
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
+
+/* "src/toolbox/maths.pyx":7
+ * 
+ * 
+ * ctypedef cnp.cdouble_t CDTYPE_t             # <<<<<<<<<<<<<<
+ * ctypedef cnp.double_t DTYPE_t
+ * 
+ */
+typedef __pyx_t_5numpy_cdouble_t __pyx_t_12cython_maths_CDTYPE_t;
 
 /* --- Runtime support code (head) --- */
 /* Refnanny.proto */
@@ -1664,7 +1682,7 @@ static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
 /* Module declarations from 'cython_maths' */
-static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_double_t = { "double_t", NULL, sizeof(__pyx_t_5numpy_double_t), { 0 }, 0, 'R', 0, 0 };
+static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_12cython_maths_DTYPE_t = { "DTYPE_t", NULL, sizeof(__pyx_t_12cython_maths_DTYPE_t), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_StructField __Pyx_StructFields_nn___pyx_t_5numpy_cdouble_t[] = {
   {&__Pyx_TypeInfo_double, "real", offsetof(__pyx_t_5numpy_cdouble_t, real)},
@@ -1672,6 +1690,12 @@ static __Pyx_StructField __Pyx_StructFields_nn___pyx_t_5numpy_cdouble_t[] = {
   {NULL, NULL, 0}
 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_cdouble_t = { "cdouble_t", __Pyx_StructFields_nn___pyx_t_5numpy_cdouble_t, sizeof(__pyx_t_5numpy_cdouble_t), { 0 }, 0, 'C', 0, 0 };
+static __Pyx_StructField __Pyx_StructFields_nn___pyx_t_12cython_maths_CDTYPE_t[] = {
+  {&__Pyx_TypeInfo_double, "real", offsetof(__pyx_t_12cython_maths_CDTYPE_t, real)},
+  {&__Pyx_TypeInfo_double, "imag", offsetof(__pyx_t_12cython_maths_CDTYPE_t, imag)},
+  {NULL, NULL, 0}
+};
+static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_12cython_maths_CDTYPE_t = { "CDTYPE_t", __Pyx_StructFields_nn___pyx_t_12cython_maths_CDTYPE_t, sizeof(__pyx_t_12cython_maths_CDTYPE_t), { 0 }, 0, 'C', 0, 0 };
 #define __Pyx_MODULE_NAME "cython_maths"
 extern int __pyx_module_is_main_cython_maths;
 int __pyx_module_is_main_cython_maths = 0;
@@ -1684,7 +1708,6 @@ static PyObject *__pyx_builtin_ImportError;
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k_abs[] = "abs";
 static const char __pyx_k_fft[] = "fft";
-static const char __pyx_k_data[] = "data";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_temp[] = "temp";
@@ -1707,7 +1730,6 @@ static const char __pyx_k_fft_spectra[] = "fft_spectra";
 static const char __pyx_k_RuntimeError[] = "RuntimeError";
 static const char __pyx_k_cython_maths[] = "cython_maths";
 static const char __pyx_k_unwrap_phase[] = "unwrap_phase";
-static const char __pyx_k_spectra2aline[] = "spectra2aline";
 static const char __pyx_k_unwrapped_phase[] = "unwrapped_phase";
 static const char __pyx_k_Standard_imports[] = "_____Standard imports_____";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
@@ -1732,7 +1754,6 @@ static PyObject *__pyx_n_s_apodization;
 static PyObject *__pyx_n_s_array;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_cython_maths;
-static PyObject *__pyx_n_s_data;
 static PyObject *__pyx_n_s_fft;
 static PyObject *__pyx_n_s_fft_spectra;
 static PyObject *__pyx_n_s_fftshift;
@@ -1750,7 +1771,6 @@ static PyObject *__pyx_kp_s_numpy_core_umath_failed_to_impor;
 static PyObject *__pyx_n_s_phase;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_spectra;
-static PyObject *__pyx_n_s_spectra2aline;
 static PyObject *__pyx_kp_s_src_toolbox_maths_pyx;
 static PyObject *__pyx_n_s_temp;
 static PyObject *__pyx_n_s_test;
@@ -1758,10 +1778,9 @@ static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_unwrap;
 static PyObject *__pyx_n_s_unwrap_phase;
 static PyObject *__pyx_n_s_unwrapped_phase;
-static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_data); /* proto */
+static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_spectra); /* proto */
 static PyObject *__pyx_pf_12cython_maths_2unwrap_phase(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_spectra); /* proto */
 static PyObject *__pyx_pf_12cython_maths_4apodization(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_spectra); /* proto */
-static PyObject *__pyx_pf_12cython_maths_6spectra2aline(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_spectra); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static PyObject *__pyx_int_0;
@@ -1775,30 +1794,28 @@ static PyObject *__pyx_tuple__7;
 static PyObject *__pyx_tuple__8;
 static PyObject *__pyx_tuple__10;
 static PyObject *__pyx_tuple__12;
-static PyObject *__pyx_tuple__14;
 static PyObject *__pyx_codeobj__9;
 static PyObject *__pyx_codeobj__11;
 static PyObject *__pyx_codeobj__13;
-static PyObject *__pyx_codeobj__15;
 /* Late includes */
 
-/* "src/toolbox/maths.pyx":7
+/* "src/toolbox/maths.pyx":12
  * 
  * 
- * def hilbert(cnp.ndarray[cnp.double_t, ndim=1] data):             # <<<<<<<<<<<<<<
+ * def hilbert(cnp.ndarray[DTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
  *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12cython_maths_1hilbert(PyObject *__pyx_self, PyObject *__pyx_v_data); /*proto*/
+static PyObject *__pyx_pw_12cython_maths_1hilbert(PyObject *__pyx_self, PyObject *__pyx_v_spectra); /*proto*/
 static PyMethodDef __pyx_mdef_12cython_maths_1hilbert = {"hilbert", (PyCFunction)__pyx_pw_12cython_maths_1hilbert, METH_O, 0};
-static PyObject *__pyx_pw_12cython_maths_1hilbert(PyObject *__pyx_self, PyObject *__pyx_v_data) {
+static PyObject *__pyx_pw_12cython_maths_1hilbert(PyObject *__pyx_self, PyObject *__pyx_v_spectra) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hilbert (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), __pyx_ptype_5numpy_ndarray, 1, "data", 0))) __PYX_ERR(0, 7, __pyx_L1_error)
-  __pyx_r = __pyx_pf_12cython_maths_hilbert(__pyx_self, ((PyArrayObject *)__pyx_v_data));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_spectra), __pyx_ptype_5numpy_ndarray, 1, "spectra", 0))) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_r = __pyx_pf_12cython_maths_hilbert(__pyx_self, ((PyArrayObject *)__pyx_v_spectra));
 
   /* function exit code */
   goto __pyx_L0;
@@ -1809,10 +1826,10 @@ static PyObject *__pyx_pw_12cython_maths_1hilbert(PyObject *__pyx_self, PyObject
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_data) {
+static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_spectra) {
   PyArrayObject *__pyx_v_temp = 0;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_data;
-  __Pyx_Buffer __pyx_pybuffer_data;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_spectra;
+  __Pyx_Buffer __pyx_pybuffer_spectra;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_temp;
   __Pyx_Buffer __pyx_pybuffer_temp;
   PyObject *__pyx_r = NULL;
@@ -1833,34 +1850,34 @@ static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_pybuffer_temp.refcount = 0;
   __pyx_pybuffernd_temp.data = NULL;
   __pyx_pybuffernd_temp.rcbuffer = &__pyx_pybuffer_temp;
-  __pyx_pybuffer_data.pybuffer.buf = NULL;
-  __pyx_pybuffer_data.refcount = 0;
-  __pyx_pybuffernd_data.data = NULL;
-  __pyx_pybuffernd_data.rcbuffer = &__pyx_pybuffer_data;
+  __pyx_pybuffer_spectra.pybuffer.buf = NULL;
+  __pyx_pybuffer_spectra.refcount = 0;
+  __pyx_pybuffernd_spectra.data = NULL;
+  __pyx_pybuffernd_spectra.rcbuffer = &__pyx_pybuffer_spectra;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_data.rcbuffer->pybuffer, (PyObject*)__pyx_v_data, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 7, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_12cython_maths_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 12, __pyx_L1_error)
   }
-  __pyx_pybuffernd_data.diminfo[0].strides = __pyx_pybuffernd_data.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_data.diminfo[0].shape = __pyx_pybuffernd_data.rcbuffer->pybuffer.shape[0];
+  __pyx_pybuffernd_spectra.diminfo[0].strides = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_spectra.diminfo[0].shape = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.shape[0];
 
-  /* "src/toolbox/maths.pyx":11
+  /* "src/toolbox/maths.pyx":16
  *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
  * 
- *     temp = np.fft.fft(np.array(data))             # <<<<<<<<<<<<<<
+ *     temp = np.fft.fft(np.array(spectra))             # <<<<<<<<<<<<<<
  * 
  *     temp[0: len(temp)//2] = 0
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fft); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fft); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fft); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fft); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -1873,9 +1890,9 @@ static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_s
       __Pyx_DECREF_SET(__pyx_t_5, function);
     }
   }
-  __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, ((PyObject *)__pyx_v_data)) : __Pyx_PyObject_CallOneArg(__pyx_t_5, ((PyObject *)__pyx_v_data));
+  __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, ((PyObject *)__pyx_v_spectra)) : __Pyx_PyObject_CallOneArg(__pyx_t_5, ((PyObject *)__pyx_v_spectra));
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -1891,10 +1908,10 @@ static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_5, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 16, __pyx_L1_error)
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[2];
@@ -1911,29 +1928,29 @@ static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_s
       __pyx_t_8 = __pyx_t_9 = __pyx_t_10 = 0;
     }
     __pyx_pybuffernd_temp.diminfo[0].strides = __pyx_pybuffernd_temp.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_temp.diminfo[0].shape = __pyx_pybuffernd_temp.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 11, __pyx_L1_error)
+    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 16, __pyx_L1_error)
   }
   __pyx_t_6 = 0;
   __pyx_v_temp = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":13
- *     temp = np.fft.fft(np.array(data))
+  /* "src/toolbox/maths.pyx":18
+ *     temp = np.fft.fft(np.array(spectra))
  * 
  *     temp[0: len(temp)//2] = 0             # <<<<<<<<<<<<<<
  * 
  *     return np.fft.fft(temp)
  */
-  __pyx_t_11 = PyObject_Length(((PyObject *)__pyx_v_temp)); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 13, __pyx_L1_error)
-  __pyx_t_1 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_11, 2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_11 = PyObject_Length(((PyObject *)__pyx_v_temp)); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_1 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_11, 2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PySlice_New(__pyx_int_0, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_2 = PySlice_New(__pyx_int_0, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_temp), __pyx_t_2, __pyx_int_0) < 0)) __PYX_ERR(0, 13, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_temp), __pyx_t_2, __pyx_int_0) < 0)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/maths.pyx":15
+  /* "src/toolbox/maths.pyx":20
  *     temp[0: len(temp)//2] = 0
  * 
  *     return np.fft.fft(temp)             # <<<<<<<<<<<<<<
@@ -1941,12 +1958,12 @@ static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_s
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_fft); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_fft); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fft); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fft); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -1961,17 +1978,17 @@ static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_s
   }
   __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_3, ((PyObject *)__pyx_v_temp)) : __Pyx_PyObject_CallOneArg(__pyx_t_1, ((PyObject *)__pyx_v_temp));
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 15, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/maths.pyx":7
+  /* "src/toolbox/maths.pyx":12
  * 
  * 
- * def hilbert(cnp.ndarray[cnp.double_t, ndim=1] data):             # <<<<<<<<<<<<<<
+ * def hilbert(cnp.ndarray[DTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
  *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
  */
@@ -1987,14 +2004,14 @@ static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_s
     __Pyx_PyThreadState_declare
     __Pyx_PyThreadState_assign
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_data.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_temp.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
   __Pyx_AddTraceback("cython_maths.hilbert", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_data.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_temp.rcbuffer->pybuffer);
   __pyx_L2:;
   __Pyx_XDECREF((PyObject *)__pyx_v_temp);
@@ -2003,12 +2020,12 @@ static PyObject *__pyx_pf_12cython_maths_hilbert(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "src/toolbox/maths.pyx":18
+/* "src/toolbox/maths.pyx":23
  * 
  * 
- * def unwrap_phase(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * def unwrap_phase(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
- *     spectra = np.array(spectra)
+ *     fft_spectra = hilbert(spectra)
  */
 
 /* Python wrapper */
@@ -2018,7 +2035,7 @@ static PyObject *__pyx_pw_12cython_maths_3unwrap_phase(PyObject *__pyx_self, PyO
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("unwrap_phase (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_spectra), __pyx_ptype_5numpy_ndarray, 1, "spectra", 0))) __PYX_ERR(0, 18, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_spectra), __pyx_ptype_5numpy_ndarray, 1, "spectra", 0))) __PYX_ERR(0, 23, __pyx_L1_error)
   __pyx_r = __pyx_pf_12cython_maths_2unwrap_phase(__pyx_self, ((PyArrayObject *)__pyx_v_spectra));
 
   /* function exit code */
@@ -2041,33 +2058,54 @@ static PyObject *__pyx_pf_12cython_maths_2unwrap_phase(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
-  PyArrayObject *__pyx_t_4 = NULL;
-  int __pyx_t_5;
-  PyObject *__pyx_t_6 = NULL;
-  PyObject *__pyx_t_7 = NULL;
-  PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("unwrap_phase", 0);
-  __Pyx_INCREF((PyObject *)__pyx_v_spectra);
   __pyx_pybuffer_spectra.pybuffer.buf = NULL;
   __pyx_pybuffer_spectra.refcount = 0;
   __pyx_pybuffernd_spectra.data = NULL;
   __pyx_pybuffernd_spectra.rcbuffer = &__pyx_pybuffer_spectra;
   {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 18, __pyx_L1_error)
+    __Pyx_BufFmt_StackElem __pyx_stack[2];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_12cython_maths_CDTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 23, __pyx_L1_error)
   }
   __pyx_pybuffernd_spectra.diminfo[0].strides = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_spectra.diminfo[0].shape = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.shape[0];
 
-  /* "src/toolbox/maths.pyx":20
- * def unwrap_phase(cnp.ndarray[cnp.double_t, ndim=1] spectra):
+  /* "src/toolbox/maths.pyx":25
+ * def unwrap_phase(cnp.ndarray[CDTYPE_t, ndim=1] spectra):
  * 
- *     spectra = np.array(spectra)             # <<<<<<<<<<<<<<
+ *     fft_spectra = hilbert(spectra)             # <<<<<<<<<<<<<<
  * 
- *     fft_spectra = hilbert(spectra)
+ *     phase = np.angle( fft_spectra )
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_hilbert); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, ((PyObject *)__pyx_v_spectra)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_spectra));
+  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_v_fft_spectra = __pyx_t_1;
+  __pyx_t_1 = 0;
+
+  /* "src/toolbox/maths.pyx":27
+ *     fft_spectra = hilbert(spectra)
+ * 
+ *     phase = np.angle( fft_spectra )             # <<<<<<<<<<<<<<
+ * 
+ *     unwrapped_phase = np.unwrap( phase )
+ */
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_angle); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2080,71 +2118,24 @@ static PyObject *__pyx_pf_12cython_maths_2unwrap_phase(CYTHON_UNUSED PyObject *_
       __Pyx_DECREF_SET(__pyx_t_3, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, ((PyObject *)__pyx_v_spectra)) : __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_spectra));
+  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_v_fft_spectra) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_fft_spectra);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 20, __pyx_L1_error)
-  __pyx_t_4 = ((PyArrayObject *)__pyx_t_1);
-  {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer);
-    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_t_4, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
-    if (unlikely(__pyx_t_5 < 0)) {
-      PyErr_Fetch(&__pyx_t_6, &__pyx_t_7, &__pyx_t_8);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
-        Py_XDECREF(__pyx_t_6); Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_8);
-        __Pyx_RaiseBufferFallbackError();
-      } else {
-        PyErr_Restore(__pyx_t_6, __pyx_t_7, __pyx_t_8);
-      }
-      __pyx_t_6 = __pyx_t_7 = __pyx_t_8 = 0;
-    }
-    __pyx_pybuffernd_spectra.diminfo[0].strides = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_spectra.diminfo[0].shape = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 20, __pyx_L1_error)
-  }
-  __pyx_t_4 = 0;
-  __Pyx_DECREF_SET(__pyx_v_spectra, ((PyArrayObject *)__pyx_t_1));
+  __pyx_v_phase = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":22
- *     spectra = np.array(spectra)
- * 
- *     fft_spectra = hilbert(spectra)             # <<<<<<<<<<<<<<
- * 
+  /* "src/toolbox/maths.pyx":29
  *     phase = np.angle( fft_spectra )
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_hilbert); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_2);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, ((PyObject *)__pyx_v_spectra)) : __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_spectra));
-  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_v_fft_spectra = __pyx_t_1;
-  __pyx_t_1 = 0;
-
-  /* "src/toolbox/maths.pyx":24
- *     fft_spectra = hilbert(spectra)
  * 
- *     phase = np.angle( fft_spectra )             # <<<<<<<<<<<<<<
+ *     unwrapped_phase = np.unwrap( phase )             # <<<<<<<<<<<<<<
  * 
- *     unwrapped_phase = np.unwrap( phase )
+ *     unwrapped_phase[0] = 0
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_angle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_unwrap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -2157,55 +2148,25 @@ static PyObject *__pyx_pf_12cython_maths_2unwrap_phase(CYTHON_UNUSED PyObject *_
       __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_fft_spectra) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_fft_spectra);
+  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_phase) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_phase);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_v_phase = __pyx_t_1;
-  __pyx_t_1 = 0;
-
-  /* "src/toolbox/maths.pyx":26
- *     phase = np.angle( fft_spectra )
- * 
- *     unwrapped_phase = np.unwrap( phase )             # <<<<<<<<<<<<<<
- * 
- *     phase[0] = 0
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_unwrap); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 26, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_2);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_v_phase) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_phase);
-  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_unwrapped_phase = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":28
+  /* "src/toolbox/maths.pyx":31
  *     unwrapped_phase = np.unwrap( phase )
  * 
- *     phase[0] = 0             # <<<<<<<<<<<<<<
+ *     unwrapped_phase[0] = 0             # <<<<<<<<<<<<<<
  * 
  *     return unwrapped_phase
  */
-  if (unlikely(__Pyx_SetItemInt(__pyx_v_phase, 0, __pyx_int_0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 28, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_v_unwrapped_phase, 0, __pyx_int_0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 31, __pyx_L1_error)
 
-  /* "src/toolbox/maths.pyx":30
- *     phase[0] = 0
+  /* "src/toolbox/maths.pyx":33
+ *     unwrapped_phase[0] = 0
  * 
  *     return unwrapped_phase             # <<<<<<<<<<<<<<
  * 
@@ -2216,12 +2177,12 @@ static PyObject *__pyx_pf_12cython_maths_2unwrap_phase(CYTHON_UNUSED PyObject *_
   __pyx_r = __pyx_v_unwrapped_phase;
   goto __pyx_L0;
 
-  /* "src/toolbox/maths.pyx":18
+  /* "src/toolbox/maths.pyx":23
  * 
  * 
- * def unwrap_phase(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * def unwrap_phase(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
- *     spectra = np.array(spectra)
+ *     fft_spectra = hilbert(spectra)
  */
 
   /* function exit code */
@@ -2244,16 +2205,15 @@ static PyObject *__pyx_pf_12cython_maths_2unwrap_phase(CYTHON_UNUSED PyObject *_
   __Pyx_XDECREF(__pyx_v_fft_spectra);
   __Pyx_XDECREF(__pyx_v_phase);
   __Pyx_XDECREF(__pyx_v_unwrapped_phase);
-  __Pyx_XDECREF((PyObject *)__pyx_v_spectra);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "src/toolbox/maths.pyx":33
+/* "src/toolbox/maths.pyx":36
  * 
  * 
- * def apodization(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * def apodization(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
  *     hanning = np.hanning( len(spectra) )
  */
@@ -2265,7 +2225,7 @@ static PyObject *__pyx_pw_12cython_maths_5apodization(PyObject *__pyx_self, PyOb
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("apodization (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_spectra), __pyx_ptype_5numpy_ndarray, 1, "spectra", 0))) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_spectra), __pyx_ptype_5numpy_ndarray, 1, "spectra", 0))) __PYX_ERR(0, 36, __pyx_L1_error)
   __pyx_r = __pyx_pf_12cython_maths_4apodization(__pyx_self, ((PyArrayObject *)__pyx_v_spectra));
 
   /* function exit code */
@@ -2300,25 +2260,25 @@ static PyObject *__pyx_pf_12cython_maths_4apodization(CYTHON_UNUSED PyObject *__
   __pyx_pybuffernd_spectra.data = NULL;
   __pyx_pybuffernd_spectra.rcbuffer = &__pyx_pybuffer_spectra;
   {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 33, __pyx_L1_error)
+    __Pyx_BufFmt_StackElem __pyx_stack[2];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_12cython_maths_CDTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 36, __pyx_L1_error)
   }
   __pyx_pybuffernd_spectra.diminfo[0].strides = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_spectra.diminfo[0].shape = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.shape[0];
 
-  /* "src/toolbox/maths.pyx":35
- * def apodization(cnp.ndarray[cnp.double_t, ndim=1] spectra):
+  /* "src/toolbox/maths.pyx":38
+ * def apodization(cnp.ndarray[CDTYPE_t, ndim=1] spectra):
  * 
  *     hanning = np.hanning( len(spectra) )             # <<<<<<<<<<<<<<
  * 
  *     spectra = hanning *  spectra
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_hanning); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_hanning); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = PyObject_Length(((PyObject *)__pyx_v_spectra)); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 35, __pyx_L1_error)
-  __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_4 = PyObject_Length(((PyObject *)__pyx_v_spectra)); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -2333,30 +2293,30 @@ static PyObject *__pyx_pf_12cython_maths_4apodization(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_5, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_hanning = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":37
+  /* "src/toolbox/maths.pyx":40
  *     hanning = np.hanning( len(spectra) )
  * 
  *     spectra = hanning *  spectra             # <<<<<<<<<<<<<<
  * 
  *     return spectra
  */
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_hanning, ((PyObject *)__pyx_v_spectra)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_hanning, ((PyObject *)__pyx_v_spectra)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 37, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 40, __pyx_L1_error)
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_1);
   {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    __Pyx_BufFmt_StackElem __pyx_stack[2];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_nn___pyx_t_12cython_maths_CDTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_8, &__pyx_t_9, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_12cython_maths_CDTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -2365,13 +2325,13 @@ static PyObject *__pyx_pf_12cython_maths_4apodization(CYTHON_UNUSED PyObject *__
       __pyx_t_8 = __pyx_t_9 = __pyx_t_10 = 0;
     }
     __pyx_pybuffernd_spectra.diminfo[0].strides = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_spectra.diminfo[0].shape = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 37, __pyx_L1_error)
+    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 40, __pyx_L1_error)
   }
   __pyx_t_6 = 0;
   __Pyx_DECREF_SET(__pyx_v_spectra, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":39
+  /* "src/toolbox/maths.pyx":42
  *     spectra = hanning *  spectra
  * 
  *     return spectra             # <<<<<<<<<<<<<<
@@ -2383,10 +2343,10 @@ static PyObject *__pyx_pf_12cython_maths_4apodization(CYTHON_UNUSED PyObject *__
   __pyx_r = ((PyObject *)__pyx_v_spectra);
   goto __pyx_L0;
 
-  /* "src/toolbox/maths.pyx":33
+  /* "src/toolbox/maths.pyx":36
  * 
  * 
- * def apodization(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * def apodization(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
  *     hanning = np.hanning( len(spectra) )
  */
@@ -2416,40 +2376,21 @@ static PyObject *__pyx_pf_12cython_maths_4apodization(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "src/toolbox/maths.pyx":42
+/* "src/toolbox/maths.pyx":45
  * 
  * 
- * def spectra2aline(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * cdef cnp.ndarray[CDTYPE_t, ndim=1] spectra2aline(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
- *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
+ *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] ctemp
  */
 
-/* Python wrapper */
-static PyObject *__pyx_pw_12cython_maths_7spectra2aline(PyObject *__pyx_self, PyObject *__pyx_v_spectra); /*proto*/
-static PyMethodDef __pyx_mdef_12cython_maths_7spectra2aline = {"spectra2aline", (PyCFunction)__pyx_pw_12cython_maths_7spectra2aline, METH_O, 0};
-static PyObject *__pyx_pw_12cython_maths_7spectra2aline(PyObject *__pyx_self, PyObject *__pyx_v_spectra) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("spectra2aline (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_spectra), __pyx_ptype_5numpy_ndarray, 1, "spectra", 0))) __PYX_ERR(0, 42, __pyx_L1_error)
-  __pyx_r = __pyx_pf_12cython_maths_6spectra2aline(__pyx_self, ((PyArrayObject *)__pyx_v_spectra));
-
-  /* function exit code */
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_12cython_maths_6spectra2aline(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_spectra) {
-  PyArrayObject *__pyx_v_temp = 0;
+static PyArrayObject *__pyx_f_12cython_maths_spectra2aline(PyArrayObject *__pyx_v_spectra) {
+  PyArrayObject *__pyx_v_ctemp = 0;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_ctemp;
+  __Pyx_Buffer __pyx_pybuffer_ctemp;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_spectra;
   __Pyx_Buffer __pyx_pybuffer_spectra;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_temp;
-  __Pyx_Buffer __pyx_pybuffer_temp;
-  PyObject *__pyx_r = NULL;
+  PyArrayObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
@@ -2460,33 +2401,33 @@ static PyObject *__pyx_pf_12cython_maths_6spectra2aline(CYTHON_UNUSED PyObject *
   PyObject *__pyx_t_7 = NULL;
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("spectra2aline", 0);
-  __pyx_pybuffer_temp.pybuffer.buf = NULL;
-  __pyx_pybuffer_temp.refcount = 0;
-  __pyx_pybuffernd_temp.data = NULL;
-  __pyx_pybuffernd_temp.rcbuffer = &__pyx_pybuffer_temp;
+  __pyx_pybuffer_ctemp.pybuffer.buf = NULL;
+  __pyx_pybuffer_ctemp.refcount = 0;
+  __pyx_pybuffernd_ctemp.data = NULL;
+  __pyx_pybuffernd_ctemp.rcbuffer = &__pyx_pybuffer_ctemp;
   __pyx_pybuffer_spectra.pybuffer.buf = NULL;
   __pyx_pybuffer_spectra.refcount = 0;
   __pyx_pybuffernd_spectra.data = NULL;
   __pyx_pybuffernd_spectra.rcbuffer = &__pyx_pybuffer_spectra;
   {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 42, __pyx_L1_error)
+    __Pyx_BufFmt_StackElem __pyx_stack[2];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer, (PyObject*)__pyx_v_spectra, &__Pyx_TypeInfo_nn___pyx_t_12cython_maths_CDTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 45, __pyx_L1_error)
   }
   __pyx_pybuffernd_spectra.diminfo[0].strides = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_spectra.diminfo[0].shape = __pyx_pybuffernd_spectra.rcbuffer->pybuffer.shape[0];
 
-  /* "src/toolbox/maths.pyx":46
- *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
+  /* "src/toolbox/maths.pyx":49
+ *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] ctemp
  * 
- *     temp = np.fft.fft(spectra)             # <<<<<<<<<<<<<<
+ *     ctemp = np.fft.fft(spectra)             # <<<<<<<<<<<<<<
  * 
- *     temp = np.fft.fftshift( temp )
+ *     ctemp = np.fft.fftshift( ctemp )
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fft); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fft); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fft); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fft); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -2501,18 +2442,18 @@ static PyObject *__pyx_pf_12cython_maths_6spectra2aline(CYTHON_UNUSED PyObject *
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, ((PyObject *)__pyx_v_spectra)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_spectra));
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 46, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 49, __pyx_L1_error)
   __pyx_t_4 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[2];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_temp.rcbuffer->pybuffer);
-    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_temp.rcbuffer->pybuffer, (PyObject*)__pyx_t_4, &__Pyx_TypeInfo_nn___pyx_t_5numpy_cdouble_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ctemp.rcbuffer->pybuffer);
+    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ctemp.rcbuffer->pybuffer, (PyObject*)__pyx_t_4, &__Pyx_TypeInfo_nn___pyx_t_5numpy_cdouble_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
     if (unlikely(__pyx_t_5 < 0)) {
       PyErr_Fetch(&__pyx_t_6, &__pyx_t_7, &__pyx_t_8);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_temp.rcbuffer->pybuffer, (PyObject*)__pyx_v_temp, &__Pyx_TypeInfo_nn___pyx_t_5numpy_cdouble_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ctemp.rcbuffer->pybuffer, (PyObject*)__pyx_v_ctemp, &__Pyx_TypeInfo_nn___pyx_t_5numpy_cdouble_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_6); Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_8);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -2520,26 +2461,26 @@ static PyObject *__pyx_pf_12cython_maths_6spectra2aline(CYTHON_UNUSED PyObject *
       }
       __pyx_t_6 = __pyx_t_7 = __pyx_t_8 = 0;
     }
-    __pyx_pybuffernd_temp.diminfo[0].strides = __pyx_pybuffernd_temp.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_temp.diminfo[0].shape = __pyx_pybuffernd_temp.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 46, __pyx_L1_error)
+    __pyx_pybuffernd_ctemp.diminfo[0].strides = __pyx_pybuffernd_ctemp.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ctemp.diminfo[0].shape = __pyx_pybuffernd_ctemp.rcbuffer->pybuffer.shape[0];
+    if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 49, __pyx_L1_error)
   }
   __pyx_t_4 = 0;
-  __pyx_v_temp = ((PyArrayObject *)__pyx_t_1);
+  __pyx_v_ctemp = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":48
- *     temp = np.fft.fft(spectra)
+  /* "src/toolbox/maths.pyx":51
+ *     ctemp = np.fft.fft(spectra)
  * 
- *     temp = np.fft.fftshift( temp )             # <<<<<<<<<<<<<<
+ *     ctemp = np.fft.fftshift( ctemp )             # <<<<<<<<<<<<<<
  * 
- *     return np.abs( temp )
+ *     return np.abs( ctemp )
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fft); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fft); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fftshift); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fftshift); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -2552,20 +2493,20 @@ static PyObject *__pyx_pf_12cython_maths_6spectra2aline(CYTHON_UNUSED PyObject *
       __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, ((PyObject *)__pyx_v_temp)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_temp));
+  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, ((PyObject *)__pyx_v_ctemp)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_ctemp));
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 48, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 51, __pyx_L1_error)
   __pyx_t_4 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[2];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_temp.rcbuffer->pybuffer);
-    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_temp.rcbuffer->pybuffer, (PyObject*)__pyx_t_4, &__Pyx_TypeInfo_nn___pyx_t_5numpy_cdouble_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ctemp.rcbuffer->pybuffer);
+    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ctemp.rcbuffer->pybuffer, (PyObject*)__pyx_t_4, &__Pyx_TypeInfo_nn___pyx_t_5numpy_cdouble_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
     if (unlikely(__pyx_t_5 < 0)) {
       PyErr_Fetch(&__pyx_t_8, &__pyx_t_7, &__pyx_t_6);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_temp.rcbuffer->pybuffer, (PyObject*)__pyx_v_temp, &__Pyx_TypeInfo_nn___pyx_t_5numpy_cdouble_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ctemp.rcbuffer->pybuffer, (PyObject*)__pyx_v_ctemp, &__Pyx_TypeInfo_nn___pyx_t_5numpy_cdouble_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_6);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -2573,22 +2514,22 @@ static PyObject *__pyx_pf_12cython_maths_6spectra2aline(CYTHON_UNUSED PyObject *
       }
       __pyx_t_8 = __pyx_t_7 = __pyx_t_6 = 0;
     }
-    __pyx_pybuffernd_temp.diminfo[0].strides = __pyx_pybuffernd_temp.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_temp.diminfo[0].shape = __pyx_pybuffernd_temp.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 48, __pyx_L1_error)
+    __pyx_pybuffernd_ctemp.diminfo[0].strides = __pyx_pybuffernd_ctemp.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ctemp.diminfo[0].shape = __pyx_pybuffernd_ctemp.rcbuffer->pybuffer.shape[0];
+    if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 51, __pyx_L1_error)
   }
   __pyx_t_4 = 0;
-  __Pyx_DECREF_SET(__pyx_v_temp, ((PyArrayObject *)__pyx_t_1));
+  __Pyx_DECREF_SET(__pyx_v_ctemp, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":50
- *     temp = np.fft.fftshift( temp )
+  /* "src/toolbox/maths.pyx":53
+ *     ctemp = np.fft.fftshift( ctemp )
  * 
- *     return np.abs( temp )             # <<<<<<<<<<<<<<
+ *     return np.abs( ctemp )             # <<<<<<<<<<<<<<
  */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __Pyx_XDECREF(((PyObject *)__pyx_r));
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_abs); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_abs); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2601,21 +2542,22 @@ static PyObject *__pyx_pf_12cython_maths_6spectra2aline(CYTHON_UNUSED PyObject *
       __Pyx_DECREF_SET(__pyx_t_3, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, ((PyObject *)__pyx_v_temp)) : __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_temp));
+  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, ((PyObject *)__pyx_v_ctemp)) : __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_ctemp));
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 50, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_r = __pyx_t_1;
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_r = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/maths.pyx":42
+  /* "src/toolbox/maths.pyx":45
  * 
  * 
- * def spectra2aline(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * cdef cnp.ndarray[CDTYPE_t, ndim=1] spectra2aline(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
- *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
+ *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] ctemp
  */
 
   /* function exit code */
@@ -2627,18 +2569,18 @@ static PyObject *__pyx_pf_12cython_maths_6spectra2aline(CYTHON_UNUSED PyObject *
     __Pyx_PyThreadState_declare
     __Pyx_PyThreadState_assign
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ctemp.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_temp.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
   __Pyx_AddTraceback("cython_maths.spectra2aline", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
+  __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ctemp.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_spectra.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_temp.rcbuffer->pybuffer);
   __pyx_L2:;
-  __Pyx_XDECREF((PyObject *)__pyx_v_temp);
-  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_XDECREF((PyObject *)__pyx_v_ctemp);
+  __Pyx_XGIVEREF((PyObject *)__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
@@ -5119,7 +5061,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_array, __pyx_k_array, sizeof(__pyx_k_array), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_cython_maths, __pyx_k_cython_maths, sizeof(__pyx_k_cython_maths), 0, 0, 1, 1},
-  {&__pyx_n_s_data, __pyx_k_data, sizeof(__pyx_k_data), 0, 0, 1, 1},
   {&__pyx_n_s_fft, __pyx_k_fft, sizeof(__pyx_k_fft), 0, 0, 1, 1},
   {&__pyx_n_s_fft_spectra, __pyx_k_fft_spectra, sizeof(__pyx_k_fft_spectra), 0, 0, 1, 1},
   {&__pyx_n_s_fftshift, __pyx_k_fftshift, sizeof(__pyx_k_fftshift), 0, 0, 1, 1},
@@ -5137,7 +5078,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_phase, __pyx_k_phase, sizeof(__pyx_k_phase), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_spectra, __pyx_k_spectra, sizeof(__pyx_k_spectra), 0, 0, 1, 1},
-  {&__pyx_n_s_spectra2aline, __pyx_k_spectra2aline, sizeof(__pyx_k_spectra2aline), 0, 0, 1, 1},
   {&__pyx_kp_s_src_toolbox_maths_pyx, __pyx_k_src_toolbox_maths_pyx, sizeof(__pyx_k_src_toolbox_maths_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_temp, __pyx_k_temp, sizeof(__pyx_k_temp), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
@@ -5238,53 +5178,41 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "src/toolbox/maths.pyx":7
+  /* "src/toolbox/maths.pyx":12
  * 
  * 
- * def hilbert(cnp.ndarray[cnp.double_t, ndim=1] data):             # <<<<<<<<<<<<<<
+ * def hilbert(cnp.ndarray[DTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
  *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
  */
-  __pyx_tuple__8 = PyTuple_Pack(2, __pyx_n_s_data, __pyx_n_s_temp); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(2, __pyx_n_s_spectra, __pyx_n_s_temp); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_maths_pyx, __pyx_n_s_hilbert, 7, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_maths_pyx, __pyx_n_s_hilbert, 12, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 12, __pyx_L1_error)
 
-  /* "src/toolbox/maths.pyx":18
+  /* "src/toolbox/maths.pyx":23
  * 
  * 
- * def unwrap_phase(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * def unwrap_phase(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
- *     spectra = np.array(spectra)
+ *     fft_spectra = hilbert(spectra)
  */
-  __pyx_tuple__10 = PyTuple_Pack(4, __pyx_n_s_spectra, __pyx_n_s_fft_spectra, __pyx_n_s_phase, __pyx_n_s_unwrapped_phase); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_tuple__10 = PyTuple_Pack(4, __pyx_n_s_spectra, __pyx_n_s_fft_spectra, __pyx_n_s_phase, __pyx_n_s_unwrapped_phase); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_maths_pyx, __pyx_n_s_unwrap_phase, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_maths_pyx, __pyx_n_s_unwrap_phase, 23, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 23, __pyx_L1_error)
 
-  /* "src/toolbox/maths.pyx":33
+  /* "src/toolbox/maths.pyx":36
  * 
  * 
- * def apodization(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * def apodization(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
  *     hanning = np.hanning( len(spectra) )
  */
-  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_n_s_spectra, __pyx_n_s_hanning); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_n_s_spectra, __pyx_n_s_hanning); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_maths_pyx, __pyx_n_s_apodization, 33, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 33, __pyx_L1_error)
-
-  /* "src/toolbox/maths.pyx":42
- * 
- * 
- * def spectra2aline(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
- * 
- *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
- */
-  __pyx_tuple__14 = PyTuple_Pack(2, __pyx_n_s_spectra, __pyx_n_s_temp); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 42, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__14);
-  __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_maths_pyx, __pyx_n_s_spectra2aline, 42, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_maths_pyx, __pyx_n_s_apodization, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5602,52 +5530,40 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":7
+  /* "src/toolbox/maths.pyx":12
  * 
  * 
- * def hilbert(cnp.ndarray[cnp.double_t, ndim=1] data):             # <<<<<<<<<<<<<<
+ * def hilbert(cnp.ndarray[DTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
  *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12cython_maths_1hilbert, NULL, __pyx_n_s_cython_maths); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12cython_maths_1hilbert, NULL, __pyx_n_s_cython_maths); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_hilbert, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_hilbert, __pyx_t_1) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":18
+  /* "src/toolbox/maths.pyx":23
  * 
  * 
- * def unwrap_phase(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * def unwrap_phase(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
- *     spectra = np.array(spectra)
+ *     fft_spectra = hilbert(spectra)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12cython_maths_3unwrap_phase, NULL, __pyx_n_s_cython_maths); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12cython_maths_3unwrap_phase, NULL, __pyx_n_s_cython_maths); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_unwrap_phase, __pyx_t_1) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_unwrap_phase, __pyx_t_1) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/maths.pyx":33
+  /* "src/toolbox/maths.pyx":36
  * 
  * 
- * def apodization(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
+ * def apodization(cnp.ndarray[CDTYPE_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
  * 
  *     hanning = np.hanning( len(spectra) )
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12cython_maths_5apodization, NULL, __pyx_n_s_cython_maths); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12cython_maths_5apodization, NULL, __pyx_n_s_cython_maths); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_apodization, __pyx_t_1) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "src/toolbox/maths.pyx":42
- * 
- * 
- * def spectra2aline(cnp.ndarray[cnp.double_t, ndim=1] spectra):             # <<<<<<<<<<<<<<
- * 
- *     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12cython_maths_7spectra2aline, NULL, __pyx_n_s_cython_maths); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_spectra2aline, __pyx_t_1) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_apodization, __pyx_t_1) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "src/toolbox/maths.pyx":2

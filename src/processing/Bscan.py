@@ -1,4 +1,3 @@
-
 '''_____Standard imports_____'''
 import os
 import sys
@@ -20,7 +19,7 @@ from src.toolbox._arguments import Arguments
 from src.toolbox.cython_filters import denoise_Bscan
 
 if Arguments.gpu:
-    from src.toolbox.main_processing_gpu import process_Bscan
+    from src.toolbox.cython_main_processing_gpu import process_Bscan
 else:
     from src.toolbox.cython_main_processing_cpu import process_Bscan
 
@@ -37,7 +36,7 @@ for iteration in range(dimension[0]):
 
     print( "########## iteration [{0}/{1}]".format( iteration + 1, dimension[0] ) )
 
-    tmp = process_Bscan(Bscan_spectra[iteration], calibration, shift=0)
+    tmp = process_Bscan(Bscan_spectra[iteration], calibration)
 
     Bscan.append( denoise_Bscan(tmp) )
 

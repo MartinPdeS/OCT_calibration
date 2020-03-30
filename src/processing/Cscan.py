@@ -15,13 +15,14 @@ if p not in sys.path:
 from src.toolbox.parsing import Cscan_parse_arguments
 arguments = Cscan_parse_arguments()
 from src.toolbox.loadings import load_calibration
-from src.toolbox.main_processing import *
+from src.toolbox.main_processing_gpu import *
 from src.toolbox._arguments import Arguments
 
+
 if Arguments.gpu:
-    from src.toolbox.main_processing_gpu import process_Bscan
+    from src.toolbox.cython_main_processing_gpu import process_Bscan
 else:
-    from src.toolbox.main_processing_cpu import process_Bscan
+    from src.toolbox.cython_main_processing_cpu import process_Bscan
 
 calibration = load_calibration(dir = Arguments.calibration_file)
 
@@ -43,10 +44,7 @@ for n_i, Bscan_spectra in enumerate(Bscan_list):
 
     raw_Bscan_spectra = np.load(Bscan_spectra)
 
-    if Arguments.gpu:
-        Bscan = [_process_Bscan(raw_Bscan_spectra, calibration, shift=0)]
-    else:
-        Bscan = [process_Bscan(raw_Bscan_spectra, calibration, shift=0)]
+    Bscan = [process_Bscan(raw_Bscan_spectra, calibration)]
 
     array_c.append(Bscan)
 

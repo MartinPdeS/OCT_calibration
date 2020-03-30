@@ -22,6 +22,8 @@ In order to use the Py-OCT-Calibration Library, one must have installed the foll
     - matplotlib
     - sphynx (for developer only)
     - git (for developer only)
+    - CuPy (for GPU acceleration)
+    - Napari (for 3D-rendering)
 
 ```
 
@@ -32,6 +34,8 @@ Using pip3 one can use the following commands:
 >>> pip3 install Scipy
 >>> pip3 install matplotlib
 >>> pip3 install gitpython
+>>> pip3 install Cupy
+>>> pip3 install napari
 >>> apt-get install python-sphinx (for Unix OS)
 >>> sudo port install py27-sphinx (for Mac OS)
 ```
@@ -52,6 +56,7 @@ The folder architecture is presented as :
             - Aline.py                  (process one Aline)
             - Bscan.py                  (process one Bscan)
             - Cscan.py                  (process one Cscan)
+            - post_processing.py        (3D rendering of Cscan volume)
         - toolbox/                      (contain tools to do all the processing)
 
         - Doc/                          (not yet fully developped)
@@ -68,7 +73,7 @@ In order to run a calibration example one can tape the following command on comm
 
 ```console
 
->>> python3 src/processing/calibration.py --dispersion=1 --input-dir=./data/calibration/example/ --output-file=calib.json
+>>> python3 src/processing/calibration.py --dispersion=1 --input-dir=./data/calibration/example/ --output-file=data/calibration/example/calib.json
 
 ```
 
@@ -113,7 +118,7 @@ In order to process one example of Bscan, one can tape the following command on 
 
 ```console
 
->>> python3 src/processing/Bscan.py --dispersion=1 --input-file=data/Bscan/example.npy --calibration-file=data/calibration/example/calib.json --output-file=...
+>>> python3 src/processing/Bscan.py --dispersion=1 --input-file=data/Bscan/example.npy --calibration-file=data/calibration/example/calib.json
 
 ```
 

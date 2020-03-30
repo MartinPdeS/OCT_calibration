@@ -9,14 +9,20 @@ test_Calibration:
 		rm --force temp_calibration.json.json
 
 test_Bscan_cpu:
-		python src/processing/Bscan.py -d=1 -if=data/Bscan/example.npy -c=data/calibration/example/calib.json 
+		python src/processing/Bscan.py -d=1 -if=data/Bscan/example.npy -c=data/calibration/example/calib.json
 
 test_Bscan_gpu:
-		python src/processing/Bscan.py -gpu -d=1 -if=data/Bscan/example.npy -c=data/calibration/example/calib.json --silent
+		python src/processing/Bscan.py -gpu -d=1 -if=data/Bscan/example.npy -c=data/calibration/example/calib.json
 
 test_Cscan_cpu:
 		python src/processing/Cscan.py --dispersion=1 --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
 
 
 test_Cscan_gpu:
-		python src/processing/Cscan.py --dispersion=1 --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
+		python src/processing/Cscan.py --dispersion=1 -gpu --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
+
+test_calibration:
+		python src/processing/calibration.py --dispersion=1 --input-dir=data/calibration/example/ --output-file=data/calibration/example/calib.json
+
+test_Cscan_result:
+		python ./src/processing/post_process.py -v -if="data/Cscan/example.h5"

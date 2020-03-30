@@ -194,15 +194,16 @@ dir2 = "data/Cscan/example_shifted.h5"
 
 sys.stdout.write('Creating object 1 from {0} \n'.format(dir1))
 obj1 = Segment()
-obj1.load_data(dir1)
+obj1.load_data(arguments.input_file)
 
-
+"""
 obj2 = Segment()
 #obj1.load_data(arguments.input_file)
-obj2.load_data(dir2)
+#obj2.load_data(dir2)
 
 obj3 = Segment()
 obj3.set_data(obj1.data - obj2.data)
+"""
 
 if arguments.segmentation:
     obj1.bound_bottom()
@@ -210,7 +211,7 @@ if arguments.segmentation:
 
 if arguments.view:
     with napari.gui_qt():
-        viewer = napari.view_image(obj3.data)
+        viewer = napari.view_image(obj1.data)
 
 """
 sys.stdout.write('Creating object 2 from {0} \n'.format(dir2))
