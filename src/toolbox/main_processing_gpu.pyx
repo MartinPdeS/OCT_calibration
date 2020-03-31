@@ -20,13 +20,13 @@ def process_Bscan(cnp.ndarray Bscan_spectra, calibration):
 
     cdef cnp.ndarray[cnp.double_t, ndim=2] temp
 
+    cdef cnp.ndarray[cnp.double_t, ndim=1] x = np.arange( len(Bscan_spectra[0,:]) ).astype('float64')
+
     cdef cnp.ndarray[cnp.cdouble_t, ndim=2] ctemp
 
     j = complex(0,1)
 
     temp = scipy.signal.detrend(Bscan_spectra, axis=0).astype("float64")
-
-    x = np.arange( len(Bscan_spectra[0,:]) )
 
     interpolation = interp1d(x, temp, kind='cubic', fill_value="extrapolate")
 
