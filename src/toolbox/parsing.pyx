@@ -138,6 +138,13 @@ def Bscan_parse_arguments():
                         type=str,
                         required=True)
 
+    parser.add_argument('-dim',
+                        '--dimension',
+                        help="dimension",
+                        dest="dimension",
+                        required=True,
+                        nargs=2)
+
     parser.add_argument('-s',
                         '--shift',
                         help="shifting spectum",
@@ -159,6 +166,8 @@ def Bscan_parse_arguments():
                         action="store_true")
 
     arguments = parser.parse_args()
+
+    arguments.dimension = tuple(map(int,arguments.dimension))
 
     if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
@@ -215,7 +224,7 @@ def Cscan_parse_arguments():
                         help="dimension",
                         dest="dimension",
                         required=True,
-                        nargs=3)
+                        nargs=2)
 
     parser.add_argument('-s',
                         '--shift',
@@ -234,7 +243,7 @@ def Cscan_parse_arguments():
 
     arguments = parser.parse_args()
 
-    arguments.dimension = list(map(int,arguments.dimension))
+    arguments.dimension = tuple(map(int,arguments.dimension))
 
     if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')

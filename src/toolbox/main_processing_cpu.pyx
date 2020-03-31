@@ -8,17 +8,12 @@ cimport numpy as cnp
 '''_____Project imports_____'''
 from src.toolbox.filters import butter_highpass_filter
 from src.toolbox.calibration_processing import linearize_spectra, compensate_dispersion
-#from src.toolbox.maths import spectra2aline, hilbert
+from src.toolbox cimport maths
+#from src.toolbox.maths import hilbert, spectra2aline
 from src.toolbox.cython_maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
 
 
-global dim
-dim = 3147
-
-#ctypedef cnp.npy_float FLOAT
-#ctypedef cnp.float FLOAT
-ctypedef cnp.npy_intp INTP
 
 def process_Aline(spectra, calibration, int shift):
     """
@@ -44,12 +39,12 @@ def process_Aline(spectra, calibration, int shift):
     return Aline
 
 
-def process_Bscan(Bscan_spectra, calibration, shift=0):
+def process_Bscan(cnp.ndarray Bscan_spectra, calibration, shift=0):
     """
     CPU based
     """
 
-    cdef cnp.ndarray[cnp.float_t, ndim=2] Bscan = np.zeros((dim,512)).astype(np.float)
+    cdef cnp.ndarray[cnp.float_t, ndim=2] Bscan = np.zeros((Arguments.dimension[0], Arguments.dimension[-1]//2)).astype(np.float)
 
     Bscan_spectra = scipy.signal.detrend(Bscan_spectra, axis=0)
 

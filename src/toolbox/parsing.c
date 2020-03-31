@@ -1432,7 +1432,6 @@ static PyObject *__pyx_pf_14cython_parsing_10Pre_processing_parse_arguments(CYTH
 static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s); /* proto */
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_2;
-static PyObject *__pyx_int_3;
 static PyObject *__pyx_int_neg_1;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
@@ -2758,7 +2757,7 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
  *                         type=str,
  *                         required=True)             # <<<<<<<<<<<<<<
  * 
- *     parser.add_argument('-s',
+ *     parser.add_argument('-dim',
  */
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 136, __pyx_L1_error)
 
@@ -2778,41 +2777,41 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
   /* "src/toolbox/parsing.pyx":141
  *                         required=True)
  * 
- *     parser.add_argument('-s',             # <<<<<<<<<<<<<<
- *                         '--shift',
- *                         help="shifting spectum",
+ *     parser.add_argument('-dim',             # <<<<<<<<<<<<<<
+ *                         '--dimension',
+ *                         help="dimension",
  */
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
   /* "src/toolbox/parsing.pyx":143
- *     parser.add_argument('-s',
- *                         '--shift',
- *                         help="shifting spectum",             # <<<<<<<<<<<<<<
- *                         dest="shift",
- *                         required=False,
+ *     parser.add_argument('-dim',
+ *                         '--dimension',
+ *                         help="dimension",             # <<<<<<<<<<<<<<
+ *                         dest="dimension",
+ *                         required=True,
  */
   __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_shifting_spectum) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_shift_2) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_n_s_dimension_2) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_dimension_2) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
 
   /* "src/toolbox/parsing.pyx":145
- *                         help="shifting spectum",
- *                         dest="shift",
- *                         required=False,             # <<<<<<<<<<<<<<
- *                         action="store_true")
+ *                         help="dimension",
+ *                         dest="dimension",
+ *                         required=True,             # <<<<<<<<<<<<<<
+ *                         nargs=2)
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_nargs, __pyx_int_2) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
 
   /* "src/toolbox/parsing.pyx":141
  *                         required=True)
  * 
- *     parser.add_argument('-s',             # <<<<<<<<<<<<<<
- *                         '--shift',
- *                         help="shifting spectum",
+ *     parser.add_argument('-dim',             # <<<<<<<<<<<<<<
+ *                         '--dimension',
+ *                         help="dimension",
  */
   __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__13, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -2821,165 +2820,236 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "src/toolbox/parsing.pyx":148
+ *                         nargs=2)
+ * 
+ *     parser.add_argument('-s',             # <<<<<<<<<<<<<<
+ *                         '--shift',
+ *                         help="shifting spectum",
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+
+  /* "src/toolbox/parsing.pyx":150
+ *     parser.add_argument('-s',
+ *                         '--shift',
+ *                         help="shifting spectum",             # <<<<<<<<<<<<<<
+ *                         dest="shift",
+ *                         required=False,
+ */
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_shifting_spectum) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_shift_2) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
+
+  /* "src/toolbox/parsing.pyx":152
+ *                         help="shifting spectum",
+ *                         dest="shift",
+ *                         required=False,             # <<<<<<<<<<<<<<
+ *                         action="store_true")
+ * 
+ */
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
+
+  /* "src/toolbox/parsing.pyx":148
+ *                         nargs=2)
+ * 
+ *     parser.add_argument('-s',             # <<<<<<<<<<<<<<
+ *                         '--shift',
+ *                         help="shifting spectum",
+ */
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__14, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "src/toolbox/parsing.pyx":155
  *                         action="store_true")
  * 
  *     parser.add_argument('-d',             # <<<<<<<<<<<<<<
  *                         '--dispersion',
  *                         help='Dispersion normal[1] or anormal[-1]',
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/parsing.pyx":150
+  /* "src/toolbox/parsing.pyx":157
  *     parser.add_argument('-d',
  *                         '--dispersion',
  *                         help='Dispersion normal[1] or anormal[-1]',             # <<<<<<<<<<<<<<
  *                         dest='dispersion',
  *                         type=int,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Dispersion_normal_1_or_anormal_1) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_dispersion_2) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Dispersion_normal_1_or_anormal_1) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_dispersion_2) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":152
+  /* "src/toolbox/parsing.pyx":159
  *                         help='Dispersion normal[1] or anormal[-1]',
  *                         dest='dispersion',
  *                         type=int,             # <<<<<<<<<<<<<<
  *                         default=1,
  *                         required=True)
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_int_1) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_int_1) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":154
+  /* "src/toolbox/parsing.pyx":161
  *                         type=int,
  *                         default=1,
  *                         required=True)             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('--silent',
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":148
+  /* "src/toolbox/parsing.pyx":155
  *                         action="store_true")
  * 
  *     parser.add_argument('-d',             # <<<<<<<<<<<<<<
  *                         '--dispersion',
  *                         help='Dispersion normal[1] or anormal[-1]',
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__4, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__4, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 155, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":156
+  /* "src/toolbox/parsing.pyx":163
  *                         required=True)
  * 
  *     parser.add_argument('--silent',             # <<<<<<<<<<<<<<
  *                         help='No verbose mode',
  *                         dest='silent',
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/toolbox/parsing.pyx":157
+  /* "src/toolbox/parsing.pyx":164
  * 
  *     parser.add_argument('--silent',
  *                         help='No verbose mode',             # <<<<<<<<<<<<<<
  *                         dest='silent',
  *                         action="store_true")
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_No_verbose_mode) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_silent_2) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_No_verbose_mode) < 0) __PYX_ERR(0, 164, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_silent_2) < 0) __PYX_ERR(0, 164, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 164, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":156
+  /* "src/toolbox/parsing.pyx":163
  *                         required=True)
  * 
  *     parser.add_argument('--silent',             # <<<<<<<<<<<<<<
  *                         help='No verbose mode',
  *                         dest='silent',
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__5, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__5, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":161
+  /* "src/toolbox/parsing.pyx":168
  *                         action="store_true")
  * 
  *     arguments = parser.parse_args()             # <<<<<<<<<<<<<<
  * 
- *     if arguments.dispersion not in [-1,1]:
+ *     arguments.dimension = tuple(map(int,arguments.dimension))
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = NULL;
+  __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_1)) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_2)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_1);
+      __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_3, function);
     }
   }
-  __pyx_t_2 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 161, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_v_arguments = __pyx_t_2;
-  __pyx_t_2 = 0;
+  __pyx_v_arguments = __pyx_t_1;
+  __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":163
+  /* "src/toolbox/parsing.pyx":170
  *     arguments = parser.parse_args()
+ * 
+ *     arguments.dimension = tuple(map(int,arguments.dimension))             # <<<<<<<<<<<<<<
+ * 
+ *     if arguments.dispersion not in [-1,1]:
+ */
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_arguments, __pyx_n_s_dimension_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_INCREF(((PyObject *)(&PyInt_Type)));
+  __Pyx_GIVEREF(((PyObject *)(&PyInt_Type)));
+  PyTuple_SET_ITEM(__pyx_t_3, 0, ((PyObject *)(&PyInt_Type)));
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_1);
+  __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = __Pyx_PySequence_Tuple(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_arguments, __pyx_n_s_dimension_2, __pyx_t_3) < 0) __PYX_ERR(0, 170, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "src/toolbox/parsing.pyx":172
+ *     arguments.dimension = tuple(map(int,arguments.dimension))
  * 
  *     if arguments.dispersion not in [-1,1]:             # <<<<<<<<<<<<<<
  *         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_arguments, __pyx_n_s_dispersion_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_NeObjC(__pyx_t_2, __pyx_int_neg_1, -1L, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_arguments, __pyx_n_s_dispersion_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 163, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_1 = __Pyx_PyInt_NeObjC(__pyx_t_3, __pyx_int_neg_1, -1L, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 172, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_5) {
   } else {
     __pyx_t_4 = __pyx_t_5;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_3 = __Pyx_PyInt_NeObjC(__pyx_t_2, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 163, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 163, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_1 = __Pyx_PyInt_NeObjC(__pyx_t_3, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 172, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_4 = __pyx_t_5;
   __pyx_L4_bool_binop_done:;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_5 = (__pyx_t_4 != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "src/toolbox/parsing.pyx":164
+    /* "src/toolbox/parsing.pyx":173
  * 
  *     if arguments.dispersion not in [-1,1]:
  *         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')             # <<<<<<<<<<<<<<
  * 
  *     with open('src/toolbox/_arguments.py', 'w') as f:
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_Raise(__pyx_t_2, 0, 0, 0);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_Raise(__pyx_t_3, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __PYX_ERR(0, 173, __pyx_L1_error)
 
-    /* "src/toolbox/parsing.pyx":163
- *     arguments = parser.parse_args()
+    /* "src/toolbox/parsing.pyx":172
+ *     arguments.dimension = tuple(map(int,arguments.dimension))
  * 
  *     if arguments.dispersion not in [-1,1]:             # <<<<<<<<<<<<<<
  *         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
@@ -2987,7 +3057,7 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
  */
   }
 
-  /* "src/toolbox/parsing.pyx":166
+  /* "src/toolbox/parsing.pyx":175
  *         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
  * 
  *     with open('src/toolbox/_arguments.py', 'w') as f:             # <<<<<<<<<<<<<<
@@ -2995,30 +3065,30 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
  * 
  */
   /*with:*/ {
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 166, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 175, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_6 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_exit); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 175, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_1 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L6_error)
-    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L6_error)
+    __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_7 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_1);
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_2);
       if (likely(__pyx_t_7)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
         __Pyx_INCREF(__pyx_t_7);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_1, function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
       }
     }
-    __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+    __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L6_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __pyx_t_3;
-    __pyx_t_3 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L6_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __pyx_t_1;
+    __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     /*try:*/ {
       {
         __Pyx_PyThreadState_declare
@@ -3028,19 +3098,19 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
         __Pyx_XGOTREF(__pyx_t_9);
         __Pyx_XGOTREF(__pyx_t_10);
         /*try:*/ {
-          __pyx_v_f = __pyx_t_1;
-          __pyx_t_1 = 0;
+          __pyx_v_f = __pyx_t_2;
+          __pyx_t_2 = 0;
 
-          /* "src/toolbox/parsing.pyx":167
+          /* "src/toolbox/parsing.pyx":176
  * 
  *     with open('src/toolbox/_arguments.py', 'w') as f:
  *         f.write('from argparse import Namespace \nglobal Arguments \nArguments = {0}'.format(arguments))             # <<<<<<<<<<<<<<
  * 
  * 
  */
-          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L10_error)
-          __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_from_argparse_import_Namespace_g, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 167, __pyx_L10_error)
+          __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_write); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 176, __pyx_L10_error)
+          __Pyx_GOTREF(__pyx_t_3);
+          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_from_argparse_import_Namespace_g, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 176, __pyx_L10_error)
           __Pyx_GOTREF(__pyx_t_7);
           __pyx_t_11 = NULL;
           if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_7))) {
@@ -3052,30 +3122,30 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
               __Pyx_DECREF_SET(__pyx_t_7, function);
             }
           }
-          __pyx_t_3 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_11, __pyx_v_arguments) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_arguments);
+          __pyx_t_1 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_11, __pyx_v_arguments) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_arguments);
           __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L10_error)
-          __Pyx_GOTREF(__pyx_t_3);
+          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L10_error)
+          __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __pyx_t_7 = NULL;
-          if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-            __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_2);
+          if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
+            __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_3);
             if (likely(__pyx_t_7)) {
-              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
               __Pyx_INCREF(__pyx_t_7);
               __Pyx_INCREF(function);
-              __Pyx_DECREF_SET(__pyx_t_2, function);
+              __Pyx_DECREF_SET(__pyx_t_3, function);
             }
           }
-          __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_7, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
+          __pyx_t_2 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_7, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_1);
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L10_error)
-          __Pyx_GOTREF(__pyx_t_1);
-          __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L10_error)
+          __Pyx_GOTREF(__pyx_t_2);
+          __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+          __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-          /* "src/toolbox/parsing.pyx":166
+          /* "src/toolbox/parsing.pyx":175
  *         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
  * 
  *     with open('src/toolbox/_arguments.py', 'w') as f:             # <<<<<<<<<<<<<<
@@ -3095,32 +3165,32 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
         /*except:*/ {
           __Pyx_AddTraceback("cython_parsing.Bscan_parse_arguments", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_2, &__pyx_t_3) < 0) __PYX_ERR(0, 166, __pyx_L12_except_error)
-          __Pyx_GOTREF(__pyx_t_1);
+          if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_3, &__pyx_t_1) < 0) __PYX_ERR(0, 175, __pyx_L12_except_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_GOTREF(__pyx_t_3);
-          __pyx_t_7 = PyTuple_Pack(3, __pyx_t_1, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 166, __pyx_L12_except_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __pyx_t_7 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 175, __pyx_L12_except_error)
           __Pyx_GOTREF(__pyx_t_7);
           __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_7, NULL);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 166, __pyx_L12_except_error)
+          if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 175, __pyx_L12_except_error)
           __Pyx_GOTREF(__pyx_t_12);
           __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_12);
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-          if (__pyx_t_5 < 0) __PYX_ERR(0, 166, __pyx_L12_except_error)
+          if (__pyx_t_5 < 0) __PYX_ERR(0, 175, __pyx_L12_except_error)
           __pyx_t_4 = ((!(__pyx_t_5 != 0)) != 0);
           if (__pyx_t_4) {
-            __Pyx_GIVEREF(__pyx_t_1);
             __Pyx_GIVEREF(__pyx_t_2);
-            __Pyx_XGIVEREF(__pyx_t_3);
-            __Pyx_ErrRestoreWithState(__pyx_t_1, __pyx_t_2, __pyx_t_3);
-            __pyx_t_1 = 0; __pyx_t_2 = 0; __pyx_t_3 = 0; 
-            __PYX_ERR(0, 166, __pyx_L12_except_error)
+            __Pyx_GIVEREF(__pyx_t_3);
+            __Pyx_XGIVEREF(__pyx_t_1);
+            __Pyx_ErrRestoreWithState(__pyx_t_2, __pyx_t_3, __pyx_t_1);
+            __pyx_t_2 = 0; __pyx_t_3 = 0; __pyx_t_1 = 0; 
+            __PYX_ERR(0, 175, __pyx_L12_except_error)
           }
-          __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+          __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           goto __pyx_L11_exception_handled;
         }
         __pyx_L12_except_error:;
@@ -3142,7 +3212,7 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
         if (__pyx_t_6) {
           __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_tuple__8, NULL);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-          if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 166, __pyx_L1_error)
+          if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 175, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_10);
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         }
@@ -3185,7 +3255,7 @@ static PyObject *__pyx_pf_14cython_parsing_4Bscan_parse_arguments(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "src/toolbox/parsing.pyx":171
+/* "src/toolbox/parsing.pyx":180
  * 
  * 
  * def Cscan_parse_arguments():             # <<<<<<<<<<<<<<
@@ -3227,16 +3297,16 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
   PyObject *__pyx_t_12 = NULL;
   __Pyx_RefNannySetupContext("Cscan_parse_arguments", 0);
 
-  /* "src/toolbox/parsing.pyx":173
+  /* "src/toolbox/parsing.pyx":182
  * def Cscan_parse_arguments():
  * 
  *     parser = argparse.ArgumentParser()             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-id',
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_argparse); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_argparse); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ArgumentParser); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ArgumentParser); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -3251,397 +3321,397 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_parser = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":175
+  /* "src/toolbox/parsing.pyx":184
  *     parser = argparse.ArgumentParser()
  * 
  *     parser.add_argument('-id',             # <<<<<<<<<<<<<<
  *                         '--input-directory',
  *                         help='Input .npy Cscan file',
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/parsing.pyx":177
+  /* "src/toolbox/parsing.pyx":186
  *     parser.add_argument('-id',
  *                         '--input-directory',
  *                         help='Input .npy Cscan file',             # <<<<<<<<<<<<<<
  *                         dest='input_directory',
  *                         type=str,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Input_npy_Cscan_file) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_input_directory_2) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Input_npy_Cscan_file) < 0) __PYX_ERR(0, 186, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_input_directory_2) < 0) __PYX_ERR(0, 186, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":179
+  /* "src/toolbox/parsing.pyx":188
  *                         help='Input .npy Cscan file',
  *                         dest='input_directory',
  *                         type=str,             # <<<<<<<<<<<<<<
  *                         default='test.raw',
  *                         required=False)
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_kp_s_test_raw) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 186, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_kp_s_test_raw) < 0) __PYX_ERR(0, 186, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":181
+  /* "src/toolbox/parsing.pyx":190
  *                         type=str,
  *                         default='test.raw',
  *                         required=False)             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-of',
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 186, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":175
+  /* "src/toolbox/parsing.pyx":184
  *     parser = argparse.ArgumentParser()
  * 
  *     parser.add_argument('-id',             # <<<<<<<<<<<<<<
  *                         '--input-directory',
  *                         help='Input .npy Cscan file',
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__14, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__15, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 184, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":183
+  /* "src/toolbox/parsing.pyx":192
  *                         required=False)
  * 
  *     parser.add_argument('-of',             # <<<<<<<<<<<<<<
  *                         '--output-file',
  *                         help='Output .h5 Cscan file',
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 183, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/toolbox/parsing.pyx":185
+  /* "src/toolbox/parsing.pyx":194
  *     parser.add_argument('-of',
  *                         '--output-file',
  *                         help='Output .h5 Cscan file',             # <<<<<<<<<<<<<<
  *                         dest='output_file',
  *                         type=str,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 185, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Output_h5_Cscan_file) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_output_file_2) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Output_h5_Cscan_file) < 0) __PYX_ERR(0, 194, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_output_file_2) < 0) __PYX_ERR(0, 194, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":187
+  /* "src/toolbox/parsing.pyx":196
  *                         help='Output .h5 Cscan file',
  *                         dest='output_file',
  *                         type=str,             # <<<<<<<<<<<<<<
  *                         default='Cscan_temp.h5',
  *                         required=False)
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_kp_s_Cscan_temp_h5) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 194, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_kp_s_Cscan_temp_h5) < 0) __PYX_ERR(0, 194, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":189
+  /* "src/toolbox/parsing.pyx":198
  *                         type=str,
  *                         default='Cscan_temp.h5',
  *                         required=False)             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-c',
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 194, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":183
+  /* "src/toolbox/parsing.pyx":192
  *                         required=False)
  * 
  *     parser.add_argument('-of',             # <<<<<<<<<<<<<<
  *                         '--output-file',
  *                         help='Output .h5 Cscan file',
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 183, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":191
+  /* "src/toolbox/parsing.pyx":200
  *                         required=False)
  * 
  *     parser.add_argument('-c',             # <<<<<<<<<<<<<<
  *                         '--calibration-file',
  *                         help='Calibration json file.',
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/parsing.pyx":193
+  /* "src/toolbox/parsing.pyx":202
  *     parser.add_argument('-c',
  *                         '--calibration-file',
  *                         help='Calibration json file.',             # <<<<<<<<<<<<<<
  *                         dest='calibration_file',
  *                         type=str,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 193, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Calibration_json_file) < 0) __PYX_ERR(0, 193, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_calibration_file_2) < 0) __PYX_ERR(0, 193, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Calibration_json_file) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_calibration_file_2) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":195
+  /* "src/toolbox/parsing.pyx":204
  *                         help='Calibration json file.',
  *                         dest='calibration_file',
  *                         type=str,             # <<<<<<<<<<<<<<
  *                         required=True)
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 193, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":196
+  /* "src/toolbox/parsing.pyx":205
  *                         dest='calibration_file',
  *                         type=str,
  *                         required=True)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 193, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":191
+  /* "src/toolbox/parsing.pyx":200
  *                         required=False)
  * 
  *     parser.add_argument('-c',             # <<<<<<<<<<<<<<
  *                         '--calibration-file',
  *                         help='Calibration json file.',
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__10, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__10, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":199
+  /* "src/toolbox/parsing.pyx":208
  * 
  * 
  *     parser.add_argument('-d',             # <<<<<<<<<<<<<<
  *                         '--dispersion',
  *                         help='Dispersion normal[1] or anormal[-1]',
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 208, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/toolbox/parsing.pyx":201
+  /* "src/toolbox/parsing.pyx":210
  *     parser.add_argument('-d',
  *                         '--dispersion',
  *                         help='Dispersion normal[1] or anormal[-1]',             # <<<<<<<<<<<<<<
  *                         dest='dispersion',
  *                         type=int,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Dispersion_normal_1_or_anormal_1) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_dispersion_2) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Dispersion_normal_1_or_anormal_1) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_dispersion_2) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":203
+  /* "src/toolbox/parsing.pyx":212
  *                         help='Dispersion normal[1] or anormal[-1]',
  *                         dest='dispersion',
  *                         type=int,             # <<<<<<<<<<<<<<
  *                         default=1,
  *                         required=True)
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_int_1) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_int_1) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":205
+  /* "src/toolbox/parsing.pyx":214
  *                         type=int,
  *                         default=1,
  *                         required=True)             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-gpu',
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":199
+  /* "src/toolbox/parsing.pyx":208
  * 
  * 
  *     parser.add_argument('-d',             # <<<<<<<<<<<<<<
  *                         '--dispersion',
  *                         help='Dispersion normal[1] or anormal[-1]',
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__4, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__4, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":207
+  /* "src/toolbox/parsing.pyx":216
  *                         required=True)
  * 
  *     parser.add_argument('-gpu',             # <<<<<<<<<<<<<<
  *                         '--gpu-accelerated',
  *                         help='CUDA coding for accelerating, NVIDIA or NOT',
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/parsing.pyx":209
+  /* "src/toolbox/parsing.pyx":218
  *     parser.add_argument('-gpu',
  *                         '--gpu-accelerated',
  *                         help='CUDA coding for accelerating, NVIDIA or NOT',             # <<<<<<<<<<<<<<
  *                         dest='gpu',
  *                         action="store_true")
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_CUDA_coding_for_accelerating_NVI) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_gpu_2) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_CUDA_coding_for_accelerating_NVI) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_gpu_2) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":207
+  /* "src/toolbox/parsing.pyx":216
  *                         required=True)
  * 
  *     parser.add_argument('-gpu',             # <<<<<<<<<<<<<<
  *                         '--gpu-accelerated',
  *                         help='CUDA coding for accelerating, NVIDIA or NOT',
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__12, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__12, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":213
+  /* "src/toolbox/parsing.pyx":222
  *                         action="store_true")
  * 
  *     parser.add_argument('-dim',             # <<<<<<<<<<<<<<
  *                         '--dimension',
  *                         help="dimension",
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/toolbox/parsing.pyx":215
+  /* "src/toolbox/parsing.pyx":224
  *     parser.add_argument('-dim',
  *                         '--dimension',
  *                         help="dimension",             # <<<<<<<<<<<<<<
  *                         dest="dimension",
  *                         required=True,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_n_s_dimension_2) < 0) __PYX_ERR(0, 215, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_dimension_2) < 0) __PYX_ERR(0, 215, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_n_s_dimension_2) < 0) __PYX_ERR(0, 224, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_dimension_2) < 0) __PYX_ERR(0, 224, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":217
+  /* "src/toolbox/parsing.pyx":226
  *                         help="dimension",
  *                         dest="dimension",
  *                         required=True,             # <<<<<<<<<<<<<<
- *                         nargs=3)
+ *                         nargs=2)
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 215, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_nargs, __pyx_int_3) < 0) __PYX_ERR(0, 215, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 224, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_nargs, __pyx_int_2) < 0) __PYX_ERR(0, 224, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":213
+  /* "src/toolbox/parsing.pyx":222
  *                         action="store_true")
  * 
  *     parser.add_argument('-dim',             # <<<<<<<<<<<<<<
  *                         '--dimension',
  *                         help="dimension",
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__15, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__13, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":220
- *                         nargs=3)
+  /* "src/toolbox/parsing.pyx":229
+ *                         nargs=2)
  * 
  *     parser.add_argument('-s',             # <<<<<<<<<<<<<<
  *                         '--shift',
  *                         help="shifting spectum",
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 220, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/parsing.pyx":222
+  /* "src/toolbox/parsing.pyx":231
  *     parser.add_argument('-s',
  *                         '--shift',
  *                         help="shifting spectum",             # <<<<<<<<<<<<<<
  *                         dest="shift",
  *                         required=False,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_shifting_spectum) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_shift_2) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_shifting_spectum) < 0) __PYX_ERR(0, 231, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_shift_2) < 0) __PYX_ERR(0, 231, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":224
+  /* "src/toolbox/parsing.pyx":233
  *                         help="shifting spectum",
  *                         dest="shift",
  *                         required=False,             # <<<<<<<<<<<<<<
  *                         action="store_true")
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 231, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 231, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":220
- *                         nargs=3)
+  /* "src/toolbox/parsing.pyx":229
+ *                         nargs=2)
  * 
  *     parser.add_argument('-s',             # <<<<<<<<<<<<<<
  *                         '--shift',
  *                         help="shifting spectum",
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__13, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 220, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__14, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":228
+  /* "src/toolbox/parsing.pyx":237
  * 
  * 
  *     parser.add_argument('--silent',             # <<<<<<<<<<<<<<
  *                         help='No verbose mode',
  *                         dest='silent',
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/toolbox/parsing.pyx":229
+  /* "src/toolbox/parsing.pyx":238
  * 
  *     parser.add_argument('--silent',
  *                         help='No verbose mode',             # <<<<<<<<<<<<<<
  *                         dest='silent',
  *                         action="store_true")
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_No_verbose_mode) < 0) __PYX_ERR(0, 229, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_silent_2) < 0) __PYX_ERR(0, 229, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 229, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_No_verbose_mode) < 0) __PYX_ERR(0, 238, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_silent_2) < 0) __PYX_ERR(0, 238, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 238, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":228
+  /* "src/toolbox/parsing.pyx":237
  * 
  * 
  *     parser.add_argument('--silent',             # <<<<<<<<<<<<<<
  *                         help='No verbose mode',
  *                         dest='silent',
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__5, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__5, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":235
+  /* "src/toolbox/parsing.pyx":244
  * 
  * 
  *     arguments = parser.parse_args()             # <<<<<<<<<<<<<<
  * 
- *     arguments.dimension = list(map(int,arguments.dimension))
+ *     arguments.dimension = tuple(map(int,arguments.dimension))
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -3655,22 +3725,22 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_arguments = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":237
+  /* "src/toolbox/parsing.pyx":246
  *     arguments = parser.parse_args()
  * 
- *     arguments.dimension = list(map(int,arguments.dimension))             # <<<<<<<<<<<<<<
+ *     arguments.dimension = tuple(map(int,arguments.dimension))             # <<<<<<<<<<<<<<
  * 
  *     if arguments.dispersion not in [-1,1]:
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_arguments, __pyx_n_s_dimension_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_arguments, __pyx_n_s_dimension_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(((PyObject *)(&PyInt_Type)));
   __Pyx_GIVEREF(((PyObject *)(&PyInt_Type)));
@@ -3678,36 +3748,36 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PySequence_List(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PySequence_Tuple(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_arguments, __pyx_n_s_dimension_2, __pyx_t_3) < 0) __PYX_ERR(0, 237, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_arguments, __pyx_n_s_dimension_2, __pyx_t_3) < 0) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/parsing.pyx":239
- *     arguments.dimension = list(map(int,arguments.dimension))
+  /* "src/toolbox/parsing.pyx":248
+ *     arguments.dimension = tuple(map(int,arguments.dimension))
  * 
  *     if arguments.dispersion not in [-1,1]:             # <<<<<<<<<<<<<<
  *         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_arguments, __pyx_n_s_dispersion_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_arguments, __pyx_n_s_dispersion_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyInt_NeObjC(__pyx_t_3, __pyx_int_neg_1, -1L, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_NeObjC(__pyx_t_3, __pyx_int_neg_1, -1L, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_5) {
   } else {
     __pyx_t_4 = __pyx_t_5;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_1 = __Pyx_PyInt_NeObjC(__pyx_t_3, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_NeObjC(__pyx_t_3, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_4 = __pyx_t_5;
   __pyx_L4_bool_binop_done:;
@@ -3715,21 +3785,21 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
   __pyx_t_5 = (__pyx_t_4 != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "src/toolbox/parsing.pyx":240
+    /* "src/toolbox/parsing.pyx":249
  * 
  *     if arguments.dispersion not in [-1,1]:
  *         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 240, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 249, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 240, __pyx_L1_error)
+    __PYX_ERR(0, 249, __pyx_L1_error)
 
-    /* "src/toolbox/parsing.pyx":239
- *     arguments.dimension = list(map(int,arguments.dimension))
+    /* "src/toolbox/parsing.pyx":248
+ *     arguments.dimension = tuple(map(int,arguments.dimension))
  * 
  *     if arguments.dispersion not in [-1,1]:             # <<<<<<<<<<<<<<
  *         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
@@ -3737,7 +3807,7 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
  */
   }
 
-  /* "src/toolbox/parsing.pyx":243
+  /* "src/toolbox/parsing.pyx":252
  * 
  * 
  *     with open('src/toolbox/_arguments.py', 'w') as f:             # <<<<<<<<<<<<<<
@@ -3745,11 +3815,11 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
  * 
  */
   /*with:*/ {
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 243, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 252, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_6 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_exit); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 243, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_exit); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 252, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 243, __pyx_L6_error)
+    __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L6_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -3763,7 +3833,7 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
     }
     __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 243, __pyx_L6_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 252, __pyx_L6_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __pyx_t_1;
@@ -3781,16 +3851,16 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
           __pyx_v_f = __pyx_t_2;
           __pyx_t_2 = 0;
 
-          /* "src/toolbox/parsing.pyx":244
+          /* "src/toolbox/parsing.pyx":253
  * 
  *     with open('src/toolbox/_arguments.py', 'w') as f:
  *         f.write('from argparse import Namespace \nglobal Arguments \nArguments = {0}'.format(arguments))             # <<<<<<<<<<<<<<
  * 
  *     return arguments
  */
-          __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_write); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 244, __pyx_L10_error)
+          __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_write); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 253, __pyx_L10_error)
           __Pyx_GOTREF(__pyx_t_3);
-          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_from_argparse_import_Namespace_g, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 244, __pyx_L10_error)
+          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_from_argparse_import_Namespace_g, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 253, __pyx_L10_error)
           __Pyx_GOTREF(__pyx_t_7);
           __pyx_t_11 = NULL;
           if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_7))) {
@@ -3804,7 +3874,7 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
           }
           __pyx_t_1 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_11, __pyx_v_arguments) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_arguments);
           __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L10_error)
+          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 253, __pyx_L10_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __pyx_t_7 = NULL;
@@ -3820,12 +3890,12 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
           __pyx_t_2 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_7, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_1);
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 244, __pyx_L10_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L10_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-          /* "src/toolbox/parsing.pyx":243
+          /* "src/toolbox/parsing.pyx":252
  * 
  * 
  *     with open('src/toolbox/_arguments.py', 'w') as f:             # <<<<<<<<<<<<<<
@@ -3845,20 +3915,20 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
         /*except:*/ {
           __Pyx_AddTraceback("cython_parsing.Cscan_parse_arguments", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_3, &__pyx_t_1) < 0) __PYX_ERR(0, 243, __pyx_L12_except_error)
+          if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_3, &__pyx_t_1) < 0) __PYX_ERR(0, 252, __pyx_L12_except_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_7 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 243, __pyx_L12_except_error)
+          __pyx_t_7 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 252, __pyx_L12_except_error)
           __Pyx_GOTREF(__pyx_t_7);
           __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_7, NULL);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 243, __pyx_L12_except_error)
+          if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 252, __pyx_L12_except_error)
           __Pyx_GOTREF(__pyx_t_12);
           __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_12);
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-          if (__pyx_t_5 < 0) __PYX_ERR(0, 243, __pyx_L12_except_error)
+          if (__pyx_t_5 < 0) __PYX_ERR(0, 252, __pyx_L12_except_error)
           __pyx_t_4 = ((!(__pyx_t_5 != 0)) != 0);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_2);
@@ -3866,7 +3936,7 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
             __Pyx_XGIVEREF(__pyx_t_1);
             __Pyx_ErrRestoreWithState(__pyx_t_2, __pyx_t_3, __pyx_t_1);
             __pyx_t_2 = 0; __pyx_t_3 = 0; __pyx_t_1 = 0; 
-            __PYX_ERR(0, 243, __pyx_L12_except_error)
+            __PYX_ERR(0, 252, __pyx_L12_except_error)
           }
           __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3892,7 +3962,7 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
         if (__pyx_t_6) {
           __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_tuple__8, NULL);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-          if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 243, __pyx_L1_error)
+          if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 252, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_10);
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         }
@@ -3907,7 +3977,7 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
     __pyx_L19:;
   }
 
-  /* "src/toolbox/parsing.pyx":246
+  /* "src/toolbox/parsing.pyx":255
  *         f.write('from argparse import Namespace \nglobal Arguments \nArguments = {0}'.format(arguments))
  * 
  *     return arguments             # <<<<<<<<<<<<<<
@@ -3919,7 +3989,7 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
   __pyx_r = __pyx_v_arguments;
   goto __pyx_L0;
 
-  /* "src/toolbox/parsing.pyx":171
+  /* "src/toolbox/parsing.pyx":180
  * 
  * 
  * def Cscan_parse_arguments():             # <<<<<<<<<<<<<<
@@ -3945,7 +4015,7 @@ static PyObject *__pyx_pf_14cython_parsing_6Cscan_parse_arguments(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "src/toolbox/parsing.pyx":249
+/* "src/toolbox/parsing.pyx":258
  * 
  * 
  * def Post_processing_parse_arguments():             # <<<<<<<<<<<<<<
@@ -3976,16 +4046,16 @@ static PyObject *__pyx_pf_14cython_parsing_8Post_processing_parse_arguments(CYTH
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("Post_processing_parse_arguments", 0);
 
-  /* "src/toolbox/parsing.pyx":251
+  /* "src/toolbox/parsing.pyx":260
  * def Post_processing_parse_arguments():
  * 
  *     parser = argparse.ArgumentParser()             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-if',
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_argparse); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_argparse); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ArgumentParser); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ArgumentParser); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -4000,165 +4070,165 @@ static PyObject *__pyx_pf_14cython_parsing_8Post_processing_parse_arguments(CYTH
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 251, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_parser = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":253
+  /* "src/toolbox/parsing.pyx":262
  *     parser = argparse.ArgumentParser()
  * 
  *     parser.add_argument('-if',             # <<<<<<<<<<<<<<
  *                         '--input-file',
  *                         help='Input Cscan file [FILE]',
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 253, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/parsing.pyx":255
+  /* "src/toolbox/parsing.pyx":264
  *     parser.add_argument('-if',
  *                         '--input-file',
  *                         help='Input Cscan file [FILE]',             # <<<<<<<<<<<<<<
  *                         dest='input_file',
  *                         type=str,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Input_Cscan_file_FILE) < 0) __PYX_ERR(0, 255, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_input_file_2) < 0) __PYX_ERR(0, 255, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Input_Cscan_file_FILE) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_input_file_2) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":257
+  /* "src/toolbox/parsing.pyx":266
  *                         help='Input Cscan file [FILE]',
  *                         dest='input_file',
  *                         type=str,             # <<<<<<<<<<<<<<
  *                         default= None ,
  *                         required=False)
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 255, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":258
+  /* "src/toolbox/parsing.pyx":267
  *                         dest='input_file',
  *                         type=str,
  *                         default= None ,             # <<<<<<<<<<<<<<
  *                         required=False)
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, Py_None) < 0) __PYX_ERR(0, 255, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, Py_None) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":259
+  /* "src/toolbox/parsing.pyx":268
  *                         type=str,
  *                         default= None ,
  *                         required=False)             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-seg',
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 255, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":253
+  /* "src/toolbox/parsing.pyx":262
  *     parser = argparse.ArgumentParser()
  * 
  *     parser.add_argument('-if',             # <<<<<<<<<<<<<<
  *                         '--input-file',
  *                         help='Input Cscan file [FILE]',
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__9, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__9, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":261
+  /* "src/toolbox/parsing.pyx":270
  *                         required=False)
  * 
  *     parser.add_argument('-seg',             # <<<<<<<<<<<<<<
  *                         '--segmentation',
  *                         help='Segmentate Input Cscan file ',
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/toolbox/parsing.pyx":263
+  /* "src/toolbox/parsing.pyx":272
  *     parser.add_argument('-seg',
  *                         '--segmentation',
  *                         help='Segmentate Input Cscan file ',             # <<<<<<<<<<<<<<
  *                         dest='segmentation',
  *                         action="store_true",
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 263, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 272, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Segmentate_Input_Cscan_file) < 0) __PYX_ERR(0, 263, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_segmentation_2) < 0) __PYX_ERR(0, 263, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 263, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Segmentate_Input_Cscan_file) < 0) __PYX_ERR(0, 272, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_segmentation_2) < 0) __PYX_ERR(0, 272, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 272, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":266
+  /* "src/toolbox/parsing.pyx":275
  *                         dest='segmentation',
  *                         action="store_true",
  *                         required=False)             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-v',
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 263, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 272, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":261
+  /* "src/toolbox/parsing.pyx":270
  *                         required=False)
  * 
  *     parser.add_argument('-seg',             # <<<<<<<<<<<<<<
  *                         '--segmentation',
  *                         help='Segmentate Input Cscan file ',
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__16, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__16, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":268
+  /* "src/toolbox/parsing.pyx":277
  *                         required=False)
  * 
  *     parser.add_argument('-v',             # <<<<<<<<<<<<<<
  *                         '--view',
  *                         help='3D viewer if input Cscan file ',
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/parsing.pyx":270
+  /* "src/toolbox/parsing.pyx":279
  *     parser.add_argument('-v',
  *                         '--view',
  *                         help='3D viewer if input Cscan file ',             # <<<<<<<<<<<<<<
  *                         dest='view',
  *                         action='store_true',
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 270, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_3D_viewer_if_input_Cscan_file) < 0) __PYX_ERR(0, 270, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_view_2) < 0) __PYX_ERR(0, 270, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 270, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_3D_viewer_if_input_Cscan_file) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_view_2) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_action, __pyx_n_s_store_true) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":273
+  /* "src/toolbox/parsing.pyx":282
  *                         dest='view',
  *                         action='store_true',
  *                         required=False)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 270, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_False) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":268
+  /* "src/toolbox/parsing.pyx":277
  *                         required=False)
  * 
  *     parser.add_argument('-v',             # <<<<<<<<<<<<<<
  *                         '--view',
  *                         help='3D viewer if input Cscan file ',
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__17, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__17, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":276
+  /* "src/toolbox/parsing.pyx":285
  * 
  * 
  *     return parser.parse_args()             # <<<<<<<<<<<<<<
@@ -4166,7 +4236,7 @@ static PyObject *__pyx_pf_14cython_parsing_8Post_processing_parse_arguments(CYTH
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 276, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -4180,14 +4250,14 @@ static PyObject *__pyx_pf_14cython_parsing_8Post_processing_parse_arguments(CYTH
   }
   __pyx_t_2 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 276, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/parsing.pyx":249
+  /* "src/toolbox/parsing.pyx":258
  * 
  * 
  * def Post_processing_parse_arguments():             # <<<<<<<<<<<<<<
@@ -4209,7 +4279,7 @@ static PyObject *__pyx_pf_14cython_parsing_8Post_processing_parse_arguments(CYTH
   return __pyx_r;
 }
 
-/* "src/toolbox/parsing.pyx":280
+/* "src/toolbox/parsing.pyx":289
  * 
  * 
  * def Pre_processing_parse_arguments():             # <<<<<<<<<<<<<<
@@ -4240,16 +4310,16 @@ static PyObject *__pyx_pf_14cython_parsing_10Pre_processing_parse_arguments(CYTH
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("Pre_processing_parse_arguments", 0);
 
-  /* "src/toolbox/parsing.pyx":282
+  /* "src/toolbox/parsing.pyx":291
  * def Pre_processing_parse_arguments():
  * 
  *     parser = argparse.ArgumentParser()             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-id',
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_argparse); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 282, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_argparse); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ArgumentParser); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 282, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ArgumentParser); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -4264,191 +4334,191 @@ static PyObject *__pyx_pf_14cython_parsing_10Pre_processing_parse_arguments(CYTH
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 282, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_parser = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":284
+  /* "src/toolbox/parsing.pyx":293
  *     parser = argparse.ArgumentParser()
  * 
  *     parser.add_argument('-id',             # <<<<<<<<<<<<<<
  *                         '--input-directory',
  *                         help='Input Cscan directory [DIRECTORY]',
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/parsing.pyx":286
+  /* "src/toolbox/parsing.pyx":295
  *     parser.add_argument('-id',
  *                         '--input-directory',
  *                         help='Input Cscan directory [DIRECTORY]',             # <<<<<<<<<<<<<<
  *                         dest='input_dir',
  *                         type=str,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Input_Cscan_directory_DIRECTORY) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_input_dir_2) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Input_Cscan_directory_DIRECTORY) < 0) __PYX_ERR(0, 295, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_input_dir_2) < 0) __PYX_ERR(0, 295, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":288
+  /* "src/toolbox/parsing.pyx":297
  *                         help='Input Cscan directory [DIRECTORY]',
  *                         dest='input_dir',
  *                         type=str,             # <<<<<<<<<<<<<<
  *                         default= None ,
  *                         required=True)
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 295, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":289
+  /* "src/toolbox/parsing.pyx":298
  *                         dest='input_dir',
  *                         type=str,
  *                         default= None ,             # <<<<<<<<<<<<<<
  *                         required=True)
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, Py_None) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, Py_None) < 0) __PYX_ERR(0, 295, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":290
+  /* "src/toolbox/parsing.pyx":299
  *                         type=str,
  *                         default= None ,
  *                         required=True)             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-od',
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 295, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":284
+  /* "src/toolbox/parsing.pyx":293
  *     parser = argparse.ArgumentParser()
  * 
  *     parser.add_argument('-id',             # <<<<<<<<<<<<<<
  *                         '--input-directory',
  *                         help='Input Cscan directory [DIRECTORY]',
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__14, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__15, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":292
+  /* "src/toolbox/parsing.pyx":301
  *                         required=True)
  * 
  *     parser.add_argument('-od',             # <<<<<<<<<<<<<<
  *                         '--output-directory',
  *                         help='Output Cscan directory [DIRECTORY]',
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 301, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/toolbox/parsing.pyx":294
+  /* "src/toolbox/parsing.pyx":303
  *     parser.add_argument('-od',
  *                         '--output-directory',
  *                         help='Output Cscan directory [DIRECTORY]',             # <<<<<<<<<<<<<<
  *                         dest='output_dir',
  *                         type=str,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Output_Cscan_directory_DIRECTORY) < 0) __PYX_ERR(0, 294, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_output_dir) < 0) __PYX_ERR(0, 294, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Output_Cscan_directory_DIRECTORY) < 0) __PYX_ERR(0, 303, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_output_dir) < 0) __PYX_ERR(0, 303, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":296
+  /* "src/toolbox/parsing.pyx":305
  *                         help='Output Cscan directory [DIRECTORY]',
  *                         dest='output_dir',
  *                         type=str,             # <<<<<<<<<<<<<<
  *                         default= None,
  *                         required=True)
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 294, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 303, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":297
+  /* "src/toolbox/parsing.pyx":306
  *                         dest='output_dir',
  *                         type=str,
  *                         default= None,             # <<<<<<<<<<<<<<
  *                         required=True)
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, Py_None) < 0) __PYX_ERR(0, 294, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, Py_None) < 0) __PYX_ERR(0, 303, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":298
+  /* "src/toolbox/parsing.pyx":307
  *                         type=str,
  *                         default= None,
  *                         required=True)             # <<<<<<<<<<<<<<
  * 
  *     parser.add_argument('-dim',
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 294, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 303, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":292
+  /* "src/toolbox/parsing.pyx":301
  *                         required=True)
  * 
  *     parser.add_argument('-od',             # <<<<<<<<<<<<<<
  *                         '--output-directory',
  *                         help='Output Cscan directory [DIRECTORY]',
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__18, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__18, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 301, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/parsing.pyx":300
+  /* "src/toolbox/parsing.pyx":309
  *                         required=True)
  * 
  *     parser.add_argument('-dim',             # <<<<<<<<<<<<<<
  *                         '--dimension',
  *                         help='Bscan dimension Z-axis last [2-values LIST]',
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/parsing.pyx":302
+  /* "src/toolbox/parsing.pyx":311
  *     parser.add_argument('-dim',
  *                         '--dimension',
  *                         help='Bscan dimension Z-axis last [2-values LIST]',             # <<<<<<<<<<<<<<
  *                         dest='dimension',
  *                         default= None,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 302, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Bscan_dimension_Z_axis_last_2_va) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_dimension_2) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_Bscan_dimension_Z_axis_last_2_va) < 0) __PYX_ERR(0, 311, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dest, __pyx_n_s_dimension_2) < 0) __PYX_ERR(0, 311, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":304
+  /* "src/toolbox/parsing.pyx":313
  *                         help='Bscan dimension Z-axis last [2-values LIST]',
  *                         dest='dimension',
  *                         default= None,             # <<<<<<<<<<<<<<
  *                         required=True,
  *                         nargs=2)
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, Py_None) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, Py_None) < 0) __PYX_ERR(0, 311, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":305
+  /* "src/toolbox/parsing.pyx":314
  *                         dest='dimension',
  *                         default= None,
  *                         required=True,             # <<<<<<<<<<<<<<
  *                         nargs=2)
  * 
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_nargs, __pyx_int_2) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 311, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_nargs, __pyx_int_2) < 0) __PYX_ERR(0, 311, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":300
+  /* "src/toolbox/parsing.pyx":309
  *                         required=True)
  * 
  *     parser.add_argument('-dim',             # <<<<<<<<<<<<<<
  *                         '--dimension',
  *                         help='Bscan dimension Z-axis last [2-values LIST]',
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__15, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__13, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":309
+  /* "src/toolbox/parsing.pyx":318
  * 
  * 
  *     return parser.parse_args()             # <<<<<<<<<<<<<<
@@ -4456,7 +4526,7 @@ static PyObject *__pyx_pf_14cython_parsing_10Pre_processing_parse_arguments(CYTH
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -4470,14 +4540,14 @@ static PyObject *__pyx_pf_14cython_parsing_10Pre_processing_parse_arguments(CYTH
   }
   __pyx_t_2 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/parsing.pyx":280
+  /* "src/toolbox/parsing.pyx":289
  * 
  * 
  * def Pre_processing_parse_arguments():             # <<<<<<<<<<<<<<
@@ -4499,7 +4569,7 @@ static PyObject *__pyx_pf_14cython_parsing_10Pre_processing_parse_arguments(CYTH
   return __pyx_r;
 }
 
-/* "src/toolbox/parsing.pyx":314
+/* "src/toolbox/parsing.pyx":323
  * 
  * 
  * def coords(s):             # <<<<<<<<<<<<<<
@@ -4539,7 +4609,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("coords", 0);
 
-  /* "src/toolbox/parsing.pyx":315
+  /* "src/toolbox/parsing.pyx":324
  * 
  * def coords(s):
  *     try:             # <<<<<<<<<<<<<<
@@ -4555,14 +4625,14 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "src/toolbox/parsing.pyx":316
+      /* "src/toolbox/parsing.pyx":325
  * def coords(s):
  *     try:
  *         x, y, z = map(int, s.split(','))             # <<<<<<<<<<<<<<
  *         return x, y, z
  *     except:
  */
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_s, __pyx_n_s_split); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 316, __pyx_L3_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_s, __pyx_n_s_split); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 325, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_6 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -4576,10 +4646,10 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
       }
       __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_6, __pyx_kp_s__19) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_kp_s__19);
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 316, __pyx_L3_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 325, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 316, __pyx_L3_error)
+      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 325, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_INCREF(((PyObject *)(&PyInt_Type)));
       __Pyx_GIVEREF(((PyObject *)(&PyInt_Type)));
@@ -4587,7 +4657,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 316, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 325, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if ((likely(PyTuple_CheckExact(__pyx_t_4))) || (PyList_CheckExact(__pyx_t_4))) {
@@ -4596,7 +4666,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
         if (unlikely(size != 3)) {
           if (size > 3) __Pyx_RaiseTooManyValuesError(3);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 316, __pyx_L3_error)
+          __PYX_ERR(0, 325, __pyx_L3_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         if (likely(PyTuple_CheckExact(sequence))) {
@@ -4612,17 +4682,17 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
         __Pyx_INCREF(__pyx_t_6);
         __Pyx_INCREF(__pyx_t_7);
         #else
-        __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 316, __pyx_L3_error)
+        __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 325, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 316, __pyx_L3_error)
+        __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 325, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_7 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 316, __pyx_L3_error)
+        __pyx_t_7 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 325, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_7);
         #endif
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
         Py_ssize_t index = -1;
-        __pyx_t_8 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 316, __pyx_L3_error)
+        __pyx_t_8 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 325, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __pyx_t_9 = Py_TYPE(__pyx_t_8)->tp_iternext;
@@ -4632,7 +4702,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
         __Pyx_GOTREF(__pyx_t_6);
         index = 2; __pyx_t_7 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_7)) goto __pyx_L9_unpacking_failed;
         __Pyx_GOTREF(__pyx_t_7);
-        if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 3) < 0) __PYX_ERR(0, 316, __pyx_L3_error)
+        if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 3) < 0) __PYX_ERR(0, 325, __pyx_L3_error)
         __pyx_t_9 = NULL;
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         goto __pyx_L10_unpacking_done;
@@ -4640,7 +4710,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         __pyx_t_9 = NULL;
         if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-        __PYX_ERR(0, 316, __pyx_L3_error)
+        __PYX_ERR(0, 325, __pyx_L3_error)
         __pyx_L10_unpacking_done:;
       }
       __pyx_v_x = __pyx_t_5;
@@ -4650,7 +4720,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
       __pyx_v_z = __pyx_t_7;
       __pyx_t_7 = 0;
 
-      /* "src/toolbox/parsing.pyx":317
+      /* "src/toolbox/parsing.pyx":326
  *     try:
  *         x, y, z = map(int, s.split(','))
  *         return x, y, z             # <<<<<<<<<<<<<<
@@ -4658,7 +4728,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
  *         raise argparse.ArgumentTypeError("Dimension must be x,y,z")
  */
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L3_error)
+      __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 326, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_INCREF(__pyx_v_x);
       __Pyx_GIVEREF(__pyx_v_x);
@@ -4673,7 +4743,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
       __pyx_t_4 = 0;
       goto __pyx_L7_try_return;
 
-      /* "src/toolbox/parsing.pyx":315
+      /* "src/toolbox/parsing.pyx":324
  * 
  * def coords(s):
  *     try:             # <<<<<<<<<<<<<<
@@ -4688,7 +4758,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "src/toolbox/parsing.pyx":318
+    /* "src/toolbox/parsing.pyx":327
  *         x, y, z = map(int, s.split(','))
  *         return x, y, z
  *     except:             # <<<<<<<<<<<<<<
@@ -4697,21 +4767,21 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
  */
     /*except:*/ {
       __Pyx_AddTraceback("cython_parsing.coords", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_7, &__pyx_t_6) < 0) __PYX_ERR(0, 318, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_7, &__pyx_t_6) < 0) __PYX_ERR(0, 327, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_GOTREF(__pyx_t_6);
 
-      /* "src/toolbox/parsing.pyx":319
+      /* "src/toolbox/parsing.pyx":328
  *         return x, y, z
  *     except:
  *         raise argparse.ArgumentTypeError("Dimension must be x,y,z")             # <<<<<<<<<<<<<<
  * 
  * 
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_argparse); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 319, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_argparse); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 328, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_ArgumentTypeError); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 319, __pyx_L5_except_error)
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_ArgumentTypeError); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 328, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __pyx_t_8 = NULL;
@@ -4726,16 +4796,16 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
       }
       __pyx_t_5 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_8, __pyx_kp_s_Dimension_must_be_x_y_z) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_kp_s_Dimension_must_be_x_y_z);
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 319, __pyx_L5_except_error)
+      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 328, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_Raise(__pyx_t_5, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __PYX_ERR(0, 319, __pyx_L5_except_error)
+      __PYX_ERR(0, 328, __pyx_L5_except_error)
     }
     __pyx_L5_except_error:;
 
-    /* "src/toolbox/parsing.pyx":315
+    /* "src/toolbox/parsing.pyx":324
  * 
  * def coords(s):
  *     try:             # <<<<<<<<<<<<<<
@@ -4755,7 +4825,7 @@ static PyObject *__pyx_pf_14cython_parsing_12coords(CYTHON_UNUSED PyObject *__py
     goto __pyx_L0;
   }
 
-  /* "src/toolbox/parsing.pyx":314
+  /* "src/toolbox/parsing.pyx":323
  * 
  * 
  * def coords(s):             # <<<<<<<<<<<<<<
@@ -4957,7 +5027,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 56, __pyx_L1_error)
   __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) __PYX_ERR(0, 62, __pyx_L1_error)
-  __pyx_builtin_map = __Pyx_GetBuiltinName(__pyx_n_s_map); if (!__pyx_builtin_map) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_builtin_map = __Pyx_GetBuiltinName(__pyx_n_s_map); if (!__pyx_builtin_map) __PYX_ERR(0, 170, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -5094,66 +5164,66 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "src/toolbox/parsing.pyx":141
  *                         required=True)
  * 
+ *     parser.add_argument('-dim',             # <<<<<<<<<<<<<<
+ *                         '--dimension',
+ *                         help="dimension",
+ */
+  __pyx_tuple__13 = PyTuple_Pack(2, __pyx_kp_s_dim, __pyx_kp_s_dimension); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__13);
+  __Pyx_GIVEREF(__pyx_tuple__13);
+
+  /* "src/toolbox/parsing.pyx":148
+ *                         nargs=2)
+ * 
  *     parser.add_argument('-s',             # <<<<<<<<<<<<<<
  *                         '--shift',
  *                         help="shifting spectum",
  */
-  __pyx_tuple__13 = PyTuple_Pack(2, __pyx_kp_s_s, __pyx_kp_s_shift); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 141, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__13);
-  __Pyx_GIVEREF(__pyx_tuple__13);
+  __pyx_tuple__14 = PyTuple_Pack(2, __pyx_kp_s_s, __pyx_kp_s_shift); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__14);
+  __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "src/toolbox/parsing.pyx":175
+  /* "src/toolbox/parsing.pyx":184
  *     parser = argparse.ArgumentParser()
  * 
  *     parser.add_argument('-id',             # <<<<<<<<<<<<<<
  *                         '--input-directory',
  *                         help='Input .npy Cscan file',
  */
-  __pyx_tuple__14 = PyTuple_Pack(2, __pyx_kp_s_id, __pyx_kp_s_input_directory); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 175, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__14);
-  __Pyx_GIVEREF(__pyx_tuple__14);
-
-  /* "src/toolbox/parsing.pyx":213
- *                         action="store_true")
- * 
- *     parser.add_argument('-dim',             # <<<<<<<<<<<<<<
- *                         '--dimension',
- *                         help="dimension",
- */
-  __pyx_tuple__15 = PyTuple_Pack(2, __pyx_kp_s_dim, __pyx_kp_s_dimension); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_tuple__15 = PyTuple_Pack(2, __pyx_kp_s_id, __pyx_kp_s_input_directory); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 184, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "src/toolbox/parsing.pyx":261
+  /* "src/toolbox/parsing.pyx":270
  *                         required=False)
  * 
  *     parser.add_argument('-seg',             # <<<<<<<<<<<<<<
  *                         '--segmentation',
  *                         help='Segmentate Input Cscan file ',
  */
-  __pyx_tuple__16 = PyTuple_Pack(2, __pyx_kp_s_seg, __pyx_kp_s_segmentation); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(2, __pyx_kp_s_seg, __pyx_kp_s_segmentation); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "src/toolbox/parsing.pyx":268
+  /* "src/toolbox/parsing.pyx":277
  *                         required=False)
  * 
  *     parser.add_argument('-v',             # <<<<<<<<<<<<<<
  *                         '--view',
  *                         help='3D viewer if input Cscan file ',
  */
-  __pyx_tuple__17 = PyTuple_Pack(2, __pyx_kp_s_v, __pyx_kp_s_view); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(2, __pyx_kp_s_v, __pyx_kp_s_view); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "src/toolbox/parsing.pyx":292
+  /* "src/toolbox/parsing.pyx":301
  *                         required=True)
  * 
  *     parser.add_argument('-od',             # <<<<<<<<<<<<<<
  *                         '--output-directory',
  *                         help='Output Cscan directory [DIRECTORY]',
  */
-  __pyx_tuple__18 = PyTuple_Pack(2, __pyx_kp_s_od, __pyx_kp_s_output_directory); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_tuple__18 = PyTuple_Pack(2, __pyx_kp_s_od, __pyx_kp_s_output_directory); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 301, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
@@ -5193,53 +5263,53 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__25);
   __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_parsing_pyx, __pyx_n_s_Bscan_parse_arguments, 109, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 109, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":171
+  /* "src/toolbox/parsing.pyx":180
  * 
  * 
  * def Cscan_parse_arguments():             # <<<<<<<<<<<<<<
  * 
  *     parser = argparse.ArgumentParser()
  */
-  __pyx_tuple__27 = PyTuple_Pack(3, __pyx_n_s_parser, __pyx_n_s_arguments, __pyx_n_s_f); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_tuple__27 = PyTuple_Pack(3, __pyx_n_s_parser, __pyx_n_s_arguments, __pyx_n_s_f); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_parsing_pyx, __pyx_n_s_Cscan_parse_arguments, 171, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_parsing_pyx, __pyx_n_s_Cscan_parse_arguments, 180, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 180, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":249
+  /* "src/toolbox/parsing.pyx":258
  * 
  * 
  * def Post_processing_parse_arguments():             # <<<<<<<<<<<<<<
  * 
  *     parser = argparse.ArgumentParser()
  */
-  __pyx_tuple__29 = PyTuple_Pack(1, __pyx_n_s_parser); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_tuple__29 = PyTuple_Pack(1, __pyx_n_s_parser); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 258, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_parsing_pyx, __pyx_n_s_Post_processing_parse_arguments, 249, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_parsing_pyx, __pyx_n_s_Post_processing_parse_arguments, 258, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 258, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":280
+  /* "src/toolbox/parsing.pyx":289
  * 
  * 
  * def Pre_processing_parse_arguments():             # <<<<<<<<<<<<<<
  * 
  *     parser = argparse.ArgumentParser()
  */
-  __pyx_tuple__31 = PyTuple_Pack(1, __pyx_n_s_parser); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 280, __pyx_L1_error)
+  __pyx_tuple__31 = PyTuple_Pack(1, __pyx_n_s_parser); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 289, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_parsing_pyx, __pyx_n_s_Pre_processing_parse_arguments, 280, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 280, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_parsing_pyx, __pyx_n_s_Pre_processing_parse_arguments, 289, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 289, __pyx_L1_error)
 
-  /* "src/toolbox/parsing.pyx":314
+  /* "src/toolbox/parsing.pyx":323
  * 
  * 
  * def coords(s):             # <<<<<<<<<<<<<<
  *     try:
  *         x, y, z = map(int, s.split(','))
  */
-  __pyx_tuple__33 = PyTuple_Pack(4, __pyx_n_s_s_2, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_z); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_tuple__33 = PyTuple_Pack(4, __pyx_n_s_s_2, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_z); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_parsing_pyx, __pyx_n_s_coords, 314, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_parsing_pyx, __pyx_n_s_coords, 323, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5251,7 +5321,6 @@ static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 2, __pyx_L1_error);
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 2, __pyx_L1_error)
   __pyx_int_2 = PyInt_FromLong(2); if (unlikely(!__pyx_int_2)) __PYX_ERR(0, 2, __pyx_L1_error)
-  __pyx_int_3 = PyInt_FromLong(3); if (unlikely(!__pyx_int_3)) __PYX_ERR(0, 2, __pyx_L1_error)
   __pyx_int_neg_1 = PyInt_FromLong(-1); if (unlikely(!__pyx_int_neg_1)) __PYX_ERR(0, 2, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -5602,52 +5671,52 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Bscan_parse_arguments, __pyx_t_2) < 0) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":171
+  /* "src/toolbox/parsing.pyx":180
  * 
  * 
  * def Cscan_parse_arguments():             # <<<<<<<<<<<<<<
  * 
  *     parser = argparse.ArgumentParser()
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_14cython_parsing_7Cscan_parse_arguments, NULL, __pyx_n_s_cython_parsing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_14cython_parsing_7Cscan_parse_arguments, NULL, __pyx_n_s_cython_parsing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Cscan_parse_arguments, __pyx_t_2) < 0) __PYX_ERR(0, 171, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Cscan_parse_arguments, __pyx_t_2) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":249
+  /* "src/toolbox/parsing.pyx":258
  * 
  * 
  * def Post_processing_parse_arguments():             # <<<<<<<<<<<<<<
  * 
  *     parser = argparse.ArgumentParser()
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_14cython_parsing_9Post_processing_parse_arguments, NULL, __pyx_n_s_cython_parsing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_14cython_parsing_9Post_processing_parse_arguments, NULL, __pyx_n_s_cython_parsing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 258, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Post_processing_parse_arguments, __pyx_t_2) < 0) __PYX_ERR(0, 249, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Post_processing_parse_arguments, __pyx_t_2) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":280
+  /* "src/toolbox/parsing.pyx":289
  * 
  * 
  * def Pre_processing_parse_arguments():             # <<<<<<<<<<<<<<
  * 
  *     parser = argparse.ArgumentParser()
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_14cython_parsing_11Pre_processing_parse_arguments, NULL, __pyx_n_s_cython_parsing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_14cython_parsing_11Pre_processing_parse_arguments, NULL, __pyx_n_s_cython_parsing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Pre_processing_parse_arguments, __pyx_t_2) < 0) __PYX_ERR(0, 280, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Pre_processing_parse_arguments, __pyx_t_2) < 0) __PYX_ERR(0, 289, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/parsing.pyx":314
+  /* "src/toolbox/parsing.pyx":323
  * 
  * 
  * def coords(s):             # <<<<<<<<<<<<<<
  *     try:
  *         x, y, z = map(int, s.split(','))
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_14cython_parsing_13coords, NULL, __pyx_n_s_cython_parsing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_14cython_parsing_13coords, NULL, __pyx_n_s_cython_parsing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_coords, __pyx_t_2) < 0) __PYX_ERR(0, 314, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_coords, __pyx_t_2) < 0) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "src/toolbox/parsing.pyx":2

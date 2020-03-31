@@ -11,7 +11,7 @@ if p not in sys.path:
 
 
 '''_____Project imports_____'''
-from src.toolbox.parsing import Bscan_parse_arguments
+from src.toolbox.cython_parsing import Bscan_parse_arguments
 arguments = Bscan_parse_arguments()
 from src.toolbox.cython_loadings import load_Bscan_spectra, load_calibration
 from src.toolbox.cython_plottings import Bscan_plots

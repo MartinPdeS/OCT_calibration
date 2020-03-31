@@ -7,7 +7,6 @@ import cupy as cp
 from scipy.interpolate import interp1d
 
 '''_____Project imports_____'''
-from src.toolbox.maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
 
 ctypedef cnp.cdouble_t CDTYPE_t

@@ -3,7 +3,6 @@
 import numpy as np
 cimport numpy as cnp
 
-
 ctypedef cnp.cdouble_t CDTYPE_t
 ctypedef cnp.double_t DTYPE_t
 
@@ -20,20 +19,23 @@ def hilbert(cnp.ndarray[DTYPE_t, ndim=1] spectra):
     return np.fft.fft(temp)
 
 
-def unwrap_phase(cnp.ndarray[CDTYPE_t, ndim=1] spectra):
-
-    fft_spectra = hilbert(spectra)
-
-    phase = np.angle( fft_spectra )
-
-    unwrapped_phase = np.unwrap( phase )
-
-    unwrapped_phase[0] = 0
-
-    return unwrapped_phase
+def unwrap_phase(cnp.ndarray[DTYPE_t, ndim=1] spectra):
 
 
-def apodization(cnp.ndarray[CDTYPE_t, ndim=1] spectra):
+    cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
+
+    temp = hilbert(spectra)
+
+    temp = np.angle( temp )
+
+    temp = np.unwrap( temp )
+
+    temp[0] = np.float64(0)
+
+    return temp
+
+
+def apodization(cnp.ndarray[DTYPE_t, ndim=1] spectra):
 
     hanning = np.hanning( len(spectra) )
 
@@ -42,7 +44,7 @@ def apodization(cnp.ndarray[CDTYPE_t, ndim=1] spectra):
     return spectra
 
 
-cdef cnp.ndarray[CDTYPE_t, ndim=1] spectra2aline(cnp.ndarray[CDTYPE_t, ndim=1] spectra):
+def spectra2aline(cnp.ndarray[DTYPE_t, ndim=1] spectra):
 
     cdef cnp.ndarray[cnp.cdouble_t, ndim=1] ctemp
 

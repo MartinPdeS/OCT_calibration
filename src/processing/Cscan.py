@@ -12,9 +12,9 @@ if p not in sys.path:
     sys.path.append(p)
 
 '''_____Project imports_____'''
-from src.toolbox.parsing import Cscan_parse_arguments
+from src.toolbox.cython_parsing import Cscan_parse_arguments
 arguments = Cscan_parse_arguments()
-from src.toolbox.loadings import load_calibration
+from src.toolbox.cython_loadings import load_calibration
 from src.toolbox.main_processing_gpu import *
 from src.toolbox._arguments import Arguments
 
@@ -36,7 +36,7 @@ f = tables.open_file(outfile, mode='w')
 
 atom = tables.Float64Atom()
 
-array_c = f.create_earray(f.root, 'data', atom, (0, Arguments.dimension[1], Arguments.dimension[2]/2))
+array_c = f.create_earray(f.root, 'data', atom, (0, Arguments.dimension[0], Arguments.dimension[1]/2))
 
 for n_i, Bscan_spectra in enumerate(Bscan_list):
 

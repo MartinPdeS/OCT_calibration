@@ -2,7 +2,7 @@ from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
 from Cython.Build import cythonize
-import numpy
+import numpy, scipy
 
 ext_modules=[
     Extension("cython_fits",                     ["src/toolbox/fits.pyx"]),
@@ -23,5 +23,5 @@ setup(
         license='Creative Commons Attribution-Noncommercial-Share Alike license',
         ext_package='src/toolbox/',
         ext_modules = cythonize(ext_modules), #cythonize("src/toolbox/fits.pyx"),
-        include_dirs=[numpy.get_include()],
+        include_dirs=[numpy.get_include(), scipy.get_include()],
 )
