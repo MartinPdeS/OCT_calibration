@@ -1,7 +1,7 @@
 
 '''_____Standard imports_____'''
 import numpy as np
-cimport numpy as cnp
+cimport numpy as np
 import scipy.signal
 import cupy as cp
 from scipy.interpolate import interp1d
@@ -9,20 +9,20 @@ from scipy.interpolate import interp1d
 '''_____Project imports_____'''
 from src.toolbox._arguments import Arguments
 
-ctypedef cnp.cdouble_t CDTYPE_t
-ctypedef cnp.double_t DTYPE_t
+ctypedef np.cdouble_t CDTYPE_t
+ctypedef np.double_t DTYPE_t
 
 
-def process_Bscan(cnp.ndarray Bscan_spectra, calibration):
+cpdef process_Bscan(np.ndarray Bscan_spectra, dict calibration):
     """
     GPU accelerated
     """
 
-    cdef cnp.ndarray[cnp.double_t, ndim=2] temp
+    cdef np.ndarray[np.double_t, ndim=2] temp
 
-    cdef cnp.ndarray[cnp.double_t, ndim=1] x = np.arange( len(Bscan_spectra[0,:]) ).astype('float64')
+    cdef np.ndarray[np.int_t, ndim=1] x = np.arange( Arguments.dimension[-1] )
 
-    cdef cnp.ndarray[cnp.cdouble_t, ndim=2] ctemp
+    cdef np.ndarray[np.cdouble_t, ndim=2] ctemp
 
     j = complex(0,1)
 
@@ -38,7 +38,7 @@ def process_Bscan(cnp.ndarray Bscan_spectra, calibration):
 
         shift = calibration['peak_shift1']
 
-        spectrum_shift = np.exp(j * np.arange(len(Bscan_spectra[0,:])) * shift )
+        spectrum_shift = np.exp(j * np.arange( Arguments.dimension[-1] ) * shift )
 
         ctemp = np.multiply(ctemp, spectrum_shift)
 
@@ -55,11 +55,14 @@ def process_Bscan(cnp.ndarray Bscan_spectra, calibration):
     return np.flip( np.abs(ctemp), 1)
 
 
-cdef cnp.ndarray[CDTYPE_t, ndim=1] operation1(cnp.ndarray[cnp.double_t, ndim=2] Bscan_spectra):
+cimport cython
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cdef np.ndarray[CDTYPE_t, ndim=1] operation1(np.ndarray[np.double_t, ndim=2] Bscan_spectra):
 
-    cdef cnp.ndarray[cnp.double_t, ndim=2] temp_t
+    cdef np.ndarray[np.double_t, ndim=2] temp_t
 
-    cdef cnp.ndarray[cnp.cdouble_t, ndim=2] ctemp_t
+    cdef np.ndarray[np.cdouble_t, ndim=2] ctemp_t
 
     temp = cp.array(Bscan_spectra)
 

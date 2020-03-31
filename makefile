@@ -28,3 +28,6 @@ test_calibration:
 
 test_Cscan_result:
 		python ./src/processing/post_process.py -v -if="data/Cscan/example.h5"
+
+cython_html:
+		cython -a src/toolbox/main_processing_gpu.pyx
