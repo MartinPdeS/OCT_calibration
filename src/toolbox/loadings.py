@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 
 
-def load_data(dir, type=float):
+def load_data(dir: str, type=float):
 
     data = []
 
@@ -13,7 +13,7 @@ def load_data(dir, type=float):
     return data
 
 
-def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):
+def load_Bscan_spectra(file_dir: str, dimension=(1,1024,3147)):
 
     data = np.load(file_dir)
     data = np.reshape(data, dimension)
@@ -21,7 +21,7 @@ def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):
     return data
 
 
-def load_calibration(dir=None):
+def load_calibration(dir: str=None):
 
     calibration = pickle.load( open( dir, "rb" ) )
 

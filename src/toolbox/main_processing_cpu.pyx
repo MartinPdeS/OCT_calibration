@@ -1,3 +1,4 @@
+# -MPdSH
 
 '''_____Standard imports_____'''
 import numpy as np
@@ -6,16 +7,14 @@ import scipy
 cimport numpy as cnp
 
 '''_____Project imports_____'''
-from src.toolbox.filters import butter_highpass_filter
-from src.toolbox.calibration_processing import linearize_spectra, compensate_dispersion
-from src.toolbox cimport maths
-#from src.toolbox.maths import hilbert, spectra2aline
+from src.toolbox.cython_filters import butter_highpass_filter
+from src.toolbox.cython_calibration_processing import linearize_spectra, compensate_dispersion
 from src.toolbox.cython_maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
 
 
 
-def process_Aline(spectra, calibration, int shift):
+cpdef process_Aline(spectra, calibration, int shift):
     """
     CPU based
     """
@@ -39,7 +38,7 @@ def process_Aline(spectra, calibration, int shift):
     return Aline
 
 
-def process_Bscan(cnp.ndarray Bscan_spectra, calibration, shift=0):
+cpdef process_Bscan(cnp.ndarray Bscan_spectra, calibration, shift=0):
     """
     CPU based
     """

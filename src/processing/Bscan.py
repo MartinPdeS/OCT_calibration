@@ -10,13 +10,21 @@ if p not in sys.path:
     sys.path.append(p)
 
 
-'''_____Project imports_____'''
-from src.toolbox.cython_parsing import Bscan_parse_arguments
+'''_____Arguments parsing/loading_____'''
+from src.toolbox.parsing import Bscan_parse_arguments
 arguments = Bscan_parse_arguments()
-from src.toolbox.cython_loadings import load_Bscan_spectra, load_calibration
-from src.toolbox.cython_plottings import Bscan_plots
 from src.toolbox._arguments import Arguments
-from src.toolbox.cython_filters import denoise_Bscan
+
+
+'''_____Project imports_____'''
+if Arguments.compiled:
+    from src.toolbox.cython_loadings import load_Bscan_spectra, load_calibration
+    from src.toolbox.cython_plottings import Bscan_plots
+    from src.toolbox.cython_filters import denoise_Bscan
+else:
+    from src.toolbox.loadings import load_Bscan_spectra, load_calibration
+    from src.toolbox.plottings import Bscan_plots
+    from src.toolbox.filters import denoise_Bscan
 
 if Arguments.gpu:
     from src.toolbox.cython_main_processing_gpu import process_Bscan
@@ -24,7 +32,7 @@ else:
     from src.toolbox.cython_main_processing_cpu import process_Bscan
 
 
-dimension = (1,3147,1024)
+dimension = (1,Arguments.dimension[0], Arguments.dimension[1])
 
 Bscan_spectra = load_Bscan_spectra(Arguments.input_file, dimension = dimension)
 

@@ -1,78 +1,77 @@
+# -MPdSH
 
 '''_____Standard imports_____'''
 import numpy as np
-import scipy.fftpack as fp
-import scipy
+import scipy.signal
 import cupy as cp
 from scipy.interpolate import interp1d
 
+
 '''_____Project imports_____'''
-from src.toolbox.maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
 
 
 
-def process_Bscan(Bscan_spectra, calibration, shift=0):
+def process_Bscan(Bscan_spectra: np.ndarray, calibration: dict):
     """
     GPU accelerated
     """
 
+    x = np.arange( Arguments.dimension[-1] )
+
     j = complex(0,1)
 
-    Bscan_spectra = scipy.signal.detrend(Bscan_spectra, axis=0)
+    temp = scipy.signal.detrend(Bscan_spectra, axis=0).astype("float64")
 
-    hil = operation1(Bscan_spectra)
+    interpolation = interp1d(x, temp, kind='cubic', fill_value="extrapolate")
+
+    temp = interpolation(calibration['klinear'][:])
+
+    ctemp = operation1(temp)
 
     if Arguments.shift:
+
         shift = calibration['peak_shift1']
 
-    spectrum_shift = np.exp(j * np.arange(len(Bscan_spectra[0,:])) * shift )
+        spectrum_shift = np.exp(j * np.arange( Arguments.dimension[-1] ) * shift )
 
-    x = np.arange( len(Bscan_spectra[0,:]) )
+        ctemp = np.multiply(ctemp, spectrum_shift)
 
-    interpolation = interp1d(x, Bscan_spectra, kind='cubic', fill_value="extrapolate")
+    temp = np.real(ctemp)
 
-    Bscan = interpolation(calibration['klinear'][:])
+    cp_temp = cp.array(temp)
 
-    Bscan = operation1(Bscan)
-
-    Bscan = np.multiply(Bscan, spectrum_shift)
-
-    Bscan = np.real(Bscan)
-
-    Bscan = cp.array(Bscan)
-
-    data_output1  = cp.fft.fft(Bscan, axis=1)
+    cp_temp  = cp.fft.fft(cp_temp, axis=1)
 
     cp.cuda.Device().synchronize()
 
-    Bscan = cp.asnumpy(data_output1)[:,:len(Bscan[0,:])//2]
+    ctemp = cp.asnumpy(cp_temp)[:,:len(ctemp[0,:])//2]
 
-    return np.flip( np.abs(Bscan), 1)
+    return np.flip( np.abs(ctemp), 1)
 
 
-def operation1(Bscan_spectra):
+
+def operation1(Bscan_spectra: np.ndarray):
 
     temp = cp.array(Bscan_spectra)
 
-    data_output = cp.fft.fft(temp,axis=1)
+    temp = cp.fft.fft(temp, axis=1)
 
     cp.cuda.Device().synchronize()
 
-    temp = cp.asnumpy(data_output)
+    ctemp_t = cp.asnumpy(temp)
 
-    temp[:, 0: len(temp[0,:])//2] = 0
+    ctemp_t[:, 0: len(ctemp_t[0,:])//2] = 0
 
-    temp = cp.array(temp)
+    temp = cp.array(ctemp_t)
 
-    temp_output = cp.fft.fft(temp,axis=1)
+    temp = cp.fft.fft(temp,axis=1)
 
     cp.cuda.Device().synchronize()
 
-    hil = cp.asnumpy(temp_output)
+    ctemp_t = cp.asnumpy(temp)
 
-    return hil
-
+    return ctemp_t
 
 
 # ---

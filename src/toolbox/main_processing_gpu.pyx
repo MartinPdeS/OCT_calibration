@@ -1,3 +1,4 @@
+# -MPdSH
 
 '''_____Standard imports_____'''
 import numpy as np
@@ -5,6 +6,7 @@ cimport numpy as np
 import scipy.signal
 import cupy as cp
 from scipy.interpolate import interp1d
+cimport cython
 
 '''_____Project imports_____'''
 from src.toolbox._arguments import Arguments
@@ -13,7 +15,7 @@ ctypedef np.cdouble_t CDTYPE_t
 ctypedef np.double_t DTYPE_t
 
 
-cpdef process_Bscan(np.ndarray Bscan_spectra, dict calibration):
+cpdef process_Bscan(np.ndarray[np.double_t, ndim=2 Bscan_spectra, dict calibration):
     """
     GPU accelerated
     """
@@ -55,7 +57,6 @@ cpdef process_Bscan(np.ndarray Bscan_spectra, dict calibration):
     return np.flip( np.abs(ctemp), 1)
 
 
-cimport cython
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cdef np.ndarray[CDTYPE_t, ndim=1] operation1(np.ndarray[np.double_t, ndim=2] Bscan_spectra):

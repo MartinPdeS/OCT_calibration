@@ -1,41 +1,44 @@
-
+# -
 
 '''_____Standard imports_____'''
 import numpy as np
-import numba
-from numba import jit
 
 
-def hilbert(data):
-    tmp = np.fft.fft(np.array(data))
-    tmp[0: len(tmp)//2] = 0
-    return np.fft.fft(tmp)
+def hilbert(spectra: np.array):
+
+    temp = np.fft.fft(np.array(spectra))
+
+    temp[0: len(temp)//2] = 0
+
+    return np.fft.fft(temp)
 
 
-@jit(nopython=False)
-def unwrap_phase(spectra):
+def unwrap_phase(spectra: np.array):
 
-    spectra = np.array(spectra)
-    fft_spectra = hilbert(spectra)
-    phase = np.angle( fft_spectra )
-    unwrapped_phase = np.unwrap( phase )
-    phase[0] = 0
+    temp = hilbert(spectra)
 
-    return unwrapped_phase
+    temp = np.angle( temp )
+
+    temp = np.unwrap( temp )
+
+    temp[0] = np.float64(0)
+
+    return temp
 
 
-@jit(nopython=True)
-def apodization(spectra):
+def apodization(spectra: np.array):
 
     hanning = np.hanning( len(spectra) )
+
     spectra = hanning *  spectra
 
     return spectra
 
 
-def spectra2aline(spectra):
+def spectra2aline(spectra: np.array):
 
-    tmp0 = np.fft.fft(spectra)
-    tmp1 = np.fft.fftshift( tmp0 )
+    ctemp = np.fft.fft(spectra)
 
-    return np.abs( tmp1 )
+    ctemp = np.fft.fftshift( ctemp )
+
+    return np.abs( ctemp )

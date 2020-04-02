@@ -1,3 +1,4 @@
+# -MPdSH
 
 '''_____Standard imports_____'''
 import numpy as np
@@ -12,7 +13,7 @@ from src.toolbox.cython_maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
 
 
-def process_Aline(spectra, calibration, shift):
+def process_Aline(spectra: np.ndarray, calibration: dict, shift: int):
     """
     CPU based
     """
@@ -36,7 +37,7 @@ def process_Aline(spectra, calibration, shift):
     return Aline
 
 
-def process_Bscan(Bscan_spectra, calibration, shift=0):
+def process_Bscan(Bscan_spectra: np.ndarray, calibration: dict, shift: int=0):
     """
     CPU based
     """
@@ -47,9 +48,7 @@ def process_Bscan(Bscan_spectra, calibration, shift=0):
 
     for i, spectrum in enumerate(Bscan_spectra):
 
-        Aline = process_Aline(spectrum, calibration, shift=shift)
-
-        Bscan.append(Aline)
+        Bscan.append( process_Aline(spectrum, calibration, shift=shift) )
 
     Bscan = np.array(Bscan)
 

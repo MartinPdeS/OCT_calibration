@@ -13,7 +13,6 @@ ext_modules=[
     Extension("cython_main_processing_gpu",      ["src/toolbox/main_processing_gpu.pyx"]),
     Extension("cython_plottings",                ["src/toolbox/plottings.pyx"]),
     Extension("cython_calibration_processing",   ["src/toolbox/calibration_processing.pyx"]),
-    Extension("cython_parsing",                  ["src/toolbox/parsing.pyx"]),
     Extension("cython_PySpectra",                ["src/toolbox/PySpectra.pyx"]),
 ]
 
