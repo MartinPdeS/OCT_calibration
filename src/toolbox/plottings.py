@@ -162,7 +162,7 @@ def Bscan_plots(Bscan):
     ax0.set_ylabel('Aline depth Intensity [U.A]')
     ax0.set_xlabel('Wavenumber k [U.A]')
     ax0.set_title("Spectra")
-    ax0.plot(Bscan[200])
+    ax0.plot(Bscan[0])
 
 
 
@@ -171,8 +171,8 @@ def Bscan_plots(Bscan):
     ax1.set_ylabel('Aline depth Magnitude [dB]')
     ax1.set_xlabel('Wavenumber k [U.A]')
     ax1.set_title("Aline")
-    ref = np.min(dBscan[200])
-    ax1.plot(dBscan[200])
+    ref = np.min(dBscan[0])
+    ax1.plot(dBscan[0])
 
 
     data = dBscan.T

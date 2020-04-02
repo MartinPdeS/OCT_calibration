@@ -17,11 +17,14 @@ def process_Bscan(Bscan_spectra: np.ndarray, calibration: dict):
     GPU accelerated
     """
 
-    x = np.arange( Arguments.dimension[-1] )
+    x = np.arange( Arguments.dimension[2] )
 
+    print(Arguments.dimension[2])
     j = complex(0,1)
 
     temp = scipy.signal.detrend(Bscan_spectra, axis=0).astype("float64")
+
+    print(np.shape(temp))
 
     interpolation = interp1d(x, temp, kind='cubic', fill_value="extrapolate")
 
@@ -33,7 +36,7 @@ def process_Bscan(Bscan_spectra: np.ndarray, calibration: dict):
 
         shift = calibration['peak_shift1']
 
-        spectrum_shift = np.exp(j * np.arange( Arguments.dimension[-1] ) * shift )
+        spectrum_shift = np.exp(j * np.arange( Arguments.dimension[2] ) * shift )
 
         ctemp = np.multiply(ctemp, spectrum_shift)
 

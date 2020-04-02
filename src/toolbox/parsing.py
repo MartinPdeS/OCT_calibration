@@ -229,7 +229,7 @@ def Cscan_parse_arguments():
                         help="dimension",
                         dest="dimension",
                         required=True,
-                        nargs=2)
+                        nargs=3)
 
     parser.add_argument('-s',
                         '--shift',
@@ -251,6 +251,7 @@ def Cscan_parse_arguments():
 
 
     arguments = parser.parse_args()
+
 
     arguments.dimension = tuple(map(int,arguments.dimension))
 

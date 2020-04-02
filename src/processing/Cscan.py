@@ -45,27 +45,28 @@ f = tables.open_file(Arguments.output_file, mode='w')
 
 atom = tables.Float64Atom()
 
-array_c = f.create_earray(f.root, 'data', atom, (0, Arguments.dimension[0], Arguments.dimension[1]/2))
+array_c = f.create_earray(f.root, 'data', atom, (0, Arguments.dimension[1], Arguments.dimension[2]/2))
 
 length = len(Bscan_list)
 
 for n_i, Bscan_spectra in enumerate(Bscan_list):
+    print(Bscan_spectra)
 
     sys.stdout.write('Bscan processing ... [{0}/{1}] \n'.format(n_i, length ) )
 
-    raw_Bscan_spectra = np.load(Bscan_spectra)
+    temp = np.load(Bscan_spectra)
 
-    array_c.append([process_Bscan(raw_Bscan_spectra, calibration)])
+    array_c.append([process_Bscan(temp, calibration)])
 
 sys.stdout.write(' saving into {0} file \n'.format(Arguments.output_file ) )
 
+if not Arguments.silent:
+    from src.toolbox.plottings import Bscan_plots
+    from src.toolbox.filters import denoise_Bscan
+    Bscan_plots( denoise_Bscan( f.root.data[-1,:,:] ) )
+
+
 f.close()
-
-
-
-
-
-
 
 
 
