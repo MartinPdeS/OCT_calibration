@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "cython_fits",
+        "name": "fits",
         "sources": [
             "src/toolbox/fits.pyx"
         ]
     },
-    "module_name": "cython_fits"
+    "module_name": "fits"
 }
 END: Cython Metadata */
 
@@ -602,8 +602,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cython_fits
-#define __PYX_HAVE_API__cython_fits
+#define __PYX_HAVE__fits
+#define __PYX_HAVE_API__fits
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -1147,12 +1147,12 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'cython_fits' */
-#define __Pyx_MODULE_NAME "cython_fits"
-extern int __pyx_module_is_main_cython_fits;
-int __pyx_module_is_main_cython_fits = 0;
+/* Module declarations from 'fits' */
+#define __Pyx_MODULE_NAME "fits"
+extern int __pyx_module_is_main_fits;
+int __pyx_module_is_main_fits = 0;
 
-/* Implementation of 'cython_fits' */
+/* Implementation of 'fits' */
 static const char __pyx_k_A[] = "A";
 static const char __pyx_k_p[] = "p";
 static const char __pyx_k_w[] = "w";
@@ -1171,6 +1171,7 @@ static const char __pyx_k_exp[] = "exp";
 static const char __pyx_k_beta[] = "beta";
 static const char __pyx_k_ffit[] = "ffit";
 static const char __pyx_k_file[] = "file";
+static const char __pyx_k_fits[] = "fits";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
@@ -1193,7 +1194,6 @@ static const char __pyx_k_curve_fit[] = "curve_fit";
 static const char __pyx_k_polynomial[] = "polynomial";
 static const char __pyx_k_var_matrix[] = "var_matrix";
 static const char __pyx_k_Pdispersion[] = "Pdispersion";
-static const char __pyx_k_cython_fits[] = "cython_fits";
 static const char __pyx_k_get_fit_curve[] = "get_fit_curve";
 static const char __pyx_k_make_poly_fit[] = "make_poly_fit";
 static const char __pyx_k_fit_dispersion[] = "fit_dispersion";
@@ -1217,12 +1217,12 @@ static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_coeff;
 static PyObject *__pyx_n_s_coefs;
 static PyObject *__pyx_n_s_curve_fit;
-static PyObject *__pyx_n_s_cython_fits;
 static PyObject *__pyx_n_s_end;
 static PyObject *__pyx_n_s_exp;
 static PyObject *__pyx_n_s_ffit;
 static PyObject *__pyx_n_s_file;
 static PyObject *__pyx_n_s_fit_dispersion;
+static PyObject *__pyx_n_s_fits;
 static PyObject *__pyx_n_s_format;
 static PyObject *__pyx_n_s_gauss;
 static PyObject *__pyx_n_s_get_fit_curve;
@@ -1252,11 +1252,11 @@ static PyObject *__pyx_n_s_w;
 static PyObject *__pyx_n_s_weight;
 static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_y;
-static PyObject *__pyx_pf_11cython_fits_gauss(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_p); /* proto */
-static PyObject *__pyx_pf_11cython_fits_2beta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_p); /* proto */
-static PyObject *__pyx_pf_11cython_fits_4make_poly_fit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_order, PyObject *__pyx_v_weight); /* proto */
-static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Pdispersion); /* proto */
-static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_coeff, PyObject *__pyx_v_length); /* proto */
+static PyObject *__pyx_pf_4fits_gauss(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_p); /* proto */
+static PyObject *__pyx_pf_4fits_2beta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_p); /* proto */
+static PyObject *__pyx_pf_4fits_4make_poly_fit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_order, PyObject *__pyx_v_weight); /* proto */
+static PyObject *__pyx_pf_4fits_6fit_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Pdispersion); /* proto */
+static PyObject *__pyx_pf_4fits_8get_fit_curve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_coeff, PyObject *__pyx_v_length); /* proto */
 static PyObject *__pyx_float_0_;
 static PyObject *__pyx_float_2_;
 static PyObject *__pyx_int_2;
@@ -1281,7 +1281,7 @@ static PyObject *__pyx_codeobj__11;
 static PyObject *__pyx_codeobj__13;
 /* Late includes */
 
-/* "src/toolbox/fits.pyx":7
+/* "fits.pyx":7
  * 
  * 
  * def gauss(x, *p):             # <<<<<<<<<<<<<<
@@ -1290,9 +1290,9 @@ static PyObject *__pyx_codeobj__13;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11cython_fits_1gauss(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_11cython_fits_1gauss = {"gauss", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_11cython_fits_1gauss, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_11cython_fits_1gauss(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_4fits_1gauss(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_4fits_1gauss = {"gauss", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_4fits_1gauss, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_4fits_1gauss(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_x = 0;
   PyObject *__pyx_v_p = 0;
   PyObject *__pyx_r = 0;
@@ -1342,11 +1342,11 @@ static PyObject *__pyx_pw_11cython_fits_1gauss(PyObject *__pyx_self, PyObject *_
   __Pyx_RaiseArgtupleInvalid("gauss", 0, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 7, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_DECREF(__pyx_v_p); __pyx_v_p = 0;
-  __Pyx_AddTraceback("cython_fits.gauss", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fits.gauss", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_11cython_fits_gauss(__pyx_self, __pyx_v_x, __pyx_v_p);
+  __pyx_r = __pyx_pf_4fits_gauss(__pyx_self, __pyx_v_x, __pyx_v_p);
 
   /* function exit code */
   __Pyx_XDECREF(__pyx_v_p);
@@ -1354,7 +1354,7 @@ static PyObject *__pyx_pw_11cython_fits_1gauss(PyObject *__pyx_self, PyObject *_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11cython_fits_gauss(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_p) {
+static PyObject *__pyx_pf_4fits_gauss(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_p) {
   PyObject *__pyx_v_A = NULL;
   PyObject *__pyx_v_mu = NULL;
   PyObject *__pyx_v_sigma = NULL;
@@ -1367,7 +1367,7 @@ static PyObject *__pyx_pf_11cython_fits_gauss(CYTHON_UNUSED PyObject *__pyx_self
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("gauss", 0);
 
-  /* "src/toolbox/fits.pyx":8
+  /* "fits.pyx":8
  * 
  * def gauss(x, *p):
  *     A, mu, sigma = p             # <<<<<<<<<<<<<<
@@ -1405,7 +1405,7 @@ static PyObject *__pyx_pf_11cython_fits_gauss(CYTHON_UNUSED PyObject *__pyx_self
   __pyx_v_sigma = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/fits.pyx":9
+  /* "fits.pyx":9
  * def gauss(x, *p):
  *     A, mu, sigma = p
  *     return A*np.exp(-(x-mu)**2/(2.*sigma**2))             # <<<<<<<<<<<<<<
@@ -1458,7 +1458,7 @@ static PyObject *__pyx_pf_11cython_fits_gauss(CYTHON_UNUSED PyObject *__pyx_self
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/fits.pyx":7
+  /* "fits.pyx":7
  * 
  * 
  * def gauss(x, *p):             # <<<<<<<<<<<<<<
@@ -1473,7 +1473,7 @@ static PyObject *__pyx_pf_11cython_fits_gauss(CYTHON_UNUSED PyObject *__pyx_self
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_fits.gauss", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fits.gauss", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_A);
@@ -1484,7 +1484,7 @@ static PyObject *__pyx_pf_11cython_fits_gauss(CYTHON_UNUSED PyObject *__pyx_self
   return __pyx_r;
 }
 
-/* "src/toolbox/fits.pyx":12
+/* "fits.pyx":12
  * 
  * 
  * def beta(x, *p):             # <<<<<<<<<<<<<<
@@ -1493,9 +1493,9 @@ static PyObject *__pyx_pf_11cython_fits_gauss(CYTHON_UNUSED PyObject *__pyx_self
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11cython_fits_3beta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_11cython_fits_3beta = {"beta", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_11cython_fits_3beta, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_11cython_fits_3beta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_4fits_3beta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_4fits_3beta = {"beta", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_4fits_3beta, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_4fits_3beta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_x = 0;
   PyObject *__pyx_v_p = 0;
   PyObject *__pyx_r = 0;
@@ -1545,11 +1545,11 @@ static PyObject *__pyx_pw_11cython_fits_3beta(PyObject *__pyx_self, PyObject *__
   __Pyx_RaiseArgtupleInvalid("beta", 0, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 12, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_DECREF(__pyx_v_p); __pyx_v_p = 0;
-  __Pyx_AddTraceback("cython_fits.beta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fits.beta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_11cython_fits_2beta(__pyx_self, __pyx_v_x, __pyx_v_p);
+  __pyx_r = __pyx_pf_4fits_2beta(__pyx_self, __pyx_v_x, __pyx_v_p);
 
   /* function exit code */
   __Pyx_XDECREF(__pyx_v_p);
@@ -1557,7 +1557,7 @@ static PyObject *__pyx_pw_11cython_fits_3beta(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11cython_fits_2beta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_p) {
+static PyObject *__pyx_pf_4fits_2beta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_p) {
   PyObject *__pyx_v_B1 = NULL;
   PyObject *__pyx_v_B2 = NULL;
   PyObject *__pyx_v_B3 = NULL;
@@ -1572,7 +1572,7 @@ static PyObject *__pyx_pf_11cython_fits_2beta(CYTHON_UNUSED PyObject *__pyx_self
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("beta", 0);
 
-  /* "src/toolbox/fits.pyx":13
+  /* "fits.pyx":13
  * 
  * def beta(x, *p):
  *     B1, B2, B3, B4, B5 = p             # <<<<<<<<<<<<<<
@@ -1621,7 +1621,7 @@ static PyObject *__pyx_pf_11cython_fits_2beta(CYTHON_UNUSED PyObject *__pyx_self
   __pyx_v_B5 = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "src/toolbox/fits.pyx":14
+  /* "fits.pyx":14
  * def beta(x, *p):
  *     B1, B2, B3, B4, B5 = p
  *     return B1 * x + B2 * x**2 + B3 * x**3 + B4 * x**4 + B5 * x**5             # <<<<<<<<<<<<<<
@@ -1671,7 +1671,7 @@ static PyObject *__pyx_pf_11cython_fits_2beta(CYTHON_UNUSED PyObject *__pyx_self
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/fits.pyx":12
+  /* "fits.pyx":12
  * 
  * 
  * def beta(x, *p):             # <<<<<<<<<<<<<<
@@ -1686,7 +1686,7 @@ static PyObject *__pyx_pf_11cython_fits_2beta(CYTHON_UNUSED PyObject *__pyx_self
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_fits.beta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fits.beta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_B1);
@@ -1699,7 +1699,7 @@ static PyObject *__pyx_pf_11cython_fits_2beta(CYTHON_UNUSED PyObject *__pyx_self
   return __pyx_r;
 }
 
-/* "src/toolbox/fits.pyx":17
+/* "fits.pyx":17
  * 
  * 
  * def make_poly_fit(x=[],y=[], order = 5, weight=None):             # <<<<<<<<<<<<<<
@@ -1708,9 +1708,9 @@ static PyObject *__pyx_pf_11cython_fits_2beta(CYTHON_UNUSED PyObject *__pyx_self
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11cython_fits_5make_poly_fit(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_11cython_fits_5make_poly_fit = {"make_poly_fit", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_11cython_fits_5make_poly_fit, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_11cython_fits_5make_poly_fit(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_4fits_5make_poly_fit(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_4fits_5make_poly_fit = {"make_poly_fit", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_4fits_5make_poly_fit, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_4fits_5make_poly_fit(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_x = 0;
   PyObject *__pyx_v_y = 0;
   PyObject *__pyx_v_order = 0;
@@ -1792,18 +1792,18 @@ static PyObject *__pyx_pw_11cython_fits_5make_poly_fit(PyObject *__pyx_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("make_poly_fit", 0, 0, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 17, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_fits.make_poly_fit", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fits.make_poly_fit", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_11cython_fits_4make_poly_fit(__pyx_self, __pyx_v_x, __pyx_v_y, __pyx_v_order, __pyx_v_weight);
+  __pyx_r = __pyx_pf_4fits_4make_poly_fit(__pyx_self, __pyx_v_x, __pyx_v_y, __pyx_v_order, __pyx_v_weight);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11cython_fits_4make_poly_fit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_order, PyObject *__pyx_v_weight) {
+static PyObject *__pyx_pf_4fits_4make_poly_fit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_order, PyObject *__pyx_v_weight) {
   PyObject *__pyx_v_coefs = NULL;
   PyObject *__pyx_v_ffit = NULL;
   PyObject *__pyx_r = NULL;
@@ -1814,7 +1814,7 @@ static PyObject *__pyx_pf_11cython_fits_4make_poly_fit(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("make_poly_fit", 0);
 
-  /* "src/toolbox/fits.pyx":19
+  /* "fits.pyx":19
  * def make_poly_fit(x=[],y=[], order = 5, weight=None):
  * 
  *     coefs = np.polynomial.polynomial.polyfit(x, y, order, w=weight)             # <<<<<<<<<<<<<<
@@ -1854,7 +1854,7 @@ static PyObject *__pyx_pf_11cython_fits_4make_poly_fit(CYTHON_UNUSED PyObject *_
   __pyx_v_coefs = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/fits.pyx":20
+  /* "fits.pyx":20
  * 
  *     coefs = np.polynomial.polynomial.polyfit(x, y, order, w=weight)
  *     ffit = np.poly1d(coefs[::-1])             # <<<<<<<<<<<<<<
@@ -1887,7 +1887,7 @@ static PyObject *__pyx_pf_11cython_fits_4make_poly_fit(CYTHON_UNUSED PyObject *_
   __pyx_v_ffit = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/fits.pyx":21
+  /* "fits.pyx":21
  *     coefs = np.polynomial.polynomial.polyfit(x, y, order, w=weight)
  *     ffit = np.poly1d(coefs[::-1])
  *     return ffit             # <<<<<<<<<<<<<<
@@ -1899,7 +1899,7 @@ static PyObject *__pyx_pf_11cython_fits_4make_poly_fit(CYTHON_UNUSED PyObject *_
   __pyx_r = __pyx_v_ffit;
   goto __pyx_L0;
 
-  /* "src/toolbox/fits.pyx":17
+  /* "fits.pyx":17
  * 
  * 
  * def make_poly_fit(x=[],y=[], order = 5, weight=None):             # <<<<<<<<<<<<<<
@@ -1913,7 +1913,7 @@ static PyObject *__pyx_pf_11cython_fits_4make_poly_fit(CYTHON_UNUSED PyObject *_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_fits.make_poly_fit", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fits.make_poly_fit", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_coefs);
@@ -1923,7 +1923,7 @@ static PyObject *__pyx_pf_11cython_fits_4make_poly_fit(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "src/toolbox/fits.pyx":24
+/* "fits.pyx":24
  * 
  * 
  * def fit_dispersion(Pdispersion):             # <<<<<<<<<<<<<<
@@ -1932,20 +1932,20 @@ static PyObject *__pyx_pf_11cython_fits_4make_poly_fit(CYTHON_UNUSED PyObject *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11cython_fits_7fit_dispersion(PyObject *__pyx_self, PyObject *__pyx_v_Pdispersion); /*proto*/
-static PyMethodDef __pyx_mdef_11cython_fits_7fit_dispersion = {"fit_dispersion", (PyCFunction)__pyx_pw_11cython_fits_7fit_dispersion, METH_O, 0};
-static PyObject *__pyx_pw_11cython_fits_7fit_dispersion(PyObject *__pyx_self, PyObject *__pyx_v_Pdispersion) {
+static PyObject *__pyx_pw_4fits_7fit_dispersion(PyObject *__pyx_self, PyObject *__pyx_v_Pdispersion); /*proto*/
+static PyMethodDef __pyx_mdef_4fits_7fit_dispersion = {"fit_dispersion", (PyCFunction)__pyx_pw_4fits_7fit_dispersion, METH_O, 0};
+static PyObject *__pyx_pw_4fits_7fit_dispersion(PyObject *__pyx_self, PyObject *__pyx_v_Pdispersion) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("fit_dispersion (wrapper)", 0);
-  __pyx_r = __pyx_pf_11cython_fits_6fit_dispersion(__pyx_self, ((PyObject *)__pyx_v_Pdispersion));
+  __pyx_r = __pyx_pf_4fits_6fit_dispersion(__pyx_self, ((PyObject *)__pyx_v_Pdispersion));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Pdispersion) {
+static PyObject *__pyx_pf_4fits_6fit_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Pdispersion) {
   PyObject *__pyx_v_p0 = NULL;
   PyObject *__pyx_v_x = NULL;
   PyObject *__pyx_v_coeff = NULL;
@@ -1972,7 +1972,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   PyObject *__pyx_t_12 = NULL;
   __Pyx_RefNannySetupContext("fit_dispersion", 0);
 
-  /* "src/toolbox/fits.pyx":26
+  /* "fits.pyx":26
  * def fit_dispersion(Pdispersion):
  * 
  *     p0 = [0., 0., 0., 0., 0.]             # <<<<<<<<<<<<<<
@@ -1999,7 +1999,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_v_p0 = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":27
+  /* "fits.pyx":27
  * 
  *     p0 = [0., 0., 0., 0., 0.]
  *     x = np.arange( len(Pdispersion) )             # <<<<<<<<<<<<<<
@@ -2033,7 +2033,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_v_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":29
+  /* "fits.pyx":29
  *     x = np.arange( len(Pdispersion) )
  * 
  *     coeff, var_matrix = curve_fit(beta, x, Pdispersion, p0=p0, maxfev = 80000)             # <<<<<<<<<<<<<<
@@ -2115,7 +2115,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_v_var_matrix = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/fits.pyx":30
+  /* "fits.pyx":30
  * 
  *     coeff, var_matrix = curve_fit(beta, x, Pdispersion, p0=p0, maxfev = 80000)
  *     B1, B2, B3, B4, B5 = coeff[0], coeff[1], coeff[2], coeff[3], coeff[4]             # <<<<<<<<<<<<<<
@@ -2143,7 +2143,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_v_B5 = __pyx_t_7;
   __pyx_t_7 = 0;
 
-  /* "src/toolbox/fits.pyx":32
+  /* "fits.pyx":32
  *     B1, B2, B3, B4, B5 = coeff[0], coeff[1], coeff[2], coeff[3], coeff[4]
  * 
  *     sim_dispersion = B1 * x + B2 * x**2 + B3 * x**3 + B4 * x**4 + B5 * x**5             # <<<<<<<<<<<<<<
@@ -2191,7 +2191,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_v_sim_dispersion = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":34
+  /* "fits.pyx":34
  *     sim_dispersion = B1 * x + B2 * x**2 + B3 * x**3 + B4 * x**4 + B5 * x**5
  * 
  *     print('\n B1: {0},\n B2: {1},\n B3: {2},\n B4: {3}\n B5:{4}'.format(coeff[0],             # <<<<<<<<<<<<<<
@@ -2203,7 +2203,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_coeff, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "src/toolbox/fits.pyx":35
+  /* "fits.pyx":35
  * 
  *     print('\n B1: {0},\n B2: {1},\n B3: {2},\n B4: {3}\n B5:{4}'.format(coeff[0],
  *                                                                       coeff[1],             # <<<<<<<<<<<<<<
@@ -2213,7 +2213,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_coeff, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/toolbox/fits.pyx":36
+  /* "fits.pyx":36
  *     print('\n B1: {0},\n B2: {1},\n B3: {2},\n B4: {3}\n B5:{4}'.format(coeff[0],
  *                                                                       coeff[1],
  *                                                                       coeff[2],             # <<<<<<<<<<<<<<
@@ -2223,7 +2223,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_coeff, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "src/toolbox/fits.pyx":37
+  /* "fits.pyx":37
  *                                                                       coeff[1],
  *                                                                       coeff[2],
  *                                                                       coeff[3],             # <<<<<<<<<<<<<<
@@ -2233,7 +2233,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_coeff, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
 
-  /* "src/toolbox/fits.pyx":38
+  /* "fits.pyx":38
  *                                                                       coeff[2],
  *                                                                       coeff[3],
  *                                                                       coeff[4]))             # <<<<<<<<<<<<<<
@@ -2309,7 +2309,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":40
+  /* "fits.pyx":40
  *                                                                       coeff[4]))
  * 
  *     return sim_dispersion             # <<<<<<<<<<<<<<
@@ -2321,7 +2321,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __pyx_r = __pyx_v_sim_dispersion;
   goto __pyx_L0;
 
-  /* "src/toolbox/fits.pyx":24
+  /* "fits.pyx":24
  * 
  * 
  * def fit_dispersion(Pdispersion):             # <<<<<<<<<<<<<<
@@ -2340,7 +2340,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_AddTraceback("cython_fits.fit_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fits.fit_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_p0);
@@ -2358,7 +2358,7 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "src/toolbox/fits.pyx":43
+/* "fits.pyx":43
  * 
  * 
  * def get_fit_curve(coeff, length=1024):             # <<<<<<<<<<<<<<
@@ -2367,9 +2367,9 @@ static PyObject *__pyx_pf_11cython_fits_6fit_dispersion(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11cython_fits_9get_fit_curve(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_11cython_fits_9get_fit_curve = {"get_fit_curve", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_11cython_fits_9get_fit_curve, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_11cython_fits_9get_fit_curve(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_4fits_9get_fit_curve(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_4fits_9get_fit_curve = {"get_fit_curve", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_4fits_9get_fit_curve, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_4fits_9get_fit_curve(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_coeff = 0;
   PyObject *__pyx_v_length = 0;
   PyObject *__pyx_r = 0;
@@ -2421,18 +2421,18 @@ static PyObject *__pyx_pw_11cython_fits_9get_fit_curve(PyObject *__pyx_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("get_fit_curve", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 43, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_fits.get_fit_curve", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fits.get_fit_curve", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_11cython_fits_8get_fit_curve(__pyx_self, __pyx_v_coeff, __pyx_v_length);
+  __pyx_r = __pyx_pf_4fits_8get_fit_curve(__pyx_self, __pyx_v_coeff, __pyx_v_length);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_coeff, PyObject *__pyx_v_length) {
+static PyObject *__pyx_pf_4fits_8get_fit_curve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_coeff, PyObject *__pyx_v_length) {
   PyObject *__pyx_v_B1 = NULL;
   PyObject *__pyx_v_B2 = NULL;
   PyObject *__pyx_v_B3 = NULL;
@@ -2447,7 +2447,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("get_fit_curve", 0);
 
-  /* "src/toolbox/fits.pyx":45
+  /* "fits.pyx":45
  * def get_fit_curve(coeff, length=1024):
  * 
  *     B1 = coeff[0]             # <<<<<<<<<<<<<<
@@ -2459,7 +2459,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   __pyx_v_B1 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":46
+  /* "fits.pyx":46
  * 
  *     B1 = coeff[0]
  *     B2= coeff[1]             # <<<<<<<<<<<<<<
@@ -2471,7 +2471,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   __pyx_v_B2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":47
+  /* "fits.pyx":47
  *     B1 = coeff[0]
  *     B2= coeff[1]
  *     B3= coeff[2]             # <<<<<<<<<<<<<<
@@ -2483,7 +2483,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   __pyx_v_B3 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":48
+  /* "fits.pyx":48
  *     B2= coeff[1]
  *     B3= coeff[2]
  *     B4= coeff[3]             # <<<<<<<<<<<<<<
@@ -2495,7 +2495,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   __pyx_v_B4 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":49
+  /* "fits.pyx":49
  *     B3= coeff[2]
  *     B4= coeff[3]
  *     B5= coeff[4]             # <<<<<<<<<<<<<<
@@ -2507,7 +2507,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   __pyx_v_B5 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":50
+  /* "fits.pyx":50
  *     B4= coeff[3]
  *     B5= coeff[4]
  *     x=np.arange(length)             # <<<<<<<<<<<<<<
@@ -2537,7 +2537,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   __pyx_v_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":51
+  /* "fits.pyx":51
  *     B5= coeff[4]
  *     x=np.arange(length)
  *     sim_dispersion = B1 * x + B2 * x **2 + B3 * x **3 + B4 * x **4 + B5 * x**5             # <<<<<<<<<<<<<<
@@ -2585,7 +2585,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   __pyx_v_sim_dispersion = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/fits.pyx":53
+  /* "fits.pyx":53
  *     sim_dispersion = B1 * x + B2 * x **2 + B3 * x **3 + B4 * x **4 + B5 * x**5
  * 
  *     return sim_dispersion             # <<<<<<<<<<<<<<
@@ -2595,7 +2595,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   __pyx_r = __pyx_v_sim_dispersion;
   goto __pyx_L0;
 
-  /* "src/toolbox/fits.pyx":43
+  /* "fits.pyx":43
  * 
  * 
  * def get_fit_curve(coeff, length=1024):             # <<<<<<<<<<<<<<
@@ -2608,7 +2608,7 @@ static PyObject *__pyx_pf_11cython_fits_8get_fit_curve(CYTHON_UNUSED PyObject *_
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cython_fits.get_fit_curve", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fits.get_fit_curve", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_B1);
@@ -2630,17 +2630,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_cython_fits(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_fits(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_cython_fits},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_fits},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "cython_fits",
+    "fits",
     __pyx_k_Standard_imports, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -2683,12 +2683,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_coeff, __pyx_k_coeff, sizeof(__pyx_k_coeff), 0, 0, 1, 1},
   {&__pyx_n_s_coefs, __pyx_k_coefs, sizeof(__pyx_k_coefs), 0, 0, 1, 1},
   {&__pyx_n_s_curve_fit, __pyx_k_curve_fit, sizeof(__pyx_k_curve_fit), 0, 0, 1, 1},
-  {&__pyx_n_s_cython_fits, __pyx_k_cython_fits, sizeof(__pyx_k_cython_fits), 0, 0, 1, 1},
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
   {&__pyx_n_s_exp, __pyx_k_exp, sizeof(__pyx_k_exp), 0, 0, 1, 1},
   {&__pyx_n_s_ffit, __pyx_k_ffit, sizeof(__pyx_k_ffit), 0, 0, 1, 1},
   {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
   {&__pyx_n_s_fit_dispersion, __pyx_k_fit_dispersion, sizeof(__pyx_k_fit_dispersion), 0, 0, 1, 1},
+  {&__pyx_n_s_fits, __pyx_k_fits, sizeof(__pyx_k_fits), 0, 0, 1, 1},
   {&__pyx_n_s_format, __pyx_k_format, sizeof(__pyx_k_format), 0, 0, 1, 1},
   {&__pyx_n_s_gauss, __pyx_k_gauss, sizeof(__pyx_k_gauss), 0, 0, 1, 1},
   {&__pyx_n_s_get_fit_curve, __pyx_k_get_fit_curve, sizeof(__pyx_k_get_fit_curve), 0, 0, 1, 1},
@@ -2728,7 +2728,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "src/toolbox/fits.pyx":20
+  /* "fits.pyx":20
  * 
  *     coefs = np.polynomial.polynomial.polyfit(x, y, order, w=weight)
  *     ffit = np.poly1d(coefs[::-1])             # <<<<<<<<<<<<<<
@@ -2739,7 +2739,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
 
-  /* "src/toolbox/fits.pyx":7
+  /* "fits.pyx":7
  * 
  * 
  * def gauss(x, *p):             # <<<<<<<<<<<<<<
@@ -2751,7 +2751,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__4);
   __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_fits_pyx, __pyx_n_s_gauss, 7, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 7, __pyx_L1_error)
 
-  /* "src/toolbox/fits.pyx":12
+  /* "fits.pyx":12
  * 
  * 
  * def beta(x, *p):             # <<<<<<<<<<<<<<
@@ -2763,7 +2763,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__6);
   __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_fits_pyx, __pyx_n_s_beta, 12, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 12, __pyx_L1_error)
 
-  /* "src/toolbox/fits.pyx":17
+  /* "fits.pyx":17
  * 
  * 
  * def make_poly_fit(x=[],y=[], order = 5, weight=None):             # <<<<<<<<<<<<<<
@@ -2775,7 +2775,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__8);
   __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(4, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_fits_pyx, __pyx_n_s_make_poly_fit, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 17, __pyx_L1_error)
 
-  /* "src/toolbox/fits.pyx":24
+  /* "fits.pyx":24
  * 
  * 
  * def fit_dispersion(Pdispersion):             # <<<<<<<<<<<<<<
@@ -2787,7 +2787,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__10);
   __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_fits_pyx, __pyx_n_s_fit_dispersion, 24, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 24, __pyx_L1_error)
 
-  /* "src/toolbox/fits.pyx":43
+  /* "fits.pyx":43
  * 
  * 
  * def get_fit_curve(coeff, length=1024):             # <<<<<<<<<<<<<<
@@ -2902,11 +2902,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initcython_fits(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initcython_fits(void)
+__Pyx_PyMODINIT_FUNC initfits(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initfits(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_cython_fits(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_cython_fits(void)
+__Pyx_PyMODINIT_FUNC PyInit_fits(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_fits(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -2973,7 +2973,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_fits(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_fits(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -2983,7 +2983,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_fits(PyObject *__pyx_pyinit
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'cython_fits' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'fits' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -2998,7 +2998,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_cython_fits(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_fits(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -3037,7 +3037,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("cython_fits", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("fits", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -3055,14 +3055,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cython_fits) {
+  if (__pyx_module_is_main_fits) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 2, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cython_fits")) {
-      if (unlikely(PyDict_SetItemString(modules, "cython_fits", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "fits")) {
+      if (unlikely(PyDict_SetItemString(modules, "fits", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
     }
   }
   #endif
@@ -3083,7 +3083,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
 
-  /* "src/toolbox/fits.pyx":3
+  /* "fits.pyx":3
  * 
  * '''_____Standard imports_____'''
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -3095,7 +3095,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/fits.pyx":4
+  /* "fits.pyx":4
  * '''_____Standard imports_____'''
  * import numpy as np
  * from scipy.optimize import curve_fit             # <<<<<<<<<<<<<<
@@ -3116,31 +3116,31 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/fits.pyx":7
+  /* "fits.pyx":7
  * 
  * 
  * def gauss(x, *p):             # <<<<<<<<<<<<<<
  *     A, mu, sigma = p
  *     return A*np.exp(-(x-mu)**2/(2.*sigma**2))
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_11cython_fits_1gauss, NULL, __pyx_n_s_cython_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_4fits_1gauss, NULL, __pyx_n_s_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_gauss, __pyx_t_2) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/fits.pyx":12
+  /* "fits.pyx":12
  * 
  * 
  * def beta(x, *p):             # <<<<<<<<<<<<<<
  *     B1, B2, B3, B4, B5 = p
  *     return B1 * x + B2 * x**2 + B3 * x**3 + B4 * x**4 + B5 * x**5
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_11cython_fits_3beta, NULL, __pyx_n_s_cython_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_4fits_3beta, NULL, __pyx_n_s_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_beta, __pyx_t_2) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/fits.pyx":17
+  /* "fits.pyx":17
  * 
  * 
  * def make_poly_fit(x=[],y=[], order = 5, weight=None):             # <<<<<<<<<<<<<<
@@ -3157,36 +3157,36 @@ if (!__Pyx_RefNanny) {
   __pyx_k__2 = __pyx_t_2;
   __Pyx_GIVEREF(__pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_11cython_fits_5make_poly_fit, NULL, __pyx_n_s_cython_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_4fits_5make_poly_fit, NULL, __pyx_n_s_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_make_poly_fit, __pyx_t_2) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/fits.pyx":24
+  /* "fits.pyx":24
  * 
  * 
  * def fit_dispersion(Pdispersion):             # <<<<<<<<<<<<<<
  * 
  *     p0 = [0., 0., 0., 0., 0.]
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_11cython_fits_7fit_dispersion, NULL, __pyx_n_s_cython_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_4fits_7fit_dispersion, NULL, __pyx_n_s_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fit_dispersion, __pyx_t_2) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/fits.pyx":43
+  /* "fits.pyx":43
  * 
  * 
  * def get_fit_curve(coeff, length=1024):             # <<<<<<<<<<<<<<
  * 
  *     B1 = coeff[0]
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_11cython_fits_9get_fit_curve, NULL, __pyx_n_s_cython_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_4fits_9get_fit_curve, NULL, __pyx_n_s_fits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_fit_curve, __pyx_t_2) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/fits.pyx":2
+  /* "fits.pyx":2
  * 
  * '''_____Standard imports_____'''             # <<<<<<<<<<<<<<
  * import numpy as np
@@ -3205,11 +3205,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init cython_fits", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init fits", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cython_fits");
+    PyErr_SetString(PyExc_ImportError, "init fits");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

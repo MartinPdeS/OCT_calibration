@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "cython_plottings",
+        "name": "plottings",
         "sources": [
             "src/toolbox/plottings.pyx"
         ]
     },
-    "module_name": "cython_plottings"
+    "module_name": "plottings"
 }
 END: Cython Metadata */
 
@@ -602,8 +602,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cython_plottings
-#define __PYX_HAVE_API__cython_plottings
+#define __PYX_HAVE__plottings
+#define __PYX_HAVE_API__plottings
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -817,16 +817,16 @@ static const char *__pyx_f[] = {
 };
 
 /*--- Type declarations ---*/
-struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots;
+struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots;
 
-/* "src/toolbox/plottings.pyx":152
+/* "plottings.pyx":152
  * 
  * 
  * def Bscan_plots(Bscan):             # <<<<<<<<<<<<<<
  * 
  *     Bscan = np.array(Bscan)
  */
-struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots {
+struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots {
   PyObject_HEAD
   PyObject *__pyx_v_SVmax;
   PyObject *__pyx_v_SVmin;
@@ -1310,13 +1310,13 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'cython_plottings' */
-static PyTypeObject *__pyx_ptype_16cython_plottings___pyx_scope_struct__Bscan_plots = 0;
-#define __Pyx_MODULE_NAME "cython_plottings"
-extern int __pyx_module_is_main_cython_plottings;
-int __pyx_module_is_main_cython_plottings = 0;
+/* Module declarations from 'plottings' */
+static PyTypeObject *__pyx_ptype_9plottings___pyx_scope_struct__Bscan_plots = 0;
+#define __Pyx_MODULE_NAME "plottings"
+extern int __pyx_module_is_main_plottings;
+int __pyx_module_is_main_plottings = 0;
 
-/* Implementation of 'cython_plottings' */
+/* Implementation of 'plottings' */
 static PyObject *__pyx_builtin_object;
 static PyObject *__pyx_builtin_input;
 static PyObject *__pyx_builtin_eval;
@@ -1488,6 +1488,7 @@ static const char __pyx_k_draw_idle[] = "draw_idle";
 static const char __pyx_k_image_png[] = "image.png";
 static const char __pyx_k_metaclass[] = "__metaclass__";
 static const char __pyx_k_on_submit[] = "on_submit";
+static const char __pyx_k_plottings[] = "plottings";
 static const char __pyx_k_save_LP01[] = "save_LP01";
 static const char __pyx_k_save_LP11[] = "save_LP11";
 static const char __pyx_k_set_title[] = "set_title";
@@ -1544,7 +1545,6 @@ static const char __pyx_k_Wavenumber_k_U_A[] = "Wavenumber k [U.A]";
 static const char __pyx_k_axVmax_intensity[] = "axVmax_intensity";
 static const char __pyx_k_axVmin_intensity[] = "axVmin_intensity";
 static const char __pyx_k_background_noise[] = "background noise";
-static const char __pyx_k_cython_plottings[] = "cython_plottings";
 static const char __pyx_k_shift1_condition[] = "shift1_condition";
 static const char __pyx_k_shift2_condition[] = "shift2_condition";
 static const char __pyx_k_src_toolbox_fits[] = "src.toolbox.fits";
@@ -1719,7 +1719,6 @@ static PyObject *__pyx_kp_s_click_the_image_to_exit;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_close;
 static PyObject *__pyx_n_s_cmap;
-static PyObject *__pyx_n_s_cython_plottings;
 static PyObject *__pyx_n_s_dB1;
 static PyObject *__pyx_n_s_dB2;
 static PyObject *__pyx_n_s_dB_plot;
@@ -1805,6 +1804,7 @@ static PyObject *__pyx_n_s_phase_dispersion_plot;
 static PyObject *__pyx_n_s_plot;
 static PyObject *__pyx_n_s_plot_klinearization;
 static PyObject *__pyx_n_s_plots_signals;
+static PyObject *__pyx_n_s_plottings;
 static PyObject *__pyx_n_s_plt;
 static PyObject *__pyx_n_s_png;
 static PyObject *__pyx_n_s_prepare;
@@ -1873,46 +1873,46 @@ static PyObject *__pyx_n_s_vmax;
 static PyObject *__pyx_n_s_vmin;
 static PyObject *__pyx_n_s_waitforbuttonpress;
 static PyObject *__pyx_n_s_wow;
-static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data1, PyObject *__pyx_v_data2); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_param1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_param2); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_param1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_param2); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_exp_dispersion, PyObject *__pyx_v_fit_dispersion); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_val); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_2save(PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Bscan); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_sub_data, PyObject *__pyx_v_ref, PyObject *__pyx_v_sample, PyObject *__pyx_v_dark); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_phase1, PyObject *__pyx_v_phase2, PyObject *__pyx_v_Plin, PyObject *__pyx_v_Pfit); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_14__init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_28__init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Cscan_LP01, PyObject *__pyx_v_Cscan_LP11); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_text); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normalize_image(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_tp_new_16cython_plottings___pyx_scope_struct__Bscan_plots(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_pf_9plottings_dB_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data1, PyObject *__pyx_v_data2); /* proto */
+static PyObject *__pyx_pf_9plottings_2interactive_shift(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_param1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_param2); /* proto */
+static PyObject *__pyx_pf_9plottings_4shifted_spectra_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_param1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_param2); /* proto */
+static PyObject *__pyx_pf_9plottings_6phase_dispersion_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_exp_dispersion, PyObject *__pyx_v_fit_dispersion); /* proto */
+static PyObject *__pyx_pf_9plottings_11Bscan_plots_update(PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_val); /* proto */
+static PyObject *__pyx_pf_9plottings_11Bscan_plots_2save(PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_8Bscan_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Bscan); /* proto */
+static PyObject *__pyx_pf_9plottings_10plots_signals(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_sub_data, PyObject *__pyx_v_ref, PyObject *__pyx_v_sample, PyObject *__pyx_v_dark); /* proto */
+static PyObject *__pyx_pf_9plottings_12plot_klinearization(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_phase1, PyObject *__pyx_v_phase2, PyObject *__pyx_v_Plin, PyObject *__pyx_v_Pfit); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_2update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_4next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_6previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_8save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_10save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_12Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_14__init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_16update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_18next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_20previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_22save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_24save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_26Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_28__init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_30update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_32next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_34previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_36save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_38save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_40Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Cscan_LP01, PyObject *__pyx_v_Cscan_LP11); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_2update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_4submit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_text); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_6next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_8normalize_image(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_10previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_12save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_14save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event); /* proto */
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_16Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_tp_new_9plottings___pyx_scope_struct__Bscan_plots(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_float_1_;
 static PyObject *__pyx_float_0_1;
 static PyObject *__pyx_float_0_3;
@@ -2054,7 +2054,7 @@ static PyObject *__pyx_codeobj__98;
 static PyObject *__pyx_codeobj__100;
 /* Late includes */
 
-/* "src/toolbox/plottings.pyx":16
+/* "plottings.pyx":16
  * 
  * 
  * def dB_plot(data1, data2=None):             # <<<<<<<<<<<<<<
@@ -2063,9 +2063,9 @@ static PyObject *__pyx_codeobj__100;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_1dB_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_1dB_plot = {"dB_plot", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_1dB_plot, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_1dB_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_1dB_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_1dB_plot = {"dB_plot", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_1dB_plot, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_1dB_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_data1 = 0;
   PyObject *__pyx_v_data2 = 0;
   PyObject *__pyx_r = 0;
@@ -2117,18 +2117,18 @@ static PyObject *__pyx_pw_16cython_plottings_1dB_plot(PyObject *__pyx_self, PyOb
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("dB_plot", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 16, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.dB_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.dB_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_dB_plot(__pyx_self, __pyx_v_data1, __pyx_v_data2);
+  __pyx_r = __pyx_pf_9plottings_dB_plot(__pyx_self, __pyx_v_data1, __pyx_v_data2);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data1, PyObject *__pyx_v_data2) {
+static PyObject *__pyx_pf_9plottings_dB_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data1, PyObject *__pyx_v_data2) {
   PyObject *__pyx_v_fig = NULL;
   PyObject *__pyx_v_ax = NULL;
   PyObject *__pyx_v_ref1 = NULL;
@@ -2148,7 +2148,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("dB_plot", 0);
 
-  /* "src/toolbox/plottings.pyx":18
+  /* "plottings.pyx":18
  * def dB_plot(data1, data2=None):
  * 
  *     fig = plt.figure(figsize=(15, 6))             # <<<<<<<<<<<<<<
@@ -2170,7 +2170,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
   __pyx_v_fig = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":20
+  /* "plottings.pyx":20
  *     fig = plt.figure(figsize=(15, 6))
  * 
  *     if data2 is None:             # <<<<<<<<<<<<<<
@@ -2181,7 +2181,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
   __pyx_t_5 = (__pyx_t_4 != 0);
   if (__pyx_t_5) {
 
-    /* "src/toolbox/plottings.pyx":21
+    /* "plottings.pyx":21
  * 
  *     if data2 is None:
  *         ax = fig.add_subplot(111)             # <<<<<<<<<<<<<<
@@ -2208,7 +2208,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __pyx_v_ax = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":22
+    /* "plottings.pyx":22
  *     if data2 is None:
  *         ax = fig.add_subplot(111)
  *         ref1 = np.min(data1)             # <<<<<<<<<<<<<<
@@ -2238,7 +2238,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __pyx_v_ref1 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":23
+    /* "plottings.pyx":23
  *         ax = fig.add_subplot(111)
  *         ref1 = np.min(data1)
  *         dB1 = 10 * np.log(data1/ref1)             # <<<<<<<<<<<<<<
@@ -2274,7 +2274,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __pyx_v_dB1 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "src/toolbox/plottings.pyx":24
+    /* "plottings.pyx":24
  *         ref1 = np.min(data1)
  *         dB1 = 10 * np.log(data1/ref1)
  *         ax.plot(dB1)             # <<<<<<<<<<<<<<
@@ -2300,7 +2300,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "src/toolbox/plottings.pyx":25
+    /* "plottings.pyx":25
  *         dB1 = 10 * np.log(data1/ref1)
  *         ax.plot(dB1)
  *         ax.grid()             # <<<<<<<<<<<<<<
@@ -2326,7 +2326,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "src/toolbox/plottings.pyx":26
+    /* "plottings.pyx":26
  *         ax.plot(dB1)
  *         ax.grid()
  *         ax.set_ylabel('Magnitude [dB]')             # <<<<<<<<<<<<<<
@@ -2352,7 +2352,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "src/toolbox/plottings.pyx":27
+    /* "plottings.pyx":27
  *         ax.grid()
  *         ax.set_ylabel('Magnitude [dB]')
  *         ax.set_xlabel('Wavenumber k [U.A]')             # <<<<<<<<<<<<<<
@@ -2378,7 +2378,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "src/toolbox/plottings.pyx":20
+    /* "plottings.pyx":20
  *     fig = plt.figure(figsize=(15, 6))
  * 
  *     if data2 is None:             # <<<<<<<<<<<<<<
@@ -2388,7 +2388,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     goto __pyx_L3;
   }
 
-  /* "src/toolbox/plottings.pyx":31
+  /* "plottings.pyx":31
  * 
  *     else:
  *         ax0 = fig.add_subplot(121)             # <<<<<<<<<<<<<<
@@ -2416,7 +2416,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __pyx_v_ax0 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "src/toolbox/plottings.pyx":32
+    /* "plottings.pyx":32
  *     else:
  *         ax0 = fig.add_subplot(121)
  *         ax1 = fig.add_subplot(122)             # <<<<<<<<<<<<<<
@@ -2443,7 +2443,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __pyx_v_ax1 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "src/toolbox/plottings.pyx":34
+    /* "plottings.pyx":34
  *         ax1 = fig.add_subplot(122)
  * 
  *         ref1 = np.max(data1)             # <<<<<<<<<<<<<<
@@ -2473,7 +2473,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __pyx_v_ref1 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "src/toolbox/plottings.pyx":35
+    /* "plottings.pyx":35
  * 
  *         ref1 = np.max(data1)
  *         ref2 = np.max(data2)             # <<<<<<<<<<<<<<
@@ -2503,7 +2503,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __pyx_v_ref2 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "src/toolbox/plottings.pyx":37
+    /* "plottings.pyx":37
  *         ref2 = np.max(data2)
  * 
  *         dB1 = 10 * np.log(data1/ref1)             # <<<<<<<<<<<<<<
@@ -2539,7 +2539,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __pyx_v_dB1 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "src/toolbox/plottings.pyx":38
+    /* "plottings.pyx":38
  * 
  *         dB1 = 10 * np.log(data1/ref1)
  *         dB2 = 10 * np.log(data2/ref2)             # <<<<<<<<<<<<<<
@@ -2575,7 +2575,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __pyx_v_dB2 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":40
+    /* "plottings.pyx":40
  *         dB2 = 10 * np.log(data2/ref2)
  * 
  *         ax0.plot(dB1)             # <<<<<<<<<<<<<<
@@ -2601,7 +2601,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":41
+    /* "plottings.pyx":41
  * 
  *         ax0.plot(dB1)
  *         ax0.set_title('Processed Aline')             # <<<<<<<<<<<<<<
@@ -2627,7 +2627,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":42
+    /* "plottings.pyx":42
  *         ax0.plot(dB1)
  *         ax0.set_title('Processed Aline')
  *         ax0.grid()             # <<<<<<<<<<<<<<
@@ -2653,7 +2653,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":43
+    /* "plottings.pyx":43
  *         ax0.set_title('Processed Aline')
  *         ax0.grid()
  *         ax0.set_ylabel('Magnitude [dB]')             # <<<<<<<<<<<<<<
@@ -2679,7 +2679,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":44
+    /* "plottings.pyx":44
  *         ax0.grid()
  *         ax0.set_ylabel('Magnitude [dB]')
  *         ax0.set_xlabel('Wavenumber k [U.A]')             # <<<<<<<<<<<<<<
@@ -2705,7 +2705,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":47
+    /* "plottings.pyx":47
  * 
  * 
  *         ax1.plot(dB2)             # <<<<<<<<<<<<<<
@@ -2731,7 +2731,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":48
+    /* "plottings.pyx":48
  * 
  *         ax1.plot(dB2)
  *         ax1.set_title('Raw Aline')             # <<<<<<<<<<<<<<
@@ -2757,7 +2757,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":49
+    /* "plottings.pyx":49
  *         ax1.plot(dB2)
  *         ax1.set_title('Raw Aline')
  *         ax1.grid()             # <<<<<<<<<<<<<<
@@ -2783,7 +2783,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":50
+    /* "plottings.pyx":50
  *         ax1.set_title('Raw Aline')
  *         ax1.grid()
  *         ax1.set_ylabel('Magnitude [dB]')             # <<<<<<<<<<<<<<
@@ -2809,7 +2809,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":51
+    /* "plottings.pyx":51
  *         ax1.grid()
  *         ax1.set_ylabel('Magnitude [dB]')
  *         ax1.set_xlabel('Wavenumber k [U.A]')             # <<<<<<<<<<<<<<
@@ -2835,7 +2835,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":52
+    /* "plottings.pyx":52
  *         ax1.set_ylabel('Magnitude [dB]')
  *         ax1.set_xlabel('Wavenumber k [U.A]')
  *         ax1.set_ylim(ax0.get_ylim())             # <<<<<<<<<<<<<<
@@ -2881,7 +2881,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
   }
   __pyx_L3:;
 
-  /* "src/toolbox/plottings.pyx":54
+  /* "plottings.pyx":54
  *         ax1.set_ylim(ax0.get_ylim())
  * 
  *     plt.waitforbuttonpress()             # <<<<<<<<<<<<<<
@@ -2910,7 +2910,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":55
+  /* "plottings.pyx":55
  * 
  *     plt.waitforbuttonpress()
  *     plt.close()             # <<<<<<<<<<<<<<
@@ -2939,7 +2939,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":16
+  /* "plottings.pyx":16
  * 
  * 
  * def dB_plot(data1, data2=None):             # <<<<<<<<<<<<<<
@@ -2956,7 +2956,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("cython_plottings.dB_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.dB_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_fig);
@@ -2972,7 +2972,7 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":58
+/* "plottings.pyx":58
  * 
  * 
  * def interactive_shift(spectra1, param1, spectra2, param2):             # <<<<<<<<<<<<<<
@@ -2981,9 +2981,9 @@ static PyObject *__pyx_pf_16cython_plottings_dB_plot(CYTHON_UNUSED PyObject *__p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_3interactive_shift(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_3interactive_shift = {"interactive_shift", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_3interactive_shift, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_3interactive_shift(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_3interactive_shift(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_3interactive_shift = {"interactive_shift", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_3interactive_shift, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_3interactive_shift(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_spectra1 = 0;
   PyObject *__pyx_v_param1 = 0;
   PyObject *__pyx_v_spectra2 = 0;
@@ -3053,18 +3053,18 @@ static PyObject *__pyx_pw_16cython_plottings_3interactive_shift(PyObject *__pyx_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("interactive_shift", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 58, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.interactive_shift", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.interactive_shift", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_2interactive_shift(__pyx_self, __pyx_v_spectra1, __pyx_v_param1, __pyx_v_spectra2, __pyx_v_param2);
+  __pyx_r = __pyx_pf_9plottings_2interactive_shift(__pyx_self, __pyx_v_spectra1, __pyx_v_param1, __pyx_v_spectra2, __pyx_v_param2);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_param1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_param2) {
+static PyObject *__pyx_pf_9plottings_2interactive_shift(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_param1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_param2) {
   int __pyx_v_shift1_condition;
   int __pyx_v_shift2_condition;
   PyObject *__pyx_v_shift1 = NULL;
@@ -3080,7 +3080,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
   Py_ssize_t __pyx_t_7;
   __Pyx_RefNannySetupContext("interactive_shift", 0);
 
-  /* "src/toolbox/plottings.pyx":61
+  /* "plottings.pyx":61
  * 
  * 
  *     shift1_condition = False             # <<<<<<<<<<<<<<
@@ -3089,7 +3089,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
  */
   __pyx_v_shift1_condition = 0;
 
-  /* "src/toolbox/plottings.pyx":62
+  /* "plottings.pyx":62
  * 
  *     shift1_condition = False
  *     shift2_condition = False             # <<<<<<<<<<<<<<
@@ -3098,7 +3098,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
  */
   __pyx_v_shift2_condition = 0;
 
-  /* "src/toolbox/plottings.pyx":64
+  /* "plottings.pyx":64
  *     shift2_condition = False
  * 
  *     while shift1_condition is False:             # <<<<<<<<<<<<<<
@@ -3109,7 +3109,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __pyx_t_1 = ((__pyx_v_shift1_condition == 0) != 0);
     if (!__pyx_t_1) break;
 
-    /* "src/toolbox/plottings.pyx":66
+    /* "plottings.pyx":66
  *     while shift1_condition is False:
  * 
  *         shifted_spectra_plots( spectra1,             # <<<<<<<<<<<<<<
@@ -3119,7 +3119,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_shifted_spectra_plots); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
 
-    /* "src/toolbox/plottings.pyx":69
+    /* "plottings.pyx":69
  *                                param1,
  *                                spectra2,
  *                                param2 )             # <<<<<<<<<<<<<<
@@ -3179,7 +3179,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "src/toolbox/plottings.pyx":71
+    /* "plottings.pyx":71
  *                                param2 )
  * 
  *         shift1 = input("Shift mirror1? [>0:Left, 0:None, <0:Right]")             # <<<<<<<<<<<<<<
@@ -3191,7 +3191,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_XDECREF_SET(__pyx_v_shift1, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "src/toolbox/plottings.pyx":72
+    /* "plottings.pyx":72
  * 
  *         shift1 = input("Shift mirror1? [>0:Left, 0:None, <0:Right]")
  *         shift1 = eval(shift1)             # <<<<<<<<<<<<<<
@@ -3249,7 +3249,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_DECREF_SET(__pyx_v_shift1, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/toolbox/plottings.pyx":74
+    /* "plottings.pyx":74
  *         shift1 = eval(shift1)
  * 
  *         if shift1 == 0:             # <<<<<<<<<<<<<<
@@ -3262,7 +3262,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_1) {
 
-      /* "src/toolbox/plottings.pyx":75
+      /* "plottings.pyx":75
  * 
  *         if shift1 == 0:
  *             shift1_condition = True             # <<<<<<<<<<<<<<
@@ -3271,7 +3271,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
  */
       __pyx_v_shift1_condition = 1;
 
-      /* "src/toolbox/plottings.pyx":74
+      /* "plottings.pyx":74
  *         shift1 = eval(shift1)
  * 
  *         if shift1 == 0:             # <<<<<<<<<<<<<<
@@ -3281,7 +3281,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
       goto __pyx_L5;
     }
 
-    /* "src/toolbox/plottings.pyx":77
+    /* "plottings.pyx":77
  *             shift1_condition = True
  *         else:
  *             print(param1[2])             # <<<<<<<<<<<<<<
@@ -3294,7 +3294,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
       if (__Pyx_PrintOne(0, __pyx_t_3) < 0) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "src/toolbox/plottings.pyx":78
+      /* "plottings.pyx":78
  *         else:
  *             print(param1[2])
  *             param1[2] += shift1             # <<<<<<<<<<<<<<
@@ -3312,7 +3312,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     }
     __pyx_L5:;
 
-    /* "src/toolbox/plottings.pyx":79
+    /* "plottings.pyx":79
  *             print(param1[2])
  *             param1[2] += shift1
  *         plt.close()             # <<<<<<<<<<<<<<
@@ -3342,7 +3342,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
 
-  /* "src/toolbox/plottings.pyx":82
+  /* "plottings.pyx":82
  * 
  * 
  *     while shift2_condition is False:             # <<<<<<<<<<<<<<
@@ -3353,7 +3353,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __pyx_t_1 = ((__pyx_v_shift2_condition == 0) != 0);
     if (!__pyx_t_1) break;
 
-    /* "src/toolbox/plottings.pyx":84
+    /* "plottings.pyx":84
  *     while shift2_condition is False:
  * 
  *         shifted_spectra_plots( spectra1,             # <<<<<<<<<<<<<<
@@ -3363,7 +3363,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_shifted_spectra_plots); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
 
-    /* "src/toolbox/plottings.pyx":87
+    /* "plottings.pyx":87
  *                                param1,
  *                                spectra2,
  *                                param2 )             # <<<<<<<<<<<<<<
@@ -3423,7 +3423,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "src/toolbox/plottings.pyx":89
+    /* "plottings.pyx":89
  *                                param2 )
  * 
  *         shift2 = input("Shift mirror2? [>0:Left, 0:None, <0:Right]")             # <<<<<<<<<<<<<<
@@ -3435,7 +3435,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_XDECREF_SET(__pyx_v_shift2, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "src/toolbox/plottings.pyx":90
+    /* "plottings.pyx":90
  * 
  *         shift2 = input("Shift mirror2? [>0:Left, 0:None, <0:Right]")
  *         shift2 = eval(shift2)             # <<<<<<<<<<<<<<
@@ -3493,7 +3493,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_DECREF_SET(__pyx_v_shift2, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "src/toolbox/plottings.pyx":92
+    /* "plottings.pyx":92
  *         shift2 = eval(shift2)
  * 
  *         if shift2 == 0:             # <<<<<<<<<<<<<<
@@ -3506,7 +3506,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_1) {
 
-      /* "src/toolbox/plottings.pyx":93
+      /* "plottings.pyx":93
  * 
  *         if shift2 == 0:
  *             shift2_condition = True             # <<<<<<<<<<<<<<
@@ -3515,7 +3515,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
  */
       __pyx_v_shift2_condition = 1;
 
-      /* "src/toolbox/plottings.pyx":92
+      /* "plottings.pyx":92
  *         shift2 = eval(shift2)
  * 
  *         if shift2 == 0:             # <<<<<<<<<<<<<<
@@ -3525,7 +3525,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
       goto __pyx_L8;
     }
 
-    /* "src/toolbox/plottings.pyx":95
+    /* "plottings.pyx":95
  *             shift2_condition = True
  *         else:
  *             param2[2] += shift2             # <<<<<<<<<<<<<<
@@ -3544,7 +3544,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     }
     __pyx_L8:;
 
-    /* "src/toolbox/plottings.pyx":96
+    /* "plottings.pyx":96
  *         else:
  *             param2[2] += shift2
  *         plt.close()             # <<<<<<<<<<<<<<
@@ -3574,7 +3574,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
 
-  /* "src/toolbox/plottings.pyx":98
+  /* "plottings.pyx":98
  *         plt.close()
  * 
  *     return param1[2], param2[2]             # <<<<<<<<<<<<<<
@@ -3598,7 +3598,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/plottings.pyx":58
+  /* "plottings.pyx":58
  * 
  * 
  * def interactive_shift(spectra1, param1, spectra2, param2):             # <<<<<<<<<<<<<<
@@ -3612,7 +3612,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("cython_plottings.interactive_shift", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.interactive_shift", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_shift1);
@@ -3622,7 +3622,7 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":101
+/* "plottings.pyx":101
  * 
  * 
  * def shifted_spectra_plots(spectra1, param1, spectra2, param2):             # <<<<<<<<<<<<<<
@@ -3631,9 +3631,9 @@ static PyObject *__pyx_pf_16cython_plottings_2interactive_shift(CYTHON_UNUSED Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_5shifted_spectra_plots(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_5shifted_spectra_plots = {"shifted_spectra_plots", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_5shifted_spectra_plots, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_5shifted_spectra_plots(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_5shifted_spectra_plots(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_5shifted_spectra_plots = {"shifted_spectra_plots", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_5shifted_spectra_plots, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_5shifted_spectra_plots(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_spectra1 = 0;
   PyObject *__pyx_v_param1 = 0;
   PyObject *__pyx_v_spectra2 = 0;
@@ -3703,18 +3703,18 @@ static PyObject *__pyx_pw_16cython_plottings_5shifted_spectra_plots(PyObject *__
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("shifted_spectra_plots", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 101, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.shifted_spectra_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.shifted_spectra_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_4shifted_spectra_plots(__pyx_self, __pyx_v_spectra1, __pyx_v_param1, __pyx_v_spectra2, __pyx_v_param2);
+  __pyx_r = __pyx_pf_9plottings_4shifted_spectra_plots(__pyx_self, __pyx_v_spectra1, __pyx_v_param1, __pyx_v_spectra2, __pyx_v_param2);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_param1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_param2) {
+static PyObject *__pyx_pf_9plottings_4shifted_spectra_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_param1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_param2) {
   PyObject *__pyx_v_fig = NULL;
   PyObject *__pyx_v_ax0 = NULL;
   PyObject *__pyx_v_ax1 = NULL;
@@ -3726,7 +3726,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("shifted_spectra_plots", 0);
 
-  /* "src/toolbox/plottings.pyx":103
+  /* "plottings.pyx":103
  * def shifted_spectra_plots(spectra1, param1, spectra2, param2):
  * 
  *     plt.ion()             # <<<<<<<<<<<<<<
@@ -3755,7 +3755,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":104
+  /* "plottings.pyx":104
  * 
  *     plt.ion()
  *     fig = plt.figure(figsize=(15, 6))             # <<<<<<<<<<<<<<
@@ -3777,7 +3777,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __pyx_v_fig = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":105
+  /* "plottings.pyx":105
  *     plt.ion()
  *     fig = plt.figure(figsize=(15, 6))
  *     ax0 = fig.add_subplot(121)             # <<<<<<<<<<<<<<
@@ -3804,7 +3804,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __pyx_v_ax0 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":106
+  /* "plottings.pyx":106
  *     fig = plt.figure(figsize=(15, 6))
  *     ax0 = fig.add_subplot(121)
  *     ax1 = fig.add_subplot(122)             # <<<<<<<<<<<<<<
@@ -3831,7 +3831,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __pyx_v_ax1 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":109
+  /* "plottings.pyx":109
  * 
  * 
  *     ax0.plot( spectra1, label='Shifted raw' )             # <<<<<<<<<<<<<<
@@ -3855,7 +3855,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":110
+  /* "plottings.pyx":110
  * 
  *     ax0.plot( spectra1, label='Shifted raw' )
  *     ax0.grid()             # <<<<<<<<<<<<<<
@@ -3881,7 +3881,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":111
+  /* "plottings.pyx":111
  *     ax0.plot( spectra1, label='Shifted raw' )
  *     ax0.grid()
  *     ax0.set_title('Shifted raw spectra mirror 1')             # <<<<<<<<<<<<<<
@@ -3907,7 +3907,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":113
+  /* "plottings.pyx":113
  *     ax0.set_title('Shifted raw spectra mirror 1')
  * 
  *     ax0.plot( gauss(*param1),'r-', label='gaussian fit' )             # <<<<<<<<<<<<<<
@@ -3942,7 +3942,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":114
+  /* "plottings.pyx":114
  * 
  *     ax0.plot( gauss(*param1),'r-', label='gaussian fit' )
  *     ax0.grid()             # <<<<<<<<<<<<<<
@@ -3968,7 +3968,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":115
+  /* "plottings.pyx":115
  *     ax0.plot( gauss(*param1),'r-', label='gaussian fit' )
  *     ax0.grid()
  *     ax0.set_title('Fitted gaussian curve mirror 1')             # <<<<<<<<<<<<<<
@@ -3994,7 +3994,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":117
+  /* "plottings.pyx":117
  *     ax0.set_title('Fitted gaussian curve mirror 1')
  * 
  *     ax1.plot( spectra2, label='Shifted raw' )             # <<<<<<<<<<<<<<
@@ -4018,7 +4018,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":118
+  /* "plottings.pyx":118
  * 
  *     ax1.plot( spectra2, label='Shifted raw' )
  *     ax1.grid()             # <<<<<<<<<<<<<<
@@ -4044,7 +4044,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":119
+  /* "plottings.pyx":119
  *     ax1.plot( spectra2, label='Shifted raw' )
  *     ax1.grid()
  *     ax1.set_title('Shifted raw spectra mirror 2')             # <<<<<<<<<<<<<<
@@ -4070,7 +4070,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":121
+  /* "plottings.pyx":121
  *     ax1.set_title('Shifted raw spectra mirror 2')
  * 
  *     ax1.plot( gauss(*param2), 'r-', label='gaussian fit' )             # <<<<<<<<<<<<<<
@@ -4105,7 +4105,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":122
+  /* "plottings.pyx":122
  * 
  *     ax1.plot( gauss(*param2), 'r-', label='gaussian fit' )
  *     ax1.grid()             # <<<<<<<<<<<<<<
@@ -4131,7 +4131,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":123
+  /* "plottings.pyx":123
  *     ax1.plot( gauss(*param2), 'r-', label='gaussian fit' )
  *     ax1.grid()
  *     ax1.set_title('Fitted gaussian curve mirror 2')             # <<<<<<<<<<<<<<
@@ -4157,7 +4157,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":125
+  /* "plottings.pyx":125
  *     ax1.set_title('Fitted gaussian curve mirror 2')
  * 
  *     print("click the image to exit")             # <<<<<<<<<<<<<<
@@ -4166,7 +4166,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_click_the_image_to_exit) < 0) __PYX_ERR(0, 125, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":126
+  /* "plottings.pyx":126
  * 
  *     print("click the image to exit")
  *     ax0.legend()             # <<<<<<<<<<<<<<
@@ -4192,7 +4192,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":127
+  /* "plottings.pyx":127
  *     print("click the image to exit")
  *     ax0.legend()
  *     ax0.grid()             # <<<<<<<<<<<<<<
@@ -4218,7 +4218,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":129
+  /* "plottings.pyx":129
  *     ax0.grid()
  * 
  *     ax1.legend()             # <<<<<<<<<<<<<<
@@ -4244,7 +4244,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":130
+  /* "plottings.pyx":130
  * 
  *     ax1.legend()
  *     ax1.grid()             # <<<<<<<<<<<<<<
@@ -4270,7 +4270,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":131
+  /* "plottings.pyx":131
  *     ax1.legend()
  *     ax1.grid()
  *     fig.canvas.draw()             # <<<<<<<<<<<<<<
@@ -4299,7 +4299,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":101
+  /* "plottings.pyx":101
  * 
  * 
  * def shifted_spectra_plots(spectra1, param1, spectra2, param2):             # <<<<<<<<<<<<<<
@@ -4315,7 +4315,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_plottings.shifted_spectra_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.shifted_spectra_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_fig);
@@ -4326,7 +4326,7 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":134
+/* "plottings.pyx":134
  * 
  * 
  * def phase_dispersion_plot(exp_dispersion, fit_dispersion):             # <<<<<<<<<<<<<<
@@ -4335,9 +4335,9 @@ static PyObject *__pyx_pf_16cython_plottings_4shifted_spectra_plots(CYTHON_UNUSE
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_7phase_dispersion_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_7phase_dispersion_plot = {"phase_dispersion_plot", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_7phase_dispersion_plot, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_7phase_dispersion_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_7phase_dispersion_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_7phase_dispersion_plot = {"phase_dispersion_plot", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_7phase_dispersion_plot, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_7phase_dispersion_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_exp_dispersion = 0;
   PyObject *__pyx_v_fit_dispersion = 0;
   PyObject *__pyx_r = 0;
@@ -4385,18 +4385,18 @@ static PyObject *__pyx_pw_16cython_plottings_7phase_dispersion_plot(PyObject *__
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("phase_dispersion_plot", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 134, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.phase_dispersion_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.phase_dispersion_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_6phase_dispersion_plot(__pyx_self, __pyx_v_exp_dispersion, __pyx_v_fit_dispersion);
+  __pyx_r = __pyx_pf_9plottings_6phase_dispersion_plot(__pyx_self, __pyx_v_exp_dispersion, __pyx_v_fit_dispersion);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_exp_dispersion, PyObject *__pyx_v_fit_dispersion) {
+static PyObject *__pyx_pf_9plottings_6phase_dispersion_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_exp_dispersion, PyObject *__pyx_v_fit_dispersion) {
   PyObject *__pyx_v_fig = NULL;
   PyObject *__pyx_v_ax0 = NULL;
   PyObject *__pyx_r = NULL;
@@ -4407,7 +4407,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("phase_dispersion_plot", 0);
 
-  /* "src/toolbox/plottings.pyx":136
+  /* "plottings.pyx":136
  * def phase_dispersion_plot(exp_dispersion, fit_dispersion):
  * 
  *     fig = plt.figure(figsize=(15, 6))             # <<<<<<<<<<<<<<
@@ -4429,7 +4429,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __pyx_v_fig = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":137
+  /* "plottings.pyx":137
  * 
  *     fig = plt.figure(figsize=(15, 6))
  *     ax0 = fig.add_subplot(111)             # <<<<<<<<<<<<<<
@@ -4456,7 +4456,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __pyx_v_ax0 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":139
+  /* "plottings.pyx":139
  *     ax0 = fig.add_subplot(111)
  * 
  *     ax0.plot(fit_dispersion, label = 'fitted ')             # <<<<<<<<<<<<<<
@@ -4480,7 +4480,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":140
+  /* "plottings.pyx":140
  * 
  *     ax0.plot(fit_dispersion, label = 'fitted ')
  *     ax0.plot(exp_dispersion,'-',label = 'experimental')             # <<<<<<<<<<<<<<
@@ -4507,7 +4507,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":142
+  /* "plottings.pyx":142
  *     ax0.plot(exp_dispersion,'-',label = 'experimental')
  * 
  *     ax0.set_ylabel('Unwrapped phase [U.A]')             # <<<<<<<<<<<<<<
@@ -4533,7 +4533,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":143
+  /* "plottings.pyx":143
  * 
  *     ax0.set_ylabel('Unwrapped phase [U.A]')
  *     ax0.set_title('System phase dispersion')             # <<<<<<<<<<<<<<
@@ -4559,7 +4559,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":144
+  /* "plottings.pyx":144
  *     ax0.set_ylabel('Unwrapped phase [U.A]')
  *     ax0.set_title('System phase dispersion')
  *     plt.grid()             # <<<<<<<<<<<<<<
@@ -4588,7 +4588,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":145
+  /* "plottings.pyx":145
  *     ax0.set_title('System phase dispersion')
  *     plt.grid()
  *     plt.legend()             # <<<<<<<<<<<<<<
@@ -4617,7 +4617,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":147
+  /* "plottings.pyx":147
  *     plt.legend()
  * 
  *     print("click the image to exit")             # <<<<<<<<<<<<<<
@@ -4626,7 +4626,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_click_the_image_to_exit) < 0) __PYX_ERR(0, 147, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":148
+  /* "plottings.pyx":148
  * 
  *     print("click the image to exit")
  *     plt.waitforbuttonpress()             # <<<<<<<<<<<<<<
@@ -4655,7 +4655,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":149
+  /* "plottings.pyx":149
  *     print("click the image to exit")
  *     plt.waitforbuttonpress()
  *     plt.close()             # <<<<<<<<<<<<<<
@@ -4684,7 +4684,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":134
+  /* "plottings.pyx":134
  * 
  * 
  * def phase_dispersion_plot(exp_dispersion, fit_dispersion):             # <<<<<<<<<<<<<<
@@ -4700,7 +4700,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_plottings.phase_dispersion_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.phase_dispersion_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_fig);
@@ -4710,7 +4710,7 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":152
+/* "plottings.pyx":152
  * 
  * 
  * def Bscan_plots(Bscan):             # <<<<<<<<<<<<<<
@@ -4719,20 +4719,20 @@ static PyObject *__pyx_pf_16cython_plottings_6phase_dispersion_plot(CYTHON_UNUSE
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_9Bscan_plots(PyObject *__pyx_self, PyObject *__pyx_v_Bscan); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_9Bscan_plots = {"Bscan_plots", (PyCFunction)__pyx_pw_16cython_plottings_9Bscan_plots, METH_O, 0};
-static PyObject *__pyx_pw_16cython_plottings_9Bscan_plots(PyObject *__pyx_self, PyObject *__pyx_v_Bscan) {
+static PyObject *__pyx_pw_9plottings_9Bscan_plots(PyObject *__pyx_self, PyObject *__pyx_v_Bscan); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_9Bscan_plots = {"Bscan_plots", (PyCFunction)__pyx_pw_9plottings_9Bscan_plots, METH_O, 0};
+static PyObject *__pyx_pw_9plottings_9Bscan_plots(PyObject *__pyx_self, PyObject *__pyx_v_Bscan) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("Bscan_plots (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_plottings_8Bscan_plots(__pyx_self, ((PyObject *)__pyx_v_Bscan));
+  __pyx_r = __pyx_pf_9plottings_8Bscan_plots(__pyx_self, ((PyObject *)__pyx_v_Bscan));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":199
+/* "plottings.pyx":199
  * 
  * 
  *     def update(val):             # <<<<<<<<<<<<<<
@@ -4741,22 +4741,22 @@ static PyObject *__pyx_pw_16cython_plottings_9Bscan_plots(PyObject *__pyx_self, 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_11Bscan_plots_1update(PyObject *__pyx_self, PyObject *__pyx_v_val); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_11Bscan_plots_1update = {"update", (PyCFunction)__pyx_pw_16cython_plottings_11Bscan_plots_1update, METH_O, 0};
-static PyObject *__pyx_pw_16cython_plottings_11Bscan_plots_1update(PyObject *__pyx_self, PyObject *__pyx_v_val) {
+static PyObject *__pyx_pw_9plottings_11Bscan_plots_1update(PyObject *__pyx_self, PyObject *__pyx_v_val); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_11Bscan_plots_1update = {"update", (PyCFunction)__pyx_pw_9plottings_11Bscan_plots_1update, METH_O, 0};
+static PyObject *__pyx_pw_9plottings_11Bscan_plots_1update(PyObject *__pyx_self, PyObject *__pyx_v_val) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("update (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_plottings_11Bscan_plots_update(__pyx_self, ((PyObject *)__pyx_v_val));
+  __pyx_r = __pyx_pf_9plottings_11Bscan_plots_update(__pyx_self, ((PyObject *)__pyx_v_val));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_val) {
-  struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *__pyx_cur_scope;
-  struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *__pyx_outer_scope;
+static PyObject *__pyx_pf_9plottings_11Bscan_plots_update(PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_val) {
+  struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *__pyx_cur_scope;
+  struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *__pyx_outer_scope;
   PyObject *__pyx_v_Vmax = NULL;
   PyObject *__pyx_v_Vmin = NULL;
   PyObject *__pyx_r = NULL;
@@ -4765,10 +4765,10 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__py
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
-  __pyx_outer_scope = (struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "src/toolbox/plottings.pyx":200
+  /* "plottings.pyx":200
  * 
  *     def update(val):
  *         Vmax = SVmax.val             # <<<<<<<<<<<<<<
@@ -4781,7 +4781,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__py
   __pyx_v_Vmax = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":201
+  /* "plottings.pyx":201
  *     def update(val):
  *         Vmax = SVmax.val
  *         Vmin = SVmin.val             # <<<<<<<<<<<<<<
@@ -4794,7 +4794,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__py
   __pyx_v_Vmin = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":202
+  /* "plottings.pyx":202
  *         Vmax = SVmax.val
  *         Vmin = SVmin.val
  *         l.set_clim(vmin=Vmin, vmax=Vmax)             # <<<<<<<<<<<<<<
@@ -4814,7 +4814,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__py
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":203
+  /* "plottings.pyx":203
  *         Vmin = SVmin.val
  *         l.set_clim(vmin=Vmin, vmax=Vmax)
  *         fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -4844,7 +4844,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__py
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":199
+  /* "plottings.pyx":199
  * 
  * 
  *     def update(val):             # <<<<<<<<<<<<<<
@@ -4859,7 +4859,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__py
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cython_plottings.Bscan_plots.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Bscan_plots.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Vmax);
@@ -4869,7 +4869,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__py
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":205
+/* "plottings.pyx":205
  *         fig.canvas.draw_idle()
  * 
  *     def save(event):             # <<<<<<<<<<<<<<
@@ -4878,22 +4878,22 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_update(PyObject *__py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_11Bscan_plots_3save(PyObject *__pyx_self, PyObject *__pyx_v_event); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_11Bscan_plots_3save = {"save", (PyCFunction)__pyx_pw_16cython_plottings_11Bscan_plots_3save, METH_O, 0};
-static PyObject *__pyx_pw_16cython_plottings_11Bscan_plots_3save(PyObject *__pyx_self, PyObject *__pyx_v_event) {
+static PyObject *__pyx_pw_9plottings_11Bscan_plots_3save(PyObject *__pyx_self, PyObject *__pyx_v_event); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_11Bscan_plots_3save = {"save", (PyCFunction)__pyx_pw_9plottings_11Bscan_plots_3save, METH_O, 0};
+static PyObject *__pyx_pw_9plottings_11Bscan_plots_3save(PyObject *__pyx_self, PyObject *__pyx_v_event) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("save (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_plottings_11Bscan_plots_2save(__pyx_self, ((PyObject *)__pyx_v_event));
+  __pyx_r = __pyx_pf_9plottings_11Bscan_plots_2save(__pyx_self, ((PyObject *)__pyx_v_event));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_2save(PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
-  struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *__pyx_cur_scope;
-  struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *__pyx_outer_scope;
+static PyObject *__pyx_pf_9plottings_11Bscan_plots_2save(PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+  struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *__pyx_cur_scope;
+  struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *__pyx_outer_scope;
   PyObject *__pyx_v_save_dir = NULL;
   PyObject *__pyx_v_extent = NULL;
   PyObject *__pyx_r = NULL;
@@ -4904,10 +4904,10 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_2save(PyObject *__pyx
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("save", 0);
-  __pyx_outer_scope = (struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "src/toolbox/plottings.pyx":206
+  /* "plottings.pyx":206
  * 
  *     def save(event):
  *         save_dir = directories.png + "image.png"             # <<<<<<<<<<<<<<
@@ -4925,7 +4925,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_2save(PyObject *__pyx
   __pyx_v_save_dir = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":207
+  /* "plottings.pyx":207
  *     def save(event):
  *         save_dir = directories.png + "image.png"
  *         extent = ax2.get_window_extent().transformed(fig.dpi_scale_trans.inverted())             # <<<<<<<<<<<<<<
@@ -4993,7 +4993,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_2save(PyObject *__pyx
   __pyx_v_extent = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":208
+  /* "plottings.pyx":208
  *         save_dir = directories.png + "image.png"
  *         extent = ax2.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
  *         plt.savefig(save_dir, bbox_inches=extent)             # <<<<<<<<<<<<<<
@@ -5020,7 +5020,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_2save(PyObject *__pyx
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "src/toolbox/plottings.pyx":205
+  /* "plottings.pyx":205
  *         fig.canvas.draw_idle()
  * 
  *     def save(event):             # <<<<<<<<<<<<<<
@@ -5037,7 +5037,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_2save(PyObject *__pyx
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Bscan_plots.save", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Bscan_plots.save", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_save_dir);
@@ -5047,7 +5047,7 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_2save(PyObject *__pyx
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":152
+/* "plottings.pyx":152
  * 
  * 
  * def Bscan_plots(Bscan):             # <<<<<<<<<<<<<<
@@ -5055,8 +5055,8 @@ static PyObject *__pyx_pf_16cython_plottings_11Bscan_plots_2save(PyObject *__pyx
  *     Bscan = np.array(Bscan)
  */
 
-static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Bscan) {
-  struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *__pyx_cur_scope;
+static PyObject *__pyx_pf_9plottings_8Bscan_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Bscan) {
+  struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *__pyx_cur_scope;
   PyObject *__pyx_v_dBscan = NULL;
   PyObject *__pyx_v_ax0 = NULL;
   PyObject *__pyx_v_ax1 = NULL;
@@ -5079,9 +5079,9 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   PyObject *__pyx_t_4 = NULL;
   int __pyx_t_5;
   __Pyx_RefNannySetupContext("Bscan_plots", 0);
-  __pyx_cur_scope = (struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *)__pyx_tp_new_16cython_plottings___pyx_scope_struct__Bscan_plots(__pyx_ptype_16cython_plottings___pyx_scope_struct__Bscan_plots, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *)__pyx_tp_new_9plottings___pyx_scope_struct__Bscan_plots(__pyx_ptype_9plottings___pyx_scope_struct__Bscan_plots, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *)Py_None);
     __Pyx_INCREF(Py_None);
     __PYX_ERR(0, 152, __pyx_L1_error)
   } else {
@@ -5089,7 +5089,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   }
   __Pyx_INCREF(__pyx_v_Bscan);
 
-  /* "src/toolbox/plottings.pyx":154
+  /* "plottings.pyx":154
  * def Bscan_plots(Bscan):
  * 
  *     Bscan = np.array(Bscan)             # <<<<<<<<<<<<<<
@@ -5119,7 +5119,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF_SET(__pyx_v_Bscan, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":155
+  /* "plottings.pyx":155
  * 
  *     Bscan = np.array(Bscan)
  *     dBscan = 10*np.log(Bscan)             # <<<<<<<<<<<<<<
@@ -5152,7 +5152,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_dBscan = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":157
+  /* "plottings.pyx":157
  *     dBscan = 10*np.log(Bscan)
  * 
  *     fig = plt.figure(figsize=(16,10))             # <<<<<<<<<<<<<<
@@ -5175,7 +5175,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_cur_scope->__pyx_v_fig = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":160
+  /* "plottings.pyx":160
  * 
  * 
  *     ax0 = fig.add_subplot(221)             # <<<<<<<<<<<<<<
@@ -5202,7 +5202,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_ax0 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":161
+  /* "plottings.pyx":161
  * 
  *     ax0 = fig.add_subplot(221)
  *     ax0.grid()             # <<<<<<<<<<<<<<
@@ -5228,7 +5228,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":162
+  /* "plottings.pyx":162
  *     ax0 = fig.add_subplot(221)
  *     ax0.grid()
  *     ax0.set_ylabel('Aline depth Intensity [U.A]')             # <<<<<<<<<<<<<<
@@ -5254,7 +5254,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":163
+  /* "plottings.pyx":163
  *     ax0.grid()
  *     ax0.set_ylabel('Aline depth Intensity [U.A]')
  *     ax0.set_xlabel('Wavenumber k [U.A]')             # <<<<<<<<<<<<<<
@@ -5280,7 +5280,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":164
+  /* "plottings.pyx":164
  *     ax0.set_ylabel('Aline depth Intensity [U.A]')
  *     ax0.set_xlabel('Wavenumber k [U.A]')
  *     ax0.set_title("Spectra")             # <<<<<<<<<<<<<<
@@ -5306,7 +5306,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":165
+  /* "plottings.pyx":165
  *     ax0.set_xlabel('Wavenumber k [U.A]')
  *     ax0.set_title("Spectra")
  *     ax0.plot(Bscan[200])             # <<<<<<<<<<<<<<
@@ -5335,7 +5335,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":169
+  /* "plottings.pyx":169
  * 
  * 
  *     ax1 = fig.add_subplot(222)             # <<<<<<<<<<<<<<
@@ -5362,7 +5362,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_ax1 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":170
+  /* "plottings.pyx":170
  * 
  *     ax1 = fig.add_subplot(222)
  *     ax1.grid()             # <<<<<<<<<<<<<<
@@ -5388,7 +5388,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":171
+  /* "plottings.pyx":171
  *     ax1 = fig.add_subplot(222)
  *     ax1.grid()
  *     ax1.set_ylabel('Aline depth Magnitude [dB]')             # <<<<<<<<<<<<<<
@@ -5414,7 +5414,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":172
+  /* "plottings.pyx":172
  *     ax1.grid()
  *     ax1.set_ylabel('Aline depth Magnitude [dB]')
  *     ax1.set_xlabel('Wavenumber k [U.A]')             # <<<<<<<<<<<<<<
@@ -5440,7 +5440,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":173
+  /* "plottings.pyx":173
  *     ax1.set_ylabel('Aline depth Magnitude [dB]')
  *     ax1.set_xlabel('Wavenumber k [U.A]')
  *     ax1.set_title("Aline")             # <<<<<<<<<<<<<<
@@ -5466,7 +5466,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":174
+  /* "plottings.pyx":174
  *     ax1.set_xlabel('Wavenumber k [U.A]')
  *     ax1.set_title("Aline")
  *     ref = np.min(dBscan[200])             # <<<<<<<<<<<<<<
@@ -5499,7 +5499,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_ref = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":175
+  /* "plottings.pyx":175
  *     ax1.set_title("Aline")
  *     ref = np.min(dBscan[200])
  *     ax1.plot(dBscan[200])             # <<<<<<<<<<<<<<
@@ -5528,7 +5528,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":178
+  /* "plottings.pyx":178
  * 
  * 
  *     data = dBscan.T             # <<<<<<<<<<<<<<
@@ -5540,7 +5540,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_data = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":179
+  /* "plottings.pyx":179
  * 
  *     data = dBscan.T
  *     ax2 = fig.add_subplot(223)             # <<<<<<<<<<<<<<
@@ -5568,7 +5568,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_cur_scope->__pyx_v_ax2 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":180
+  /* "plottings.pyx":180
  *     data = dBscan.T
  *     ax2 = fig.add_subplot(223)
  *     l = ax2.imshow(data,             # <<<<<<<<<<<<<<
@@ -5583,7 +5583,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_GIVEREF(__pyx_v_data);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_data);
 
-  /* "src/toolbox/plottings.pyx":181
+  /* "plottings.pyx":181
  *     ax2 = fig.add_subplot(223)
  *     l = ax2.imshow(data,
  *                    cmap = "gray",             # <<<<<<<<<<<<<<
@@ -5594,7 +5594,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_cmap, __pyx_n_s_gray) < 0) __PYX_ERR(0, 181, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":182
+  /* "plottings.pyx":182
  *     l = ax2.imshow(data,
  *                    cmap = "gray",
  *                    vmin=None,             # <<<<<<<<<<<<<<
@@ -5603,7 +5603,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
  */
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_vmin, Py_None) < 0) __PYX_ERR(0, 181, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":183
+  /* "plottings.pyx":183
  *                    cmap = "gray",
  *                    vmin=None,
  *                    vmax=None)             # <<<<<<<<<<<<<<
@@ -5612,7 +5612,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
  */
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_vmax, Py_None) < 0) __PYX_ERR(0, 181, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":180
+  /* "plottings.pyx":180
  *     data = dBscan.T
  *     ax2 = fig.add_subplot(223)
  *     l = ax2.imshow(data,             # <<<<<<<<<<<<<<
@@ -5628,7 +5628,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_cur_scope->__pyx_v_l = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":184
+  /* "plottings.pyx":184
  *                    vmin=None,
  *                    vmax=None)
  *     ax2.invert_yaxis()             # <<<<<<<<<<<<<<
@@ -5654,7 +5654,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":185
+  /* "plottings.pyx":185
  *                    vmax=None)
  *     ax2.invert_yaxis()
  *     ax2.set_title("Processed Bscan")             # <<<<<<<<<<<<<<
@@ -5680,7 +5680,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":187
+  /* "plottings.pyx":187
  *     ax2.set_title("Processed Bscan")
  * 
  *     axVmin = plt.axes([0.6, 0.1, 0.3, 0.03])             # <<<<<<<<<<<<<<
@@ -5725,7 +5725,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_axVmin = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":188
+  /* "plottings.pyx":188
  * 
  *     axVmin = plt.axes([0.6, 0.1, 0.3, 0.03])
  *     axVmax = plt.axes([0.6, 0.15, 0.3, 0.03])             # <<<<<<<<<<<<<<
@@ -5770,7 +5770,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_axVmax = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":189
+  /* "plottings.pyx":189
  *     axVmin = plt.axes([0.6, 0.1, 0.3, 0.03])
  *     axVmax = plt.axes([0.6, 0.15, 0.3, 0.03])
  *     axsave = plt.axes([0.7, 0.25, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -5815,7 +5815,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_axsave = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":191
+  /* "plottings.pyx":191
  *     axsave = plt.axes([0.7, 0.25, 0.1, 0.075])
  * 
  *     Min, Max = np.min(data)*0.7, np.max(data)*1.2             # <<<<<<<<<<<<<<
@@ -5873,7 +5873,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_Max = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":192
+  /* "plottings.pyx":192
  * 
  *     Min, Max = np.min(data)*0.7, np.max(data)*1.2
  *     Nstep = (Max - Min)/100             # <<<<<<<<<<<<<<
@@ -5888,7 +5888,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_Nstep = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":194
+  /* "plottings.pyx":194
  *     Nstep = (Max - Min)/100
  * 
  *     SVmin = Slider(axVmin, 'Vmin', Min, Max, valinit=Min, valstep=Nstep)             # <<<<<<<<<<<<<<
@@ -5924,7 +5924,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_cur_scope->__pyx_v_SVmin = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":195
+  /* "plottings.pyx":195
  * 
  *     SVmin = Slider(axVmin, 'Vmin', Min, Max, valinit=Min, valstep=Nstep)
  *     SVmax = Slider(axVmax, 'Vmax', Min, Max, valinit=Max, valstep=Nstep)             # <<<<<<<<<<<<<<
@@ -5960,7 +5960,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_cur_scope->__pyx_v_SVmax = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":196
+  /* "plottings.pyx":196
  *     SVmin = Slider(axVmin, 'Vmin', Min, Max, valinit=Min, valstep=Nstep)
  *     SVmax = Slider(axVmax, 'Vmax', Min, Max, valinit=Max, valstep=Nstep)
  *     bsave = Button(axsave, 'Save Bscan')             # <<<<<<<<<<<<<<
@@ -6017,31 +6017,31 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __pyx_v_bsave = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":199
+  /* "plottings.pyx":199
  * 
  * 
  *     def update(val):             # <<<<<<<<<<<<<<
  *         Vmax = SVmax.val
  *         Vmin = SVmin.val
  */
-  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_11Bscan_plots_1update, 0, __pyx_n_s_Bscan_plots_locals_update, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_11Bscan_plots_1update, 0, __pyx_n_s_Bscan_plots_locals_update, ((PyObject*)__pyx_cur_scope), __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_update = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":205
+  /* "plottings.pyx":205
  *         fig.canvas.draw_idle()
  * 
  *     def save(event):             # <<<<<<<<<<<<<<
  *         save_dir = directories.png + "image.png"
  *         extent = ax2.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
  */
-  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_11Bscan_plots_3save, 0, __pyx_n_s_Bscan_plots_locals_save, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_11Bscan_plots_3save, 0, __pyx_n_s_Bscan_plots_locals_save, ((PyObject*)__pyx_cur_scope), __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_save = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":211
+  /* "plottings.pyx":211
  * 
  * 
  *     bsave.on_clicked(save)             # <<<<<<<<<<<<<<
@@ -6067,7 +6067,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":212
+  /* "plottings.pyx":212
  * 
  *     bsave.on_clicked(save)
  *     SVmin.on_changed(update)             # <<<<<<<<<<<<<<
@@ -6093,7 +6093,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":213
+  /* "plottings.pyx":213
  *     bsave.on_clicked(save)
  *     SVmin.on_changed(update)
  *     SVmax.on_changed(update)             # <<<<<<<<<<<<<<
@@ -6119,7 +6119,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":215
+  /* "plottings.pyx":215
  *     SVmax.on_changed(update)
  * 
  *     plt.show()             # <<<<<<<<<<<<<<
@@ -6148,7 +6148,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":152
+  /* "plottings.pyx":152
  * 
  * 
  * def Bscan_plots(Bscan):             # <<<<<<<<<<<<<<
@@ -6164,7 +6164,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_plottings.Bscan_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Bscan_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_dBscan);
@@ -6188,7 +6188,7 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":218
+/* "plottings.pyx":218
  * 
  * 
  * def plots_signals(data, sub_data, ref, sample, dark):             # <<<<<<<<<<<<<<
@@ -6197,9 +6197,9 @@ static PyObject *__pyx_pf_16cython_plottings_8Bscan_plots(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_11plots_signals(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_11plots_signals = {"plots_signals", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_11plots_signals, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_11plots_signals(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_11plots_signals(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_11plots_signals = {"plots_signals", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_11plots_signals, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_11plots_signals(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_data = 0;
   PyObject *__pyx_v_sub_data = 0;
   PyObject *__pyx_v_ref = 0;
@@ -6280,18 +6280,18 @@ static PyObject *__pyx_pw_16cython_plottings_11plots_signals(PyObject *__pyx_sel
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("plots_signals", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 218, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.plots_signals", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.plots_signals", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_10plots_signals(__pyx_self, __pyx_v_data, __pyx_v_sub_data, __pyx_v_ref, __pyx_v_sample, __pyx_v_dark);
+  __pyx_r = __pyx_pf_9plottings_10plots_signals(__pyx_self, __pyx_v_data, __pyx_v_sub_data, __pyx_v_ref, __pyx_v_sample, __pyx_v_dark);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_sub_data, PyObject *__pyx_v_ref, PyObject *__pyx_v_sample, PyObject *__pyx_v_dark) {
+static PyObject *__pyx_pf_9plottings_10plots_signals(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_sub_data, PyObject *__pyx_v_ref, PyObject *__pyx_v_sample, PyObject *__pyx_v_dark) {
   PyObject *__pyx_v_fig = NULL;
   PyObject *__pyx_v_ax0 = NULL;
   PyObject *__pyx_r = NULL;
@@ -6302,7 +6302,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("plots_signals", 0);
 
-  /* "src/toolbox/plottings.pyx":220
+  /* "plottings.pyx":220
  * def plots_signals(data, sub_data, ref, sample, dark):
  * 
  *     fig = plt.figure()             # <<<<<<<<<<<<<<
@@ -6332,7 +6332,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __pyx_v_fig = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":221
+  /* "plottings.pyx":221
  * 
  *     fig = plt.figure()
  *     ax0 = fig.add_subplot(111)             # <<<<<<<<<<<<<<
@@ -6359,7 +6359,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __pyx_v_ax0 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":222
+  /* "plottings.pyx":222
  *     fig = plt.figure()
  *     ax0 = fig.add_subplot(111)
  *     ax0.plot(data, label='raw data')             # <<<<<<<<<<<<<<
@@ -6383,7 +6383,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":223
+  /* "plottings.pyx":223
  *     ax0 = fig.add_subplot(111)
  *     ax0.plot(data, label='raw data')
  *     ax0.plot(sub_data, 'k', label='substracted raw data')             # <<<<<<<<<<<<<<
@@ -6410,7 +6410,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":224
+  /* "plottings.pyx":224
  *     ax0.plot(data, label='raw data')
  *     ax0.plot(sub_data, 'k', label='substracted raw data')
  *     ax0.plot(ref, 'r', label='reference noise')             # <<<<<<<<<<<<<<
@@ -6437,7 +6437,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":225
+  /* "plottings.pyx":225
  *     ax0.plot(sub_data, 'k', label='substracted raw data')
  *     ax0.plot(ref, 'r', label='reference noise')
  *     ax0.plot(sample, 'b', label='sample noise')             # <<<<<<<<<<<<<<
@@ -6464,7 +6464,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":226
+  /* "plottings.pyx":226
  *     ax0.plot(ref, 'r', label='reference noise')
  *     ax0.plot(sample, 'b', label='sample noise')
  *     ax0.plot(dark, 'g', label='background noise')             # <<<<<<<<<<<<<<
@@ -6491,7 +6491,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":228
+  /* "plottings.pyx":228
  *     ax0.plot(dark, 'g', label='background noise')
  * 
  *     plt.grid()             # <<<<<<<<<<<<<<
@@ -6520,7 +6520,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":229
+  /* "plottings.pyx":229
  * 
  *     plt.grid()
  *     plt.legend()             # <<<<<<<<<<<<<<
@@ -6549,7 +6549,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":230
+  /* "plottings.pyx":230
  *     plt.grid()
  *     plt.legend()
  *     print("click the image to exit")             # <<<<<<<<<<<<<<
@@ -6558,7 +6558,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_click_the_image_to_exit) < 0) __PYX_ERR(0, 230, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":231
+  /* "plottings.pyx":231
  *     plt.legend()
  *     print("click the image to exit")
  *     plt.waitforbuttonpress()             # <<<<<<<<<<<<<<
@@ -6587,7 +6587,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":232
+  /* "plottings.pyx":232
  *     print("click the image to exit")
  *     plt.waitforbuttonpress()
  *     plt.close()             # <<<<<<<<<<<<<<
@@ -6616,7 +6616,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":218
+  /* "plottings.pyx":218
  * 
  * 
  * def plots_signals(data, sub_data, ref, sample, dark):             # <<<<<<<<<<<<<<
@@ -6632,7 +6632,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_plottings.plots_signals", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.plots_signals", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_fig);
@@ -6642,7 +6642,7 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":237
+/* "plottings.pyx":237
  * 
  * 
  * def plot_klinearization(phase1, phase2, Plin, Pfit=None):             # <<<<<<<<<<<<<<
@@ -6651,9 +6651,9 @@ static PyObject *__pyx_pf_16cython_plottings_10plots_signals(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_13plot_klinearization(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_13plot_klinearization = {"plot_klinearization", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_13plot_klinearization, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_13plot_klinearization(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_13plot_klinearization(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_13plot_klinearization = {"plot_klinearization", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_13plot_klinearization, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_13plot_klinearization(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_phase1 = 0;
   PyObject *__pyx_v_phase2 = 0;
   PyObject *__pyx_v_Plin = 0;
@@ -6727,18 +6727,18 @@ static PyObject *__pyx_pw_16cython_plottings_13plot_klinearization(PyObject *__p
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("plot_klinearization", 0, 3, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 237, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.plot_klinearization", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.plot_klinearization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_12plot_klinearization(__pyx_self, __pyx_v_phase1, __pyx_v_phase2, __pyx_v_Plin, __pyx_v_Pfit);
+  __pyx_r = __pyx_pf_9plottings_12plot_klinearization(__pyx_self, __pyx_v_phase1, __pyx_v_phase2, __pyx_v_Plin, __pyx_v_Pfit);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_phase1, PyObject *__pyx_v_phase2, PyObject *__pyx_v_Plin, PyObject *__pyx_v_Pfit) {
+static PyObject *__pyx_pf_9plottings_12plot_klinearization(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_phase1, PyObject *__pyx_v_phase2, PyObject *__pyx_v_Plin, PyObject *__pyx_v_Pfit) {
   PyObject *__pyx_v_fig = NULL;
   PyObject *__pyx_v_ax = NULL;
   PyObject *__pyx_r = NULL;
@@ -6751,7 +6751,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("plot_klinearization", 0);
 
-  /* "src/toolbox/plottings.pyx":239
+  /* "plottings.pyx":239
  * def plot_klinearization(phase1, phase2, Plin, Pfit=None):
  * 
  *     plt.ion()             # <<<<<<<<<<<<<<
@@ -6780,7 +6780,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":240
+  /* "plottings.pyx":240
  * 
  *     plt.ion()
  *     fig = plt.figure(figsize=(8,10))             # <<<<<<<<<<<<<<
@@ -6802,7 +6802,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __pyx_v_fig = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":241
+  /* "plottings.pyx":241
  *     plt.ion()
  *     fig = plt.figure(figsize=(8,10))
  *     ax = fig.add_subplot(111)             # <<<<<<<<<<<<<<
@@ -6829,7 +6829,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __pyx_v_ax = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":243
+  /* "plottings.pyx":243
  *     ax = fig.add_subplot(111)
  * 
  *     ax.plot(phase1,'r', label='Mirror1')             # <<<<<<<<<<<<<<
@@ -6856,7 +6856,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":244
+  /* "plottings.pyx":244
  * 
  *     ax.plot(phase1,'r', label='Mirror1')
  *     ax.plot(phase2,'b', label='Mirror2')             # <<<<<<<<<<<<<<
@@ -6883,7 +6883,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":245
+  /* "plottings.pyx":245
  *     ax.plot(phase1,'r', label='Mirror1')
  *     ax.plot(phase2,'b', label='Mirror2')
  *     ax.plot(Plin, 'k', label='Linear phase')             # <<<<<<<<<<<<<<
@@ -6910,7 +6910,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":246
+  /* "plottings.pyx":246
  *     ax.plot(phase2,'b', label='Mirror2')
  *     ax.plot(Plin, 'k', label='Linear phase')
  *     if Pfit is not None:             # <<<<<<<<<<<<<<
@@ -6921,7 +6921,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __pyx_t_6 = (__pyx_t_5 != 0);
   if (__pyx_t_6) {
 
-    /* "src/toolbox/plottings.pyx":247
+    /* "plottings.pyx":247
  *     ax.plot(Plin, 'k', label='Linear phase')
  *     if Pfit is not None:
  *         ax.plot(Pfit, 'g', label='Fitted linear phase')             # <<<<<<<<<<<<<<
@@ -6948,7 +6948,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "src/toolbox/plottings.pyx":246
+    /* "plottings.pyx":246
  *     ax.plot(phase2,'b', label='Mirror2')
  *     ax.plot(Plin, 'k', label='Linear phase')
  *     if Pfit is not None:             # <<<<<<<<<<<<<<
@@ -6957,7 +6957,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
  */
   }
 
-  /* "src/toolbox/plottings.pyx":248
+  /* "plottings.pyx":248
  *     if Pfit is not None:
  *         ax.plot(Pfit, 'g', label='Fitted linear phase')
  *     plt.grid()             # <<<<<<<<<<<<<<
@@ -6986,7 +6986,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":249
+  /* "plottings.pyx":249
  *         ax.plot(Pfit, 'g', label='Fitted linear phase')
  *     plt.grid()
  *     ax.set_ylabel('Phase [rad]')             # <<<<<<<<<<<<<<
@@ -7012,7 +7012,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":250
+  /* "plottings.pyx":250
  *     plt.grid()
  *     ax.set_ylabel('Phase [rad]')
  *     ax.set_xlabel('Points space [U.A]')             # <<<<<<<<<<<<<<
@@ -7038,7 +7038,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":251
+  /* "plottings.pyx":251
  *     ax.set_ylabel('Phase [rad]')
  *     ax.set_xlabel('Points space [U.A]')
  *     plt.legend()             # <<<<<<<<<<<<<<
@@ -7067,7 +7067,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":252
+  /* "plottings.pyx":252
  *     ax.set_xlabel('Points space [U.A]')
  *     plt.legend()
  *     print("click the image to exit")             # <<<<<<<<<<<<<<
@@ -7076,7 +7076,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_click_the_image_to_exit) < 0) __PYX_ERR(0, 252, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":253
+  /* "plottings.pyx":253
  *     plt.legend()
  *     print("click the image to exit")
  *     plt.waitforbuttonpress()             # <<<<<<<<<<<<<<
@@ -7105,7 +7105,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":254
+  /* "plottings.pyx":254
  *     print("click the image to exit")
  *     plt.waitforbuttonpress()
  *     plt.close()             # <<<<<<<<<<<<<<
@@ -7134,7 +7134,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":237
+  /* "plottings.pyx":237
  * 
  * 
  * def plot_klinearization(phase1, phase2, Plin, Pfit=None):             # <<<<<<<<<<<<<<
@@ -7150,7 +7150,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_plottings.plot_klinearization", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.plot_klinearization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_fig);
@@ -7160,7 +7160,7 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":262
+/* "plottings.pyx":262
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
@@ -7169,9 +7169,9 @@ static PyObject *__pyx_pf_16cython_plottings_12plot_klinearization(CYTHON_UNUSED
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_fig1 = 0;
   PyObject *__pyx_v_Bscan_LP01 = 0;
@@ -7241,23 +7241,23 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_1__init_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 262, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser___init__(__pyx_self, __pyx_v_self, __pyx_v_fig1, __pyx_v_Bscan_LP01, __pyx_v_Bscan_LP11);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser___init__(__pyx_self, __pyx_v_self, __pyx_v_fig1, __pyx_v_Bscan_LP01, __pyx_v_Bscan_LP11);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "src/toolbox/plottings.pyx":263
+  /* "plottings.pyx":263
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):
  *         self.fig1 = fig1             # <<<<<<<<<<<<<<
@@ -7266,7 +7266,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser___init__
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fig1, __pyx_v_fig1) < 0) __PYX_ERR(0, 263, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":264
+  /* "plottings.pyx":264
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):
  *         self.fig1 = fig1
  *         self.Bscan_LP01 = Bscan_LP01             # <<<<<<<<<<<<<<
@@ -7275,7 +7275,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser___init__
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP01, __pyx_v_Bscan_LP01) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":265
+  /* "plottings.pyx":265
  *         self.fig1 = fig1
  *         self.Bscan_LP01 = Bscan_LP01
  *         self.Bscan_LP11 = Bscan_LP11             # <<<<<<<<<<<<<<
@@ -7284,7 +7284,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser___init__
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP11, __pyx_v_Bscan_LP11) < 0) __PYX_ERR(0, 265, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":262
+  /* "plottings.pyx":262
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
@@ -7296,7 +7296,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser___init__
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7304,7 +7304,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser___init__
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":268
+/* "plottings.pyx":268
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -7313,9 +7313,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser___init__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_3update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_3update_intensity = {"update_intensity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_3update_intensity, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_3update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_3update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_3update_intensity = {"update_intensity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_3update_intensity, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_3update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -7363,18 +7363,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_3update_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("update_intensity", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 268, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_intensity(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_2update_intensity(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_2update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_Vmax_LP11 = NULL;
   PyObject *__pyx_v_Vmin_LP11 = NULL;
   PyObject *__pyx_v_Vmax_LP01 = NULL;
@@ -7386,7 +7386,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("update_intensity", 0);
 
-  /* "src/toolbox/plottings.pyx":269
+  /* "plottings.pyx":269
  * 
  *     def update_intensity(self, event):
  *         Vmax_LP11 = self.SVmax_LP11.val             # <<<<<<<<<<<<<<
@@ -7401,7 +7401,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   __pyx_v_Vmax_LP11 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":270
+  /* "plottings.pyx":270
  *     def update_intensity(self, event):
  *         Vmax_LP11 = self.SVmax_LP11.val
  *         Vmin_LP11 = self.SVmin_LP11.val             # <<<<<<<<<<<<<<
@@ -7416,7 +7416,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   __pyx_v_Vmin_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":271
+  /* "plottings.pyx":271
  *         Vmax_LP11 = self.SVmax_LP11.val
  *         Vmin_LP11 = self.SVmin_LP11.val
  *         self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)             # <<<<<<<<<<<<<<
@@ -7438,7 +7438,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":272
+  /* "plottings.pyx":272
  *         Vmin_LP11 = self.SVmin_LP11.val
  *         self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)
  *         Vmax_LP01 = self.SVmax_LP11.val             # <<<<<<<<<<<<<<
@@ -7453,7 +7453,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   __pyx_v_Vmax_LP01 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":273
+  /* "plottings.pyx":273
  *         self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)
  *         Vmax_LP01 = self.SVmax_LP11.val
  *         Vmin_LP01 = self.SVmin_LP11.val             # <<<<<<<<<<<<<<
@@ -7468,7 +7468,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   __pyx_v_Vmin_LP01 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":274
+  /* "plottings.pyx":274
  *         Vmax_LP01 = self.SVmax_LP11.val
  *         Vmin_LP01 = self.SVmin_LP11.val
  *         self.l_LP01.set_clim(vmin=Vmin_LP01, vmax=Vmax_LP01)             # <<<<<<<<<<<<<<
@@ -7490,7 +7490,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":275
+  /* "plottings.pyx":275
  *         Vmin_LP01 = self.SVmin_LP11.val
  *         self.l_LP01.set_clim(vmin=Vmin_LP01, vmax=Vmax_LP01)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -7522,7 +7522,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":268
+  /* "plottings.pyx":268
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -7537,7 +7537,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Vmax_LP11);
@@ -7549,7 +7549,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":278
+/* "plottings.pyx":278
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -7558,9 +7558,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_2update_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_5next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_5next = {"next", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_5next, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_5next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_5next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_5next = {"next", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_5next, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_5next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -7608,18 +7608,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_5next(Py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("next", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 278, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_4next(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_4next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7629,7 +7629,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CY
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("next", 0);
 
-  /* "src/toolbox/plottings.pyx":279
+  /* "plottings.pyx":279
  * 
  *     def next(self, event):
  *         self.N_plot += 1             # <<<<<<<<<<<<<<
@@ -7644,7 +7644,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CY
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_t_2) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":280
+  /* "plottings.pyx":280
  *     def next(self, event):
  *         self.N_plot += 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -7685,7 +7685,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CY
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":281
+  /* "plottings.pyx":281
  *         self.N_plot += 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -7726,7 +7726,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CY
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":282
+  /* "plottings.pyx":282
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -7758,7 +7758,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CY
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":278
+  /* "plottings.pyx":278
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -7775,7 +7775,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CY
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7783,7 +7783,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CY
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":285
+/* "plottings.pyx":285
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -7792,9 +7792,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_4next(CY
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_7previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_7previous = {"previous", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_7previous, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_7previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_7previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_7previous = {"previous", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_7previous, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_7previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -7842,18 +7842,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_7previou
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("previous", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 285, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previous(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_6previous(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_6previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7863,7 +7863,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previou
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("previous", 0);
 
-  /* "src/toolbox/plottings.pyx":286
+  /* "plottings.pyx":286
  * 
  *     def previous(self, event):
  *         self.N_plot -= 1             # <<<<<<<<<<<<<<
@@ -7878,7 +7878,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previou
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_t_2) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":287
+  /* "plottings.pyx":287
  *     def previous(self, event):
  *         self.N_plot -= 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -7919,7 +7919,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previou
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":288
+  /* "plottings.pyx":288
  *         self.N_plot -= 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -7960,7 +7960,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previou
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":289
+  /* "plottings.pyx":289
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -7992,7 +7992,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previou
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":285
+  /* "plottings.pyx":285
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -8009,7 +8009,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previou
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -8017,7 +8017,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previou
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":292
+/* "plottings.pyx":292
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -8026,9 +8026,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_6previou
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_9save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_9save_LP11 = {"save_LP11", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_9save_LP11, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_9save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_9save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_9save_LP11 = {"save_LP11", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_9save_LP11, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_9save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -8076,18 +8076,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_9save_LP
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save_LP11", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 292, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP11(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_8save_LP11(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_8save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_save_dir = NULL;
   PyObject *__pyx_v_extent = NULL;
   PyObject *__pyx_r = NULL;
@@ -8099,7 +8099,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("save_LP11", 0);
 
-  /* "src/toolbox/plottings.pyx":293
+  /* "plottings.pyx":293
  * 
  *     def save_LP11(self, event):
  *         save_dir = "results/"             # <<<<<<<<<<<<<<
@@ -8109,7 +8109,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP
   __Pyx_INCREF(__pyx_kp_s_results);
   __pyx_v_save_dir = __pyx_kp_s_results;
 
-  /* "src/toolbox/plottings.pyx":294
+  /* "plottings.pyx":294
  *     def save_LP11(self, event):
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())             # <<<<<<<<<<<<<<
@@ -8181,7 +8181,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP
   __pyx_v_extent = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":295
+  /* "plottings.pyx":295
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  *         plt.savefig(save_dir + "figure_" + 'LP11', bbox_inches=extent)             # <<<<<<<<<<<<<<
@@ -8213,7 +8213,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":292
+  /* "plottings.pyx":292
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -8230,7 +8230,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_save_dir);
@@ -8240,7 +8240,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":298
+/* "plottings.pyx":298
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -8249,9 +8249,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_8save_LP
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_11save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_11save_LP01 = {"save_LP01", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_11save_LP01, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_11save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_11save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_11save_LP01 = {"save_LP01", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_11save_LP01, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_11save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -8299,18 +8299,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_11save_L
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save_LP01", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 298, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_LP01(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_10save_LP01(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_10save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_save_dir = NULL;
   PyObject *__pyx_v_extent = NULL;
   PyObject *__pyx_r = NULL;
@@ -8322,7 +8322,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_L
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("save_LP01", 0);
 
-  /* "src/toolbox/plottings.pyx":299
+  /* "plottings.pyx":299
  * 
  *     def save_LP01(self, event):
  *         save_dir = "results/"             # <<<<<<<<<<<<<<
@@ -8332,7 +8332,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_L
   __Pyx_INCREF(__pyx_kp_s_results);
   __pyx_v_save_dir = __pyx_kp_s_results;
 
-  /* "src/toolbox/plottings.pyx":300
+  /* "plottings.pyx":300
  *     def save_LP01(self, event):
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())             # <<<<<<<<<<<<<<
@@ -8404,7 +8404,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_L
   __pyx_v_extent = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":301
+  /* "plottings.pyx":301
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  *         plt.savefig(save_dir + "figure_" + 'LP01', bbox_inches=extent)             # <<<<<<<<<<<<<<
@@ -8436,7 +8436,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_L
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":298
+  /* "plottings.pyx":298
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -8453,7 +8453,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_L
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_save_dir);
@@ -8463,7 +8463,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_L
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":304
+/* "plottings.pyx":304
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -8472,20 +8472,20 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_10save_L
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots = {"Bscan_lanterne_plots", (PyCFunction)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots, METH_O, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots = {"Bscan_lanterne_plots", (PyCFunction)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots, METH_O, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("Bscan_lanterne_plots (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_lanterne_plots(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_12Bscan_lanterne_plots(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_12Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_axVmin_intensity = NULL;
   PyObject *__pyx_v_axVmax_intensity = NULL;
   PyObject *__pyx_v_axsave_LP11 = NULL;
@@ -8510,7 +8510,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("Bscan_lanterne_plots", 0);
 
-  /* "src/toolbox/plottings.pyx":306
+  /* "plottings.pyx":306
  *     def Bscan_lanterne_plots(self):
  * 
  *         self.Bscan_LP01 = np.array(self.Bscan_LP01)             # <<<<<<<<<<<<<<
@@ -8543,7 +8543,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP01, __pyx_t_1) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":307
+  /* "plottings.pyx":307
  * 
  *         self.Bscan_LP01 = np.array(self.Bscan_LP01)
  *         self.Bscan_LP11 = np.array(self.Bscan_LP11)             # <<<<<<<<<<<<<<
@@ -8576,7 +8576,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP11, __pyx_t_1) < 0) __PYX_ERR(0, 307, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":309
+  /* "plottings.pyx":309
  *         self.Bscan_LP11 = np.array(self.Bscan_LP11)
  * 
  *         self.dBscan_LP11 = 10*np.log(self.Bscan_LP11)             # <<<<<<<<<<<<<<
@@ -8612,7 +8612,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 309, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":310
+  /* "plottings.pyx":310
  * 
  *         self.dBscan_LP11 = 10*np.log(self.Bscan_LP11)
  *         self.dBscan_LP01 = 10*np.log(self.Bscan_LP01)             # <<<<<<<<<<<<<<
@@ -8648,7 +8648,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan_LP01, __pyx_t_2) < 0) __PYX_ERR(0, 310, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":312
+  /* "plottings.pyx":312
  *         self.dBscan_LP01 = 10*np.log(self.Bscan_LP01)
  * 
  *         self.fig = plt.figure(figsize=(16,10))             # <<<<<<<<<<<<<<
@@ -8670,7 +8670,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fig, __pyx_t_1) < 0) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":314
+  /* "plottings.pyx":314
  *         self.fig = plt.figure(figsize=(16,10))
  * 
  *         self.N_plot = 0             # <<<<<<<<<<<<<<
@@ -8679,7 +8679,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_int_0) < 0) __PYX_ERR(0, 314, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":317
+  /* "plottings.pyx":317
  * 
  * 
  *         axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])             # <<<<<<<<<<<<<<
@@ -8724,7 +8724,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_axVmin_intensity = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":318
+  /* "plottings.pyx":318
  * 
  *         axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])
  *         axVmax_intensity = plt.axes([0.6, 0.15, 0.3, 0.03])             # <<<<<<<<<<<<<<
@@ -8769,7 +8769,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_axVmax_intensity = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":319
+  /* "plottings.pyx":319
  *         axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])
  *         axVmax_intensity = plt.axes([0.6, 0.15, 0.3, 0.03])
  *         axsave_LP11 = plt.axes([0.7, 0.25, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -8814,7 +8814,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_axsave_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":321
+  /* "plottings.pyx":321
  *         axsave_LP11 = plt.axes([0.7, 0.25, 0.1, 0.075])
  * 
  *         axsave_LP01 = plt.axes([0.7, 0.80, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -8859,7 +8859,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_axsave_LP01 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":323
+  /* "plottings.pyx":323
  *         axsave_LP01 = plt.axes([0.7, 0.80, 0.1, 0.075])
  * 
  *         axnext = plt.axes([0.8, 0.5, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -8904,7 +8904,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_axnext = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":324
+  /* "plottings.pyx":324
  * 
  *         axnext = plt.axes([0.8, 0.5, 0.1, 0.075])
  *         axprevious = plt.axes([0.6, 0.5, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -8949,7 +8949,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_axprevious = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":326
+  /* "plottings.pyx":326
  *         axprevious = plt.axes([0.6, 0.5, 0.1, 0.075])
  * 
  *         Min_LP11, Max_LP11 = np.min(self.dBscan_LP11)*0.7, np.max(self.dBscan_LP11)*1.2             # <<<<<<<<<<<<<<
@@ -9013,7 +9013,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_Max_LP11 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":327
+  /* "plottings.pyx":327
  * 
  *         Min_LP11, Max_LP11 = np.min(self.dBscan_LP11)*0.7, np.max(self.dBscan_LP11)*1.2
  *         Min_LP01, Max_LP01 = np.min(self.dBscan_LP01)*0.7, np.max(self.dBscan_LP01)*1.2             # <<<<<<<<<<<<<<
@@ -9077,7 +9077,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_Max_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":329
+  /* "plottings.pyx":329
  *         Min_LP01, Max_LP01 = np.min(self.dBscan_LP01)*0.7, np.max(self.dBscan_LP01)*1.2
  * 
  *         Nstep_LP11 = (Max_LP11 - Min_LP11)/100             # <<<<<<<<<<<<<<
@@ -9092,7 +9092,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_Nstep_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":330
+  /* "plottings.pyx":330
  * 
  *         Nstep_LP11 = (Max_LP11 - Min_LP11)/100
  *         Nstep_LP01 = (Max_LP01 - Min_LP01)/100             # <<<<<<<<<<<<<<
@@ -9107,7 +9107,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_Nstep_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":332
+  /* "plottings.pyx":332
  *         Nstep_LP01 = (Max_LP01 - Min_LP01)/100
  * 
  *         self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)             # <<<<<<<<<<<<<<
@@ -9142,7 +9142,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_SVmin_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":333
+  /* "plottings.pyx":333
  * 
  *         self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)
  *         self.SVmax_LP11 = Slider(axVmax_intensity, 'Vmax', Min_LP11, Max_LP11, valinit=Max_LP11, valstep=Nstep_LP11)             # <<<<<<<<<<<<<<
@@ -9177,7 +9177,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_SVmax_LP11, __pyx_t_2) < 0) __PYX_ERR(0, 333, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":334
+  /* "plottings.pyx":334
  *         self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)
  *         self.SVmax_LP11 = Slider(axVmax_intensity, 'Vmax', Min_LP11, Max_LP11, valinit=Max_LP11, valstep=Nstep_LP11)
  *         bsave_LP11 = Button(axsave_LP11, 'Save Bscan')             # <<<<<<<<<<<<<<
@@ -9234,7 +9234,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_bsave_LP11 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":336
+  /* "plottings.pyx":336
  *         bsave_LP11 = Button(axsave_LP11, 'Save Bscan')
  * 
  *         bsave_LP01 = Button(axsave_LP01, 'Save Bscan')             # <<<<<<<<<<<<<<
@@ -9291,7 +9291,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __pyx_v_bsave_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":338
+  /* "plottings.pyx":338
  *         bsave_LP01 = Button(axsave_LP01, 'Save Bscan')
  * 
  *         self.Bnext = Button(axnext, 'Next')             # <<<<<<<<<<<<<<
@@ -9348,7 +9348,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bnext, __pyx_t_2) < 0) __PYX_ERR(0, 338, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":339
+  /* "plottings.pyx":339
  * 
  *         self.Bnext = Button(axnext, 'Next')
  *         self.Bprevious = Button(axprevious, 'Previous')             # <<<<<<<<<<<<<<
@@ -9405,7 +9405,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bprevious, __pyx_t_2) < 0) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":342
+  /* "plottings.pyx":342
  * 
  * 
  *         self.ax1 = self.fig.add_subplot(221)             # <<<<<<<<<<<<<<
@@ -9435,7 +9435,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ax1, __pyx_t_2) < 0) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":343
+  /* "plottings.pyx":343
  * 
  *         self.ax1 = self.fig.add_subplot(221)
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,             # <<<<<<<<<<<<<<
@@ -9458,7 +9458,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":344
+  /* "plottings.pyx":344
  *         self.ax1 = self.fig.add_subplot(221)
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,
  *                                 cmap = "gray",             # <<<<<<<<<<<<<<
@@ -9469,7 +9469,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_cmap, __pyx_n_s_gray) < 0) __PYX_ERR(0, 344, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":345
+  /* "plottings.pyx":345
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,
  *                                 cmap = "gray",
  *                                 vmin=None,             # <<<<<<<<<<<<<<
@@ -9478,7 +9478,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmin, Py_None) < 0) __PYX_ERR(0, 344, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":346
+  /* "plottings.pyx":346
  *                                 cmap = "gray",
  *                                 vmin=None,
  *                                 vmax=None)             # <<<<<<<<<<<<<<
@@ -9487,7 +9487,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmax, Py_None) < 0) __PYX_ERR(0, 344, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":343
+  /* "plottings.pyx":343
  * 
  *         self.ax1 = self.fig.add_subplot(221)
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,             # <<<<<<<<<<<<<<
@@ -9502,7 +9502,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_l_LP01, __pyx_t_3) < 0) __PYX_ERR(0, 343, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":347
+  /* "plottings.pyx":347
  *                                 vmin=None,
  *                                 vmax=None)
  *         self.ax1.invert_yaxis()             # <<<<<<<<<<<<<<
@@ -9531,7 +9531,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":349
+  /* "plottings.pyx":349
  *         self.ax1.invert_yaxis()
  * 
  *         self.ax1.set_title("Processed Bscan LP01")             # <<<<<<<<<<<<<<
@@ -9560,7 +9560,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":351
+  /* "plottings.pyx":351
  *         self.ax1.set_title("Processed Bscan LP01")
  * 
  *         self.ax2 = self.fig.add_subplot(223)             # <<<<<<<<<<<<<<
@@ -9590,7 +9590,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ax2, __pyx_t_3) < 0) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":352
+  /* "plottings.pyx":352
  * 
  *         self.ax2 = self.fig.add_subplot(223)
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,             # <<<<<<<<<<<<<<
@@ -9613,7 +9613,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":353
+  /* "plottings.pyx":353
  *         self.ax2 = self.fig.add_subplot(223)
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,
  *                                    cmap = "gray",             # <<<<<<<<<<<<<<
@@ -9624,7 +9624,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_cmap, __pyx_n_s_gray) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":354
+  /* "plottings.pyx":354
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,
  *                                    cmap = "gray",
  *                                    vmin=None,             # <<<<<<<<<<<<<<
@@ -9633,7 +9633,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmin, Py_None) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":355
+  /* "plottings.pyx":355
  *                                    cmap = "gray",
  *                                    vmin=None,
  *                                    vmax=None)             # <<<<<<<<<<<<<<
@@ -9642,7 +9642,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmax, Py_None) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":352
+  /* "plottings.pyx":352
  * 
  *         self.ax2 = self.fig.add_subplot(223)
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,             # <<<<<<<<<<<<<<
@@ -9657,7 +9657,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_l_LP11, __pyx_t_4) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":356
+  /* "plottings.pyx":356
  *                                    vmin=None,
  *                                    vmax=None)
  *         self.ax2.invert_yaxis()             # <<<<<<<<<<<<<<
@@ -9686,7 +9686,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":357
+  /* "plottings.pyx":357
  *                                    vmax=None)
  *         self.ax2.invert_yaxis()
  *         self.ax2.set_title("Processed Bscan LP11")             # <<<<<<<<<<<<<<
@@ -9715,7 +9715,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":362
+  /* "plottings.pyx":362
  * 
  * 
  *         bsave_LP11.on_clicked(self.save_LP11)             # <<<<<<<<<<<<<<
@@ -9744,7 +9744,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":363
+  /* "plottings.pyx":363
  * 
  *         bsave_LP11.on_clicked(self.save_LP11)
  *         self.SVmin_LP11.on_changed(self.update_intensity)             # <<<<<<<<<<<<<<
@@ -9776,7 +9776,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":364
+  /* "plottings.pyx":364
  *         bsave_LP11.on_clicked(self.save_LP11)
  *         self.SVmin_LP11.on_changed(self.update_intensity)
  *         self.SVmax_LP11.on_changed(self.update_intensity)             # <<<<<<<<<<<<<<
@@ -9808,7 +9808,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":366
+  /* "plottings.pyx":366
  *         self.SVmax_LP11.on_changed(self.update_intensity)
  * 
  *         bsave_LP01.on_clicked(self.save_LP01)             # <<<<<<<<<<<<<<
@@ -9837,7 +9837,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":370
+  /* "plottings.pyx":370
  *         #self.SVmax_LP01.on_changed(self.update_LP01)
  * 
  *         self.Bnext.on_clicked(self.next)             # <<<<<<<<<<<<<<
@@ -9869,7 +9869,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":371
+  /* "plottings.pyx":371
  * 
  *         self.Bnext.on_clicked(self.next)
  *         self.Bprevious.on_clicked(self.previous)             # <<<<<<<<<<<<<<
@@ -9901,7 +9901,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":373
+  /* "plottings.pyx":373
  *         self.Bprevious.on_clicked(self.previous)
  * 
  *         plt.show()             # <<<<<<<<<<<<<<
@@ -9930,7 +9930,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":304
+  /* "plottings.pyx":304
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -9947,7 +9947,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.Bscan_lanterne_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.Bscan_lanterne_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_axVmin_intensity);
@@ -9969,7 +9969,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":382
+/* "plottings.pyx":382
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
@@ -9978,9 +9978,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_12Bscan_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_15__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_15__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_15__init__, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_15__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_15__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_15__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_15__init__, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_15__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_fig1 = 0;
   PyObject *__pyx_v_Bscan_LP01 = 0;
@@ -10050,23 +10050,23 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_15__init
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 382, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_14__init__(__pyx_self, __pyx_v_self, __pyx_v_fig1, __pyx_v_Bscan_LP01, __pyx_v_Bscan_LP11);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_14__init__(__pyx_self, __pyx_v_self, __pyx_v_fig1, __pyx_v_Bscan_LP01, __pyx_v_Bscan_LP11);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_14__init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_14__init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "src/toolbox/plottings.pyx":383
+  /* "plottings.pyx":383
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):
  *         self.fig1 = fig1             # <<<<<<<<<<<<<<
@@ -10075,7 +10075,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_14__init
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fig1, __pyx_v_fig1) < 0) __PYX_ERR(0, 383, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":384
+  /* "plottings.pyx":384
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):
  *         self.fig1 = fig1
  *         self.Bscan_LP01 = Bscan_LP01             # <<<<<<<<<<<<<<
@@ -10084,7 +10084,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_14__init
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP01, __pyx_v_Bscan_LP01) < 0) __PYX_ERR(0, 384, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":385
+  /* "plottings.pyx":385
  *         self.fig1 = fig1
  *         self.Bscan_LP01 = Bscan_LP01
  *         self.Bscan_LP11 = Bscan_LP11             # <<<<<<<<<<<<<<
@@ -10093,7 +10093,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_14__init
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP11, __pyx_v_Bscan_LP11) < 0) __PYX_ERR(0, 385, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":382
+  /* "plottings.pyx":382
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
@@ -10105,7 +10105,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_14__init
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -10113,7 +10113,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_14__init
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":388
+/* "plottings.pyx":388
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -10122,9 +10122,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_14__init
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_17update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_17update_intensity = {"update_intensity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_17update_intensity, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_17update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_17update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_17update_intensity = {"update_intensity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_17update_intensity, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_17update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -10172,18 +10172,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_17update
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("update_intensity", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 388, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update_intensity(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_16update_intensity(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_16update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_Vmax_LP11 = NULL;
   PyObject *__pyx_v_Vmin_LP11 = NULL;
   PyObject *__pyx_v_Vmax_LP01 = NULL;
@@ -10195,7 +10195,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("update_intensity", 0);
 
-  /* "src/toolbox/plottings.pyx":389
+  /* "plottings.pyx":389
  * 
  *     def update_intensity(self, event):
  *         Vmax_LP11 = self.SVmax_LP11.val             # <<<<<<<<<<<<<<
@@ -10210,7 +10210,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   __pyx_v_Vmax_LP11 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":390
+  /* "plottings.pyx":390
  *     def update_intensity(self, event):
  *         Vmax_LP11 = self.SVmax_LP11.val
  *         Vmin_LP11 = self.SVmin_LP11.val             # <<<<<<<<<<<<<<
@@ -10225,7 +10225,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   __pyx_v_Vmin_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":391
+  /* "plottings.pyx":391
  *         Vmax_LP11 = self.SVmax_LP11.val
  *         Vmin_LP11 = self.SVmin_LP11.val
  *         self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)             # <<<<<<<<<<<<<<
@@ -10247,7 +10247,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":392
+  /* "plottings.pyx":392
  *         Vmin_LP11 = self.SVmin_LP11.val
  *         self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)
  *         Vmax_LP01 = self.SVmax_LP11.val             # <<<<<<<<<<<<<<
@@ -10262,7 +10262,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   __pyx_v_Vmax_LP01 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":393
+  /* "plottings.pyx":393
  *         self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)
  *         Vmax_LP01 = self.SVmax_LP11.val
  *         Vmin_LP01 = self.SVmin_LP11.val             # <<<<<<<<<<<<<<
@@ -10277,7 +10277,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   __pyx_v_Vmin_LP01 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":394
+  /* "plottings.pyx":394
  *         Vmax_LP01 = self.SVmax_LP11.val
  *         Vmin_LP01 = self.SVmin_LP11.val
  *         self.l_LP01.set_clim(vmin=Vmin_LP01, vmax=Vmax_LP01)             # <<<<<<<<<<<<<<
@@ -10299,7 +10299,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":395
+  /* "plottings.pyx":395
  *         Vmin_LP01 = self.SVmin_LP11.val
  *         self.l_LP01.set_clim(vmin=Vmin_LP01, vmax=Vmax_LP01)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -10331,7 +10331,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":388
+  /* "plottings.pyx":388
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -10346,7 +10346,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Vmax_LP11);
@@ -10358,7 +10358,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":398
+/* "plottings.pyx":398
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -10367,9 +10367,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_16update
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_19next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_19next = {"next", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_19next, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_19next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_19next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_19next = {"next", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_19next, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_19next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -10417,18 +10417,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_19next(P
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("next", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 398, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_18next(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_18next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10438,7 +10438,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(C
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("next", 0);
 
-  /* "src/toolbox/plottings.pyx":399
+  /* "plottings.pyx":399
  * 
  *     def next(self, event):
  *         self.N_plot += 1             # <<<<<<<<<<<<<<
@@ -10453,7 +10453,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(C
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_t_2) < 0) __PYX_ERR(0, 399, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":400
+  /* "plottings.pyx":400
  *     def next(self, event):
  *         self.N_plot += 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -10494,7 +10494,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(C
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":401
+  /* "plottings.pyx":401
  *         self.N_plot += 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -10535,7 +10535,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(C
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":402
+  /* "plottings.pyx":402
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -10567,7 +10567,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(C
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":398
+  /* "plottings.pyx":398
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -10584,7 +10584,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(C
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -10592,7 +10592,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(C
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":405
+/* "plottings.pyx":405
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -10601,9 +10601,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_18next(C
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_21previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_21previous = {"previous", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_21previous, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_21previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_21previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_21previous = {"previous", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_21previous, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_21previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -10651,18 +10651,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_21previo
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("previous", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 405, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previous(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_20previous(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_20previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10672,7 +10672,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previo
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("previous", 0);
 
-  /* "src/toolbox/plottings.pyx":406
+  /* "plottings.pyx":406
  * 
  *     def previous(self, event):
  *         self.N_plot -= 1             # <<<<<<<<<<<<<<
@@ -10687,7 +10687,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previo
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_t_2) < 0) __PYX_ERR(0, 406, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":407
+  /* "plottings.pyx":407
  *     def previous(self, event):
  *         self.N_plot -= 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -10728,7 +10728,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previo
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":408
+  /* "plottings.pyx":408
  *         self.N_plot -= 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -10769,7 +10769,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previo
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":409
+  /* "plottings.pyx":409
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -10801,7 +10801,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previo
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":405
+  /* "plottings.pyx":405
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -10818,7 +10818,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previo
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -10826,7 +10826,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previo
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":412
+/* "plottings.pyx":412
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -10835,9 +10835,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_20previo
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_23save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_23save_LP11 = {"save_LP11", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_23save_LP11, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_23save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_23save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_23save_LP11 = {"save_LP11", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_23save_LP11, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_23save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -10885,18 +10885,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_23save_L
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save_LP11", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 412, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_LP11(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_22save_LP11(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_22save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_save_dir = NULL;
   PyObject *__pyx_v_extent = NULL;
   PyObject *__pyx_r = NULL;
@@ -10908,7 +10908,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_L
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("save_LP11", 0);
 
-  /* "src/toolbox/plottings.pyx":413
+  /* "plottings.pyx":413
  * 
  *     def save_LP11(self, event):
  *         save_dir = "results/"             # <<<<<<<<<<<<<<
@@ -10918,7 +10918,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_L
   __Pyx_INCREF(__pyx_kp_s_results);
   __pyx_v_save_dir = __pyx_kp_s_results;
 
-  /* "src/toolbox/plottings.pyx":414
+  /* "plottings.pyx":414
  *     def save_LP11(self, event):
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())             # <<<<<<<<<<<<<<
@@ -10990,7 +10990,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_L
   __pyx_v_extent = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":415
+  /* "plottings.pyx":415
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  *         plt.savefig(save_dir + "figure_" + 'LP11', bbox_inches=extent)             # <<<<<<<<<<<<<<
@@ -11022,7 +11022,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_L
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":412
+  /* "plottings.pyx":412
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -11039,7 +11039,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_L
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_save_dir);
@@ -11049,7 +11049,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_L
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":418
+/* "plottings.pyx":418
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -11058,9 +11058,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_22save_L
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_25save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_25save_LP01 = {"save_LP01", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_25save_LP01, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_25save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_25save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_25save_LP01 = {"save_LP01", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_25save_LP01, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_25save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -11108,18 +11108,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_25save_L
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save_LP01", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 418, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_LP01(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_24save_LP01(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_24save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_save_dir = NULL;
   PyObject *__pyx_v_extent = NULL;
   PyObject *__pyx_r = NULL;
@@ -11131,7 +11131,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_L
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("save_LP01", 0);
 
-  /* "src/toolbox/plottings.pyx":419
+  /* "plottings.pyx":419
  * 
  *     def save_LP01(self, event):
  *         save_dir = "results/"             # <<<<<<<<<<<<<<
@@ -11141,7 +11141,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_L
   __Pyx_INCREF(__pyx_kp_s_results);
   __pyx_v_save_dir = __pyx_kp_s_results;
 
-  /* "src/toolbox/plottings.pyx":420
+  /* "plottings.pyx":420
  *     def save_LP01(self, event):
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())             # <<<<<<<<<<<<<<
@@ -11213,7 +11213,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_L
   __pyx_v_extent = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":421
+  /* "plottings.pyx":421
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  *         plt.savefig(save_dir + "figure_" + 'LP01', bbox_inches=extent)             # <<<<<<<<<<<<<<
@@ -11245,7 +11245,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_L
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":418
+  /* "plottings.pyx":418
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -11262,7 +11262,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_L
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_save_dir);
@@ -11272,7 +11272,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_L
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":424
+/* "plottings.pyx":424
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -11281,20 +11281,20 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_24save_L
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots = {"Bscan_lanterne_plots", (PyCFunction)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots, METH_O, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots = {"Bscan_lanterne_plots", (PyCFunction)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots, METH_O, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("Bscan_lanterne_plots (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_lanterne_plots(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_26Bscan_lanterne_plots(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_26Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_axVmin_intensity = NULL;
   PyObject *__pyx_v_axVmax_intensity = NULL;
   PyObject *__pyx_v_axsave_LP11 = NULL;
@@ -11319,7 +11319,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("Bscan_lanterne_plots", 0);
 
-  /* "src/toolbox/plottings.pyx":426
+  /* "plottings.pyx":426
  *     def Bscan_lanterne_plots(self):
  * 
  *         self.Bscan_LP01 = np.array(self.Bscan_LP01)             # <<<<<<<<<<<<<<
@@ -11352,7 +11352,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP01, __pyx_t_1) < 0) __PYX_ERR(0, 426, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":427
+  /* "plottings.pyx":427
  * 
  *         self.Bscan_LP01 = np.array(self.Bscan_LP01)
  *         self.Bscan_LP11 = np.array(self.Bscan_LP11)             # <<<<<<<<<<<<<<
@@ -11385,7 +11385,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP11, __pyx_t_1) < 0) __PYX_ERR(0, 427, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":429
+  /* "plottings.pyx":429
  *         self.Bscan_LP11 = np.array(self.Bscan_LP11)
  * 
  *         self.dBscan_LP11 = 10*np.log(self.Bscan_LP11)             # <<<<<<<<<<<<<<
@@ -11421,7 +11421,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":430
+  /* "plottings.pyx":430
  * 
  *         self.dBscan_LP11 = 10*np.log(self.Bscan_LP11)
  *         self.dBscan_LP01 = 10*np.log(self.Bscan_LP01)             # <<<<<<<<<<<<<<
@@ -11457,7 +11457,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan_LP01, __pyx_t_2) < 0) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":432
+  /* "plottings.pyx":432
  *         self.dBscan_LP01 = 10*np.log(self.Bscan_LP01)
  * 
  *         self.fig = plt.figure(figsize=(16,10))             # <<<<<<<<<<<<<<
@@ -11479,7 +11479,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fig, __pyx_t_1) < 0) __PYX_ERR(0, 432, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":434
+  /* "plottings.pyx":434
  *         self.fig = plt.figure(figsize=(16,10))
  * 
  *         self.N_plot = 0             # <<<<<<<<<<<<<<
@@ -11488,7 +11488,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_int_0) < 0) __PYX_ERR(0, 434, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":437
+  /* "plottings.pyx":437
  * 
  * 
  *         axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])             # <<<<<<<<<<<<<<
@@ -11533,7 +11533,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_axVmin_intensity = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":438
+  /* "plottings.pyx":438
  * 
  *         axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])
  *         axVmax_intensity = plt.axes([0.6, 0.15, 0.3, 0.03])             # <<<<<<<<<<<<<<
@@ -11578,7 +11578,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_axVmax_intensity = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":439
+  /* "plottings.pyx":439
  *         axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])
  *         axVmax_intensity = plt.axes([0.6, 0.15, 0.3, 0.03])
  *         axsave_LP11 = plt.axes([0.7, 0.25, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -11623,7 +11623,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_axsave_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":441
+  /* "plottings.pyx":441
  *         axsave_LP11 = plt.axes([0.7, 0.25, 0.1, 0.075])
  * 
  *         axsave_LP01 = plt.axes([0.7, 0.80, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -11668,7 +11668,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_axsave_LP01 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":443
+  /* "plottings.pyx":443
  *         axsave_LP01 = plt.axes([0.7, 0.80, 0.1, 0.075])
  * 
  *         axnext = plt.axes([0.8, 0.5, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -11713,7 +11713,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_axnext = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":444
+  /* "plottings.pyx":444
  * 
  *         axnext = plt.axes([0.8, 0.5, 0.1, 0.075])
  *         axprevious = plt.axes([0.6, 0.5, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -11758,7 +11758,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_axprevious = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":446
+  /* "plottings.pyx":446
  *         axprevious = plt.axes([0.6, 0.5, 0.1, 0.075])
  * 
  *         Min_LP11, Max_LP11 = np.min(self.dBscan_LP11)*0.7, np.max(self.dBscan_LP11)*1.2             # <<<<<<<<<<<<<<
@@ -11822,7 +11822,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_Max_LP11 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":447
+  /* "plottings.pyx":447
  * 
  *         Min_LP11, Max_LP11 = np.min(self.dBscan_LP11)*0.7, np.max(self.dBscan_LP11)*1.2
  *         Min_LP01, Max_LP01 = np.min(self.dBscan_LP01)*0.7, np.max(self.dBscan_LP01)*1.2             # <<<<<<<<<<<<<<
@@ -11886,7 +11886,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_Max_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":449
+  /* "plottings.pyx":449
  *         Min_LP01, Max_LP01 = np.min(self.dBscan_LP01)*0.7, np.max(self.dBscan_LP01)*1.2
  * 
  *         Nstep_LP11 = (Max_LP11 - Min_LP11)/100             # <<<<<<<<<<<<<<
@@ -11901,7 +11901,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_Nstep_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":450
+  /* "plottings.pyx":450
  * 
  *         Nstep_LP11 = (Max_LP11 - Min_LP11)/100
  *         Nstep_LP01 = (Max_LP01 - Min_LP01)/100             # <<<<<<<<<<<<<<
@@ -11916,7 +11916,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_Nstep_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":452
+  /* "plottings.pyx":452
  *         Nstep_LP01 = (Max_LP01 - Min_LP01)/100
  * 
  *         self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)             # <<<<<<<<<<<<<<
@@ -11951,7 +11951,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_SVmin_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 452, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":453
+  /* "plottings.pyx":453
  * 
  *         self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)
  *         self.SVmax_LP11 = Slider(axVmax_intensity, 'Vmax', Min_LP11, Max_LP11, valinit=Max_LP11, valstep=Nstep_LP11)             # <<<<<<<<<<<<<<
@@ -11986,7 +11986,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_SVmax_LP11, __pyx_t_2) < 0) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":454
+  /* "plottings.pyx":454
  *         self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)
  *         self.SVmax_LP11 = Slider(axVmax_intensity, 'Vmax', Min_LP11, Max_LP11, valinit=Max_LP11, valstep=Nstep_LP11)
  *         bsave_LP11 = Button(axsave_LP11, 'Save Bscan')             # <<<<<<<<<<<<<<
@@ -12043,7 +12043,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_bsave_LP11 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":456
+  /* "plottings.pyx":456
  *         bsave_LP11 = Button(axsave_LP11, 'Save Bscan')
  * 
  *         bsave_LP01 = Button(axsave_LP01, 'Save Bscan')             # <<<<<<<<<<<<<<
@@ -12100,7 +12100,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __pyx_v_bsave_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":458
+  /* "plottings.pyx":458
  *         bsave_LP01 = Button(axsave_LP01, 'Save Bscan')
  * 
  *         self.Bnext = Button(axnext, 'Next')             # <<<<<<<<<<<<<<
@@ -12157,7 +12157,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bnext, __pyx_t_2) < 0) __PYX_ERR(0, 458, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":459
+  /* "plottings.pyx":459
  * 
  *         self.Bnext = Button(axnext, 'Next')
  *         self.Bprevious = Button(axprevious, 'Previous')             # <<<<<<<<<<<<<<
@@ -12214,7 +12214,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bprevious, __pyx_t_2) < 0) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":462
+  /* "plottings.pyx":462
  * 
  * 
  *         self.ax1 = self.fig.add_subplot(221)             # <<<<<<<<<<<<<<
@@ -12244,7 +12244,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ax1, __pyx_t_2) < 0) __PYX_ERR(0, 462, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":463
+  /* "plottings.pyx":463
  * 
  *         self.ax1 = self.fig.add_subplot(221)
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,             # <<<<<<<<<<<<<<
@@ -12267,7 +12267,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":464
+  /* "plottings.pyx":464
  *         self.ax1 = self.fig.add_subplot(221)
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,
  *                                 cmap = "gray",             # <<<<<<<<<<<<<<
@@ -12278,7 +12278,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_cmap, __pyx_n_s_gray) < 0) __PYX_ERR(0, 464, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":465
+  /* "plottings.pyx":465
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,
  *                                 cmap = "gray",
  *                                 vmin=None,             # <<<<<<<<<<<<<<
@@ -12287,7 +12287,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmin, Py_None) < 0) __PYX_ERR(0, 464, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":466
+  /* "plottings.pyx":466
  *                                 cmap = "gray",
  *                                 vmin=None,
  *                                 vmax=None)             # <<<<<<<<<<<<<<
@@ -12296,7 +12296,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmax, Py_None) < 0) __PYX_ERR(0, 464, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":463
+  /* "plottings.pyx":463
  * 
  *         self.ax1 = self.fig.add_subplot(221)
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,             # <<<<<<<<<<<<<<
@@ -12311,7 +12311,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_l_LP01, __pyx_t_3) < 0) __PYX_ERR(0, 463, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":467
+  /* "plottings.pyx":467
  *                                 vmin=None,
  *                                 vmax=None)
  *         self.ax1.invert_yaxis()             # <<<<<<<<<<<<<<
@@ -12340,7 +12340,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":469
+  /* "plottings.pyx":469
  *         self.ax1.invert_yaxis()
  * 
  *         self.ax1.set_title("Processed Bscan LP01")             # <<<<<<<<<<<<<<
@@ -12369,7 +12369,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":471
+  /* "plottings.pyx":471
  *         self.ax1.set_title("Processed Bscan LP01")
  * 
  *         self.ax2 = self.fig.add_subplot(223)             # <<<<<<<<<<<<<<
@@ -12399,7 +12399,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ax2, __pyx_t_3) < 0) __PYX_ERR(0, 471, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":472
+  /* "plottings.pyx":472
  * 
  *         self.ax2 = self.fig.add_subplot(223)
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,             # <<<<<<<<<<<<<<
@@ -12422,7 +12422,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":473
+  /* "plottings.pyx":473
  *         self.ax2 = self.fig.add_subplot(223)
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,
  *                                    cmap = "gray",             # <<<<<<<<<<<<<<
@@ -12433,7 +12433,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_cmap, __pyx_n_s_gray) < 0) __PYX_ERR(0, 473, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":474
+  /* "plottings.pyx":474
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,
  *                                    cmap = "gray",
  *                                    vmin=None,             # <<<<<<<<<<<<<<
@@ -12442,7 +12442,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmin, Py_None) < 0) __PYX_ERR(0, 473, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":475
+  /* "plottings.pyx":475
  *                                    cmap = "gray",
  *                                    vmin=None,
  *                                    vmax=None)             # <<<<<<<<<<<<<<
@@ -12451,7 +12451,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmax, Py_None) < 0) __PYX_ERR(0, 473, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":472
+  /* "plottings.pyx":472
  * 
  *         self.ax2 = self.fig.add_subplot(223)
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,             # <<<<<<<<<<<<<<
@@ -12466,7 +12466,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_l_LP11, __pyx_t_4) < 0) __PYX_ERR(0, 472, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":476
+  /* "plottings.pyx":476
  *                                    vmin=None,
  *                                    vmax=None)
  *         self.ax2.invert_yaxis()             # <<<<<<<<<<<<<<
@@ -12495,7 +12495,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":477
+  /* "plottings.pyx":477
  *                                    vmax=None)
  *         self.ax2.invert_yaxis()
  *         self.ax2.set_title("Processed Bscan LP11")             # <<<<<<<<<<<<<<
@@ -12524,7 +12524,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":482
+  /* "plottings.pyx":482
  * 
  * 
  *         bsave_LP11.on_clicked(self.save_LP11)             # <<<<<<<<<<<<<<
@@ -12553,7 +12553,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":483
+  /* "plottings.pyx":483
  * 
  *         bsave_LP11.on_clicked(self.save_LP11)
  *         self.SVmin_LP11.on_changed(self.update_intensity)             # <<<<<<<<<<<<<<
@@ -12585,7 +12585,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":484
+  /* "plottings.pyx":484
  *         bsave_LP11.on_clicked(self.save_LP11)
  *         self.SVmin_LP11.on_changed(self.update_intensity)
  *         self.SVmax_LP11.on_changed(self.update_intensity)             # <<<<<<<<<<<<<<
@@ -12617,7 +12617,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":486
+  /* "plottings.pyx":486
  *         self.SVmax_LP11.on_changed(self.update_intensity)
  * 
  *         bsave_LP01.on_clicked(self.save_LP01)             # <<<<<<<<<<<<<<
@@ -12646,7 +12646,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":490
+  /* "plottings.pyx":490
  *         #self.SVmax_LP01.on_changed(self.update_LP01)
  * 
  *         self.Bnext.on_clicked(self.next)             # <<<<<<<<<<<<<<
@@ -12678,7 +12678,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":491
+  /* "plottings.pyx":491
  * 
  *         self.Bnext.on_clicked(self.next)
  *         self.Bprevious.on_clicked(self.previous)             # <<<<<<<<<<<<<<
@@ -12710,7 +12710,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":493
+  /* "plottings.pyx":493
  *         self.Bprevious.on_clicked(self.previous)
  * 
  *         plt.show()             # <<<<<<<<<<<<<<
@@ -12739,7 +12739,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":424
+  /* "plottings.pyx":424
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -12756,7 +12756,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.Bscan_lanterne_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.Bscan_lanterne_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_axVmin_intensity);
@@ -12778,7 +12778,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":503
+/* "plottings.pyx":503
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
@@ -12787,9 +12787,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_26Bscan_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_29__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_29__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_29__init__, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_29__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_29__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_29__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_29__init__, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_29__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_fig1 = 0;
   PyObject *__pyx_v_Bscan_LP01 = 0;
@@ -12859,23 +12859,23 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_29__init
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 503, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_28__init__(__pyx_self, __pyx_v_self, __pyx_v_fig1, __pyx_v_Bscan_LP01, __pyx_v_Bscan_LP11);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_28__init__(__pyx_self, __pyx_v_self, __pyx_v_fig1, __pyx_v_Bscan_LP01, __pyx_v_Bscan_LP11);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_28__init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_28__init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Bscan_LP01, PyObject *__pyx_v_Bscan_LP11) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "src/toolbox/plottings.pyx":504
+  /* "plottings.pyx":504
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):
  *         self.fig1 = fig1             # <<<<<<<<<<<<<<
@@ -12884,7 +12884,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_28__init
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fig1, __pyx_v_fig1) < 0) __PYX_ERR(0, 504, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":505
+  /* "plottings.pyx":505
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):
  *         self.fig1 = fig1
  *         self.Bscan_LP01 = Bscan_LP01             # <<<<<<<<<<<<<<
@@ -12893,7 +12893,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_28__init
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP01, __pyx_v_Bscan_LP01) < 0) __PYX_ERR(0, 505, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":506
+  /* "plottings.pyx":506
  *         self.fig1 = fig1
  *         self.Bscan_LP01 = Bscan_LP01
  *         self.Bscan_LP11 = Bscan_LP11             # <<<<<<<<<<<<<<
@@ -12902,7 +12902,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_28__init
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP11, __pyx_v_Bscan_LP11) < 0) __PYX_ERR(0, 506, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":503
+  /* "plottings.pyx":503
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
@@ -12914,7 +12914,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_28__init
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -12922,7 +12922,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_28__init
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":509
+/* "plottings.pyx":509
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -12931,9 +12931,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_28__init
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_31update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_31update_intensity = {"update_intensity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_31update_intensity, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_31update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_31update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_31update_intensity = {"update_intensity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_31update_intensity, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_31update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -12981,18 +12981,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_31update
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("update_intensity", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 509, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update_intensity(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_30update_intensity(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_30update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_Vmax_LP11 = NULL;
   PyObject *__pyx_v_Vmin_LP11 = NULL;
   PyObject *__pyx_v_Vmax_LP01 = NULL;
@@ -13004,7 +13004,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("update_intensity", 0);
 
-  /* "src/toolbox/plottings.pyx":510
+  /* "plottings.pyx":510
  * 
  *     def update_intensity(self, event):
  *         Vmax_LP11 = self.SVmax_LP11.val             # <<<<<<<<<<<<<<
@@ -13019,7 +13019,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   __pyx_v_Vmax_LP11 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":511
+  /* "plottings.pyx":511
  *     def update_intensity(self, event):
  *         Vmax_LP11 = self.SVmax_LP11.val
  *         Vmin_LP11 = self.SVmin_LP11.val             # <<<<<<<<<<<<<<
@@ -13034,7 +13034,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   __pyx_v_Vmin_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":512
+  /* "plottings.pyx":512
  *         Vmax_LP11 = self.SVmax_LP11.val
  *         Vmin_LP11 = self.SVmin_LP11.val
  *         self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)             # <<<<<<<<<<<<<<
@@ -13056,7 +13056,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":513
+  /* "plottings.pyx":513
  *         Vmin_LP11 = self.SVmin_LP11.val
  *         self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)
  *         Vmax_LP01 = self.SVmax_LP11.val             # <<<<<<<<<<<<<<
@@ -13071,7 +13071,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   __pyx_v_Vmax_LP01 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":514
+  /* "plottings.pyx":514
  *         self.l_LP11.set_clim(vmin=Vmin_LP11, vmax=Vmax_LP11)
  *         Vmax_LP01 = self.SVmax_LP11.val
  *         Vmin_LP01 = self.SVmin_LP11.val             # <<<<<<<<<<<<<<
@@ -13086,7 +13086,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   __pyx_v_Vmin_LP01 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":515
+  /* "plottings.pyx":515
  *         Vmax_LP01 = self.SVmax_LP11.val
  *         Vmin_LP01 = self.SVmin_LP11.val
  *         self.l_LP01.set_clim(vmin=Vmin_LP01, vmax=Vmax_LP01)             # <<<<<<<<<<<<<<
@@ -13108,7 +13108,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":516
+  /* "plottings.pyx":516
  *         Vmin_LP01 = self.SVmin_LP11.val
  *         self.l_LP01.set_clim(vmin=Vmin_LP01, vmax=Vmax_LP01)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -13140,7 +13140,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":509
+  /* "plottings.pyx":509
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -13155,7 +13155,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Vmax_LP11);
@@ -13167,7 +13167,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":519
+/* "plottings.pyx":519
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -13176,9 +13176,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_30update
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_33next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_33next = {"next", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_33next, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_33next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_33next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_33next = {"next", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_33next, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_33next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -13226,18 +13226,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_33next(P
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("next", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 519, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_32next(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_32next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -13247,7 +13247,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(C
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("next", 0);
 
-  /* "src/toolbox/plottings.pyx":520
+  /* "plottings.pyx":520
  * 
  *     def next(self, event):
  *         self.N_plot += 1             # <<<<<<<<<<<<<<
@@ -13262,7 +13262,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(C
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_t_2) < 0) __PYX_ERR(0, 520, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":521
+  /* "plottings.pyx":521
  *     def next(self, event):
  *         self.N_plot += 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -13303,7 +13303,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(C
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":522
+  /* "plottings.pyx":522
  *         self.N_plot += 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -13344,7 +13344,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(C
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":523
+  /* "plottings.pyx":523
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -13376,7 +13376,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(C
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":519
+  /* "plottings.pyx":519
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -13393,7 +13393,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(C
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -13401,7 +13401,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(C
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":526
+/* "plottings.pyx":526
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -13410,9 +13410,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_32next(C
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_35previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_35previous = {"previous", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_35previous, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_35previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_35previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_35previous = {"previous", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_35previous, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_35previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -13460,18 +13460,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_35previo
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("previous", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 526, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previous(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_34previous(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_34previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -13481,7 +13481,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previo
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("previous", 0);
 
-  /* "src/toolbox/plottings.pyx":527
+  /* "plottings.pyx":527
  * 
  *     def previous(self, event):
  *         self.N_plot -= 1             # <<<<<<<<<<<<<<
@@ -13496,7 +13496,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previo
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_t_2) < 0) __PYX_ERR(0, 527, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":528
+  /* "plottings.pyx":528
  *     def previous(self, event):
  *         self.N_plot -= 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -13537,7 +13537,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previo
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":529
+  /* "plottings.pyx":529
  *         self.N_plot -= 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)             # <<<<<<<<<<<<<<
@@ -13578,7 +13578,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previo
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":530
+  /* "plottings.pyx":530
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  *         self.l_LP11.set_data(self.dBscan_LP11[self.N_plot].T)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -13610,7 +13610,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previo
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":526
+  /* "plottings.pyx":526
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -13627,7 +13627,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previo
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -13635,7 +13635,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previo
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":533
+/* "plottings.pyx":533
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -13644,9 +13644,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_34previo
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_37save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_37save_LP11 = {"save_LP11", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_37save_LP11, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_37save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_37save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_37save_LP11 = {"save_LP11", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_37save_LP11, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_37save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -13694,18 +13694,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_37save_L
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save_LP11", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 533, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_LP11(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_36save_LP11(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_36save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_save_dir = NULL;
   PyObject *__pyx_v_extent = NULL;
   PyObject *__pyx_r = NULL;
@@ -13717,7 +13717,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_L
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("save_LP11", 0);
 
-  /* "src/toolbox/plottings.pyx":534
+  /* "plottings.pyx":534
  * 
  *     def save_LP11(self, event):
  *         save_dir = "results/"             # <<<<<<<<<<<<<<
@@ -13727,7 +13727,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_L
   __Pyx_INCREF(__pyx_kp_s_results);
   __pyx_v_save_dir = __pyx_kp_s_results;
 
-  /* "src/toolbox/plottings.pyx":535
+  /* "plottings.pyx":535
  *     def save_LP11(self, event):
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())             # <<<<<<<<<<<<<<
@@ -13799,7 +13799,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_L
   __pyx_v_extent = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":536
+  /* "plottings.pyx":536
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  *         plt.savefig(save_dir + "figure_" + 'LP11', bbox_inches=extent)             # <<<<<<<<<<<<<<
@@ -13831,7 +13831,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_L
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":533
+  /* "plottings.pyx":533
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -13848,7 +13848,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_L
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_save_dir);
@@ -13858,7 +13858,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_L
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":539
+/* "plottings.pyx":539
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -13867,9 +13867,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_36save_L
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_39save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_39save_LP01 = {"save_LP01", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_39save_LP01, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_39save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_39save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_39save_LP01 = {"save_LP01", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_39save_LP01, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_39save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -13917,18 +13917,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_39save_L
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save_LP01", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 539, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_LP01(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_38save_LP01(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_38save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_save_dir = NULL;
   PyObject *__pyx_v_extent = NULL;
   PyObject *__pyx_r = NULL;
@@ -13940,7 +13940,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_L
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("save_LP01", 0);
 
-  /* "src/toolbox/plottings.pyx":540
+  /* "plottings.pyx":540
  * 
  *     def save_LP01(self, event):
  *         save_dir = "results/"             # <<<<<<<<<<<<<<
@@ -13950,7 +13950,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_L
   __Pyx_INCREF(__pyx_kp_s_results);
   __pyx_v_save_dir = __pyx_kp_s_results;
 
-  /* "src/toolbox/plottings.pyx":541
+  /* "plottings.pyx":541
  *     def save_LP01(self, event):
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())             # <<<<<<<<<<<<<<
@@ -14022,7 +14022,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_L
   __pyx_v_extent = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":542
+  /* "plottings.pyx":542
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  *         plt.savefig(save_dir + "figure_" + 'LP01', bbox_inches=extent)             # <<<<<<<<<<<<<<
@@ -14054,7 +14054,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_L
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":539
+  /* "plottings.pyx":539
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -14071,7 +14071,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_L
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_save_dir);
@@ -14081,7 +14081,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_L
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":545
+/* "plottings.pyx":545
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -14090,20 +14090,20 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_38save_L
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots = {"Bscan_lanterne_plots", (PyCFunction)__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots, METH_O, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots = {"Bscan_lanterne_plots", (PyCFunction)__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots, METH_O, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("Bscan_lanterne_plots (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_lanterne_plots(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Bscan_vizualiser_40Bscan_lanterne_plots(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Bscan_vizualiser_40Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_axVmin_intensity = NULL;
   PyObject *__pyx_v_axVmax_intensity = NULL;
   PyObject *__pyx_v_axsave_LP11 = NULL;
@@ -14128,7 +14128,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("Bscan_lanterne_plots", 0);
 
-  /* "src/toolbox/plottings.pyx":547
+  /* "plottings.pyx":547
  *     def Bscan_lanterne_plots(self):
  * 
  *         self.Bscan_LP01 = np.array(self.Bscan_LP01)             # <<<<<<<<<<<<<<
@@ -14161,7 +14161,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP01, __pyx_t_1) < 0) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":548
+  /* "plottings.pyx":548
  * 
  *         self.Bscan_LP01 = np.array(self.Bscan_LP01)
  *         self.Bscan_LP11 = np.array(self.Bscan_LP11)             # <<<<<<<<<<<<<<
@@ -14194,7 +14194,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bscan_LP11, __pyx_t_1) < 0) __PYX_ERR(0, 548, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":550
+  /* "plottings.pyx":550
  *         self.Bscan_LP11 = np.array(self.Bscan_LP11)
  * 
  *         self.dBscan_LP11 = 10*np.log(self.Bscan_LP11)             # <<<<<<<<<<<<<<
@@ -14230,7 +14230,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 550, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":551
+  /* "plottings.pyx":551
  * 
  *         self.dBscan_LP11 = 10*np.log(self.Bscan_LP11)
  *         self.dBscan_LP01 = 10*np.log(self.Bscan_LP01)             # <<<<<<<<<<<<<<
@@ -14266,7 +14266,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan_LP01, __pyx_t_2) < 0) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":553
+  /* "plottings.pyx":553
  *         self.dBscan_LP01 = 10*np.log(self.Bscan_LP01)
  * 
  *         self.fig = plt.figure(figsize=(16,10))             # <<<<<<<<<<<<<<
@@ -14288,7 +14288,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fig, __pyx_t_1) < 0) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":555
+  /* "plottings.pyx":555
  *         self.fig = plt.figure(figsize=(16,10))
  * 
  *         self.N_plot = 0             # <<<<<<<<<<<<<<
@@ -14297,7 +14297,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_int_0) < 0) __PYX_ERR(0, 555, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":558
+  /* "plottings.pyx":558
  * 
  * 
  *         axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])             # <<<<<<<<<<<<<<
@@ -14342,7 +14342,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_axVmin_intensity = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":559
+  /* "plottings.pyx":559
  * 
  *         axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])
  *         axVmax_intensity = plt.axes([0.6, 0.15, 0.3, 0.03])             # <<<<<<<<<<<<<<
@@ -14387,7 +14387,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_axVmax_intensity = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":560
+  /* "plottings.pyx":560
  *         axVmin_intensity = plt.axes([0.6, 0.1, 0.3, 0.03])
  *         axVmax_intensity = plt.axes([0.6, 0.15, 0.3, 0.03])
  *         axsave_LP11 = plt.axes([0.7, 0.25, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -14432,7 +14432,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_axsave_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":562
+  /* "plottings.pyx":562
  *         axsave_LP11 = plt.axes([0.7, 0.25, 0.1, 0.075])
  * 
  *         axsave_LP01 = plt.axes([0.7, 0.80, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -14477,7 +14477,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_axsave_LP01 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":564
+  /* "plottings.pyx":564
  *         axsave_LP01 = plt.axes([0.7, 0.80, 0.1, 0.075])
  * 
  *         axnext = plt.axes([0.8, 0.5, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -14522,7 +14522,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_axnext = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":565
+  /* "plottings.pyx":565
  * 
  *         axnext = plt.axes([0.8, 0.5, 0.1, 0.075])
  *         axprevious = plt.axes([0.6, 0.5, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -14567,7 +14567,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_axprevious = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":567
+  /* "plottings.pyx":567
  *         axprevious = plt.axes([0.6, 0.5, 0.1, 0.075])
  * 
  *         Min_LP11, Max_LP11 = np.min(self.dBscan_LP11)*0.7, np.max(self.dBscan_LP11)*1.2             # <<<<<<<<<<<<<<
@@ -14631,7 +14631,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_Max_LP11 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":568
+  /* "plottings.pyx":568
  * 
  *         Min_LP11, Max_LP11 = np.min(self.dBscan_LP11)*0.7, np.max(self.dBscan_LP11)*1.2
  *         Min_LP01, Max_LP01 = np.min(self.dBscan_LP01)*0.7, np.max(self.dBscan_LP01)*1.2             # <<<<<<<<<<<<<<
@@ -14695,7 +14695,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_Max_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":570
+  /* "plottings.pyx":570
  *         Min_LP01, Max_LP01 = np.min(self.dBscan_LP01)*0.7, np.max(self.dBscan_LP01)*1.2
  * 
  *         Nstep_LP11 = (Max_LP11 - Min_LP11)/100             # <<<<<<<<<<<<<<
@@ -14710,7 +14710,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_Nstep_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":571
+  /* "plottings.pyx":571
  * 
  *         Nstep_LP11 = (Max_LP11 - Min_LP11)/100
  *         Nstep_LP01 = (Max_LP01 - Min_LP01)/100             # <<<<<<<<<<<<<<
@@ -14725,7 +14725,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_Nstep_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":573
+  /* "plottings.pyx":573
  *         Nstep_LP01 = (Max_LP01 - Min_LP01)/100
  * 
  *         self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)             # <<<<<<<<<<<<<<
@@ -14760,7 +14760,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_SVmin_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 573, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":574
+  /* "plottings.pyx":574
  * 
  *         self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)
  *         self.SVmax_LP11 = Slider(axVmax_intensity, 'Vmax', Min_LP11, Max_LP11, valinit=Max_LP11, valstep=Nstep_LP11)             # <<<<<<<<<<<<<<
@@ -14795,7 +14795,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_SVmax_LP11, __pyx_t_2) < 0) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":575
+  /* "plottings.pyx":575
  *         self.SVmin_LP11 = Slider(axVmin_intensity, 'Vmin', Min_LP11, Max_LP11, valinit=Min_LP11, valstep=Nstep_LP11)
  *         self.SVmax_LP11 = Slider(axVmax_intensity, 'Vmax', Min_LP11, Max_LP11, valinit=Max_LP11, valstep=Nstep_LP11)
  *         bsave_LP11 = Button(axsave_LP11, 'Save Bscan')             # <<<<<<<<<<<<<<
@@ -14852,7 +14852,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_bsave_LP11 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":577
+  /* "plottings.pyx":577
  *         bsave_LP11 = Button(axsave_LP11, 'Save Bscan')
  * 
  *         bsave_LP01 = Button(axsave_LP01, 'Save Bscan')             # <<<<<<<<<<<<<<
@@ -14909,7 +14909,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __pyx_v_bsave_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":579
+  /* "plottings.pyx":579
  *         bsave_LP01 = Button(axsave_LP01, 'Save Bscan')
  * 
  *         self.Bnext = Button(axnext, 'Next')             # <<<<<<<<<<<<<<
@@ -14966,7 +14966,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bnext, __pyx_t_2) < 0) __PYX_ERR(0, 579, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":580
+  /* "plottings.pyx":580
  * 
  *         self.Bnext = Button(axnext, 'Next')
  *         self.Bprevious = Button(axprevious, 'Previous')             # <<<<<<<<<<<<<<
@@ -15023,7 +15023,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bprevious, __pyx_t_2) < 0) __PYX_ERR(0, 580, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":583
+  /* "plottings.pyx":583
  * 
  * 
  *         self.ax1 = self.fig.add_subplot(221)             # <<<<<<<<<<<<<<
@@ -15053,7 +15053,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ax1, __pyx_t_2) < 0) __PYX_ERR(0, 583, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":584
+  /* "plottings.pyx":584
  * 
  *         self.ax1 = self.fig.add_subplot(221)
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,             # <<<<<<<<<<<<<<
@@ -15076,7 +15076,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":585
+  /* "plottings.pyx":585
  *         self.ax1 = self.fig.add_subplot(221)
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,
  *                                 cmap = "gray",             # <<<<<<<<<<<<<<
@@ -15087,7 +15087,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_cmap, __pyx_n_s_gray) < 0) __PYX_ERR(0, 585, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":586
+  /* "plottings.pyx":586
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,
  *                                 cmap = "gray",
  *                                 vmin=None,             # <<<<<<<<<<<<<<
@@ -15096,7 +15096,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmin, Py_None) < 0) __PYX_ERR(0, 585, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":587
+  /* "plottings.pyx":587
  *                                 cmap = "gray",
  *                                 vmin=None,
  *                                 vmax=None)             # <<<<<<<<<<<<<<
@@ -15105,7 +15105,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmax, Py_None) < 0) __PYX_ERR(0, 585, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":584
+  /* "plottings.pyx":584
  * 
  *         self.ax1 = self.fig.add_subplot(221)
  *         self.l_LP01 = self.ax1.imshow(self.dBscan_LP01.T,             # <<<<<<<<<<<<<<
@@ -15120,7 +15120,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_l_LP01, __pyx_t_3) < 0) __PYX_ERR(0, 584, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":588
+  /* "plottings.pyx":588
  *                                 vmin=None,
  *                                 vmax=None)
  *         self.ax1.invert_yaxis()             # <<<<<<<<<<<<<<
@@ -15149,7 +15149,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":590
+  /* "plottings.pyx":590
  *         self.ax1.invert_yaxis()
  * 
  *         self.ax1.set_title("Processed Bscan LP01")             # <<<<<<<<<<<<<<
@@ -15178,7 +15178,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":592
+  /* "plottings.pyx":592
  *         self.ax1.set_title("Processed Bscan LP01")
  * 
  *         self.ax2 = self.fig.add_subplot(223)             # <<<<<<<<<<<<<<
@@ -15208,7 +15208,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ax2, __pyx_t_3) < 0) __PYX_ERR(0, 592, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":593
+  /* "plottings.pyx":593
  * 
  *         self.ax2 = self.fig.add_subplot(223)
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,             # <<<<<<<<<<<<<<
@@ -15231,7 +15231,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":594
+  /* "plottings.pyx":594
  *         self.ax2 = self.fig.add_subplot(223)
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,
  *                                    cmap = "gray",             # <<<<<<<<<<<<<<
@@ -15242,7 +15242,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_cmap, __pyx_n_s_gray) < 0) __PYX_ERR(0, 594, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":595
+  /* "plottings.pyx":595
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,
  *                                    cmap = "gray",
  *                                    vmin=None,             # <<<<<<<<<<<<<<
@@ -15251,7 +15251,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmin, Py_None) < 0) __PYX_ERR(0, 594, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":596
+  /* "plottings.pyx":596
  *                                    cmap = "gray",
  *                                    vmin=None,
  *                                    vmax=None)             # <<<<<<<<<<<<<<
@@ -15260,7 +15260,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmax, Py_None) < 0) __PYX_ERR(0, 594, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":593
+  /* "plottings.pyx":593
  * 
  *         self.ax2 = self.fig.add_subplot(223)
  *         self.l_LP11 = self.ax2.imshow(self.dBscan_LP11.T,             # <<<<<<<<<<<<<<
@@ -15275,7 +15275,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_l_LP11, __pyx_t_4) < 0) __PYX_ERR(0, 593, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":597
+  /* "plottings.pyx":597
  *                                    vmin=None,
  *                                    vmax=None)
  *         self.ax2.invert_yaxis()             # <<<<<<<<<<<<<<
@@ -15304,7 +15304,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":598
+  /* "plottings.pyx":598
  *                                    vmax=None)
  *         self.ax2.invert_yaxis()
  *         self.ax2.set_title("Processed Bscan LP11")             # <<<<<<<<<<<<<<
@@ -15333,7 +15333,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":603
+  /* "plottings.pyx":603
  * 
  * 
  *         bsave_LP11.on_clicked(self.save_LP11)             # <<<<<<<<<<<<<<
@@ -15362,7 +15362,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":604
+  /* "plottings.pyx":604
  * 
  *         bsave_LP11.on_clicked(self.save_LP11)
  *         self.SVmin_LP11.on_changed(self.update_intensity)             # <<<<<<<<<<<<<<
@@ -15394,7 +15394,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":605
+  /* "plottings.pyx":605
  *         bsave_LP11.on_clicked(self.save_LP11)
  *         self.SVmin_LP11.on_changed(self.update_intensity)
  *         self.SVmax_LP11.on_changed(self.update_intensity)             # <<<<<<<<<<<<<<
@@ -15426,7 +15426,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":607
+  /* "plottings.pyx":607
  *         self.SVmax_LP11.on_changed(self.update_intensity)
  * 
  *         bsave_LP01.on_clicked(self.save_LP01)             # <<<<<<<<<<<<<<
@@ -15455,7 +15455,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":611
+  /* "plottings.pyx":611
  *         #self.SVmax_LP01.on_changed(self.update_LP01)
  * 
  *         self.Bnext.on_clicked(self.next)             # <<<<<<<<<<<<<<
@@ -15487,7 +15487,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":612
+  /* "plottings.pyx":612
  * 
  *         self.Bnext.on_clicked(self.next)
  *         self.Bprevious.on_clicked(self.previous)             # <<<<<<<<<<<<<<
@@ -15519,7 +15519,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":614
+  /* "plottings.pyx":614
  *         self.Bprevious.on_clicked(self.previous)
  * 
  *         plt.show()             # <<<<<<<<<<<<<<
@@ -15548,7 +15548,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":545
+  /* "plottings.pyx":545
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -15565,7 +15565,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Bscan_vizualiser.Bscan_lanterne_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Bscan_vizualiser.Bscan_lanterne_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_axVmin_intensity);
@@ -15587,7 +15587,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":621
+/* "plottings.pyx":621
  * 
  * 
  *     def __init__(self, fig1, Cscan_LP01, Cscan_LP11):             # <<<<<<<<<<<<<<
@@ -15596,9 +15596,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Bscan_vizualiser_40Bscan_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_fig1 = 0;
   PyObject *__pyx_v_Cscan_LP01 = 0;
@@ -15668,18 +15668,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_1__init_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 621, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__(__pyx_self, __pyx_v_self, __pyx_v_fig1, __pyx_v_Cscan_LP01, __pyx_v_Cscan_LP11);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Cscan_vizualiser___init__(__pyx_self, __pyx_v_self, __pyx_v_fig1, __pyx_v_Cscan_LP01, __pyx_v_Cscan_LP11);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Cscan_LP01, PyObject *__pyx_v_Cscan_LP11) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fig1, PyObject *__pyx_v_Cscan_LP01, PyObject *__pyx_v_Cscan_LP11) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -15689,7 +15689,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "src/toolbox/plottings.pyx":622
+  /* "plottings.pyx":622
  * 
  *     def __init__(self, fig1, Cscan_LP01, Cscan_LP11):
  *         self.fig1 = fig1             # <<<<<<<<<<<<<<
@@ -15698,7 +15698,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fig1, __pyx_v_fig1) < 0) __PYX_ERR(0, 622, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":623
+  /* "plottings.pyx":623
  *     def __init__(self, fig1, Cscan_LP01, Cscan_LP11):
  *         self.fig1 = fig1
  *         self.dCscan_LP01 = np.array(10*np.log(Cscan_LP01))             # <<<<<<<<<<<<<<
@@ -15752,7 +15752,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dCscan_LP01, __pyx_t_1) < 0) __PYX_ERR(0, 623, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":624
+  /* "plottings.pyx":624
  *         self.fig1 = fig1
  *         self.dCscan_LP01 = np.array(10*np.log(Cscan_LP01))
  *         self.dCscan_LP11 = np.array(10*np.log(Cscan_LP11))             # <<<<<<<<<<<<<<
@@ -15806,7 +15806,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dCscan_LP11, __pyx_t_1) < 0) __PYX_ERR(0, 624, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":621
+  /* "plottings.pyx":621
  * 
  * 
  *     def __init__(self, fig1, Cscan_LP01, Cscan_LP11):             # <<<<<<<<<<<<<<
@@ -15823,7 +15823,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -15831,7 +15831,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":627
+/* "plottings.pyx":627
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -15840,9 +15840,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser___init__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_3update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_3update_intensity = {"update_intensity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_3update_intensity, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_3update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_3update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_3update_intensity = {"update_intensity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_3update_intensity, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_3update_intensity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -15890,18 +15890,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_3update_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("update_intensity", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 627, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_intensity(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Cscan_vizualiser_2update_intensity(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_2update_intensity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -15910,7 +15910,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("update_intensity", 0);
 
-  /* "src/toolbox/plottings.pyx":629
+  /* "plottings.pyx":629
  *     def update_intensity(self, event):
  * 
  *         self.l_LP11.set_clim(vmin=self.SVmin.val, vmax=self.SVmax.val)             # <<<<<<<<<<<<<<
@@ -15944,7 +15944,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":630
+  /* "plottings.pyx":630
  * 
  *         self.l_LP11.set_clim(vmin=self.SVmin.val, vmax=self.SVmax.val)
  *         self.l_LP01.set_clim(vmin=self.SVmin.val, vmax=self.SVmax.val)             # <<<<<<<<<<<<<<
@@ -15978,7 +15978,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":632
+  /* "plottings.pyx":632
  *         self.l_LP01.set_clim(vmin=self.SVmin.val, vmax=self.SVmax.val)
  * 
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -16010,7 +16010,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":627
+  /* "plottings.pyx":627
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -16026,7 +16026,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.update_intensity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -16034,7 +16034,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":635
+/* "plottings.pyx":635
  * 
  * 
  *     def submit(self, text):             # <<<<<<<<<<<<<<
@@ -16043,9 +16043,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_2update_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_5submit(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_5submit = {"submit", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_5submit, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_5submit(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_5submit(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_5submit = {"submit", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_5submit, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_5submit(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_text = 0;
   PyObject *__pyx_r = 0;
@@ -16093,18 +16093,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_5submit(
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("submit", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 635, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.submit", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.submit", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(__pyx_self, __pyx_v_self, __pyx_v_text);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Cscan_vizualiser_4submit(__pyx_self, __pyx_v_self, __pyx_v_text);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_text) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_4submit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_text) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -16113,7 +16113,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("submit", 0);
 
-  /* "src/toolbox/plottings.pyx":636
+  /* "plottings.pyx":636
  * 
  *     def submit(self, text):
  *         self.N_plot = eval(text)             # <<<<<<<<<<<<<<
@@ -16147,7 +16147,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_t_2) < 0) __PYX_ERR(0, 636, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":637
+  /* "plottings.pyx":637
  *     def submit(self, text):
  *         self.N_plot = eval(text)
  *         self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T             # <<<<<<<<<<<<<<
@@ -16179,7 +16179,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan, __pyx_t_1) < 0) __PYX_ERR(0, 637, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":639
+  /* "plottings.pyx":639
  *         self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T
  * 
  *         self.l_LP01.set_data(self.dBscan)             # <<<<<<<<<<<<<<
@@ -16211,7 +16211,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":640
+  /* "plottings.pyx":640
  * 
  *         self.l_LP01.set_data(self.dBscan)
  *         self.l_LP11.set_data(self.dBscan)             # <<<<<<<<<<<<<<
@@ -16243,7 +16243,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":642
+  /* "plottings.pyx":642
  *         self.l_LP11.set_data(self.dBscan)
  * 
  *         self.normalize_image()             # <<<<<<<<<<<<<<
@@ -16269,7 +16269,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":645
+  /* "plottings.pyx":645
  * 
  * 
  *         self.textbox.set_val(self.N_plot)             # <<<<<<<<<<<<<<
@@ -16301,7 +16301,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":646
+  /* "plottings.pyx":646
  * 
  *         self.textbox.set_val(self.N_plot)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -16333,7 +16333,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":635
+  /* "plottings.pyx":635
  * 
  * 
  *     def submit(self, text):             # <<<<<<<<<<<<<<
@@ -16349,7 +16349,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.submit", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.submit", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -16357,7 +16357,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":649
+/* "plottings.pyx":649
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -16366,9 +16366,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_4submit(
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_7next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_7next = {"next", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_7next, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_7next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_7next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_7next = {"next", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_7next, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_7next(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -16416,18 +16416,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_7next(Py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("next", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 649, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Cscan_vizualiser_6next(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_6next(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -16439,7 +16439,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("next", 0);
 
-  /* "src/toolbox/plottings.pyx":650
+  /* "plottings.pyx":650
  * 
  *     def next(self, event):
  *         self.N_plot += 1             # <<<<<<<<<<<<<<
@@ -16454,7 +16454,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_t_2) < 0) __PYX_ERR(0, 650, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":652
+  /* "plottings.pyx":652
  *         self.N_plot += 1
  * 
  *         self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T             # <<<<<<<<<<<<<<
@@ -16486,7 +16486,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan, __pyx_t_3) < 0) __PYX_ERR(0, 652, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":654
+  /* "plottings.pyx":654
  *         self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T
  * 
  *         self.normalize_image()             # <<<<<<<<<<<<<<
@@ -16512,7 +16512,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":656
+  /* "plottings.pyx":656
  *         self.normalize_image()
  * 
  *         self.l_LP01.set_data(self.dBscan - np.mean(self.dBscan))             # <<<<<<<<<<<<<<
@@ -16571,7 +16571,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":657
+  /* "plottings.pyx":657
  * 
  *         self.l_LP01.set_data(self.dBscan - np.mean(self.dBscan))
  *         self.l_LP11.set_data(self.dBscan - np.mean(self.dBscan))             # <<<<<<<<<<<<<<
@@ -16630,7 +16630,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":658
+  /* "plottings.pyx":658
  *         self.l_LP01.set_data(self.dBscan - np.mean(self.dBscan))
  *         self.l_LP11.set_data(self.dBscan - np.mean(self.dBscan))
  *         self.textbox.set_val(self.N_plot)             # <<<<<<<<<<<<<<
@@ -16662,7 +16662,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":659
+  /* "plottings.pyx":659
  *         self.l_LP11.set_data(self.dBscan - np.mean(self.dBscan))
  *         self.textbox.set_val(self.N_plot)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -16694,7 +16694,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":649
+  /* "plottings.pyx":649
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -16713,7 +16713,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.next", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -16721,7 +16721,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":662
+/* "plottings.pyx":662
  * 
  * 
  *     def normalize_image(self):             # <<<<<<<<<<<<<<
@@ -16730,20 +16730,20 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_6next(CY
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_9normalize_image(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_9normalize_image = {"normalize_image", (PyCFunction)__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_9normalize_image, METH_O, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_9normalize_image(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_9normalize_image(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_9normalize_image = {"normalize_image", (PyCFunction)__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_9normalize_image, METH_O, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_9normalize_image(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("normalize_image (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normalize_image(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Cscan_vizualiser_8normalize_image(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normalize_image(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_8normalize_image(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_range = NULL;
   PyObject *__pyx_v_std_range = NULL;
   PyObject *__pyx_r = NULL;
@@ -16759,7 +16759,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("normalize_image", 0);
 
-  /* "src/toolbox/plottings.pyx":664
+  /* "plottings.pyx":664
  *     def normalize_image(self):
  * 
  *         self.dBscan -= np.mean(self.dBscan) - 255/2             # <<<<<<<<<<<<<<
@@ -16801,7 +16801,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan, __pyx_t_2) < 0) __PYX_ERR(0, 664, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":666
+  /* "plottings.pyx":666
  *         self.dBscan -= np.mean(self.dBscan) - 255/2
  * 
  *         self.ax3.cla()             # <<<<<<<<<<<<<<
@@ -16830,7 +16830,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":667
+  /* "plottings.pyx":667
  * 
  *         self.ax3.cla()
  *         self.ax3.hist(self.dBscan.ravel(),255)             # <<<<<<<<<<<<<<
@@ -16911,7 +16911,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":669
+  /* "plottings.pyx":669
  *         self.ax3.hist(self.dBscan.ravel(),255)
  * 
  *         range = max( np.abs(np.max(self.dBscan)-255/2), np.abs(np.min(self.dBscan)-255/2) )             # <<<<<<<<<<<<<<
@@ -17030,7 +17030,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __pyx_v_range = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":670
+  /* "plottings.pyx":670
  * 
  *         range = max( np.abs(np.max(self.dBscan)-255/2), np.abs(np.min(self.dBscan)-255/2) )
  *         std_range = 3 * np.std(self.dBscan)             # <<<<<<<<<<<<<<
@@ -17066,7 +17066,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __pyx_v_std_range = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":671
+  /* "plottings.pyx":671
  *         range = max( np.abs(np.max(self.dBscan)-255/2), np.abs(np.min(self.dBscan)-255/2) )
  *         std_range = 3 * np.std(self.dBscan)
  *         range = 5 * std_range             # <<<<<<<<<<<<<<
@@ -17078,7 +17078,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF_SET(__pyx_v_range, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":672
+  /* "plottings.pyx":672
  *         std_range = 3 * np.std(self.dBscan)
  *         range = 5 * std_range
  *         print(std_range)             # <<<<<<<<<<<<<<
@@ -17087,7 +17087,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
  */
   if (__Pyx_PrintOne(0, __pyx_v_std_range) < 0) __PYX_ERR(0, 672, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":674
+  /* "plottings.pyx":674
  *         print(std_range)
  * 
  *         self.ax3.set_xlim(255/2 - range,255/2 + range)             # <<<<<<<<<<<<<<
@@ -17154,7 +17154,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":679
+  /* "plottings.pyx":679
  * 
  * 
  *         self.SVmin.valmin = 255/2 - range             # <<<<<<<<<<<<<<
@@ -17169,7 +17169,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":680
+  /* "plottings.pyx":680
  * 
  *         self.SVmin.valmin = 255/2 - range
  *         self.SVmin.valmax = 255/2 + range             # <<<<<<<<<<<<<<
@@ -17184,7 +17184,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":681
+  /* "plottings.pyx":681
  *         self.SVmin.valmin = 255/2 - range
  *         self.SVmin.valmax = 255/2 + range
  *         self.SVmax.valmin = 255/2 - range             # <<<<<<<<<<<<<<
@@ -17199,7 +17199,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":682
+  /* "plottings.pyx":682
  *         self.SVmin.valmax = 255/2 + range
  *         self.SVmax.valmin = 255/2 - range
  *         self.SVmax.valmax = 255/2 + range             # <<<<<<<<<<<<<<
@@ -17214,7 +17214,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":684
+  /* "plottings.pyx":684
  *         self.SVmax.valmax = 255/2 + range
  * 
  *         self.SVmin.ax.set_xlim(self.SVmin.valmin,             # <<<<<<<<<<<<<<
@@ -17235,7 +17235,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":685
+  /* "plottings.pyx":685
  * 
  *         self.SVmin.ax.set_xlim(self.SVmin.valmin,
  *                                self.SVmin.valmax)             # <<<<<<<<<<<<<<
@@ -17298,7 +17298,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":687
+  /* "plottings.pyx":687
  *                                self.SVmin.valmax)
  * 
  *         self.SVmax.ax.set_xlim(self.SVmax.valmin,             # <<<<<<<<<<<<<<
@@ -17319,7 +17319,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "src/toolbox/plottings.pyx":688
+  /* "plottings.pyx":688
  * 
  *         self.SVmax.ax.set_xlim(self.SVmax.valmin,
  *                                self.SVmax.valmax)             # <<<<<<<<<<<<<<
@@ -17382,7 +17382,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":692
+  /* "plottings.pyx":692
  * 
  * 
  *         self.SVmin.val = 255/2 - std_range             # <<<<<<<<<<<<<<
@@ -17397,7 +17397,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":693
+  /* "plottings.pyx":693
  * 
  *         self.SVmin.val = 255/2 - std_range
  *         self.SVmax.val = 255/2 + std_range             # <<<<<<<<<<<<<<
@@ -17412,7 +17412,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":694
+  /* "plottings.pyx":694
  *         self.SVmin.val = 255/2 - std_range
  *         self.SVmax.val = 255/2 + std_range
  *         self.SVmax.set_value = 1             # <<<<<<<<<<<<<<
@@ -17424,7 +17424,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   if (__Pyx_PyObject_SetAttrStr(__pyx_t_3, __pyx_n_s_set_value, __pyx_int_1) < 0) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":697
+  /* "plottings.pyx":697
  * 
  * 
  *         self.l_LP01.set_clim(vmin=255/2 - std_range,             # <<<<<<<<<<<<<<
@@ -17443,7 +17443,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_vmin, __pyx_t_1) < 0) __PYX_ERR(0, 697, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":698
+  /* "plottings.pyx":698
  * 
  *         self.l_LP01.set_clim(vmin=255/2 - std_range,
  *                              vmax=255/2 + std_range)             # <<<<<<<<<<<<<<
@@ -17455,7 +17455,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_vmax, __pyx_t_1) < 0) __PYX_ERR(0, 697, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":697
+  /* "plottings.pyx":697
  * 
  * 
  *         self.l_LP01.set_clim(vmin=255/2 - std_range,             # <<<<<<<<<<<<<<
@@ -17468,7 +17468,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":700
+  /* "plottings.pyx":700
  *                              vmax=255/2 + std_range)
  * 
  *         self.l_LP11.set_clim(vmin=255/2 - std_range,             # <<<<<<<<<<<<<<
@@ -17487,7 +17487,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmin, __pyx_t_4) < 0) __PYX_ERR(0, 700, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":701
+  /* "plottings.pyx":701
  * 
  *         self.l_LP11.set_clim(vmin=255/2 - std_range,
  *                              vmax=255/2 + std_range)             # <<<<<<<<<<<<<<
@@ -17499,7 +17499,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_vmax, __pyx_t_4) < 0) __PYX_ERR(0, 700, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":700
+  /* "plottings.pyx":700
  *                              vmax=255/2 + std_range)
  * 
  *         self.l_LP11.set_clim(vmin=255/2 - std_range,             # <<<<<<<<<<<<<<
@@ -17512,7 +17512,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":662
+  /* "plottings.pyx":662
  * 
  * 
  *     def normalize_image(self):             # <<<<<<<<<<<<<<
@@ -17531,7 +17531,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.normalize_image", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.normalize_image", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_range);
@@ -17541,7 +17541,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":705
+/* "plottings.pyx":705
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -17550,9 +17550,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_8normali
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_11previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_11previous = {"previous", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_11previous, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_11previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_11previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_11previous = {"previous", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_11previous, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_11previous(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -17600,18 +17600,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_11previo
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("previous", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 705, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previous(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Cscan_vizualiser_10previous(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_10previous(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -17620,7 +17620,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("previous", 0);
 
-  /* "src/toolbox/plottings.pyx":706
+  /* "plottings.pyx":706
  * 
  *     def previous(self, event):
  *         self.N_plot -= 1             # <<<<<<<<<<<<<<
@@ -17635,7 +17635,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_t_2) < 0) __PYX_ERR(0, 706, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":708
+  /* "plottings.pyx":708
  *         self.N_plot -= 1
  * 
  *         self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T             # <<<<<<<<<<<<<<
@@ -17667,7 +17667,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan, __pyx_t_3) < 0) __PYX_ERR(0, 708, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":710
+  /* "plottings.pyx":710
  *         self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T
  * 
  *         self.normalize_image()             # <<<<<<<<<<<<<<
@@ -17693,7 +17693,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":712
+  /* "plottings.pyx":712
  *         self.normalize_image()
  * 
  *         self.l_LP01.set_data(self.dBscan)             # <<<<<<<<<<<<<<
@@ -17725,7 +17725,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":713
+  /* "plottings.pyx":713
  * 
  *         self.l_LP01.set_data(self.dBscan)
  *         self.l_LP11.set_data(self.dBscan)             # <<<<<<<<<<<<<<
@@ -17757,7 +17757,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":715
+  /* "plottings.pyx":715
  *         self.l_LP11.set_data(self.dBscan)
  * 
  *         self.textbox.set_val(self.N_plot)             # <<<<<<<<<<<<<<
@@ -17789,7 +17789,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":716
+  /* "plottings.pyx":716
  * 
  *         self.textbox.set_val(self.N_plot)
  *         self.fig.canvas.draw_idle()             # <<<<<<<<<<<<<<
@@ -17821,7 +17821,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":705
+  /* "plottings.pyx":705
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -17837,7 +17837,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.previous", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -17845,7 +17845,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":719
+/* "plottings.pyx":719
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -17854,9 +17854,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_10previo
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_13save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_13save_LP11 = {"save_LP11", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_13save_LP11, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_13save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_13save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_13save_LP11 = {"save_LP11", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_13save_LP11, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_13save_LP11(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -17904,18 +17904,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_13save_L
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save_LP11", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 719, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_LP11(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Cscan_vizualiser_12save_LP11(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_12save_LP11(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_save_dir = NULL;
   PyObject *__pyx_v_extent = NULL;
   PyObject *__pyx_r = NULL;
@@ -17927,7 +17927,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_L
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("save_LP11", 0);
 
-  /* "src/toolbox/plottings.pyx":720
+  /* "plottings.pyx":720
  * 
  *     def save_LP11(self, event):
  *         save_dir = "results/"             # <<<<<<<<<<<<<<
@@ -17937,7 +17937,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_L
   __Pyx_INCREF(__pyx_kp_s_results);
   __pyx_v_save_dir = __pyx_kp_s_results;
 
-  /* "src/toolbox/plottings.pyx":721
+  /* "plottings.pyx":721
  *     def save_LP11(self, event):
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())             # <<<<<<<<<<<<<<
@@ -18009,7 +18009,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_L
   __pyx_v_extent = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":722
+  /* "plottings.pyx":722
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  *         plt.savefig(save_dir + "figure_" + 'LP11', bbox_inches=extent)             # <<<<<<<<<<<<<<
@@ -18041,7 +18041,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_L
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":719
+  /* "plottings.pyx":719
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -18058,7 +18058,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_L
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.save_LP11", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_save_dir);
@@ -18068,7 +18068,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_L
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":725
+/* "plottings.pyx":725
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -18077,9 +18077,9 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_12save_L
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_15save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_15save_LP01 = {"save_LP01", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_15save_LP01, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_15save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_15save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_15save_LP01 = {"save_LP01", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_15save_LP01, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_15save_LP01(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   CYTHON_UNUSED PyObject *__pyx_v_event = 0;
   PyObject *__pyx_r = 0;
@@ -18127,18 +18127,18 @@ static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_15save_L
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save_LP01", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 725, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_LP01(__pyx_self, __pyx_v_self, __pyx_v_event);
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Cscan_vizualiser_14save_LP01(__pyx_self, __pyx_v_self, __pyx_v_event);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_14save_LP01(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_event) {
   PyObject *__pyx_v_save_dir = NULL;
   PyObject *__pyx_v_extent = NULL;
   PyObject *__pyx_r = NULL;
@@ -18150,7 +18150,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_L
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("save_LP01", 0);
 
-  /* "src/toolbox/plottings.pyx":726
+  /* "plottings.pyx":726
  * 
  *     def save_LP01(self, event):
  *         save_dir = "results/"             # <<<<<<<<<<<<<<
@@ -18160,7 +18160,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_L
   __Pyx_INCREF(__pyx_kp_s_results);
   __pyx_v_save_dir = __pyx_kp_s_results;
 
-  /* "src/toolbox/plottings.pyx":727
+  /* "plottings.pyx":727
  *     def save_LP01(self, event):
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())             # <<<<<<<<<<<<<<
@@ -18232,7 +18232,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_L
   __pyx_v_extent = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":728
+  /* "plottings.pyx":728
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  *         plt.savefig(save_dir + "figure_" + 'LP01', bbox_inches=extent)             # <<<<<<<<<<<<<<
@@ -18264,7 +18264,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_L
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":725
+  /* "plottings.pyx":725
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -18281,7 +18281,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_L
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.save_LP01", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_save_dir);
@@ -18291,7 +18291,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_L
   return __pyx_r;
 }
 
-/* "src/toolbox/plottings.pyx":731
+/* "plottings.pyx":731
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -18300,20 +18300,20 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_14save_L
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots = {"Bscan_lanterne_plots", (PyCFunction)__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots, METH_O, 0};
-static PyObject *__pyx_pw_16cython_plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static PyMethodDef __pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots = {"Bscan_lanterne_plots", (PyCFunction)__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots, METH_O, 0};
+static PyObject *__pyx_pw_9plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("Bscan_lanterne_plots (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_lanterne_plots(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9plottings_24Lantern_Cscan_vizualiser_16Bscan_lanterne_plots(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_9plottings_24Lantern_Cscan_vizualiser_16Bscan_lanterne_plots(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_gs = NULL;
   PyObject *__pyx_v_axVmin_intensity = NULL;
   PyObject *__pyx_v_axVmax_intensity = NULL;
@@ -18341,7 +18341,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("Bscan_lanterne_plots", 0);
 
-  /* "src/toolbox/plottings.pyx":733
+  /* "plottings.pyx":733
  *     def Bscan_lanterne_plots(self):
  * 
  *         self.fig = plt.figure(figsize=(16,10))             # <<<<<<<<<<<<<<
@@ -18363,7 +18363,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fig, __pyx_t_3) < 0) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":734
+  /* "plottings.pyx":734
  * 
  *         self.fig = plt.figure(figsize=(16,10))
  *         gs = gridspec.GridSpec(5,5)             # <<<<<<<<<<<<<<
@@ -18381,7 +18381,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_gs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":736
+  /* "plottings.pyx":736
  *         gs = gridspec.GridSpec(5,5)
  * 
  *         self.N_plot = 0             # <<<<<<<<<<<<<<
@@ -18390,7 +18390,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_N_plot, __pyx_int_0) < 0) __PYX_ERR(0, 736, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":737
+  /* "plottings.pyx":737
  * 
  *         self.N_plot = 0
  *         self.dBscan = self.dCscan_LP11[:,:,self.N_plot].T             # <<<<<<<<<<<<<<
@@ -18422,7 +18422,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dBscan, __pyx_t_2) < 0) __PYX_ERR(0, 737, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":741
+  /* "plottings.pyx":741
  * 
  * 
  *         self.ax3 = self.fig.add_subplot(gs[4,0:5])             # <<<<<<<<<<<<<<
@@ -18455,7 +18455,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ax3, __pyx_t_2) < 0) __PYX_ERR(0, 741, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":742
+  /* "plottings.pyx":742
  * 
  *         self.ax3 = self.fig.add_subplot(gs[4,0:5])
  *         self.l_hist = self.ax3.hist(self.dBscan.ravel(),256)             # <<<<<<<<<<<<<<
@@ -18537,7 +18537,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_l_hist, __pyx_t_2) < 0) __PYX_ERR(0, 742, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":744
+  /* "plottings.pyx":744
  *         self.l_hist = self.ax3.hist(self.dBscan.ravel(),256)
  * 
  *         axVmin_intensity = plt.axes([0.1, 0.01, 0.8, 0.03])             # <<<<<<<<<<<<<<
@@ -18582,7 +18582,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_axVmin_intensity = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":745
+  /* "plottings.pyx":745
  * 
  *         axVmin_intensity = plt.axes([0.1, 0.01, 0.8, 0.03])
  *         axVmax_intensity = plt.axes([0.1, 0.05, 0.8, 0.03])             # <<<<<<<<<<<<<<
@@ -18627,7 +18627,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_axVmax_intensity = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":747
+  /* "plottings.pyx":747
  *         axVmax_intensity = plt.axes([0.1, 0.05, 0.8, 0.03])
  * 
  *         axsave_LP11 = plt.axes([0.8, 0.79, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -18672,7 +18672,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_axsave_LP11 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":748
+  /* "plottings.pyx":748
  * 
  *         axsave_LP11 = plt.axes([0.8, 0.79, 0.1, 0.075])
  *         axsave_LP01 = plt.axes([0.8, 0.9, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -18717,7 +18717,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_axsave_LP01 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":750
+  /* "plottings.pyx":750
  *         axsave_LP01 = plt.axes([0.8, 0.9, 0.1, 0.075])
  * 
  *         axnext = plt.axes([0.8, 0.3, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -18762,7 +18762,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_axnext = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":751
+  /* "plottings.pyx":751
  * 
  *         axnext = plt.axes([0.8, 0.3, 0.1, 0.075])
  *         axprevious = plt.axes([0.8, 0.41, 0.1, 0.075])             # <<<<<<<<<<<<<<
@@ -18807,7 +18807,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_axprevious = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":753
+  /* "plottings.pyx":753
  *         axprevious = plt.axes([0.8, 0.41, 0.1, 0.075])
  * 
  *         Min_LP11, Max_LP11 = np.min(self.dBscan)*1, np.max(self.dBscan)*1.             # <<<<<<<<<<<<<<
@@ -18871,7 +18871,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_Max_LP11 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":754
+  /* "plottings.pyx":754
  * 
  *         Min_LP11, Max_LP11 = np.min(self.dBscan)*1, np.max(self.dBscan)*1.
  *         Min_LP01, Max_LP01 = np.min(self.dBscan)*1, np.max(self.dBscan)*1.             # <<<<<<<<<<<<<<
@@ -18935,7 +18935,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_Max_LP01 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":756
+  /* "plottings.pyx":756
  *         Min_LP01, Max_LP01 = np.min(self.dBscan)*1, np.max(self.dBscan)*1.
  * 
  *         Nstep_LP11 = (Max_LP11 - Min_LP11)/200             # <<<<<<<<<<<<<<
@@ -18950,7 +18950,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_Nstep_LP11 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":757
+  /* "plottings.pyx":757
  * 
  *         Nstep_LP11 = (Max_LP11 - Min_LP11)/200
  *         Nstep_LP01 = (Max_LP01 - Min_LP01)/200             # <<<<<<<<<<<<<<
@@ -18965,7 +18965,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_Nstep_LP01 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":759
+  /* "plottings.pyx":759
  *         Nstep_LP01 = (Max_LP01 - Min_LP01)/200
  * 
  *         self.SVmin = Slider(axVmin_intensity, 'Vmin', 0, 255, valinit=Min_LP11, valstep=Nstep_LP11)             # <<<<<<<<<<<<<<
@@ -19000,7 +19000,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_SVmin, __pyx_t_4) < 0) __PYX_ERR(0, 759, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":760
+  /* "plottings.pyx":760
  * 
  *         self.SVmin = Slider(axVmin_intensity, 'Vmin', 0, 255, valinit=Min_LP11, valstep=Nstep_LP11)
  *         self.SVmax = Slider(axVmax_intensity, 'Vmax', 0, 255, valinit=Max_LP11, valstep=Nstep_LP11)             # <<<<<<<<<<<<<<
@@ -19035,7 +19035,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_SVmax, __pyx_t_1) < 0) __PYX_ERR(0, 760, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":762
+  /* "plottings.pyx":762
  *         self.SVmax = Slider(axVmax_intensity, 'Vmax', 0, 255, valinit=Max_LP11, valstep=Nstep_LP11)
  * 
  *         temp_descr = 'wow'             # <<<<<<<<<<<<<<
@@ -19045,7 +19045,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_INCREF(__pyx_n_s_wow);
   __pyx_v_temp_descr = __pyx_n_s_wow;
 
-  /* "src/toolbox/plottings.pyx":763
+  /* "plottings.pyx":763
  * 
  *         temp_descr = 'wow'
  *         axLabel = plt.axes([0.5, 0.9, 0.11, 0.075])             # <<<<<<<<<<<<<<
@@ -19090,7 +19090,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_axLabel = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":764
+  /* "plottings.pyx":764
  *         temp_descr = 'wow'
  *         axLabel = plt.axes([0.5, 0.9, 0.11, 0.075])
  *         self.textbox = TextBox(axLabel, '# Scan: ', temp_descr)             # <<<<<<<<<<<<<<
@@ -19150,7 +19150,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_textbox, __pyx_t_1) < 0) __PYX_ERR(0, 764, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":766
+  /* "plottings.pyx":766
  *         self.textbox = TextBox(axLabel, '# Scan: ', temp_descr)
  * 
  *         self.textbox.set_val(self.N_plot)             # <<<<<<<<<<<<<<
@@ -19182,7 +19182,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":768
+  /* "plottings.pyx":768
  *         self.textbox.set_val(self.N_plot)
  * 
  *         bsave_LP11 = Button(axsave_LP11, 'Save Bscan')             # <<<<<<<<<<<<<<
@@ -19239,7 +19239,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_bsave_LP11 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":770
+  /* "plottings.pyx":770
  *         bsave_LP11 = Button(axsave_LP11, 'Save Bscan')
  * 
  *         bsave_LP01 = Button(axsave_LP01, 'Save Bscan')             # <<<<<<<<<<<<<<
@@ -19296,7 +19296,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __pyx_v_bsave_LP01 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":772
+  /* "plottings.pyx":772
  *         bsave_LP01 = Button(axsave_LP01, 'Save Bscan')
  * 
  *         self.Bnext = Button(axnext, 'Next')             # <<<<<<<<<<<<<<
@@ -19353,7 +19353,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bnext, __pyx_t_1) < 0) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":773
+  /* "plottings.pyx":773
  * 
  *         self.Bnext = Button(axnext, 'Next')
  *         self.Bprevious = Button(axprevious, 'Previous')             # <<<<<<<<<<<<<<
@@ -19410,7 +19410,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bprevious, __pyx_t_1) < 0) __PYX_ERR(0, 773, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":776
+  /* "plottings.pyx":776
  * 
  * 
  *         self.ax1 = self.fig.add_subplot(gs[1:4,0:2])             # <<<<<<<<<<<<<<
@@ -19443,7 +19443,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ax1, __pyx_t_1) < 0) __PYX_ERR(0, 776, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":777
+  /* "plottings.pyx":777
  * 
  *         self.ax1 = self.fig.add_subplot(gs[1:4,0:2])
  *         print(np.shape(self.dBscan))             # <<<<<<<<<<<<<<
@@ -19476,7 +19476,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 777, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":778
+  /* "plottings.pyx":778
  *         self.ax1 = self.fig.add_subplot(gs[1:4,0:2])
  *         print(np.shape(self.dBscan))
  *         self.l_LP01 = self.ax1.imshow(self.dBscan[:,:],             # <<<<<<<<<<<<<<
@@ -19499,7 +19499,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":779
+  /* "plottings.pyx":779
  *         print(np.shape(self.dBscan))
  *         self.l_LP01 = self.ax1.imshow(self.dBscan[:,:],
  *                                 cmap = "gray",             # <<<<<<<<<<<<<<
@@ -19510,7 +19510,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_cmap, __pyx_n_s_gray) < 0) __PYX_ERR(0, 779, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":780
+  /* "plottings.pyx":780
  *         self.l_LP01 = self.ax1.imshow(self.dBscan[:,:],
  *                                 cmap = "gray",
  *                                 vmin=None,             # <<<<<<<<<<<<<<
@@ -19519,7 +19519,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
  */
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_vmin, Py_None) < 0) __PYX_ERR(0, 779, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":781
+  /* "plottings.pyx":781
  *                                 cmap = "gray",
  *                                 vmin=None,
  *                                 vmax=None)             # <<<<<<<<<<<<<<
@@ -19528,7 +19528,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
  */
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_vmax, Py_None) < 0) __PYX_ERR(0, 779, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":778
+  /* "plottings.pyx":778
  *         self.ax1 = self.fig.add_subplot(gs[1:4,0:2])
  *         print(np.shape(self.dBscan))
  *         self.l_LP01 = self.ax1.imshow(self.dBscan[:,:],             # <<<<<<<<<<<<<<
@@ -19543,7 +19543,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_l_LP01, __pyx_t_2) < 0) __PYX_ERR(0, 778, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":782
+  /* "plottings.pyx":782
  *                                 vmin=None,
  *                                 vmax=None)
  *         self.ax1.invert_yaxis()             # <<<<<<<<<<<<<<
@@ -19572,7 +19572,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":787
+  /* "plottings.pyx":787
  * 
  * 
  *         self.ax1.set_title("Processed Bscan LP01")             # <<<<<<<<<<<<<<
@@ -19601,7 +19601,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":789
+  /* "plottings.pyx":789
  *         self.ax1.set_title("Processed Bscan LP01")
  * 
  *         self.ax2 = self.fig.add_subplot(gs[1:4,2:4])             # <<<<<<<<<<<<<<
@@ -19634,7 +19634,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ax2, __pyx_t_2) < 0) __PYX_ERR(0, 789, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":790
+  /* "plottings.pyx":790
  * 
  *         self.ax2 = self.fig.add_subplot(gs[1:4,2:4])
  *         self.l_LP11 = self.ax2.imshow(self.dBscan[:,:],             # <<<<<<<<<<<<<<
@@ -19657,7 +19657,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":791
+  /* "plottings.pyx":791
  *         self.ax2 = self.fig.add_subplot(gs[1:4,2:4])
  *         self.l_LP11 = self.ax2.imshow(self.dBscan[:,:],
  *                                    cmap = "gray",             # <<<<<<<<<<<<<<
@@ -19668,7 +19668,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_cmap, __pyx_n_s_gray) < 0) __PYX_ERR(0, 791, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":792
+  /* "plottings.pyx":792
  *         self.l_LP11 = self.ax2.imshow(self.dBscan[:,:],
  *                                    cmap = "gray",
  *                                    vmin=None,             # <<<<<<<<<<<<<<
@@ -19677,7 +19677,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
  */
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_vmin, Py_None) < 0) __PYX_ERR(0, 791, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":793
+  /* "plottings.pyx":793
  *                                    cmap = "gray",
  *                                    vmin=None,
  *                                    vmax=None)             # <<<<<<<<<<<<<<
@@ -19686,7 +19686,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
  */
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_vmax, Py_None) < 0) __PYX_ERR(0, 791, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":790
+  /* "plottings.pyx":790
  * 
  *         self.ax2 = self.fig.add_subplot(gs[1:4,2:4])
  *         self.l_LP11 = self.ax2.imshow(self.dBscan[:,:],             # <<<<<<<<<<<<<<
@@ -19701,7 +19701,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_l_LP11, __pyx_t_4) < 0) __PYX_ERR(0, 790, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":794
+  /* "plottings.pyx":794
  *                                    vmin=None,
  *                                    vmax=None)
  *         self.ax2.invert_yaxis()             # <<<<<<<<<<<<<<
@@ -19730,7 +19730,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":795
+  /* "plottings.pyx":795
  *                                    vmax=None)
  *         self.ax2.invert_yaxis()
  *         self.ax2.set_title("Processed Bscan LP11")             # <<<<<<<<<<<<<<
@@ -19759,7 +19759,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":799
+  /* "plottings.pyx":799
  * 
  * 
  *         self.SVmin.on_changed(self.update_intensity)             # <<<<<<<<<<<<<<
@@ -19791,7 +19791,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":800
+  /* "plottings.pyx":800
  * 
  *         self.SVmin.on_changed(self.update_intensity)
  *         self.SVmax.on_changed(self.update_intensity)             # <<<<<<<<<<<<<<
@@ -19823,7 +19823,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":802
+  /* "plottings.pyx":802
  *         self.SVmax.on_changed(self.update_intensity)
  * 
  *         self.textbox.on_submit(self.submit)             # <<<<<<<<<<<<<<
@@ -19855,7 +19855,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":804
+  /* "plottings.pyx":804
  *         self.textbox.on_submit(self.submit)
  * 
  *         bsave_LP11.on_clicked(self.save_LP11)             # <<<<<<<<<<<<<<
@@ -19884,7 +19884,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":805
+  /* "plottings.pyx":805
  * 
  *         bsave_LP11.on_clicked(self.save_LP11)
  *         bsave_LP01.on_clicked(self.save_LP01)             # <<<<<<<<<<<<<<
@@ -19913,7 +19913,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":807
+  /* "plottings.pyx":807
  *         bsave_LP01.on_clicked(self.save_LP01)
  * 
  *         self.Bnext.on_clicked(self.next)             # <<<<<<<<<<<<<<
@@ -19945,7 +19945,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":808
+  /* "plottings.pyx":808
  * 
  *         self.Bnext.on_clicked(self.next)
  *         self.Bprevious.on_clicked(self.previous)             # <<<<<<<<<<<<<<
@@ -19977,7 +19977,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":810
+  /* "plottings.pyx":810
  *         self.Bprevious.on_clicked(self.previous)
  * 
  *         plt.show()             # <<<<<<<<<<<<<<
@@ -20006,7 +20006,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/toolbox/plottings.pyx":731
+  /* "plottings.pyx":731
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -20023,7 +20023,7 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_plottings.Lantern_Cscan_vizualiser.Bscan_lanterne_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plottings.Lantern_Cscan_vizualiser.Bscan_lanterne_plots", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_gs);
@@ -20048,14 +20048,14 @@ static PyObject *__pyx_pf_16cython_plottings_24Lantern_Cscan_vizualiser_16Bscan_
   return __pyx_r;
 }
 
-static struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *__pyx_freelist_16cython_plottings___pyx_scope_struct__Bscan_plots[8];
-static int __pyx_freecount_16cython_plottings___pyx_scope_struct__Bscan_plots = 0;
+static struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *__pyx_freelist_9plottings___pyx_scope_struct__Bscan_plots[8];
+static int __pyx_freecount_9plottings___pyx_scope_struct__Bscan_plots = 0;
 
-static PyObject *__pyx_tp_new_16cython_plottings___pyx_scope_struct__Bscan_plots(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_9plottings___pyx_scope_struct__Bscan_plots(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_16cython_plottings___pyx_scope_struct__Bscan_plots > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots)))) {
-    o = (PyObject*)__pyx_freelist_16cython_plottings___pyx_scope_struct__Bscan_plots[--__pyx_freecount_16cython_plottings___pyx_scope_struct__Bscan_plots];
-    memset(o, 0, sizeof(struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_9plottings___pyx_scope_struct__Bscan_plots > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots)))) {
+    o = (PyObject*)__pyx_freelist_9plottings___pyx_scope_struct__Bscan_plots[--__pyx_freecount_9plottings___pyx_scope_struct__Bscan_plots];
+    memset(o, 0, sizeof(struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -20065,24 +20065,24 @@ static PyObject *__pyx_tp_new_16cython_plottings___pyx_scope_struct__Bscan_plots
   return o;
 }
 
-static void __pyx_tp_dealloc_16cython_plottings___pyx_scope_struct__Bscan_plots(PyObject *o) {
-  struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *p = (struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *)o;
+static void __pyx_tp_dealloc_9plottings___pyx_scope_struct__Bscan_plots(PyObject *o) {
+  struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *p = (struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_SVmax);
   Py_CLEAR(p->__pyx_v_SVmin);
   Py_CLEAR(p->__pyx_v_ax2);
   Py_CLEAR(p->__pyx_v_fig);
   Py_CLEAR(p->__pyx_v_l);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_16cython_plottings___pyx_scope_struct__Bscan_plots < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots)))) {
-    __pyx_freelist_16cython_plottings___pyx_scope_struct__Bscan_plots[__pyx_freecount_16cython_plottings___pyx_scope_struct__Bscan_plots++] = ((struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_9plottings___pyx_scope_struct__Bscan_plots < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots)))) {
+    __pyx_freelist_9plottings___pyx_scope_struct__Bscan_plots[__pyx_freecount_9plottings___pyx_scope_struct__Bscan_plots++] = ((struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_16cython_plottings___pyx_scope_struct__Bscan_plots(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_9plottings___pyx_scope_struct__Bscan_plots(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *p = (struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *)o;
+  struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *p = (struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *)o;
   if (p->__pyx_v_SVmax) {
     e = (*v)(p->__pyx_v_SVmax, a); if (e) return e;
   }
@@ -20101,9 +20101,9 @@ static int __pyx_tp_traverse_16cython_plottings___pyx_scope_struct__Bscan_plots(
   return 0;
 }
 
-static int __pyx_tp_clear_16cython_plottings___pyx_scope_struct__Bscan_plots(PyObject *o) {
+static int __pyx_tp_clear_9plottings___pyx_scope_struct__Bscan_plots(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *p = (struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots *)o;
+  struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *p = (struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots *)o;
   tmp = ((PyObject*)p->__pyx_v_SVmax);
   p->__pyx_v_SVmax = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -20122,12 +20122,12 @@ static int __pyx_tp_clear_16cython_plottings___pyx_scope_struct__Bscan_plots(PyO
   return 0;
 }
 
-static PyTypeObject __pyx_type_16cython_plottings___pyx_scope_struct__Bscan_plots = {
+static PyTypeObject __pyx_type_9plottings___pyx_scope_struct__Bscan_plots = {
   PyVarObject_HEAD_INIT(0, 0)
-  "cython_plottings.__pyx_scope_struct__Bscan_plots", /*tp_name*/
-  sizeof(struct __pyx_obj_16cython_plottings___pyx_scope_struct__Bscan_plots), /*tp_basicsize*/
+  "plottings.__pyx_scope_struct__Bscan_plots", /*tp_name*/
+  sizeof(struct __pyx_obj_9plottings___pyx_scope_struct__Bscan_plots), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_16cython_plottings___pyx_scope_struct__Bscan_plots, /*tp_dealloc*/
+  __pyx_tp_dealloc_9plottings___pyx_scope_struct__Bscan_plots, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -20154,8 +20154,8 @@ static PyTypeObject __pyx_type_16cython_plottings___pyx_scope_struct__Bscan_plot
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_16cython_plottings___pyx_scope_struct__Bscan_plots, /*tp_traverse*/
-  __pyx_tp_clear_16cython_plottings___pyx_scope_struct__Bscan_plots, /*tp_clear*/
+  __pyx_tp_traverse_9plottings___pyx_scope_struct__Bscan_plots, /*tp_traverse*/
+  __pyx_tp_clear_9plottings___pyx_scope_struct__Bscan_plots, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -20170,7 +20170,7 @@ static PyTypeObject __pyx_type_16cython_plottings___pyx_scope_struct__Bscan_plot
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_16cython_plottings___pyx_scope_struct__Bscan_plots, /*tp_new*/
+  __pyx_tp_new_9plottings___pyx_scope_struct__Bscan_plots, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -20198,17 +20198,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_cython_plottings(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_plottings(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_cython_plottings},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_plottings},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "cython_plottings",
+    "plottings",
     __pyx_k_Standard_imports, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -20359,7 +20359,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_close, __pyx_k_close, sizeof(__pyx_k_close), 0, 0, 1, 1},
   {&__pyx_n_s_cmap, __pyx_k_cmap, sizeof(__pyx_k_cmap), 0, 0, 1, 1},
-  {&__pyx_n_s_cython_plottings, __pyx_k_cython_plottings, sizeof(__pyx_k_cython_plottings), 0, 0, 1, 1},
   {&__pyx_n_s_dB1, __pyx_k_dB1, sizeof(__pyx_k_dB1), 0, 0, 1, 1},
   {&__pyx_n_s_dB2, __pyx_k_dB2, sizeof(__pyx_k_dB2), 0, 0, 1, 1},
   {&__pyx_n_s_dB_plot, __pyx_k_dB_plot, sizeof(__pyx_k_dB_plot), 0, 0, 1, 1},
@@ -20445,6 +20444,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_plot, __pyx_k_plot, sizeof(__pyx_k_plot), 0, 0, 1, 1},
   {&__pyx_n_s_plot_klinearization, __pyx_k_plot_klinearization, sizeof(__pyx_k_plot_klinearization), 0, 0, 1, 1},
   {&__pyx_n_s_plots_signals, __pyx_k_plots_signals, sizeof(__pyx_k_plots_signals), 0, 0, 1, 1},
+  {&__pyx_n_s_plottings, __pyx_k_plottings, sizeof(__pyx_k_plottings), 0, 0, 1, 1},
   {&__pyx_n_s_plt, __pyx_k_plt, sizeof(__pyx_k_plt), 0, 0, 1, 1},
   {&__pyx_n_s_png, __pyx_k_png, sizeof(__pyx_k_png), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
@@ -20528,7 +20528,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "src/toolbox/plottings.pyx":18
+  /* "plottings.pyx":18
  * def dB_plot(data1, data2=None):
  * 
  *     fig = plt.figure(figsize=(15, 6))             # <<<<<<<<<<<<<<
@@ -20539,7 +20539,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "src/toolbox/plottings.pyx":71
+  /* "plottings.pyx":71
  *                                param2 )
  * 
  *         shift1 = input("Shift mirror1? [>0:Left, 0:None, <0:Right]")             # <<<<<<<<<<<<<<
@@ -20550,7 +20550,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "src/toolbox/plottings.pyx":89
+  /* "plottings.pyx":89
  *                                param2 )
  * 
  *         shift2 = input("Shift mirror2? [>0:Left, 0:None, <0:Right]")             # <<<<<<<<<<<<<<
@@ -20561,7 +20561,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "src/toolbox/plottings.pyx":157
+  /* "plottings.pyx":157
  *     dBscan = 10*np.log(Bscan)
  * 
  *     fig = plt.figure(figsize=(16,10))             # <<<<<<<<<<<<<<
@@ -20572,7 +20572,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "src/toolbox/plottings.pyx":199
+  /* "plottings.pyx":199
  * 
  * 
  *     def update(val):             # <<<<<<<<<<<<<<
@@ -20584,7 +20584,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__6);
   __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_update, 199, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 199, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":205
+  /* "plottings.pyx":205
  *         fig.canvas.draw_idle()
  * 
  *     def save(event):             # <<<<<<<<<<<<<<
@@ -20596,7 +20596,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__8);
   __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_save, 205, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 205, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":240
+  /* "plottings.pyx":240
  * 
  *     plt.ion()
  *     fig = plt.figure(figsize=(8,10))             # <<<<<<<<<<<<<<
@@ -20607,7 +20607,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "src/toolbox/plottings.pyx":637
+  /* "plottings.pyx":637
  *     def submit(self, text):
  *         self.N_plot = eval(text)
  *         self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T             # <<<<<<<<<<<<<<
@@ -20618,7 +20618,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__11);
   __Pyx_GIVEREF(__pyx_slice__11);
 
-  /* "src/toolbox/plottings.pyx":734
+  /* "plottings.pyx":734
  * 
  *         self.fig = plt.figure(figsize=(16,10))
  *         gs = gridspec.GridSpec(5,5)             # <<<<<<<<<<<<<<
@@ -20629,7 +20629,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "src/toolbox/plottings.pyx":741
+  /* "plottings.pyx":741
  * 
  * 
  *         self.ax3 = self.fig.add_subplot(gs[4,0:5])             # <<<<<<<<<<<<<<
@@ -20643,7 +20643,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "src/toolbox/plottings.pyx":776
+  /* "plottings.pyx":776
  * 
  * 
  *         self.ax1 = self.fig.add_subplot(gs[1:4,0:2])             # <<<<<<<<<<<<<<
@@ -20660,7 +20660,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "src/toolbox/plottings.pyx":778
+  /* "plottings.pyx":778
  *         self.ax1 = self.fig.add_subplot(gs[1:4,0:2])
  *         print(np.shape(self.dBscan))
  *         self.l_LP01 = self.ax1.imshow(self.dBscan[:,:],             # <<<<<<<<<<<<<<
@@ -20671,7 +20671,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "src/toolbox/plottings.pyx":789
+  /* "plottings.pyx":789
  *         self.ax1.set_title("Processed Bscan LP01")
  * 
  *         self.ax2 = self.fig.add_subplot(gs[1:4,2:4])             # <<<<<<<<<<<<<<
@@ -20685,7 +20685,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
 
-  /* "src/toolbox/plottings.pyx":6
+  /* "plottings.pyx":6
  * import matplotlib.pyplot as plt
  * import matplotlib
  * matplotlib.use('qt4agg')             # <<<<<<<<<<<<<<
@@ -20696,7 +20696,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
 
-  /* "src/toolbox/plottings.pyx":16
+  /* "plottings.pyx":16
  * 
  * 
  * def dB_plot(data1, data2=None):             # <<<<<<<<<<<<<<
@@ -20708,7 +20708,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__23);
   __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(2, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_dB_plot, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":58
+  /* "plottings.pyx":58
  * 
  * 
  * def interactive_shift(spectra1, param1, spectra2, param2):             # <<<<<<<<<<<<<<
@@ -20720,7 +20720,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__25);
   __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(4, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_interactive_shift, 58, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 58, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":101
+  /* "plottings.pyx":101
  * 
  * 
  * def shifted_spectra_plots(spectra1, param1, spectra2, param2):             # <<<<<<<<<<<<<<
@@ -20732,7 +20732,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__27);
   __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_shifted_spectra_plots, 101, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 101, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":134
+  /* "plottings.pyx":134
  * 
  * 
  * def phase_dispersion_plot(exp_dispersion, fit_dispersion):             # <<<<<<<<<<<<<<
@@ -20744,7 +20744,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__29);
   __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_phase_dispersion_plot, 134, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 134, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":152
+  /* "plottings.pyx":152
  * 
  * 
  * def Bscan_plots(Bscan):             # <<<<<<<<<<<<<<
@@ -20756,7 +20756,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__31);
   __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(1, 0, 22, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_Bscan_plots, 152, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 152, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":218
+  /* "plottings.pyx":218
  * 
  * 
  * def plots_signals(data, sub_data, ref, sample, dark):             # <<<<<<<<<<<<<<
@@ -20768,7 +20768,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__33);
   __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(5, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_plots_signals, 218, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 218, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":237
+  /* "plottings.pyx":237
  * 
  * 
  * def plot_klinearization(phase1, phase2, Plin, Pfit=None):             # <<<<<<<<<<<<<<
@@ -20780,7 +20780,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__35);
   __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(4, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_plot_klinearization, 237, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 237, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":259
+  /* "plottings.pyx":259
  * 
  * 
  * class Lantern_Bscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -20791,7 +20791,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
 
-  /* "src/toolbox/plottings.pyx":262
+  /* "plottings.pyx":262
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
@@ -20803,7 +20803,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__38);
   __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_init, 262, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 262, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":268
+  /* "plottings.pyx":268
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -20815,7 +20815,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__40);
   __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_update_intensity, 268, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 268, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":278
+  /* "plottings.pyx":278
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -20827,7 +20827,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__42);
   __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_next, 278, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 278, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":285
+  /* "plottings.pyx":285
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -20839,7 +20839,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__44);
   __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_previous, 285, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 285, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":292
+  /* "plottings.pyx":292
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -20851,7 +20851,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__46);
   __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_save_LP11, 292, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 292, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":298
+  /* "plottings.pyx":298
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -20863,7 +20863,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__48);
   __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_save_LP01, 298, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 298, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":304
+  /* "plottings.pyx":304
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -20875,7 +20875,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__50);
   __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(1, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_Bscan_lanterne_plots, 304, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 304, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":379
+  /* "plottings.pyx":379
  * 
  * 
  * class Lantern_Bscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -20886,7 +20886,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__52);
   __Pyx_GIVEREF(__pyx_tuple__52);
 
-  /* "src/toolbox/plottings.pyx":382
+  /* "plottings.pyx":382
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
@@ -20898,7 +20898,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__53);
   __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_init, 382, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 382, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":388
+  /* "plottings.pyx":388
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -20910,7 +20910,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__55);
   __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_update_intensity, 388, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 388, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":398
+  /* "plottings.pyx":398
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -20922,7 +20922,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__57);
   __pyx_codeobj__58 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__57, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_next, 398, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__58)) __PYX_ERR(0, 398, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":405
+  /* "plottings.pyx":405
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -20934,7 +20934,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__59);
   __pyx_codeobj__60 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__59, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_previous, 405, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__60)) __PYX_ERR(0, 405, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":412
+  /* "plottings.pyx":412
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -20946,7 +20946,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__61);
   __pyx_codeobj__62 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__61, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_save_LP11, 412, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__62)) __PYX_ERR(0, 412, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":418
+  /* "plottings.pyx":418
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -20958,7 +20958,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__63);
   __pyx_codeobj__64 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__63, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_save_LP01, 418, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__64)) __PYX_ERR(0, 418, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":424
+  /* "plottings.pyx":424
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -20970,7 +20970,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__65);
   __pyx_codeobj__66 = (PyObject*)__Pyx_PyCode_New(1, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__65, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_Bscan_lanterne_plots, 424, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__66)) __PYX_ERR(0, 424, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":500
+  /* "plottings.pyx":500
  * 
  * 
  * class Lantern_Bscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -20981,7 +20981,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__67);
   __Pyx_GIVEREF(__pyx_tuple__67);
 
-  /* "src/toolbox/plottings.pyx":503
+  /* "plottings.pyx":503
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
@@ -20993,7 +20993,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__68);
   __pyx_codeobj__69 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__68, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_init, 503, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__69)) __PYX_ERR(0, 503, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":509
+  /* "plottings.pyx":509
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -21005,7 +21005,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__70);
   __pyx_codeobj__71 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__70, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_update_intensity, 509, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__71)) __PYX_ERR(0, 509, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":519
+  /* "plottings.pyx":519
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -21017,7 +21017,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__72);
   __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__72, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_next, 519, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(0, 519, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":526
+  /* "plottings.pyx":526
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -21029,7 +21029,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__74);
   __pyx_codeobj__75 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__74, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_previous, 526, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__75)) __PYX_ERR(0, 526, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":533
+  /* "plottings.pyx":533
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -21041,7 +21041,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__76);
   __pyx_codeobj__77 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__76, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_save_LP11, 533, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__77)) __PYX_ERR(0, 533, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":539
+  /* "plottings.pyx":539
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -21053,7 +21053,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__78);
   __pyx_codeobj__79 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__78, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_save_LP01, 539, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__79)) __PYX_ERR(0, 539, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":545
+  /* "plottings.pyx":545
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -21065,7 +21065,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__80);
   __pyx_codeobj__81 = (PyObject*)__Pyx_PyCode_New(1, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__80, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_Bscan_lanterne_plots, 545, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__81)) __PYX_ERR(0, 545, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":618
+  /* "plottings.pyx":618
  * 
  * 
  * class Lantern_Cscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -21076,7 +21076,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__82);
   __Pyx_GIVEREF(__pyx_tuple__82);
 
-  /* "src/toolbox/plottings.pyx":621
+  /* "plottings.pyx":621
  * 
  * 
  *     def __init__(self, fig1, Cscan_LP01, Cscan_LP11):             # <<<<<<<<<<<<<<
@@ -21088,7 +21088,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__83);
   __pyx_codeobj__84 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__83, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_init, 621, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__84)) __PYX_ERR(0, 621, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":627
+  /* "plottings.pyx":627
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
@@ -21100,7 +21100,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__85);
   __pyx_codeobj__86 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__85, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_update_intensity, 627, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__86)) __PYX_ERR(0, 627, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":635
+  /* "plottings.pyx":635
  * 
  * 
  *     def submit(self, text):             # <<<<<<<<<<<<<<
@@ -21112,7 +21112,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__87);
   __pyx_codeobj__88 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__87, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_submit, 635, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__88)) __PYX_ERR(0, 635, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":649
+  /* "plottings.pyx":649
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
@@ -21124,7 +21124,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__89);
   __pyx_codeobj__90 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__89, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_next, 649, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__90)) __PYX_ERR(0, 649, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":662
+  /* "plottings.pyx":662
  * 
  * 
  *     def normalize_image(self):             # <<<<<<<<<<<<<<
@@ -21136,7 +21136,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__91);
   __pyx_codeobj__92 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__91, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_normalize_image, 662, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__92)) __PYX_ERR(0, 662, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":705
+  /* "plottings.pyx":705
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
@@ -21148,7 +21148,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__93);
   __pyx_codeobj__94 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__93, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_previous, 705, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__94)) __PYX_ERR(0, 705, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":719
+  /* "plottings.pyx":719
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
@@ -21160,7 +21160,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__95);
   __pyx_codeobj__96 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__95, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_save_LP11, 719, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__96)) __PYX_ERR(0, 719, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":725
+  /* "plottings.pyx":725
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
@@ -21172,7 +21172,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__97);
   __pyx_codeobj__98 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__97, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_plottings_pyx, __pyx_n_s_save_LP01, 725, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__98)) __PYX_ERR(0, 725, __pyx_L1_error)
 
-  /* "src/toolbox/plottings.pyx":731
+  /* "plottings.pyx":731
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
@@ -21274,14 +21274,14 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_16cython_plottings___pyx_scope_struct__Bscan_plots) < 0) __PYX_ERR(0, 152, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_9plottings___pyx_scope_struct__Bscan_plots) < 0) __PYX_ERR(0, 152, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_16cython_plottings___pyx_scope_struct__Bscan_plots.tp_print = 0;
+  __pyx_type_9plottings___pyx_scope_struct__Bscan_plots.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_16cython_plottings___pyx_scope_struct__Bscan_plots.tp_dictoffset && __pyx_type_16cython_plottings___pyx_scope_struct__Bscan_plots.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_16cython_plottings___pyx_scope_struct__Bscan_plots.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9plottings___pyx_scope_struct__Bscan_plots.tp_dictoffset && __pyx_type_9plottings___pyx_scope_struct__Bscan_plots.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_9plottings___pyx_scope_struct__Bscan_plots.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
-  __pyx_ptype_16cython_plottings___pyx_scope_struct__Bscan_plots = &__pyx_type_16cython_plottings___pyx_scope_struct__Bscan_plots;
+  __pyx_ptype_9plottings___pyx_scope_struct__Bscan_plots = &__pyx_type_9plottings___pyx_scope_struct__Bscan_plots;
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -21330,11 +21330,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initcython_plottings(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initcython_plottings(void)
+__Pyx_PyMODINIT_FUNC initplottings(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initplottings(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_cython_plottings(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_cython_plottings(void)
+__Pyx_PyMODINIT_FUNC PyInit_plottings(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_plottings(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -21401,7 +21401,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_plottings(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_plottings(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -21412,7 +21412,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_plottings(PyObject *__pyx_p
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'cython_plottings' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'plottings' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -21427,7 +21427,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_cython_plottings(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_plottings(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -21466,7 +21466,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("cython_plottings", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("plottings", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -21484,14 +21484,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cython_plottings) {
+  if (__pyx_module_is_main_plottings) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 2, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cython_plottings")) {
-      if (unlikely(PyDict_SetItemString(modules, "cython_plottings", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "plottings")) {
+      if (unlikely(PyDict_SetItemString(modules, "plottings", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
     }
   }
   #endif
@@ -21512,7 +21512,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
 
-  /* "src/toolbox/plottings.pyx":3
+  /* "plottings.pyx":3
  * 
  * '''_____Standard imports_____'''
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -21524,7 +21524,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":4
+  /* "plottings.pyx":4
  * '''_____Standard imports_____'''
  * import numpy as np
  * import matplotlib.pyplot as plt             # <<<<<<<<<<<<<<
@@ -21542,7 +21542,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plt, __pyx_t_2) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":5
+  /* "plottings.pyx":5
  * import numpy as np
  * import matplotlib.pyplot as plt
  * import matplotlib             # <<<<<<<<<<<<<<
@@ -21554,7 +21554,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_matplotlib, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":6
+  /* "plottings.pyx":6
  * import matplotlib.pyplot as plt
  * import matplotlib
  * matplotlib.use('qt4agg')             # <<<<<<<<<<<<<<
@@ -21571,7 +21571,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":7
+  /* "plottings.pyx":7
  * import matplotlib
  * matplotlib.use('qt4agg')
  * from matplotlib.widgets import Slider, Button, RadioButtons, TextBox             # <<<<<<<<<<<<<<
@@ -21613,7 +21613,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":8
+  /* "plottings.pyx":8
  * matplotlib.use('qt4agg')
  * from matplotlib.widgets import Slider, Button, RadioButtons, TextBox
  * import matplotlib.gridspec as gridspec             # <<<<<<<<<<<<<<
@@ -21631,7 +21631,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_gridspec, __pyx_t_2) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":11
+  /* "plottings.pyx":11
  * 
  * '''_____Project imports_____'''
  * from src.toolbox.fits import gauss             # <<<<<<<<<<<<<<
@@ -21652,7 +21652,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/plottings.pyx":12
+  /* "plottings.pyx":12
  * '''_____Project imports_____'''
  * from src.toolbox.fits import gauss
  * import src.toolbox.directories as directories             # <<<<<<<<<<<<<<
@@ -21670,91 +21670,91 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_directories, __pyx_t_2) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":16
+  /* "plottings.pyx":16
  * 
  * 
  * def dB_plot(data1, data2=None):             # <<<<<<<<<<<<<<
  * 
  *     fig = plt.figure(figsize=(15, 6))
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16cython_plottings_1dB_plot, NULL, __pyx_n_s_cython_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9plottings_1dB_plot, NULL, __pyx_n_s_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_dB_plot, __pyx_t_2) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":58
+  /* "plottings.pyx":58
  * 
  * 
  * def interactive_shift(spectra1, param1, spectra2, param2):             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16cython_plottings_3interactive_shift, NULL, __pyx_n_s_cython_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9plottings_3interactive_shift, NULL, __pyx_n_s_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_interactive_shift, __pyx_t_2) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":101
+  /* "plottings.pyx":101
  * 
  * 
  * def shifted_spectra_plots(spectra1, param1, spectra2, param2):             # <<<<<<<<<<<<<<
  * 
  *     plt.ion()
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16cython_plottings_5shifted_spectra_plots, NULL, __pyx_n_s_cython_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9plottings_5shifted_spectra_plots, NULL, __pyx_n_s_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_shifted_spectra_plots, __pyx_t_2) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":134
+  /* "plottings.pyx":134
  * 
  * 
  * def phase_dispersion_plot(exp_dispersion, fit_dispersion):             # <<<<<<<<<<<<<<
  * 
  *     fig = plt.figure(figsize=(15, 6))
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16cython_plottings_7phase_dispersion_plot, NULL, __pyx_n_s_cython_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9plottings_7phase_dispersion_plot, NULL, __pyx_n_s_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_phase_dispersion_plot, __pyx_t_2) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":152
+  /* "plottings.pyx":152
  * 
  * 
  * def Bscan_plots(Bscan):             # <<<<<<<<<<<<<<
  * 
  *     Bscan = np.array(Bscan)
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16cython_plottings_9Bscan_plots, NULL, __pyx_n_s_cython_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9plottings_9Bscan_plots, NULL, __pyx_n_s_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Bscan_plots, __pyx_t_2) < 0) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":218
+  /* "plottings.pyx":218
  * 
  * 
  * def plots_signals(data, sub_data, ref, sample, dark):             # <<<<<<<<<<<<<<
  * 
  *     fig = plt.figure()
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16cython_plottings_11plots_signals, NULL, __pyx_n_s_cython_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9plottings_11plots_signals, NULL, __pyx_n_s_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plots_signals, __pyx_t_2) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":237
+  /* "plottings.pyx":237
  * 
  * 
  * def plot_klinearization(phase1, phase2, Plin, Pfit=None):             # <<<<<<<<<<<<<<
  * 
  *     plt.ion()
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16cython_plottings_13plot_klinearization, NULL, __pyx_n_s_cython_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9plottings_13plot_klinearization, NULL, __pyx_n_s_plottings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plot_klinearization, __pyx_t_2) < 0) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":259
+  /* "plottings.pyx":259
  * 
  * 
  * class Lantern_Bscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -21763,94 +21763,94 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_tuple__37); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__37, __pyx_n_s_Lantern_Bscan_vizualiser, __pyx_n_s_Lantern_Bscan_vizualiser, (PyObject *) NULL, __pyx_n_s_cython_plottings, (PyObject *) NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 259, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__37, __pyx_n_s_Lantern_Bscan_vizualiser, __pyx_n_s_Lantern_Bscan_vizualiser, (PyObject *) NULL, __pyx_n_s_plottings, (PyObject *) NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/plottings.pyx":262
+  /* "plottings.pyx":262
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
  *         self.fig1 = fig1
  *         self.Bscan_LP01 = Bscan_LP01
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_1__init__, 0, __pyx_n_s_Lantern_Bscan_vizualiser___init, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_1__init__, 0, __pyx_n_s_Lantern_Bscan_vizualiser___init, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":268
+  /* "plottings.pyx":268
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
  *         Vmax_LP11 = self.SVmax_LP11.val
  *         Vmin_LP11 = self.SVmin_LP11.val
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_3update_intensity, 0, __pyx_n_s_Lantern_Bscan_vizualiser_update, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_3update_intensity, 0, __pyx_n_s_Lantern_Bscan_vizualiser_update, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_update_intensity, __pyx_t_3) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":278
+  /* "plottings.pyx":278
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
  *         self.N_plot += 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_5next, 0, __pyx_n_s_Lantern_Bscan_vizualiser_next, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 278, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_5next, 0, __pyx_n_s_Lantern_Bscan_vizualiser_next, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 278, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_next, __pyx_t_3) < 0) __PYX_ERR(0, 278, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":285
+  /* "plottings.pyx":285
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
  *         self.N_plot -= 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_7previous, 0, __pyx_n_s_Lantern_Bscan_vizualiser_previou, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_7previous, 0, __pyx_n_s_Lantern_Bscan_vizualiser_previou, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_previous, __pyx_t_3) < 0) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":292
+  /* "plottings.pyx":292
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_9save_LP11, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_9save_LP11, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_save_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 292, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":298
+  /* "plottings.pyx":298
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_11save_LP01, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP_2, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_11save_LP01, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP_2, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_save_LP01, __pyx_t_3) < 0) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":304
+  /* "plottings.pyx":304
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
  * 
  *         self.Bscan_LP01 = np.array(self.Bscan_LP01)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots, 0, __pyx_n_s_Lantern_Bscan_vizualiser_Bscan_l, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_13Bscan_lanterne_plots, 0, __pyx_n_s_Lantern_Bscan_vizualiser_Bscan_l, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_Bscan_lanterne_plots, __pyx_t_3) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":259
+  /* "plottings.pyx":259
  * 
  * 
  * class Lantern_Bscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -21864,7 +21864,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":379
+  /* "plottings.pyx":379
  * 
  * 
  * class Lantern_Bscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -21873,94 +21873,94 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_tuple__52); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__52, __pyx_n_s_Lantern_Bscan_vizualiser, __pyx_n_s_Lantern_Bscan_vizualiser, (PyObject *) NULL, __pyx_n_s_cython_plottings, (PyObject *) NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__52, __pyx_n_s_Lantern_Bscan_vizualiser, __pyx_n_s_Lantern_Bscan_vizualiser, (PyObject *) NULL, __pyx_n_s_plottings, (PyObject *) NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/plottings.pyx":382
+  /* "plottings.pyx":382
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
  *         self.fig1 = fig1
  *         self.Bscan_LP01 = Bscan_LP01
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_15__init__, 0, __pyx_n_s_Lantern_Bscan_vizualiser___init, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_15__init__, 0, __pyx_n_s_Lantern_Bscan_vizualiser___init, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 382, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":388
+  /* "plottings.pyx":388
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
  *         Vmax_LP11 = self.SVmax_LP11.val
  *         Vmin_LP11 = self.SVmin_LP11.val
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_17update_intensity, 0, __pyx_n_s_Lantern_Bscan_vizualiser_update, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_17update_intensity, 0, __pyx_n_s_Lantern_Bscan_vizualiser_update, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_update_intensity, __pyx_t_3) < 0) __PYX_ERR(0, 388, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":398
+  /* "plottings.pyx":398
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
  *         self.N_plot += 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_19next, 0, __pyx_n_s_Lantern_Bscan_vizualiser_next, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__58)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_19next, 0, __pyx_n_s_Lantern_Bscan_vizualiser_next, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__58)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_next, __pyx_t_3) < 0) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":405
+  /* "plottings.pyx":405
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
  *         self.N_plot -= 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_21previous, 0, __pyx_n_s_Lantern_Bscan_vizualiser_previou, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__60)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 405, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_21previous, 0, __pyx_n_s_Lantern_Bscan_vizualiser_previou, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__60)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 405, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_previous, __pyx_t_3) < 0) __PYX_ERR(0, 405, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":412
+  /* "plottings.pyx":412
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_23save_LP11, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__62)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 412, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_23save_LP11, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__62)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 412, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_save_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 412, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":418
+  /* "plottings.pyx":418
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_25save_LP01, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP_2, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__64)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 418, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_25save_LP01, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP_2, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__64)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 418, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_save_LP01, __pyx_t_3) < 0) __PYX_ERR(0, 418, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":424
+  /* "plottings.pyx":424
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
  * 
  *         self.Bscan_LP01 = np.array(self.Bscan_LP01)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots, 0, __pyx_n_s_Lantern_Bscan_vizualiser_Bscan_l, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__66)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 424, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_27Bscan_lanterne_plots, 0, __pyx_n_s_Lantern_Bscan_vizualiser_Bscan_l, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__66)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 424, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_Bscan_lanterne_plots, __pyx_t_3) < 0) __PYX_ERR(0, 424, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":379
+  /* "plottings.pyx":379
  * 
  * 
  * class Lantern_Bscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -21974,7 +21974,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":500
+  /* "plottings.pyx":500
  * 
  * 
  * class Lantern_Bscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -21983,94 +21983,94 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_tuple__67); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 500, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__67, __pyx_n_s_Lantern_Bscan_vizualiser, __pyx_n_s_Lantern_Bscan_vizualiser, (PyObject *) NULL, __pyx_n_s_cython_plottings, (PyObject *) NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 500, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__67, __pyx_n_s_Lantern_Bscan_vizualiser, __pyx_n_s_Lantern_Bscan_vizualiser, (PyObject *) NULL, __pyx_n_s_plottings, (PyObject *) NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 500, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/plottings.pyx":503
+  /* "plottings.pyx":503
  * 
  * 
  *     def __init__(self, fig1, Bscan_LP01, Bscan_LP11):             # <<<<<<<<<<<<<<
  *         self.fig1 = fig1
  *         self.Bscan_LP01 = Bscan_LP01
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_29__init__, 0, __pyx_n_s_Lantern_Bscan_vizualiser___init, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__69)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_29__init__, 0, __pyx_n_s_Lantern_Bscan_vizualiser___init, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__69)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 503, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 503, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":509
+  /* "plottings.pyx":509
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
  *         Vmax_LP11 = self.SVmax_LP11.val
  *         Vmin_LP11 = self.SVmin_LP11.val
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_31update_intensity, 0, __pyx_n_s_Lantern_Bscan_vizualiser_update, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__71)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 509, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_31update_intensity, 0, __pyx_n_s_Lantern_Bscan_vizualiser_update, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__71)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 509, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_update_intensity, __pyx_t_3) < 0) __PYX_ERR(0, 509, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":519
+  /* "plottings.pyx":519
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
  *         self.N_plot += 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_33next, 0, __pyx_n_s_Lantern_Bscan_vizualiser_next, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__73)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 519, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_33next, 0, __pyx_n_s_Lantern_Bscan_vizualiser_next, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__73)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 519, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_next, __pyx_t_3) < 0) __PYX_ERR(0, 519, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":526
+  /* "plottings.pyx":526
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
  *         self.N_plot -= 1
  *         self.l_LP01.set_data(self.dBscan_LP01[self.N_plot].T)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_35previous, 0, __pyx_n_s_Lantern_Bscan_vizualiser_previou, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__75)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 526, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_35previous, 0, __pyx_n_s_Lantern_Bscan_vizualiser_previou, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__75)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 526, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_previous, __pyx_t_3) < 0) __PYX_ERR(0, 526, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":533
+  /* "plottings.pyx":533
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_37save_LP11, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__77)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_37save_LP11, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__77)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 533, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_save_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 533, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":539
+  /* "plottings.pyx":539
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_39save_LP01, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP_2, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__79)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 539, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_39save_LP01, 0, __pyx_n_s_Lantern_Bscan_vizualiser_save_LP_2, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__79)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_save_LP01, __pyx_t_3) < 0) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":545
+  /* "plottings.pyx":545
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
  * 
  *         self.Bscan_LP01 = np.array(self.Bscan_LP01)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots, 0, __pyx_n_s_Lantern_Bscan_vizualiser_Bscan_l, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__81)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 545, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Bscan_vizualiser_41Bscan_lanterne_plots, 0, __pyx_n_s_Lantern_Bscan_vizualiser_Bscan_l, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__81)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_Bscan_lanterne_plots, __pyx_t_3) < 0) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":500
+  /* "plottings.pyx":500
  * 
  * 
  * class Lantern_Bscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -22084,7 +22084,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":618
+  /* "plottings.pyx":618
  * 
  * 
  * class Lantern_Cscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -22093,118 +22093,118 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_tuple__82); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__82, __pyx_n_s_Lantern_Cscan_vizualiser, __pyx_n_s_Lantern_Cscan_vizualiser, (PyObject *) NULL, __pyx_n_s_cython_plottings, (PyObject *) NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 618, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__82, __pyx_n_s_Lantern_Cscan_vizualiser, __pyx_n_s_Lantern_Cscan_vizualiser, (PyObject *) NULL, __pyx_n_s_plottings, (PyObject *) NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/toolbox/plottings.pyx":621
+  /* "plottings.pyx":621
  * 
  * 
  *     def __init__(self, fig1, Cscan_LP01, Cscan_LP11):             # <<<<<<<<<<<<<<
  *         self.fig1 = fig1
  *         self.dCscan_LP01 = np.array(10*np.log(Cscan_LP01))
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_1__init__, 0, __pyx_n_s_Lantern_Cscan_vizualiser___init, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__84)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_1__init__, 0, __pyx_n_s_Lantern_Cscan_vizualiser___init, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__84)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 621, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 621, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":627
+  /* "plottings.pyx":627
  * 
  * 
  *     def update_intensity(self, event):             # <<<<<<<<<<<<<<
  * 
  *         self.l_LP11.set_clim(vmin=self.SVmin.val, vmax=self.SVmax.val)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_3update_intensity, 0, __pyx_n_s_Lantern_Cscan_vizualiser_update, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__86)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 627, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_3update_intensity, 0, __pyx_n_s_Lantern_Cscan_vizualiser_update, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__86)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 627, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_update_intensity, __pyx_t_3) < 0) __PYX_ERR(0, 627, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":635
+  /* "plottings.pyx":635
  * 
  * 
  *     def submit(self, text):             # <<<<<<<<<<<<<<
  *         self.N_plot = eval(text)
  *         self.dBscan = self.dCscan_LP01[:,:,self.N_plot].T
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_5submit, 0, __pyx_n_s_Lantern_Cscan_vizualiser_submit, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__88)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 635, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_5submit, 0, __pyx_n_s_Lantern_Cscan_vizualiser_submit, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__88)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 635, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_submit, __pyx_t_3) < 0) __PYX_ERR(0, 635, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":649
+  /* "plottings.pyx":649
  * 
  * 
  *     def next(self, event):             # <<<<<<<<<<<<<<
  *         self.N_plot += 1
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_7next, 0, __pyx_n_s_Lantern_Cscan_vizualiser_next, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__90)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 649, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_7next, 0, __pyx_n_s_Lantern_Cscan_vizualiser_next, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__90)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 649, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_next, __pyx_t_3) < 0) __PYX_ERR(0, 649, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":662
+  /* "plottings.pyx":662
  * 
  * 
  *     def normalize_image(self):             # <<<<<<<<<<<<<<
  * 
  *         self.dBscan -= np.mean(self.dBscan) - 255/2
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_9normalize_image, 0, __pyx_n_s_Lantern_Cscan_vizualiser_normali, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__92)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 662, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_9normalize_image, 0, __pyx_n_s_Lantern_Cscan_vizualiser_normali, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__92)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 662, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_normalize_image, __pyx_t_3) < 0) __PYX_ERR(0, 662, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":705
+  /* "plottings.pyx":705
  * 
  * 
  *     def previous(self, event):             # <<<<<<<<<<<<<<
  *         self.N_plot -= 1
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_11previous, 0, __pyx_n_s_Lantern_Cscan_vizualiser_previou, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__94)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 705, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_11previous, 0, __pyx_n_s_Lantern_Cscan_vizualiser_previou, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__94)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 705, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_previous, __pyx_t_3) < 0) __PYX_ERR(0, 705, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":719
+  /* "plottings.pyx":719
  * 
  * 
  *     def save_LP11(self, event):             # <<<<<<<<<<<<<<
  *         save_dir = "results/"
  *         extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_13save_LP11, 0, __pyx_n_s_Lantern_Cscan_vizualiser_save_LP, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__96)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 719, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_13save_LP11, 0, __pyx_n_s_Lantern_Cscan_vizualiser_save_LP, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__96)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 719, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_save_LP11, __pyx_t_3) < 0) __PYX_ERR(0, 719, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":725
+  /* "plottings.pyx":725
  * 
  * 
  *     def save_LP01(self, event):             # <<<<<<<<<<<<<<
  *         save_dir = "results/"
  *         extent = self.ax1.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_15save_LP01, 0, __pyx_n_s_Lantern_Cscan_vizualiser_save_LP_2, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__98)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 725, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_15save_LP01, 0, __pyx_n_s_Lantern_Cscan_vizualiser_save_LP_2, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__98)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 725, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_save_LP01, __pyx_t_3) < 0) __PYX_ERR(0, 725, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":731
+  /* "plottings.pyx":731
  * 
  * 
  *     def Bscan_lanterne_plots(self):             # <<<<<<<<<<<<<<
  * 
  *         self.fig = plt.figure(figsize=(16,10))
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots, 0, __pyx_n_s_Lantern_Cscan_vizualiser_Bscan_l, NULL, __pyx_n_s_cython_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__100)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 731, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9plottings_24Lantern_Cscan_vizualiser_17Bscan_lanterne_plots, 0, __pyx_n_s_Lantern_Cscan_vizualiser_Bscan_l, NULL, __pyx_n_s_plottings, __pyx_d, ((PyObject *)__pyx_codeobj__100)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 731, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_Bscan_lanterne_plots, __pyx_t_3) < 0) __PYX_ERR(0, 731, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/plottings.pyx":618
+  /* "plottings.pyx":618
  * 
  * 
  * class Lantern_Cscan_vizualiser(object):             # <<<<<<<<<<<<<<
@@ -22218,7 +22218,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/plottings.pyx":2
+  /* "plottings.pyx":2
  * 
  * '''_____Standard imports_____'''             # <<<<<<<<<<<<<<
  * import numpy as np
@@ -22238,11 +22238,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init cython_plottings", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init plottings", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cython_plottings");
+    PyErr_SetString(PyExc_ImportError, "init plottings");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

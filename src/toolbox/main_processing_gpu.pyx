@@ -15,7 +15,7 @@ ctypedef np.cdouble_t CDTYPE_t
 ctypedef np.double_t DTYPE_t
 
 
-cpdef process_Bscan(np.ndarray[np.double_t, ndim=2 Bscan_spectra, dict calibration):
+cpdef process_Bscan(np.ndarray[np.double_t, ndim=2] Bscan_spectra, dict calibration):
     """
     GPU accelerated
     """

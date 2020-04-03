@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "cython_PySpectra",
+        "name": "PySpectra",
         "sources": [
             "src/toolbox/PySpectra.pyx"
         ]
     },
-    "module_name": "cython_PySpectra"
+    "module_name": "PySpectra"
 }
 END: Cython Metadata */
 
@@ -602,8 +602,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cython_PySpectra
-#define __PYX_HAVE_API__cython_PySpectra
+#define __PYX_HAVE__PySpectra
+#define __PYX_HAVE_API__PySpectra
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -1204,12 +1204,12 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'cython_PySpectra' */
-#define __Pyx_MODULE_NAME "cython_PySpectra"
-extern int __pyx_module_is_main_cython_PySpectra;
-int __pyx_module_is_main_cython_PySpectra = 0;
+/* Module declarations from 'PySpectra' */
+#define __Pyx_MODULE_NAME "PySpectra"
+extern int __pyx_module_is_main_PySpectra;
+int __pyx_module_is_main_PySpectra = 0;
 
-/* Implementation of 'cython_PySpectra' */
+/* Implementation of 'PySpectra' */
 static PyObject *__pyx_builtin_object;
 static const char __pyx_k_fs[] = "fs";
 static const char __pyx_k_np[] = "np";
@@ -1237,6 +1237,7 @@ static const char __pyx_k_ref_dir[] = "ref_dir";
 static const char __pyx_k_sub_raw[] = "sub_raw";
 static const char __pyx_k_data_dir[] = "data_dir";
 static const char __pyx_k_qualname[] = "__qualname__";
+static const char __pyx_k_PySpectra[] = "PySpectra";
 static const char __pyx_k_get_phase[] = "get_phase";
 static const char __pyx_k_load_data[] = "load_data";
 static const char __pyx_k_metaclass[] = "__metaclass__";
@@ -1249,7 +1250,6 @@ static const char __pyx_k_plots_signals[] = "plots_signals";
 static const char __pyx_k_Spectra___init[] = "Spectra.__init__";
 static const char __pyx_k_background_dir[] = "background_dir";
 static const char __pyx_k_Standard_imports[] = "_____Standard imports_____";
-static const char __pyx_k_cython_PySpectra[] = "cython_PySpectra";
 static const char __pyx_k_Spectra_get_phase[] = "Spectra.get_phase";
 static const char __pyx_k_Spectra_load_data[] = "Spectra.load_data";
 static const char __pyx_k_src_toolbox_maths[] = "src.toolbox.maths";
@@ -1260,6 +1260,7 @@ static const char __pyx_k_src_toolbox_loadings[] = "src.toolbox.loadings";
 static const char __pyx_k_src_toolbox_plottings[] = "src.toolbox.plottings";
 static const char __pyx_k_butter_highpass_filter[] = "butter_highpass_filter";
 static const char __pyx_k_src_toolbox_PySpectra_pyx[] = "src\\toolbox\\PySpectra.pyx";
+static PyObject *__pyx_n_s_PySpectra;
 static PyObject *__pyx_n_s_Spectra;
 static PyObject *__pyx_n_s_Spectra___init;
 static PyObject *__pyx_n_s_Spectra_get_phase;
@@ -1271,7 +1272,6 @@ static PyObject *__pyx_n_s_background_dir;
 static PyObject *__pyx_n_s_butter_highpass_filter;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_cutoff;
-static PyObject *__pyx_n_s_cython_PySpectra;
 static PyObject *__pyx_n_s_data_dir;
 static PyObject *__pyx_n_s_doc;
 static PyObject *__pyx_n_s_fs;
@@ -1308,11 +1308,11 @@ static PyObject *__pyx_n_s_src_toolbox_plottings;
 static PyObject *__pyx_n_s_sub_raw;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_unwrap_phase;
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_data_dir, PyObject *__pyx_v_background_dir, PyObject *__pyx_v_ref_dir, PyObject *__pyx_v_sample_dir); /* proto */
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_2load_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_4get_phase(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9PySpectra_7Spectra___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_data_dir, PyObject *__pyx_v_background_dir, PyObject *__pyx_v_ref_dir, PyObject *__pyx_v_sample_dir); /* proto */
+static PyObject *__pyx_pf_9PySpectra_7Spectra_2load_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9PySpectra_7Spectra_4get_phase(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9PySpectra_7Spectra_6process_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_int_4;
 static PyObject *__pyx_int_280;
 static PyObject *__pyx_int_40000;
@@ -1330,7 +1330,7 @@ static PyObject *__pyx_codeobj__10;
 static PyObject *__pyx_codeobj__12;
 /* Late includes */
 
-/* "src/toolbox/PySpectra.pyx":14
+/* "PySpectra.pyx":14
  * class Spectra(object):
  * 
  *     def __init__(self, data_dir, background_dir = None, ref_dir = None, sample_dir = None):             # <<<<<<<<<<<<<<
@@ -1339,9 +1339,9 @@ static PyObject *__pyx_codeobj__12;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_PySpectra_7Spectra_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_16cython_PySpectra_7Spectra_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9PySpectra_7Spectra_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9PySpectra_7Spectra_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9PySpectra_7Spectra_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9PySpectra_7Spectra_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_data_dir = 0;
   PyObject *__pyx_v_background_dir = 0;
@@ -1430,23 +1430,23 @@ static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_1__init__(PyObject *__pyx_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 14, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_PySpectra.Spectra.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("PySpectra.Spectra.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16cython_PySpectra_7Spectra___init__(__pyx_self, __pyx_v_self, __pyx_v_data_dir, __pyx_v_background_dir, __pyx_v_ref_dir, __pyx_v_sample_dir);
+  __pyx_r = __pyx_pf_9PySpectra_7Spectra___init__(__pyx_self, __pyx_v_self, __pyx_v_data_dir, __pyx_v_background_dir, __pyx_v_ref_dir, __pyx_v_sample_dir);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_data_dir, PyObject *__pyx_v_background_dir, PyObject *__pyx_v_ref_dir, PyObject *__pyx_v_sample_dir) {
+static PyObject *__pyx_pf_9PySpectra_7Spectra___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_data_dir, PyObject *__pyx_v_background_dir, PyObject *__pyx_v_ref_dir, PyObject *__pyx_v_sample_dir) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "src/toolbox/PySpectra.pyx":16
+  /* "PySpectra.pyx":16
  *     def __init__(self, data_dir, background_dir = None, ref_dir = None, sample_dir = None):
  * 
  *         self.data_dir = data_dir             # <<<<<<<<<<<<<<
@@ -1455,7 +1455,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra___init__(CYTHON_UNUSED PyO
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data_dir, __pyx_v_data_dir) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "src/toolbox/PySpectra.pyx":18
+  /* "PySpectra.pyx":18
  *         self.data_dir = data_dir
  * 
  *         self.background_dir = background_dir             # <<<<<<<<<<<<<<
@@ -1464,7 +1464,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra___init__(CYTHON_UNUSED PyO
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_background_dir, __pyx_v_background_dir) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
 
-  /* "src/toolbox/PySpectra.pyx":20
+  /* "PySpectra.pyx":20
  *         self.background_dir = background_dir
  * 
  *         self.ref_dir = ref_dir             # <<<<<<<<<<<<<<
@@ -1473,7 +1473,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra___init__(CYTHON_UNUSED PyO
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ref_dir, __pyx_v_ref_dir) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
 
-  /* "src/toolbox/PySpectra.pyx":22
+  /* "PySpectra.pyx":22
  *         self.ref_dir = ref_dir
  * 
  *         self.sample_dir = sample_dir             # <<<<<<<<<<<<<<
@@ -1482,7 +1482,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra___init__(CYTHON_UNUSED PyO
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_sample_dir, __pyx_v_sample_dir) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
 
-  /* "src/toolbox/PySpectra.pyx":14
+  /* "PySpectra.pyx":14
  * class Spectra(object):
  * 
  *     def __init__(self, data_dir, background_dir = None, ref_dir = None, sample_dir = None):             # <<<<<<<<<<<<<<
@@ -1494,7 +1494,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra___init__(CYTHON_UNUSED PyO
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("cython_PySpectra.Spectra.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("PySpectra.Spectra.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1502,7 +1502,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra___init__(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "src/toolbox/PySpectra.pyx":25
+/* "PySpectra.pyx":25
  * 
  * 
  *     def load_data(self):             # <<<<<<<<<<<<<<
@@ -1511,21 +1511,21 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra___init__(CYTHON_UNUSED PyO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_3load_data(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_16cython_PySpectra_7Spectra_2load_data[] = " This method serve to load the data, i.e, mirror, darf_ref, dark_not,\n        dark_sample.\n\n        ";
-static PyMethodDef __pyx_mdef_16cython_PySpectra_7Spectra_3load_data = {"load_data", (PyCFunction)__pyx_pw_16cython_PySpectra_7Spectra_3load_data, METH_O, __pyx_doc_16cython_PySpectra_7Spectra_2load_data};
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_3load_data(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9PySpectra_7Spectra_3load_data(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_9PySpectra_7Spectra_2load_data[] = " This method serve to load the data, i.e, mirror, darf_ref, dark_not,\n        dark_sample.\n\n        ";
+static PyMethodDef __pyx_mdef_9PySpectra_7Spectra_3load_data = {"load_data", (PyCFunction)__pyx_pw_9PySpectra_7Spectra_3load_data, METH_O, __pyx_doc_9PySpectra_7Spectra_2load_data};
+static PyObject *__pyx_pw_9PySpectra_7Spectra_3load_data(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("load_data (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_PySpectra_7Spectra_2load_data(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9PySpectra_7Spectra_2load_data(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_2load_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_9PySpectra_7Spectra_2load_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1534,7 +1534,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_2load_data(CYTHON_UNUSED P
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("load_data", 0);
 
-  /* "src/toolbox/PySpectra.pyx":31
+  /* "PySpectra.pyx":31
  *         """
  * 
  *         self.raw = []             # <<<<<<<<<<<<<<
@@ -1546,7 +1546,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_2load_data(CYTHON_UNUSED P
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_raw, __pyx_t_1) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":33
+  /* "PySpectra.pyx":33
  *         self.raw = []
  * 
  *         self.raw = np.load(self.data_dir)             # <<<<<<<<<<<<<<
@@ -1579,7 +1579,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_2load_data(CYTHON_UNUSED P
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_raw, __pyx_t_1) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":25
+  /* "PySpectra.pyx":25
  * 
  * 
  *     def load_data(self):             # <<<<<<<<<<<<<<
@@ -1595,7 +1595,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_2load_data(CYTHON_UNUSED P
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_PySpectra.Spectra.load_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("PySpectra.Spectra.load_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1603,7 +1603,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_2load_data(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "src/toolbox/PySpectra.pyx":36
+/* "PySpectra.pyx":36
  * 
  * 
  *     def get_phase(self):             # <<<<<<<<<<<<<<
@@ -1612,21 +1612,21 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_2load_data(CYTHON_UNUSED P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_5get_phase(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_16cython_PySpectra_7Spectra_4get_phase[] = " This method compute the phase of the processed spectra.\n\n        ";
-static PyMethodDef __pyx_mdef_16cython_PySpectra_7Spectra_5get_phase = {"get_phase", (PyCFunction)__pyx_pw_16cython_PySpectra_7Spectra_5get_phase, METH_O, __pyx_doc_16cython_PySpectra_7Spectra_4get_phase};
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_5get_phase(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9PySpectra_7Spectra_5get_phase(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_9PySpectra_7Spectra_4get_phase[] = " This method compute the phase of the processed spectra.\n\n        ";
+static PyMethodDef __pyx_mdef_9PySpectra_7Spectra_5get_phase = {"get_phase", (PyCFunction)__pyx_pw_9PySpectra_7Spectra_5get_phase, METH_O, __pyx_doc_9PySpectra_7Spectra_4get_phase};
+static PyObject *__pyx_pw_9PySpectra_7Spectra_5get_phase(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_phase (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_PySpectra_7Spectra_4get_phase(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9PySpectra_7Spectra_4get_phase(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_4get_phase(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_9PySpectra_7Spectra_4get_phase(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1635,7 +1635,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_4get_phase(CYTHON_UNUSED P
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("get_phase", 0);
 
-  /* "src/toolbox/PySpectra.pyx":40
+  /* "PySpectra.pyx":40
  * 
  *         """
  *         self.phase = unwrap_phase(self.sub_raw)             # <<<<<<<<<<<<<<
@@ -1665,7 +1665,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_4get_phase(CYTHON_UNUSED P
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_phase, __pyx_t_1) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":42
+  /* "PySpectra.pyx":42
  *         self.phase = unwrap_phase(self.sub_raw)
  * 
  *         self.phase -= self.phase[0]             # <<<<<<<<<<<<<<
@@ -1686,7 +1686,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_4get_phase(CYTHON_UNUSED P
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_phase, __pyx_t_2) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":36
+  /* "PySpectra.pyx":36
  * 
  * 
  *     def get_phase(self):             # <<<<<<<<<<<<<<
@@ -1702,7 +1702,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_4get_phase(CYTHON_UNUSED P
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_PySpectra.Spectra.get_phase", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("PySpectra.Spectra.get_phase", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1710,7 +1710,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_4get_phase(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "src/toolbox/PySpectra.pyx":45
+/* "PySpectra.pyx":45
  * 
  * 
  *     def process_data(self):             # <<<<<<<<<<<<<<
@@ -1719,21 +1719,21 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_4get_phase(CYTHON_UNUSED P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_7process_data(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_16cython_PySpectra_7Spectra_6process_data[] = " This method compute the processing of data, i.e,\n        background removal + high pass filter.\n\n        ";
-static PyMethodDef __pyx_mdef_16cython_PySpectra_7Spectra_7process_data = {"process_data", (PyCFunction)__pyx_pw_16cython_PySpectra_7Spectra_7process_data, METH_O, __pyx_doc_16cython_PySpectra_7Spectra_6process_data};
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_7process_data(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9PySpectra_7Spectra_7process_data(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_9PySpectra_7Spectra_6process_data[] = " This method compute the processing of data, i.e,\n        background removal + high pass filter.\n\n        ";
+static PyMethodDef __pyx_mdef_9PySpectra_7Spectra_7process_data = {"process_data", (PyCFunction)__pyx_pw_9PySpectra_7Spectra_7process_data, METH_O, __pyx_doc_9PySpectra_7Spectra_6process_data};
+static PyObject *__pyx_pw_9PySpectra_7Spectra_7process_data(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("process_data (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_PySpectra_7Spectra_6process_data(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9PySpectra_7Spectra_6process_data(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_9PySpectra_7Spectra_6process_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1743,7 +1743,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("process_data", 0);
 
-  /* "src/toolbox/PySpectra.pyx":51
+  /* "PySpectra.pyx":51
  *         """
  * 
  *         self.sub_raw = self.raw             # <<<<<<<<<<<<<<
@@ -1755,7 +1755,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_sub_raw, __pyx_t_1) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":54
+  /* "PySpectra.pyx":54
  * 
  * 
  *         if self.background_dir:             # <<<<<<<<<<<<<<
@@ -1768,7 +1768,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "src/toolbox/PySpectra.pyx":55
+    /* "PySpectra.pyx":55
  * 
  *         if self.background_dir:
  *             self.background = load_data(self.background_dir)             # <<<<<<<<<<<<<<
@@ -1798,7 +1798,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_background, __pyx_t_1) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "src/toolbox/PySpectra.pyx":56
+    /* "PySpectra.pyx":56
  *         if self.background_dir:
  *             self.background = load_data(self.background_dir)
  *             self.sub_raw += self.background             # <<<<<<<<<<<<<<
@@ -1816,7 +1816,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_sub_raw, __pyx_t_4) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "src/toolbox/PySpectra.pyx":54
+    /* "PySpectra.pyx":54
  * 
  * 
  *         if self.background_dir:             # <<<<<<<<<<<<<<
@@ -1825,7 +1825,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
  */
   }
 
-  /* "src/toolbox/PySpectra.pyx":58
+  /* "PySpectra.pyx":58
  *             self.sub_raw += self.background
  * 
  *         if self.sample_dir:             # <<<<<<<<<<<<<<
@@ -1838,7 +1838,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_2) {
 
-    /* "src/toolbox/PySpectra.pyx":59
+    /* "PySpectra.pyx":59
  * 
  *         if self.sample_dir:
  *             self.sample = load_data(self.sample_dir)             # <<<<<<<<<<<<<<
@@ -1868,7 +1868,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_sample, __pyx_t_4) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "src/toolbox/PySpectra.pyx":60
+    /* "PySpectra.pyx":60
  *         if self.sample_dir:
  *             self.sample = load_data(self.sample_dir)
  *             self.sub_raw -= self.sample             # <<<<<<<<<<<<<<
@@ -1886,7 +1886,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_sub_raw, __pyx_t_1) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "src/toolbox/PySpectra.pyx":58
+    /* "PySpectra.pyx":58
  *             self.sub_raw += self.background
  * 
  *         if self.sample_dir:             # <<<<<<<<<<<<<<
@@ -1895,7 +1895,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
  */
   }
 
-  /* "src/toolbox/PySpectra.pyx":62
+  /* "PySpectra.pyx":62
  *             self.sub_raw -= self.sample
  * 
  *         if self.ref_dir:             # <<<<<<<<<<<<<<
@@ -1908,7 +1908,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "src/toolbox/PySpectra.pyx":63
+    /* "PySpectra.pyx":63
  * 
  *         if self.ref_dir:
  *             self.ref = load_data(self.ref_dir)             # <<<<<<<<<<<<<<
@@ -1938,7 +1938,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ref, __pyx_t_1) < 0) __PYX_ERR(0, 63, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "src/toolbox/PySpectra.pyx":64
+    /* "PySpectra.pyx":64
  *         if self.ref_dir:
  *             self.ref = load_data(self.ref_dir)
  *             self.sub_raw -= self.ref             # <<<<<<<<<<<<<<
@@ -1956,7 +1956,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_sub_raw, __pyx_t_4) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "src/toolbox/PySpectra.pyx":62
+    /* "PySpectra.pyx":62
  *             self.sub_raw -= self.sample
  * 
  *         if self.ref_dir:             # <<<<<<<<<<<<<<
@@ -1965,7 +1965,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
  */
   }
 
-  /* "src/toolbox/PySpectra.pyx":66
+  /* "PySpectra.pyx":66
  *             self.sub_raw -= self.ref
  * 
  *         self.sub_raw = butter_highpass_filter(self.sub_raw,             # <<<<<<<<<<<<<<
@@ -1982,7 +1982,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":67
+  /* "PySpectra.pyx":67
  * 
  *         self.sub_raw = butter_highpass_filter(self.sub_raw,
  *                                               cutoff=280,             # <<<<<<<<<<<<<<
@@ -1995,7 +1995,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_fs, __pyx_int_40000) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_int_4) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
 
-  /* "src/toolbox/PySpectra.pyx":66
+  /* "PySpectra.pyx":66
  *             self.sub_raw -= self.ref
  * 
  *         self.sub_raw = butter_highpass_filter(self.sub_raw,             # <<<<<<<<<<<<<<
@@ -2010,7 +2010,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_sub_raw, __pyx_t_5) < 0) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":45
+  /* "PySpectra.pyx":45
  * 
  * 
  *     def process_data(self):             # <<<<<<<<<<<<<<
@@ -2026,7 +2026,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_PySpectra.Spectra.process_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("PySpectra.Spectra.process_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2034,7 +2034,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "src/toolbox/PySpectra.pyx":71
+/* "PySpectra.pyx":71
  *                                               order=4)
  * 
  *     def plot(self):             # <<<<<<<<<<<<<<
@@ -2043,20 +2043,20 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_6process_data(CYTHON_UNUSE
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_9plot(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_16cython_PySpectra_7Spectra_9plot = {"plot", (PyCFunction)__pyx_pw_16cython_PySpectra_7Spectra_9plot, METH_O, 0};
-static PyObject *__pyx_pw_16cython_PySpectra_7Spectra_9plot(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9PySpectra_7Spectra_9plot(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static PyMethodDef __pyx_mdef_9PySpectra_7Spectra_9plot = {"plot", (PyCFunction)__pyx_pw_9PySpectra_7Spectra_9plot, METH_O, 0};
+static PyObject *__pyx_pw_9PySpectra_7Spectra_9plot(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("plot (wrapper)", 0);
-  __pyx_r = __pyx_pf_16cython_PySpectra_7Spectra_8plot(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9PySpectra_7Spectra_8plot(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_9PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2071,7 +2071,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObje
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("plot", 0);
 
-  /* "src/toolbox/PySpectra.pyx":73
+  /* "PySpectra.pyx":73
  *     def plot(self):
  * 
  *         plots_signals(self.raw,             # <<<<<<<<<<<<<<
@@ -2083,7 +2083,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObje
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_raw); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "src/toolbox/PySpectra.pyx":74
+  /* "PySpectra.pyx":74
  * 
  *         plots_signals(self.raw,
  *                       self.sub_raw,             # <<<<<<<<<<<<<<
@@ -2093,7 +2093,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObje
   __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_sub_raw); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "src/toolbox/PySpectra.pyx":75
+  /* "PySpectra.pyx":75
  *         plots_signals(self.raw,
  *                       self.sub_raw,
  *                       self.ref,             # <<<<<<<<<<<<<<
@@ -2103,7 +2103,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObje
   __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ref); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "src/toolbox/PySpectra.pyx":76
+  /* "PySpectra.pyx":76
  *                       self.sub_raw,
  *                       self.ref,
  *                       self.sample,             # <<<<<<<<<<<<<<
@@ -2113,7 +2113,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObje
   __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_sample); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "src/toolbox/PySpectra.pyx":77
+  /* "PySpectra.pyx":77
  *                       self.ref,
  *                       self.sample,
  *                       self.background)             # <<<<<<<<<<<<<<
@@ -2188,7 +2188,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObje
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":71
+  /* "PySpectra.pyx":71
  *                                               order=4)
  * 
  *     def plot(self):             # <<<<<<<<<<<<<<
@@ -2209,7 +2209,7 @@ static PyObject *__pyx_pf_16cython_PySpectra_7Spectra_8plot(CYTHON_UNUSED PyObje
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("cython_PySpectra.Spectra.plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("PySpectra.Spectra.plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2224,17 +2224,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_cython_PySpectra(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_PySpectra(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_cython_PySpectra},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_PySpectra},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "cython_PySpectra",
+    "PySpectra",
     __pyx_k_Standard_imports, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -2263,6 +2263,7 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
+  {&__pyx_n_s_PySpectra, __pyx_k_PySpectra, sizeof(__pyx_k_PySpectra), 0, 0, 1, 1},
   {&__pyx_n_s_Spectra, __pyx_k_Spectra, sizeof(__pyx_k_Spectra), 0, 0, 1, 1},
   {&__pyx_n_s_Spectra___init, __pyx_k_Spectra___init, sizeof(__pyx_k_Spectra___init), 0, 0, 1, 1},
   {&__pyx_n_s_Spectra_get_phase, __pyx_k_Spectra_get_phase, sizeof(__pyx_k_Spectra_get_phase), 0, 0, 1, 1},
@@ -2274,7 +2275,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_butter_highpass_filter, __pyx_k_butter_highpass_filter, sizeof(__pyx_k_butter_highpass_filter), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_cutoff, __pyx_k_cutoff, sizeof(__pyx_k_cutoff), 0, 0, 1, 1},
-  {&__pyx_n_s_cython_PySpectra, __pyx_k_cython_PySpectra, sizeof(__pyx_k_cython_PySpectra), 0, 0, 1, 1},
   {&__pyx_n_s_data_dir, __pyx_k_data_dir, sizeof(__pyx_k_data_dir), 0, 0, 1, 1},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
   {&__pyx_n_s_fs, __pyx_k_fs, sizeof(__pyx_k_fs), 0, 0, 1, 1},
@@ -2324,7 +2324,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "src/toolbox/PySpectra.pyx":12
+  /* "PySpectra.pyx":12
  * 
  * 
  * class Spectra(object):             # <<<<<<<<<<<<<<
@@ -2335,7 +2335,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "src/toolbox/PySpectra.pyx":14
+  /* "PySpectra.pyx":14
  * class Spectra(object):
  * 
  *     def __init__(self, data_dir, background_dir = None, ref_dir = None, sample_dir = None):             # <<<<<<<<<<<<<<
@@ -2350,7 +2350,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "src/toolbox/PySpectra.pyx":25
+  /* "PySpectra.pyx":25
  * 
  * 
  *     def load_data(self):             # <<<<<<<<<<<<<<
@@ -2362,7 +2362,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__5);
   __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_PySpectra_pyx, __pyx_n_s_load_data, 25, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 25, __pyx_L1_error)
 
-  /* "src/toolbox/PySpectra.pyx":36
+  /* "PySpectra.pyx":36
  * 
  * 
  *     def get_phase(self):             # <<<<<<<<<<<<<<
@@ -2374,7 +2374,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__7);
   __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_PySpectra_pyx, __pyx_n_s_get_phase, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 36, __pyx_L1_error)
 
-  /* "src/toolbox/PySpectra.pyx":45
+  /* "PySpectra.pyx":45
  * 
  * 
  *     def process_data(self):             # <<<<<<<<<<<<<<
@@ -2386,7 +2386,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__9);
   __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_PySpectra_pyx, __pyx_n_s_process_data, 45, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 45, __pyx_L1_error)
 
-  /* "src/toolbox/PySpectra.pyx":71
+  /* "PySpectra.pyx":71
  *                                               order=4)
  * 
  *     def plot(self):             # <<<<<<<<<<<<<<
@@ -2495,11 +2495,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initcython_PySpectra(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initcython_PySpectra(void)
+__Pyx_PyMODINIT_FUNC initPySpectra(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initPySpectra(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_cython_PySpectra(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_cython_PySpectra(void)
+__Pyx_PyMODINIT_FUNC PyInit_PySpectra(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_PySpectra(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -2566,7 +2566,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_PySpectra(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_PySpectra(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -2577,7 +2577,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_PySpectra(PyObject *__pyx_p
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'cython_PySpectra' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'PySpectra' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -2592,7 +2592,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_cython_PySpectra(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_PySpectra(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -2631,7 +2631,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("cython_PySpectra", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("PySpectra", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -2649,14 +2649,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cython_PySpectra) {
+  if (__pyx_module_is_main_PySpectra) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 2, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cython_PySpectra")) {
-      if (unlikely(PyDict_SetItemString(modules, "cython_PySpectra", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "PySpectra")) {
+      if (unlikely(PyDict_SetItemString(modules, "PySpectra", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
     }
   }
   #endif
@@ -2677,7 +2677,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
 
-  /* "src/toolbox/PySpectra.pyx":3
+  /* "PySpectra.pyx":3
  * 
  * '''_____Standard imports_____'''
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -2689,7 +2689,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":6
+  /* "PySpectra.pyx":6
  * 
  * '''_____Project imports_____'''
  * from src.toolbox.maths import unwrap_phase             # <<<<<<<<<<<<<<
@@ -2710,7 +2710,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":7
+  /* "PySpectra.pyx":7
  * '''_____Project imports_____'''
  * from src.toolbox.maths import unwrap_phase
  * from src.toolbox.loadings import load_data             # <<<<<<<<<<<<<<
@@ -2731,7 +2731,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":8
+  /* "PySpectra.pyx":8
  * from src.toolbox.maths import unwrap_phase
  * from src.toolbox.loadings import load_data
  * from src.toolbox.filters import butter_highpass_filter             # <<<<<<<<<<<<<<
@@ -2752,7 +2752,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":9
+  /* "PySpectra.pyx":9
  * from src.toolbox.loadings import load_data
  * from src.toolbox.filters import butter_highpass_filter
  * from src.toolbox.plottings import plots_signals             # <<<<<<<<<<<<<<
@@ -2773,7 +2773,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":12
+  /* "PySpectra.pyx":12
  * 
  * 
  * class Spectra(object):             # <<<<<<<<<<<<<<
@@ -2782,71 +2782,71 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_1 = __Pyx_CalculateMetaclass(NULL, __pyx_tuple_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_tuple_, __pyx_n_s_Spectra, __pyx_n_s_Spectra, (PyObject *) NULL, __pyx_n_s_cython_PySpectra, (PyObject *) NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_tuple_, __pyx_n_s_Spectra, __pyx_n_s_Spectra, (PyObject *) NULL, __pyx_n_s_PySpectra, (PyObject *) NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/toolbox/PySpectra.pyx":14
+  /* "PySpectra.pyx":14
  * class Spectra(object):
  * 
  *     def __init__(self, data_dir, background_dir = None, ref_dir = None, sample_dir = None):             # <<<<<<<<<<<<<<
  * 
  *         self.data_dir = data_dir
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_PySpectra_7Spectra_1__init__, 0, __pyx_n_s_Spectra___init, NULL, __pyx_n_s_cython_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__3)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9PySpectra_7Spectra_1__init__, 0, __pyx_n_s_Spectra___init, NULL, __pyx_n_s_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__3)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__4);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":25
+  /* "PySpectra.pyx":25
  * 
  * 
  *     def load_data(self):             # <<<<<<<<<<<<<<
  *         """ This method serve to load the data, i.e, mirror, darf_ref, dark_not,
  *         dark_sample.
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_PySpectra_7Spectra_3load_data, 0, __pyx_n_s_Spectra_load_data, NULL, __pyx_n_s_cython_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9PySpectra_7Spectra_3load_data, 0, __pyx_n_s_Spectra_load_data, NULL, __pyx_n_s_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_load_data, __pyx_t_3) < 0) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":36
+  /* "PySpectra.pyx":36
  * 
  * 
  *     def get_phase(self):             # <<<<<<<<<<<<<<
  *         """ This method compute the phase of the processed spectra.
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_PySpectra_7Spectra_5get_phase, 0, __pyx_n_s_Spectra_get_phase, NULL, __pyx_n_s_cython_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__8)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9PySpectra_7Spectra_5get_phase, 0, __pyx_n_s_Spectra_get_phase, NULL, __pyx_n_s_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__8)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_get_phase, __pyx_t_3) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":45
+  /* "PySpectra.pyx":45
  * 
  * 
  *     def process_data(self):             # <<<<<<<<<<<<<<
  *         """ This method compute the processing of data, i.e,
  *         background removal + high pass filter.
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_PySpectra_7Spectra_7process_data, 0, __pyx_n_s_Spectra_process_data, NULL, __pyx_n_s_cython_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__10)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9PySpectra_7Spectra_7process_data, 0, __pyx_n_s_Spectra_process_data, NULL, __pyx_n_s_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__10)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_process_data, __pyx_t_3) < 0) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":71
+  /* "PySpectra.pyx":71
  *                                               order=4)
  * 
  *     def plot(self):             # <<<<<<<<<<<<<<
  * 
  *         plots_signals(self.raw,
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16cython_PySpectra_7Spectra_9plot, 0, __pyx_n_s_Spectra_plot, NULL, __pyx_n_s_cython_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__12)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9PySpectra_7Spectra_9plot, 0, __pyx_n_s_Spectra_plot, NULL, __pyx_n_s_PySpectra, __pyx_d, ((PyObject *)__pyx_codeobj__12)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_plot, __pyx_t_3) < 0) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":12
+  /* "PySpectra.pyx":12
  * 
  * 
  * class Spectra(object):             # <<<<<<<<<<<<<<
@@ -2860,7 +2860,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/PySpectra.pyx":2
+  /* "PySpectra.pyx":2
  * 
  * '''_____Standard imports_____'''             # <<<<<<<<<<<<<<
  * import numpy as np
@@ -2880,11 +2880,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init cython_PySpectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init PySpectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cython_PySpectra");
+    PyErr_SetString(PyExc_ImportError, "init PySpectra");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

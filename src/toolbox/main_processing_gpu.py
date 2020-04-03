@@ -24,8 +24,6 @@ def process_Bscan(Bscan_spectra: np.ndarray, calibration: dict):
 
     temp = scipy.signal.detrend(Bscan_spectra, axis=0).astype("float64")
 
-    print(np.shape(temp))
-
     interpolation = interp1d(x, temp, kind='cubic', fill_value="extrapolate")
 
     temp = interpolation(calibration['klinear'][:])

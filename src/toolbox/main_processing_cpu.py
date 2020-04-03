@@ -6,10 +6,9 @@ import scipy.fftpack as fp
 import scipy
 
 '''_____Project imports_____'''
-from src.toolbox.cython_filters import butter_highpass_filter
-from src.toolbox.cython_calibration_processing import linearize_spectra, compensate_dispersion
-#from src.toolbox.maths import spectra2aline, hilbert
-from src.toolbox.cython_maths import spectra2aline, hilbert
+from src.toolbox.filters import butter_highpass_filter
+from src.toolbox.calibration_processing import linearize_spectra, compensate_dispersion
+from src.toolbox.maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
 
 

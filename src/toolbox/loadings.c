@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "cython_loadings",
+        "name": "loadings",
         "sources": [
             "src/toolbox/loadings.pyx"
         ]
     },
-    "module_name": "cython_loadings"
+    "module_name": "loadings"
 }
 END: Cython Metadata */
 
@@ -602,8 +602,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cython_loadings
-#define __PYX_HAVE_API__cython_loadings
+#define __PYX_HAVE__loadings
+#define __PYX_HAVE_API__loadings
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -1093,12 +1093,12 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'cython_loadings' */
-#define __Pyx_MODULE_NAME "cython_loadings"
-extern int __pyx_module_is_main_cython_loadings;
-int __pyx_module_is_main_cython_loadings = 0;
+/* Module declarations from 'loadings' */
+#define __Pyx_MODULE_NAME "loadings"
+extern int __pyx_module_is_main_loadings;
+int __pyx_module_is_main_loadings = 0;
 
-/* Implementation of 'cython_loadings' */
+/* Implementation of 'loadings' */
 static PyObject *__pyx_builtin_open;
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k_rb[] = "rb";
@@ -1115,10 +1115,10 @@ static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_pickle[] = "pickle";
 static const char __pyx_k_reshape[] = "reshape";
 static const char __pyx_k_file_dir[] = "file_dir";
+static const char __pyx_k_loadings[] = "loadings";
 static const char __pyx_k_dimension[] = "dimension";
 static const char __pyx_k_load_data[] = "load_data";
 static const char __pyx_k_calibration[] = "calibration";
-static const char __pyx_k_cython_loadings[] = "cython_loadings";
 static const char __pyx_k_Standard_imports[] = "_____Standard imports_____";
 static const char __pyx_k_load_calibration[] = "load_calibration";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
@@ -1126,7 +1126,6 @@ static const char __pyx_k_load_Bscan_spectra[] = "load_Bscan_spectra";
 static const char __pyx_k_src_toolbox_loadings_pyx[] = "src\\toolbox\\loadings.pyx";
 static PyObject *__pyx_n_s_calibration;
 static PyObject *__pyx_n_s_cline_in_traceback;
-static PyObject *__pyx_n_s_cython_loadings;
 static PyObject *__pyx_n_s_data;
 static PyObject *__pyx_n_s_dimension;
 static PyObject *__pyx_n_s_dir;
@@ -1136,6 +1135,7 @@ static PyObject *__pyx_n_s_load;
 static PyObject *__pyx_n_s_load_Bscan_spectra;
 static PyObject *__pyx_n_s_load_calibration;
 static PyObject *__pyx_n_s_load_data;
+static PyObject *__pyx_n_s_loadings;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_np;
@@ -1147,9 +1147,9 @@ static PyObject *__pyx_n_s_reshape;
 static PyObject *__pyx_kp_s_src_toolbox_loadings_pyx;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_type;
-static PyObject *__pyx_pf_15cython_loadings_load_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dir, CYTHON_UNUSED PyObject *__pyx_v_type); /* proto */
-static PyObject *__pyx_pf_15cython_loadings_2load_Bscan_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_file_dir, PyObject *__pyx_v_dimension); /* proto */
-static PyObject *__pyx_pf_15cython_loadings_4load_calibration(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dir); /* proto */
+static PyObject *__pyx_pf_8loadings_load_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dir, CYTHON_UNUSED PyObject *__pyx_v_type); /* proto */
+static PyObject *__pyx_pf_8loadings_2load_Bscan_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_file_dir, PyObject *__pyx_v_dimension); /* proto */
+static PyObject *__pyx_pf_8loadings_4load_calibration(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dir); /* proto */
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_1024;
 static PyObject *__pyx_int_3147;
@@ -1163,7 +1163,7 @@ static PyObject *__pyx_codeobj__6;
 static PyObject *__pyx_codeobj__8;
 /* Late includes */
 
-/* "src/toolbox/loadings.pyx":7
+/* "loadings.pyx":7
  * 
  * 
  * def load_data(dir, type=float):             # <<<<<<<<<<<<<<
@@ -1172,9 +1172,9 @@ static PyObject *__pyx_codeobj__8;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_15cython_loadings_1load_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_15cython_loadings_1load_data = {"load_data", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_15cython_loadings_1load_data, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_15cython_loadings_1load_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8loadings_1load_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8loadings_1load_data = {"load_data", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8loadings_1load_data, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8loadings_1load_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_dir = 0;
   CYTHON_UNUSED PyObject *__pyx_v_type = 0;
   PyObject *__pyx_r = 0;
@@ -1226,18 +1226,18 @@ static PyObject *__pyx_pw_15cython_loadings_1load_data(PyObject *__pyx_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("load_data", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 7, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_loadings.load_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("loadings.load_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_15cython_loadings_load_data(__pyx_self, __pyx_v_dir, __pyx_v_type);
+  __pyx_r = __pyx_pf_8loadings_load_data(__pyx_self, __pyx_v_dir, __pyx_v_type);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_15cython_loadings_load_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dir, CYTHON_UNUSED PyObject *__pyx_v_type) {
+static PyObject *__pyx_pf_8loadings_load_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dir, CYTHON_UNUSED PyObject *__pyx_v_type) {
   PyObject *__pyx_v_data = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1246,7 +1246,7 @@ static PyObject *__pyx_pf_15cython_loadings_load_data(CYTHON_UNUSED PyObject *__
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("load_data", 0);
 
-  /* "src/toolbox/loadings.pyx":9
+  /* "loadings.pyx":9
  * def load_data(dir, type=float):
  * 
  *     data = []             # <<<<<<<<<<<<<<
@@ -1258,7 +1258,7 @@ static PyObject *__pyx_pf_15cython_loadings_load_data(CYTHON_UNUSED PyObject *__
   __pyx_v_data = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":11
+  /* "loadings.pyx":11
  *     data = []
  * 
  *     data = np.load(dir)             # <<<<<<<<<<<<<<
@@ -1288,7 +1288,7 @@ static PyObject *__pyx_pf_15cython_loadings_load_data(CYTHON_UNUSED PyObject *__
   __Pyx_DECREF_SET(__pyx_v_data, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":13
+  /* "loadings.pyx":13
  *     data = np.load(dir)
  * 
  *     return data             # <<<<<<<<<<<<<<
@@ -1300,7 +1300,7 @@ static PyObject *__pyx_pf_15cython_loadings_load_data(CYTHON_UNUSED PyObject *__
   __pyx_r = __pyx_v_data;
   goto __pyx_L0;
 
-  /* "src/toolbox/loadings.pyx":7
+  /* "loadings.pyx":7
  * 
  * 
  * def load_data(dir, type=float):             # <<<<<<<<<<<<<<
@@ -1313,7 +1313,7 @@ static PyObject *__pyx_pf_15cython_loadings_load_data(CYTHON_UNUSED PyObject *__
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cython_loadings.load_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("loadings.load_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_data);
@@ -1322,7 +1322,7 @@ static PyObject *__pyx_pf_15cython_loadings_load_data(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "src/toolbox/loadings.pyx":16
+/* "loadings.pyx":16
  * 
  * 
  * def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):             # <<<<<<<<<<<<<<
@@ -1331,9 +1331,9 @@ static PyObject *__pyx_pf_15cython_loadings_load_data(CYTHON_UNUSED PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_15cython_loadings_3load_Bscan_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_15cython_loadings_3load_Bscan_spectra = {"load_Bscan_spectra", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_15cython_loadings_3load_Bscan_spectra, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_15cython_loadings_3load_Bscan_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8loadings_3load_Bscan_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8loadings_3load_Bscan_spectra = {"load_Bscan_spectra", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8loadings_3load_Bscan_spectra, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8loadings_3load_Bscan_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_file_dir = 0;
   PyObject *__pyx_v_dimension = 0;
   PyObject *__pyx_r = 0;
@@ -1385,18 +1385,18 @@ static PyObject *__pyx_pw_15cython_loadings_3load_Bscan_spectra(PyObject *__pyx_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("load_Bscan_spectra", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 16, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_loadings.load_Bscan_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("loadings.load_Bscan_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_15cython_loadings_2load_Bscan_spectra(__pyx_self, __pyx_v_file_dir, __pyx_v_dimension);
+  __pyx_r = __pyx_pf_8loadings_2load_Bscan_spectra(__pyx_self, __pyx_v_file_dir, __pyx_v_dimension);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_15cython_loadings_2load_Bscan_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_file_dir, PyObject *__pyx_v_dimension) {
+static PyObject *__pyx_pf_8loadings_2load_Bscan_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_file_dir, PyObject *__pyx_v_dimension) {
   PyObject *__pyx_v_data = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1407,7 +1407,7 @@ static PyObject *__pyx_pf_15cython_loadings_2load_Bscan_spectra(CYTHON_UNUSED Py
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("load_Bscan_spectra", 0);
 
-  /* "src/toolbox/loadings.pyx":18
+  /* "loadings.pyx":18
  * def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):
  * 
  *     data = np.load(file_dir)             # <<<<<<<<<<<<<<
@@ -1437,7 +1437,7 @@ static PyObject *__pyx_pf_15cython_loadings_2load_Bscan_spectra(CYTHON_UNUSED Py
   __pyx_v_data = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":19
+  /* "loadings.pyx":19
  * 
  *     data = np.load(file_dir)
  *     data = np.reshape(data, dimension)             # <<<<<<<<<<<<<<
@@ -1497,7 +1497,7 @@ static PyObject *__pyx_pf_15cython_loadings_2load_Bscan_spectra(CYTHON_UNUSED Py
   __Pyx_DECREF_SET(__pyx_v_data, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":21
+  /* "loadings.pyx":21
  *     data = np.reshape(data, dimension)
  * 
  *     return data             # <<<<<<<<<<<<<<
@@ -1509,7 +1509,7 @@ static PyObject *__pyx_pf_15cython_loadings_2load_Bscan_spectra(CYTHON_UNUSED Py
   __pyx_r = __pyx_v_data;
   goto __pyx_L0;
 
-  /* "src/toolbox/loadings.pyx":16
+  /* "loadings.pyx":16
  * 
  * 
  * def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):             # <<<<<<<<<<<<<<
@@ -1523,7 +1523,7 @@ static PyObject *__pyx_pf_15cython_loadings_2load_Bscan_spectra(CYTHON_UNUSED Py
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_loadings.load_Bscan_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("loadings.load_Bscan_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_data);
@@ -1532,7 +1532,7 @@ static PyObject *__pyx_pf_15cython_loadings_2load_Bscan_spectra(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "src/toolbox/loadings.pyx":24
+/* "loadings.pyx":24
  * 
  * 
  * def load_calibration(dir=None):             # <<<<<<<<<<<<<<
@@ -1541,9 +1541,9 @@ static PyObject *__pyx_pf_15cython_loadings_2load_Bscan_spectra(CYTHON_UNUSED Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_15cython_loadings_5load_calibration(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_15cython_loadings_5load_calibration = {"load_calibration", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_15cython_loadings_5load_calibration, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_15cython_loadings_5load_calibration(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8loadings_5load_calibration(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8loadings_5load_calibration = {"load_calibration", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8loadings_5load_calibration, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8loadings_5load_calibration(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_dir = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -1586,18 +1586,18 @@ static PyObject *__pyx_pw_15cython_loadings_5load_calibration(PyObject *__pyx_se
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("load_calibration", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 24, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_loadings.load_calibration", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("loadings.load_calibration", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_15cython_loadings_4load_calibration(__pyx_self, __pyx_v_dir);
+  __pyx_r = __pyx_pf_8loadings_4load_calibration(__pyx_self, __pyx_v_dir);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_15cython_loadings_4load_calibration(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dir) {
+static PyObject *__pyx_pf_8loadings_4load_calibration(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dir) {
   PyObject *__pyx_v_calibration = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1607,7 +1607,7 @@ static PyObject *__pyx_pf_15cython_loadings_4load_calibration(CYTHON_UNUSED PyOb
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("load_calibration", 0);
 
-  /* "src/toolbox/loadings.pyx":26
+  /* "loadings.pyx":26
  * def load_calibration(dir=None):
  * 
  *     calibration = pickle.load( open( dir, "rb" ) )             # <<<<<<<<<<<<<<
@@ -1649,7 +1649,7 @@ static PyObject *__pyx_pf_15cython_loadings_4load_calibration(CYTHON_UNUSED PyOb
   __pyx_v_calibration = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":28
+  /* "loadings.pyx":28
  *     calibration = pickle.load( open( dir, "rb" ) )
  * 
  *     return calibration             # <<<<<<<<<<<<<<
@@ -1659,7 +1659,7 @@ static PyObject *__pyx_pf_15cython_loadings_4load_calibration(CYTHON_UNUSED PyOb
   __pyx_r = __pyx_v_calibration;
   goto __pyx_L0;
 
-  /* "src/toolbox/loadings.pyx":24
+  /* "loadings.pyx":24
  * 
  * 
  * def load_calibration(dir=None):             # <<<<<<<<<<<<<<
@@ -1673,7 +1673,7 @@ static PyObject *__pyx_pf_15cython_loadings_4load_calibration(CYTHON_UNUSED PyOb
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_loadings.load_calibration", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("loadings.load_calibration", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_calibration);
@@ -1689,17 +1689,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_cython_loadings(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_loadings(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_cython_loadings},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_loadings},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "cython_loadings",
+    "loadings",
     __pyx_k_Standard_imports, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -1730,7 +1730,6 @@ static struct PyModuleDef __pyx_moduledef = {
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_calibration, __pyx_k_calibration, sizeof(__pyx_k_calibration), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
-  {&__pyx_n_s_cython_loadings, __pyx_k_cython_loadings, sizeof(__pyx_k_cython_loadings), 0, 0, 1, 1},
   {&__pyx_n_s_data, __pyx_k_data, sizeof(__pyx_k_data), 0, 0, 1, 1},
   {&__pyx_n_s_dimension, __pyx_k_dimension, sizeof(__pyx_k_dimension), 0, 0, 1, 1},
   {&__pyx_n_s_dir, __pyx_k_dir, sizeof(__pyx_k_dir), 0, 0, 1, 1},
@@ -1740,6 +1739,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_load_Bscan_spectra, __pyx_k_load_Bscan_spectra, sizeof(__pyx_k_load_Bscan_spectra), 0, 0, 1, 1},
   {&__pyx_n_s_load_calibration, __pyx_k_load_calibration, sizeof(__pyx_k_load_calibration), 0, 0, 1, 1},
   {&__pyx_n_s_load_data, __pyx_k_load_data, sizeof(__pyx_k_load_data), 0, 0, 1, 1},
+  {&__pyx_n_s_loadings, __pyx_k_loadings, sizeof(__pyx_k_loadings), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_np, __pyx_k_np, sizeof(__pyx_k_np), 0, 0, 1, 1},
@@ -1764,7 +1764,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "src/toolbox/loadings.pyx":16
+  /* "loadings.pyx":16
  * 
  * 
  * def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):             # <<<<<<<<<<<<<<
@@ -1775,7 +1775,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "src/toolbox/loadings.pyx":7
+  /* "loadings.pyx":7
  * 
  * 
  * def load_data(dir, type=float):             # <<<<<<<<<<<<<<
@@ -1787,7 +1787,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__3);
   __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_loadings_pyx, __pyx_n_s_load_data, 7, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 7, __pyx_L1_error)
 
-  /* "src/toolbox/loadings.pyx":16
+  /* "loadings.pyx":16
  * 
  * 
  * def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):             # <<<<<<<<<<<<<<
@@ -1799,7 +1799,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__5);
   __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_loadings_pyx, __pyx_n_s_load_Bscan_spectra, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "src/toolbox/loadings.pyx":24
+  /* "loadings.pyx":24
  * 
  * 
  * def load_calibration(dir=None):             # <<<<<<<<<<<<<<
@@ -1908,11 +1908,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initcython_loadings(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initcython_loadings(void)
+__Pyx_PyMODINIT_FUNC initloadings(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initloadings(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_cython_loadings(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_cython_loadings(void)
+__Pyx_PyMODINIT_FUNC PyInit_loadings(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_loadings(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -1979,7 +1979,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_loadings(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_loadings(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -1988,7 +1988,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_loadings(PyObject *__pyx_py
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'cython_loadings' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'loadings' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -2003,7 +2003,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_cython_loadings(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_loadings(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -2042,7 +2042,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("cython_loadings", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("loadings", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -2060,14 +2060,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cython_loadings) {
+  if (__pyx_module_is_main_loadings) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 2, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cython_loadings")) {
-      if (unlikely(PyDict_SetItemString(modules, "cython_loadings", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "loadings")) {
+      if (unlikely(PyDict_SetItemString(modules, "loadings", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
     }
   }
   #endif
@@ -2088,7 +2088,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
 
-  /* "src/toolbox/loadings.pyx":3
+  /* "loadings.pyx":3
  * 
  * '''_____Standard imports_____'''
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -2100,7 +2100,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":4
+  /* "loadings.pyx":4
  * '''_____Standard imports_____'''
  * import numpy as np
  * import pickle             # <<<<<<<<<<<<<<
@@ -2112,7 +2112,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pickle, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":7
+  /* "loadings.pyx":7
  * 
  * 
  * def load_data(dir, type=float):             # <<<<<<<<<<<<<<
@@ -2122,36 +2122,36 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(((PyObject *)(&PyFloat_Type)));
   __pyx_k_ = ((PyObject *)(&PyFloat_Type));
   __Pyx_GIVEREF((&PyFloat_Type));
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_15cython_loadings_1load_data, NULL, __pyx_n_s_cython_loadings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8loadings_1load_data, NULL, __pyx_n_s_loadings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_load_data, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":16
+  /* "loadings.pyx":16
  * 
  * 
  * def load_Bscan_spectra(file_dir, dimension=(1,1024,3147)):             # <<<<<<<<<<<<<<
  * 
  *     data = np.load(file_dir)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_15cython_loadings_3load_Bscan_spectra, NULL, __pyx_n_s_cython_loadings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8loadings_3load_Bscan_spectra, NULL, __pyx_n_s_loadings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_load_Bscan_spectra, __pyx_t_1) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":24
+  /* "loadings.pyx":24
  * 
  * 
  * def load_calibration(dir=None):             # <<<<<<<<<<<<<<
  * 
  *     calibration = pickle.load( open( dir, "rb" ) )
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_15cython_loadings_5load_calibration, NULL, __pyx_n_s_cython_loadings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8loadings_5load_calibration, NULL, __pyx_n_s_loadings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_load_calibration, __pyx_t_1) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/loadings.pyx":2
+  /* "loadings.pyx":2
  * 
  * '''_____Standard imports_____'''             # <<<<<<<<<<<<<<
  * import numpy as np
@@ -2169,11 +2169,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init cython_loadings", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init loadings", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cython_loadings");
+    PyErr_SetString(PyExc_ImportError, "init loadings");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

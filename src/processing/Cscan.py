@@ -22,11 +22,11 @@ from src.toolbox._arguments import Arguments
 '''_____Project imports_____'''
 
 if Arguments.compiled:
-    from src.toolbox.cython_loadings import load_calibration
+    from src.toolbox.cython.loadings import load_calibration
     if Arguments.gpu:
-        from src.toolbox.cython_main_processing_gpu import process_Bscan
+        from src.toolbox.cython.main_processing_gpu import process_Bscan
     else:
-        from src.toolbox.cython_main_processing_cpu import process_Bscan
+        from src.toolbox.cython.main_processing_cpu import process_Bscan
 else:
     from src.toolbox.loadings import load_calibration
     if Arguments.gpu:

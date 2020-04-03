@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "cython_calibration_processing",
+        "name": "calibration_processing",
         "sources": [
             "src/toolbox/calibration_processing.pyx"
         ]
     },
-    "module_name": "cython_calibration_processing"
+    "module_name": "calibration_processing"
 }
 END: Cython Metadata */
 
@@ -602,8 +602,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cython_calibration_processing
-#define __PYX_HAVE_API__cython_calibration_processing
+#define __PYX_HAVE__calibration_processing
+#define __PYX_HAVE_API__calibration_processing
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -1185,12 +1185,12 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'cython_calibration_processing' */
-#define __Pyx_MODULE_NAME "cython_calibration_processing"
-extern int __pyx_module_is_main_cython_calibration_processing;
-int __pyx_module_is_main_cython_calibration_processing = 0;
+/* Module declarations from 'calibration_processing' */
+#define __Pyx_MODULE_NAME "calibration_processing"
+extern int __pyx_module_is_main_calibration_processing;
+int __pyx_module_is_main_calibration_processing = 0;
 
-/* Implementation of 'cython_calibration_processing' */
+/* Implementation of 'calibration_processing' */
 static const char __pyx_k_L[] = "L";
 static const char __pyx_k_j[] = "j";
 static const char __pyx_k_x[] = "x";
@@ -1311,8 +1311,8 @@ static const char __pyx_k_interpolated_spectra2[] = "interpolated_spectra2";
 static const char __pyx_k_phase_dispersion_plot[] = "phase_dispersion_plot";
 static const char __pyx_k_src_toolbox_plottings[] = "src.toolbox.plottings";
 static const char __pyx_k_butter_highpass_filter[] = "butter_highpass_filter";
+static const char __pyx_k_calibration_processing[] = "calibration_processing";
 static const char __pyx_k_src_toolbox__arguments[] = "src.toolbox._arguments";
-static const char __pyx_k_cython_calibration_processing[] = "cython_calibration_processing";
 static const char __pyx_k_src_toolbox_calibration_processi[] = "src\\toolbox\\calibration_processing.pyx";
 static PyObject *__pyx_n_s_Arguments;
 static PyObject *__pyx_n_s_L;
@@ -1331,6 +1331,7 @@ static PyObject *__pyx_n_s_arange;
 static PyObject *__pyx_n_s_argmax;
 static PyObject *__pyx_n_s_butter_highpass_filter;
 static PyObject *__pyx_n_s_butter_lowpass_filter;
+static PyObject *__pyx_n_s_calibration_processing;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_coeff1;
 static PyObject *__pyx_n_s_coeff2;
@@ -1342,7 +1343,6 @@ static PyObject *__pyx_n_s_compute_PSF;
 static PyObject *__pyx_n_s_compute_dispersion;
 static PyObject *__pyx_n_s_cubic;
 static PyObject *__pyx_n_s_curve_fit;
-static PyObject *__pyx_n_s_cython_calibration_processing;
 static PyObject *__pyx_n_s_dB_plot;
 static PyObject *__pyx_n_s_exp;
 static PyObject *__pyx_n_s_extrapolate;
@@ -1436,13 +1436,13 @@ static PyObject *__pyx_n_s_x_klinear;
 static PyObject *__pyx_n_s_x_shift;
 static PyObject *__pyx_n_s_y;
 static PyObject *__pyx_n_s_z_space;
-static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_N_pad); /* proto */
-static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_shift); /* proto */
-static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_shift_1, PyObject *__pyx_v_shift_2); /* proto */
-static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2); /* proto */
-static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_x_klinear); /* proto */
-static PyObject *__pyx_pf_29cython_calibration_processing_10compensate_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_Pdispersion); /* proto */
-static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_aline); /* proto */
+static PyObject *__pyx_pf_22calibration_processing_shift_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_N_pad); /* proto */
+static PyObject *__pyx_pf_22calibration_processing_2shift_1_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_shift); /* proto */
+static PyObject *__pyx_pf_22calibration_processing_4compute_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_shift_1, PyObject *__pyx_v_shift_2); /* proto */
+static PyObject *__pyx_pf_22calibration_processing_6k_linearization(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2); /* proto */
+static PyObject *__pyx_pf_22calibration_processing_8linearize_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_x_klinear); /* proto */
+static PyObject *__pyx_pf_22calibration_processing_10compensate_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_Pdispersion); /* proto */
+static PyObject *__pyx_pf_22calibration_processing_12compute_PSF(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_aline); /* proto */
 static PyObject *__pyx_float_0_;
 static PyObject *__pyx_float_0_1;
 static PyObject *__pyx_float_10_;
@@ -1474,7 +1474,7 @@ static PyObject *__pyx_codeobj__17;
 static PyObject *__pyx_codeobj__19;
 /* Late includes */
 
-/* "src/toolbox/calibration_processing.pyx":19
+/* "calibration_processing.pyx":19
  * 
  * 
  * def shift_spectra(spectra1, spectra2, N_pad):             # <<<<<<<<<<<<<<
@@ -1483,10 +1483,10 @@ static PyObject *__pyx_codeobj__19;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_29cython_calibration_processing_1shift_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_29cython_calibration_processing_shift_spectra[] = " This method find the relative position of the FFT of the two spectras\n    in order to later k-linearize.\n\n    Args:\n        :param spectra1: OCT spectra of first mirror.\n        :type spectra1: list\n\n        :param spectra2: OCT spectra of second mirror.\n        :type spectra2: list\n\n        :param N_pad: Padding for the FFT.\n        :type N_pad: int\n\n    Return:\n        :rname: Zspace: - pi to pi linear vector space\n        :rtype: list\n\n        :rname: shift_1: spectral relative shift for mirror_1\n        :rtype: float\n\n        :rname: shift_2: spectral relative shift for mirror_2\n        :rtype: float\n    ";
-static PyMethodDef __pyx_mdef_29cython_calibration_processing_1shift_spectra = {"shift_spectra", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_29cython_calibration_processing_1shift_spectra, METH_VARARGS|METH_KEYWORDS, __pyx_doc_29cython_calibration_processing_shift_spectra};
-static PyObject *__pyx_pw_29cython_calibration_processing_1shift_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_22calibration_processing_1shift_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_22calibration_processing_shift_spectra[] = " This method find the relative position of the FFT of the two spectras\n    in order to later k-linearize.\n\n    Args:\n        :param spectra1: OCT spectra of first mirror.\n        :type spectra1: list\n\n        :param spectra2: OCT spectra of second mirror.\n        :type spectra2: list\n\n        :param N_pad: Padding for the FFT.\n        :type N_pad: int\n\n    Return:\n        :rname: Zspace: - pi to pi linear vector space\n        :rtype: list\n\n        :rname: shift_1: spectral relative shift for mirror_1\n        :rtype: float\n\n        :rname: shift_2: spectral relative shift for mirror_2\n        :rtype: float\n    ";
+static PyMethodDef __pyx_mdef_22calibration_processing_1shift_spectra = {"shift_spectra", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_22calibration_processing_1shift_spectra, METH_VARARGS|METH_KEYWORDS, __pyx_doc_22calibration_processing_shift_spectra};
+static PyObject *__pyx_pw_22calibration_processing_1shift_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_spectra1 = 0;
   PyObject *__pyx_v_spectra2 = 0;
   PyObject *__pyx_v_N_pad = 0;
@@ -1545,18 +1545,18 @@ static PyObject *__pyx_pw_29cython_calibration_processing_1shift_spectra(PyObjec
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("shift_spectra", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 19, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_calibration_processing.shift_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.shift_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_29cython_calibration_processing_shift_spectra(__pyx_self, __pyx_v_spectra1, __pyx_v_spectra2, __pyx_v_N_pad);
+  __pyx_r = __pyx_pf_22calibration_processing_shift_spectra(__pyx_self, __pyx_v_spectra1, __pyx_v_spectra2, __pyx_v_N_pad);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_N_pad) {
+static PyObject *__pyx_pf_22calibration_processing_shift_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_N_pad) {
   PyObject *__pyx_v_L = NULL;
   PyObject *__pyx_v_x = NULL;
   PyObject *__pyx_v_j = NULL;
@@ -1592,7 +1592,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   int __pyx_t_13;
   __Pyx_RefNannySetupContext("shift_spectra", 0);
 
-  /* "src/toolbox/calibration_processing.pyx":43
+  /* "calibration_processing.pyx":43
  *         :rtype: float
  *     """
  *     L = len(spectra1)             # <<<<<<<<<<<<<<
@@ -1605,7 +1605,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_L = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":44
+  /* "calibration_processing.pyx":44
  *     """
  *     L = len(spectra1)
  *     x = np.arange(L)             # <<<<<<<<<<<<<<
@@ -1635,7 +1635,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_x = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":45
+  /* "calibration_processing.pyx":45
  *     L = len(spectra1)
  *     x = np.arange(L)
  *     j = complex(0,1)             # <<<<<<<<<<<<<<
@@ -1647,7 +1647,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_j = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":47
+  /* "calibration_processing.pyx":47
  *     j = complex(0,1)
  * 
  *     z_space = np.linspace(-np.pi, np.pi, L * N_pad)             # <<<<<<<<<<<<<<
@@ -1731,7 +1731,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_z_space = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":48
+  /* "calibration_processing.pyx":48
  * 
  *     z_space = np.linspace(-np.pi, np.pi, L * N_pad)
  *     z_space = z_space[len(z_space)//2:-1]             # <<<<<<<<<<<<<<
@@ -1744,7 +1744,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __Pyx_DECREF_SET(__pyx_v_z_space, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":50
+  /* "calibration_processing.pyx":50
  *     z_space = z_space[len(z_space)//2:-1]
  * 
  *     ff1 = np.abs( np.fft.fftshift( np.fft.fft(spectra1, L * N_pad ) ) )             # <<<<<<<<<<<<<<
@@ -1856,7 +1856,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_ff1 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":51
+  /* "calibration_processing.pyx":51
  * 
  *     ff1 = np.abs( np.fft.fftshift( np.fft.fft(spectra1, L * N_pad ) ) )
  *     ff2 = np.abs( np.fft.fftshift( np.fft.fft(spectra2, L * N_pad ) ) )             # <<<<<<<<<<<<<<
@@ -1968,7 +1968,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_ff2 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":53
+  /* "calibration_processing.pyx":53
  *     ff2 = np.abs( np.fft.fftshift( np.fft.fft(spectra2, L * N_pad ) ) )
  * 
  *     ff1 = ff1[len(ff1)//2:-1]             # <<<<<<<<<<<<<<
@@ -1981,7 +1981,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __Pyx_DECREF_SET(__pyx_v_ff1, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":54
+  /* "calibration_processing.pyx":54
  * 
  *     ff1 = ff1[len(ff1)//2:-1]
  *     ff2 = ff2[len(ff2)//2:-1]             # <<<<<<<<<<<<<<
@@ -1994,7 +1994,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __Pyx_DECREF_SET(__pyx_v_ff2, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":56
+  /* "calibration_processing.pyx":56
  *     ff2 = ff2[len(ff2)//2:-1]
  * 
  *     ff1 = compressor(ff1)             # <<<<<<<<<<<<<<
@@ -2021,7 +2021,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __Pyx_DECREF_SET(__pyx_v_ff1, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":57
+  /* "calibration_processing.pyx":57
  * 
  *     ff1 = compressor(ff1)
  *     ff2 = compressor(ff2)             # <<<<<<<<<<<<<<
@@ -2048,7 +2048,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __Pyx_DECREF_SET(__pyx_v_ff2, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":59
+  /* "calibration_processing.pyx":59
  *     ff2 = compressor(ff2)
  * 
  *     p0 = [10., 0., 0.1]             # <<<<<<<<<<<<<<
@@ -2069,7 +2069,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_p0 = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":61
+  /* "calibration_processing.pyx":61
  *     p0 = [10., 0., 0.1]
  * 
  *     coeff1, var_matrix1 = curve_fit(gauss, z_space, ff1, p0=p0, maxfev = 20000)             # <<<<<<<<<<<<<<
@@ -2151,7 +2151,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_var_matrix1 = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":62
+  /* "calibration_processing.pyx":62
  * 
  *     coeff1, var_matrix1 = curve_fit(gauss, z_space, ff1, p0=p0, maxfev = 20000)
  *     coeff2, var_matrix2 = curve_fit(gauss, z_space, ff2, p0=p0, maxfev = 20000)             # <<<<<<<<<<<<<<
@@ -2233,7 +2233,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_var_matrix2 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":64
+  /* "calibration_processing.pyx":64
  *     coeff2, var_matrix2 = curve_fit(gauss, z_space, ff2, p0=p0, maxfev = 20000)
  * 
  *     shift1_condition = False             # <<<<<<<<<<<<<<
@@ -2242,7 +2242,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
  */
   __pyx_v_shift1_condition = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":65
+  /* "calibration_processing.pyx":65
  * 
  *     shift1_condition = False
  *     shift2_condition = False             # <<<<<<<<<<<<<<
@@ -2251,7 +2251,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
  */
   __pyx_v_shift2_condition = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":67
+  /* "calibration_processing.pyx":67
  *     shift2_condition = False
  * 
  *     if Arguments.interactive:             # <<<<<<<<<<<<<<
@@ -2267,7 +2267,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_13) {
 
-    /* "src/toolbox/calibration_processing.pyx":68
+    /* "calibration_processing.pyx":68
  * 
  *     if Arguments.interactive:
  *         coeff1[1], coeff2[1] = interactive_shift(ff1,             # <<<<<<<<<<<<<<
@@ -2277,7 +2277,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
     __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_interactive_shift); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
 
-    /* "src/toolbox/calibration_processing.pyx":69
+    /* "calibration_processing.pyx":69
  *     if Arguments.interactive:
  *         coeff1[1], coeff2[1] = interactive_shift(ff1,
  *                                                  [z_space, *coeff1],             # <<<<<<<<<<<<<<
@@ -2293,7 +2293,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
     __pyx_t_5 = 0;
     if (__Pyx_PyList_Extend(__pyx_t_9, __pyx_v_coeff1) < 0) __PYX_ERR(0, 69, __pyx_L1_error)
 
-    /* "src/toolbox/calibration_processing.pyx":71
+    /* "calibration_processing.pyx":71
  *                                                  [z_space, *coeff1],
  *                                                  ff2,
  *                                                  [z_space, *coeff2])             # <<<<<<<<<<<<<<
@@ -2410,7 +2410,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
       __pyx_L9_unpacking_done:;
     }
 
-    /* "src/toolbox/calibration_processing.pyx":68
+    /* "calibration_processing.pyx":68
  * 
  *     if Arguments.interactive:
  *         coeff1[1], coeff2[1] = interactive_shift(ff1,             # <<<<<<<<<<<<<<
@@ -2422,7 +2422,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
     if (unlikely(__Pyx_SetItemInt(__pyx_v_coeff2, 1, __pyx_t_4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "src/toolbox/calibration_processing.pyx":67
+    /* "calibration_processing.pyx":67
  *     shift2_condition = False
  * 
  *     if Arguments.interactive:             # <<<<<<<<<<<<<<
@@ -2431,7 +2431,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
  */
   }
 
-  /* "src/toolbox/calibration_processing.pyx":73
+  /* "calibration_processing.pyx":73
  *                                                  [z_space, *coeff2])
  * 
  *     x_shift = ( coeff1[1] + coeff2[1]) / 2             # <<<<<<<<<<<<<<
@@ -2452,7 +2452,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_x_shift = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":75
+  /* "calibration_processing.pyx":75
  *     x_shift = ( coeff1[1] + coeff2[1]) / 2
  * 
  *     shift_1 = ( -coeff1[1] + x_shift )             # <<<<<<<<<<<<<<
@@ -2470,7 +2470,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_shift_1 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":76
+  /* "calibration_processing.pyx":76
  * 
  *     shift_1 = ( -coeff1[1] + x_shift )
  *     shift_2 = ( -coeff2[1] + x_shift )             # <<<<<<<<<<<<<<
@@ -2488,7 +2488,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_shift_2 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":78
+  /* "calibration_processing.pyx":78
  *     shift_2 = ( -coeff2[1] + x_shift )
  * 
  *     shifted_spectra1 = np.real( hilbert(spectra1) * np.exp(j * x * shift_1 ) )             # <<<<<<<<<<<<<<
@@ -2566,7 +2566,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_shifted_spectra1 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":79
+  /* "calibration_processing.pyx":79
  * 
  *     shifted_spectra1 = np.real( hilbert(spectra1) * np.exp(j * x * shift_1 ) )
  *     shifted_spectra2 = np.real( hilbert(spectra2) * np.exp(j * x * shift_2 ) )             # <<<<<<<<<<<<<<
@@ -2644,7 +2644,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_v_shifted_spectra2 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":81
+  /* "calibration_processing.pyx":81
  *     shifted_spectra2 = np.real( hilbert(spectra2) * np.exp(j * x * shift_2 ) )
  * 
  *     return z_space, shifted_spectra1, shifted_spectra2, shift_1, shift_2             # <<<<<<<<<<<<<<
@@ -2673,7 +2673,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/calibration_processing.pyx":19
+  /* "calibration_processing.pyx":19
  * 
  * 
  * def shift_spectra(spectra1, spectra2, N_pad):             # <<<<<<<<<<<<<<
@@ -2692,7 +2692,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
-  __Pyx_AddTraceback("cython_calibration_processing.shift_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.shift_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_L);
@@ -2716,7 +2716,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
   return __pyx_r;
 }
 
-/* "src/toolbox/calibration_processing.pyx":87
+/* "calibration_processing.pyx":87
  * 
  * 
  * def shift_1_spectra(spectra, shift):             # <<<<<<<<<<<<<<
@@ -2725,10 +2725,10 @@ static PyObject *__pyx_pf_29cython_calibration_processing_shift_spectra(CYTHON_U
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_29cython_calibration_processing_3shift_1_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_29cython_calibration_processing_2shift_1_spectra[] = " This method find the relative position of the FFT of the two spectras\n    in order to later k-linearize.\n\n    Args:\n        :param spectra1: OCT spectra of first mirror.\n        :type spectra1: list\n\n\n    Return:\n        :rname: Zspace: - pi to pi linear vector space\n        :rtype: list\n\n\n    ";
-static PyMethodDef __pyx_mdef_29cython_calibration_processing_3shift_1_spectra = {"shift_1_spectra", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_29cython_calibration_processing_3shift_1_spectra, METH_VARARGS|METH_KEYWORDS, __pyx_doc_29cython_calibration_processing_2shift_1_spectra};
-static PyObject *__pyx_pw_29cython_calibration_processing_3shift_1_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_22calibration_processing_3shift_1_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_22calibration_processing_2shift_1_spectra[] = " This method find the relative position of the FFT of the two spectras\n    in order to later k-linearize.\n\n    Args:\n        :param spectra1: OCT spectra of first mirror.\n        :type spectra1: list\n\n\n    Return:\n        :rname: Zspace: - pi to pi linear vector space\n        :rtype: list\n\n\n    ";
+static PyMethodDef __pyx_mdef_22calibration_processing_3shift_1_spectra = {"shift_1_spectra", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_22calibration_processing_3shift_1_spectra, METH_VARARGS|METH_KEYWORDS, __pyx_doc_22calibration_processing_2shift_1_spectra};
+static PyObject *__pyx_pw_22calibration_processing_3shift_1_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_spectra = 0;
   PyObject *__pyx_v_shift = 0;
   PyObject *__pyx_r = 0;
@@ -2776,18 +2776,18 @@ static PyObject *__pyx_pw_29cython_calibration_processing_3shift_1_spectra(PyObj
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("shift_1_spectra", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 87, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_calibration_processing.shift_1_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.shift_1_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_29cython_calibration_processing_2shift_1_spectra(__pyx_self, __pyx_v_spectra, __pyx_v_shift);
+  __pyx_r = __pyx_pf_22calibration_processing_2shift_1_spectra(__pyx_self, __pyx_v_spectra, __pyx_v_shift);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_shift) {
+static PyObject *__pyx_pf_22calibration_processing_2shift_1_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_shift) {
   Py_ssize_t __pyx_v_L;
   PyObject *__pyx_v_mean = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -2806,7 +2806,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("shift_1_spectra", 0);
 
-  /* "src/toolbox/calibration_processing.pyx":102
+  /* "calibration_processing.pyx":102
  * 
  *     """
  *     L = len(spectra)             # <<<<<<<<<<<<<<
@@ -2816,7 +2816,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   __pyx_t_1 = PyObject_Length(__pyx_v_spectra); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 102, __pyx_L1_error)
   __pyx_v_L = __pyx_t_1;
 
-  /* "src/toolbox/calibration_processing.pyx":103
+  /* "calibration_processing.pyx":103
  *     """
  *     L = len(spectra)
  *     mean = np.max(spectra)             # <<<<<<<<<<<<<<
@@ -2846,7 +2846,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   __pyx_v_mean = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":104
+  /* "calibration_processing.pyx":104
  *     L = len(spectra)
  *     mean = np.max(spectra)
  *     x = np.arange(L)             # <<<<<<<<<<<<<<
@@ -2879,7 +2879,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   __pyx_v_x = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":105
+  /* "calibration_processing.pyx":105
  *     mean = np.max(spectra)
  *     x = np.arange(L)
  *     j = complex(0,1)             # <<<<<<<<<<<<<<
@@ -2891,7 +2891,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   __pyx_v_j = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":107
+  /* "calibration_processing.pyx":107
  *     j = complex(0,1)
  * 
  *     shifted_spectra = np.real( hilbert(spectra) * np.exp(j * x * shift ) )             # <<<<<<<<<<<<<<
@@ -2969,7 +2969,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   __pyx_v_shifted_spectra = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":108
+  /* "calibration_processing.pyx":108
  * 
  *     shifted_spectra = np.real( hilbert(spectra) * np.exp(j * x * shift ) )
  *     shift_mean = np.max(shifted_spectra)             # <<<<<<<<<<<<<<
@@ -2999,7 +2999,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   __pyx_v_shift_mean = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":109
+  /* "calibration_processing.pyx":109
  *     shifted_spectra = np.real( hilbert(spectra) * np.exp(j * x * shift ) )
  *     shift_mean = np.max(shifted_spectra)
  *     shifted_spectra = (shifted_spectra / shift_mean) * mean             # <<<<<<<<<<<<<<
@@ -3014,7 +3014,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   __Pyx_DECREF_SET(__pyx_v_shifted_spectra, __pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":111
+  /* "calibration_processing.pyx":111
  *     shifted_spectra = (shifted_spectra / shift_mean) * mean
  * 
  *     return shifted_spectra             # <<<<<<<<<<<<<<
@@ -3026,7 +3026,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   __pyx_r = __pyx_v_shifted_spectra;
   goto __pyx_L0;
 
-  /* "src/toolbox/calibration_processing.pyx":87
+  /* "calibration_processing.pyx":87
  * 
  * 
  * def shift_1_spectra(spectra, shift):             # <<<<<<<<<<<<<<
@@ -3043,7 +3043,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("cython_calibration_processing.shift_1_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.shift_1_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_mean);
@@ -3056,7 +3056,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
   return __pyx_r;
 }
 
-/* "src/toolbox/calibration_processing.pyx":116
+/* "calibration_processing.pyx":116
  * 
  * 
  * def compute_dispersion(spectra1, spectra2, shift_1, shift_2):             # <<<<<<<<<<<<<<
@@ -3065,10 +3065,10 @@ static PyObject *__pyx_pf_29cython_calibration_processing_2shift_1_spectra(CYTHO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_29cython_calibration_processing_5compute_dispersion(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_29cython_calibration_processing_4compute_dispersion[] = " This method compute the dispersion on a k-linearized OCT spectra of\n    two mirror exactly opposed relative to the zero delay point.\n\n    Args:\n        :param spectra1: OCT spectra of first mirror.\n        :type spectra1: list\n\n        :param spectra2: OCT spectra of second mirror.\n        :type spectra2: list\n\n        :param shift_1: spectral relative shift for mirror_1.\n        :type float\n\n        :name shift_2: spectral relative shift for mirror_2.\n        :type float\n\n    Return:\n        :rname: Pdispersion: The phase dispersion.\n        :rtype: list\n    ";
-static PyMethodDef __pyx_mdef_29cython_calibration_processing_5compute_dispersion = {"compute_dispersion", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_29cython_calibration_processing_5compute_dispersion, METH_VARARGS|METH_KEYWORDS, __pyx_doc_29cython_calibration_processing_4compute_dispersion};
-static PyObject *__pyx_pw_29cython_calibration_processing_5compute_dispersion(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_22calibration_processing_5compute_dispersion(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_22calibration_processing_4compute_dispersion[] = " This method compute the dispersion on a k-linearized OCT spectra of\n    two mirror exactly opposed relative to the zero delay point.\n\n    Args:\n        :param spectra1: OCT spectra of first mirror.\n        :type spectra1: list\n\n        :param spectra2: OCT spectra of second mirror.\n        :type spectra2: list\n\n        :param shift_1: spectral relative shift for mirror_1.\n        :type float\n\n        :name shift_2: spectral relative shift for mirror_2.\n        :type float\n\n    Return:\n        :rname: Pdispersion: The phase dispersion.\n        :rtype: list\n    ";
+static PyMethodDef __pyx_mdef_22calibration_processing_5compute_dispersion = {"compute_dispersion", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_22calibration_processing_5compute_dispersion, METH_VARARGS|METH_KEYWORDS, __pyx_doc_22calibration_processing_4compute_dispersion};
+static PyObject *__pyx_pw_22calibration_processing_5compute_dispersion(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_spectra1 = 0;
   PyObject *__pyx_v_spectra2 = 0;
   PyObject *__pyx_v_shift_1 = 0;
@@ -3138,18 +3138,18 @@ static PyObject *__pyx_pw_29cython_calibration_processing_5compute_dispersion(Py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("compute_dispersion", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 116, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_calibration_processing.compute_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.compute_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_29cython_calibration_processing_4compute_dispersion(__pyx_self, __pyx_v_spectra1, __pyx_v_spectra2, __pyx_v_shift_1, __pyx_v_shift_2);
+  __pyx_r = __pyx_pf_22calibration_processing_4compute_dispersion(__pyx_self, __pyx_v_spectra1, __pyx_v_spectra2, __pyx_v_shift_1, __pyx_v_shift_2);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_shift_1, PyObject *__pyx_v_shift_2) {
+static PyObject *__pyx_pf_22calibration_processing_4compute_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2, PyObject *__pyx_v_shift_1, PyObject *__pyx_v_shift_2) {
   CYTHON_UNUSED PyObject *__pyx_v_j = NULL;
   PyObject *__pyx_v_x = NULL;
   PyObject *__pyx_v_p1 = NULL;
@@ -3170,7 +3170,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("compute_dispersion", 0);
 
-  /* "src/toolbox/calibration_processing.pyx":137
+  /* "calibration_processing.pyx":137
  *         :rtype: list
  *     """
  *     j = complex(0,1)             # <<<<<<<<<<<<<<
@@ -3182,7 +3182,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __pyx_v_j = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":138
+  /* "calibration_processing.pyx":138
  *     """
  *     j = complex(0,1)
  *     x = np.arange( len(spectra1) )             # <<<<<<<<<<<<<<
@@ -3216,7 +3216,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __pyx_v_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":140
+  /* "calibration_processing.pyx":140
  *     x = np.arange( len(spectra1) )
  * 
  *     p1 = unwrap_phase(spectra1) + np.arange(len(spectra2))*shift_1             # <<<<<<<<<<<<<<
@@ -3274,7 +3274,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __pyx_v_p1 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":141
+  /* "calibration_processing.pyx":141
  * 
  *     p1 = unwrap_phase(spectra1) + np.arange(len(spectra2))*shift_1
  *     p2 = unwrap_phase(spectra2) + np.arange(len(spectra2))*shift_2             # <<<<<<<<<<<<<<
@@ -3332,7 +3332,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __pyx_v_p2 = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":143
+  /* "calibration_processing.pyx":143
  *     p2 = unwrap_phase(spectra2) + np.arange(len(spectra2))*shift_2
  * 
  *     Pdisp = (p1-p2)/2             # <<<<<<<<<<<<<<
@@ -3347,7 +3347,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __pyx_v_Pdisp = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":144
+  /* "calibration_processing.pyx":144
  * 
  *     Pdisp = (p1-p2)/2
  *     Pdisp -= Pdisp[0]             # <<<<<<<<<<<<<<
@@ -3362,7 +3362,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __Pyx_DECREF_SET(__pyx_v_Pdisp, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":147
+  /* "calibration_processing.pyx":147
  * 
  * 
  *     fit_disp = make_poly_fit( x = x, y = Pdisp, order = 5 )             # <<<<<<<<<<<<<<
@@ -3383,7 +3383,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __pyx_v_fit_disp = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":149
+  /* "calibration_processing.pyx":149
  *     fit_disp = make_poly_fit( x = x, y = Pdisp, order = 5 )
  * 
  *     Pdispersion = fit_disp(x)             # <<<<<<<<<<<<<<
@@ -3409,7 +3409,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __pyx_v_Pdispersion = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":151
+  /* "calibration_processing.pyx":151
  *     Pdispersion = fit_disp(x)
  * 
  *     if Arguments.silent is False:             # <<<<<<<<<<<<<<
@@ -3426,7 +3426,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __pyx_t_8 = (__pyx_t_7 != 0);
   if (__pyx_t_8) {
 
-    /* "src/toolbox/calibration_processing.pyx":153
+    /* "calibration_processing.pyx":153
  *     if Arguments.silent is False:
  * 
  *         phase_dispersion_plot(Pdisp, Pdispersion)             # <<<<<<<<<<<<<<
@@ -3482,7 +3482,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "src/toolbox/calibration_processing.pyx":151
+    /* "calibration_processing.pyx":151
  *     Pdispersion = fit_disp(x)
  * 
  *     if Arguments.silent is False:             # <<<<<<<<<<<<<<
@@ -3491,7 +3491,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
  */
   }
 
-  /* "src/toolbox/calibration_processing.pyx":156
+  /* "calibration_processing.pyx":156
  * 
  * 
  *     return Pdispersion             # <<<<<<<<<<<<<<
@@ -3503,7 +3503,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __pyx_r = __pyx_v_Pdispersion;
   goto __pyx_L0;
 
-  /* "src/toolbox/calibration_processing.pyx":116
+  /* "calibration_processing.pyx":116
  * 
  * 
  * def compute_dispersion(spectra1, spectra2, shift_1, shift_2):             # <<<<<<<<<<<<<<
@@ -3518,7 +3518,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("cython_calibration_processing.compute_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.compute_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_j);
@@ -3533,7 +3533,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
   return __pyx_r;
 }
 
-/* "src/toolbox/calibration_processing.pyx":159
+/* "calibration_processing.pyx":159
  * 
  * 
  * def k_linearization(spectra1, spectra2):             # <<<<<<<<<<<<<<
@@ -3542,10 +3542,10 @@ static PyObject *__pyx_pf_29cython_calibration_processing_4compute_dispersion(CY
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_29cython_calibration_processing_7k_linearization(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_29cython_calibration_processing_6k_linearization[] = " This method compute the k-linear fractional indexes and interpolate\n    the two spectras in order to compensate it.\n\n    Args:\n        :param spectra1: OCT spectra of first mirror.\n        :type spectra1: list\n\n        :param spectra2: OCT spectra of second mirror.\n        :type spectra2: list\n\n\n    Return:\n        :rname: x_klinear: The fractional indexes.\n        :rtype: list\n\n        :rname: interpolated_spectra1: First k-linear intepolated spectra.\n        :rtype: list\n\n        :rname: interpolated_spectra2: Second k-linear intepolated spectra.\n        :rtype: list\n\n    ";
-static PyMethodDef __pyx_mdef_29cython_calibration_processing_7k_linearization = {"k_linearization", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_29cython_calibration_processing_7k_linearization, METH_VARARGS|METH_KEYWORDS, __pyx_doc_29cython_calibration_processing_6k_linearization};
-static PyObject *__pyx_pw_29cython_calibration_processing_7k_linearization(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_22calibration_processing_7k_linearization(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_22calibration_processing_6k_linearization[] = " This method compute the k-linear fractional indexes and interpolate\n    the two spectras in order to compensate it.\n\n    Args:\n        :param spectra1: OCT spectra of first mirror.\n        :type spectra1: list\n\n        :param spectra2: OCT spectra of second mirror.\n        :type spectra2: list\n\n\n    Return:\n        :rname: x_klinear: The fractional indexes.\n        :rtype: list\n\n        :rname: interpolated_spectra1: First k-linear intepolated spectra.\n        :rtype: list\n\n        :rname: interpolated_spectra2: Second k-linear intepolated spectra.\n        :rtype: list\n\n    ";
+static PyMethodDef __pyx_mdef_22calibration_processing_7k_linearization = {"k_linearization", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_22calibration_processing_7k_linearization, METH_VARARGS|METH_KEYWORDS, __pyx_doc_22calibration_processing_6k_linearization};
+static PyObject *__pyx_pw_22calibration_processing_7k_linearization(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_spectra1 = 0;
   PyObject *__pyx_v_spectra2 = 0;
   PyObject *__pyx_r = 0;
@@ -3593,18 +3593,18 @@ static PyObject *__pyx_pw_29cython_calibration_processing_7k_linearization(PyObj
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("k_linearization", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 159, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_calibration_processing.k_linearization", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.k_linearization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_29cython_calibration_processing_6k_linearization(__pyx_self, __pyx_v_spectra1, __pyx_v_spectra2);
+  __pyx_r = __pyx_pf_22calibration_processing_6k_linearization(__pyx_self, __pyx_v_spectra1, __pyx_v_spectra2);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2) {
+static PyObject *__pyx_pf_22calibration_processing_6k_linearization(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra1, PyObject *__pyx_v_spectra2) {
   PyObject *__pyx_v_phase1 = NULL;
   PyObject *__pyx_v_phase2 = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -3633,7 +3633,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   PyObject *__pyx_t_12 = NULL;
   __Pyx_RefNannySetupContext("k_linearization", 0);
 
-  /* "src/toolbox/calibration_processing.pyx":182
+  /* "calibration_processing.pyx":182
  * 
  *     """
  *     phase1, phase2 = unwrap_phase(spectra1), unwrap_phase(spectra2)             # <<<<<<<<<<<<<<
@@ -3679,7 +3679,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_phase2 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":184
+  /* "calibration_processing.pyx":184
  *     phase1, phase2 = unwrap_phase(spectra1), unwrap_phase(spectra2)
  * 
  *     phase1 -= phase1[0]             # <<<<<<<<<<<<<<
@@ -3694,7 +3694,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __Pyx_DECREF_SET(__pyx_v_phase1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":185
+  /* "calibration_processing.pyx":185
  * 
  *     phase1 -= phase1[0]
  *     phase2 -= phase2[0]             # <<<<<<<<<<<<<<
@@ -3709,7 +3709,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __Pyx_DECREF_SET(__pyx_v_phase2, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":187
+  /* "calibration_processing.pyx":187
  *     phase2 -= phase2[0]
  * 
  *     x = np.arange( len(phase1) )             # <<<<<<<<<<<<<<
@@ -3743,7 +3743,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_x = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":189
+  /* "calibration_processing.pyx":189
  *     x = np.arange( len(phase1) )
  * 
  *     Plin = (phase1 + phase2) / 2             # <<<<<<<<<<<<<<
@@ -3758,7 +3758,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_Plin = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":191
+  /* "calibration_processing.pyx":191
  *     Plin = (phase1 + phase2) / 2
  * 
  *     fit_Plin = make_poly_fit( x=x, y = Plin, order = 5)             # <<<<<<<<<<<<<<
@@ -3779,7 +3779,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_fit_Plin = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":193
+  /* "calibration_processing.pyx":193
  *     fit_Plin = make_poly_fit( x=x, y = Plin, order = 5)
  * 
  *     Plin = fit_Plin( x )             # <<<<<<<<<<<<<<
@@ -3805,7 +3805,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __Pyx_DECREF_SET(__pyx_v_Plin, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":195
+  /* "calibration_processing.pyx":195
  *     Plin = fit_Plin( x )
  * 
  *     if Arguments.silent is False:             # <<<<<<<<<<<<<<
@@ -3822,7 +3822,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_t_7 = (__pyx_t_6 != 0);
   if (__pyx_t_7) {
 
-    /* "src/toolbox/calibration_processing.pyx":197
+    /* "calibration_processing.pyx":197
  *     if Arguments.silent is False:
  * 
  *         plot_klinearization(phase1, phase2, Plin)             # <<<<<<<<<<<<<<
@@ -3881,7 +3881,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "src/toolbox/calibration_processing.pyx":195
+    /* "calibration_processing.pyx":195
  *     Plin = fit_Plin( x )
  * 
  *     if Arguments.silent is False:             # <<<<<<<<<<<<<<
@@ -3890,7 +3890,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
  */
   }
 
-  /* "src/toolbox/calibration_processing.pyx":199
+  /* "calibration_processing.pyx":199
  *         plot_klinearization(phase1, phase2, Plin)
  * 
  *     weight = np.ones(len(Plin))             # <<<<<<<<<<<<<<
@@ -3924,7 +3924,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_weight = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":201
+  /* "calibration_processing.pyx":201
  *     weight = np.ones(len(Plin))
  * 
  *     fit_x = make_poly_fit( x=Plin, y = x, order = 5, weight=weight )             # <<<<<<<<<<<<<<
@@ -3946,7 +3946,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_fit_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":203
+  /* "calibration_processing.pyx":203
  *     fit_x = make_poly_fit( x=Plin, y = x, order = 5, weight=weight )
  * 
  *     x_klinear = fit_x( np.linspace( Plin[0], Plin[-1], len(Plin) ) )             # <<<<<<<<<<<<<<
@@ -4039,7 +4039,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_x_klinear = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":205
+  /* "calibration_processing.pyx":205
  *     x_klinear = fit_x( np.linspace( Plin[0], Plin[-1], len(Plin) ) )
  * 
  *     coefs3 = np.polynomial.polynomial.polyfit(x_klinear, x, 5)             # <<<<<<<<<<<<<<
@@ -4108,7 +4108,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_coefs3 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":207
+  /* "calibration_processing.pyx":207
  *     coefs3 = np.polynomial.polynomial.polyfit(x_klinear, x, 5)
  * 
  *     ffit3 = np.poly1d(coefs3[::-1])             # <<<<<<<<<<<<<<
@@ -4141,7 +4141,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_ffit3 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":209
+  /* "calibration_processing.pyx":209
  *     ffit3 = np.poly1d(coefs3[::-1])
  * 
  *     x_klinear = ffit3(x)[0:]             # <<<<<<<<<<<<<<
@@ -4170,7 +4170,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __Pyx_DECREF_SET(__pyx_v_x_klinear, __pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":211
+  /* "calibration_processing.pyx":211
  *     x_klinear = ffit3(x)[0:]
  * 
  *     interpolated_spectra1 = linearize_spectra(spectra1, x_klinear)             # <<<<<<<<<<<<<<
@@ -4227,7 +4227,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_interpolated_spectra1 = __pyx_t_12;
   __pyx_t_12 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":212
+  /* "calibration_processing.pyx":212
  * 
  *     interpolated_spectra1 = linearize_spectra(spectra1, x_klinear)
  *     interpolated_spectra2 = linearize_spectra(spectra2, x_klinear)             # <<<<<<<<<<<<<<
@@ -4284,7 +4284,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_v_interpolated_spectra2 = __pyx_t_12;
   __pyx_t_12 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":214
+  /* "calibration_processing.pyx":214
  *     interpolated_spectra2 = linearize_spectra(spectra2, x_klinear)
  * 
  *     return x_klinear, interpolated_spectra1, interpolated_spectra2             # <<<<<<<<<<<<<<
@@ -4307,7 +4307,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __pyx_t_12 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/calibration_processing.pyx":159
+  /* "calibration_processing.pyx":159
  * 
  * 
  * def k_linearization(spectra1, spectra2):             # <<<<<<<<<<<<<<
@@ -4325,7 +4325,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_AddTraceback("cython_calibration_processing.k_linearization", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.k_linearization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_phase1);
@@ -4345,7 +4345,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
   return __pyx_r;
 }
 
-/* "src/toolbox/calibration_processing.pyx":217
+/* "calibration_processing.pyx":217
  * 
  * 
  * def linearize_spectra(spectra, x_klinear):             # <<<<<<<<<<<<<<
@@ -4354,10 +4354,10 @@ static PyObject *__pyx_pf_29cython_calibration_processing_6k_linearization(CYTHO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_29cython_calibration_processing_9linearize_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_29cython_calibration_processing_8linearize_spectra[] = " This method interpolate the input spectra with the input list.\n\n    Args:\n        :param spectra: OCT spectra of mirror.\n        :type spectra1: list\n\n        :name x_klinear: The fractional indexes.\n        :type list\n\n    Return:\n        :rname: klinear_spectra: The interpolated spectra.\n        :rtype: list\n\n    ";
-static PyMethodDef __pyx_mdef_29cython_calibration_processing_9linearize_spectra = {"linearize_spectra", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_29cython_calibration_processing_9linearize_spectra, METH_VARARGS|METH_KEYWORDS, __pyx_doc_29cython_calibration_processing_8linearize_spectra};
-static PyObject *__pyx_pw_29cython_calibration_processing_9linearize_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_22calibration_processing_9linearize_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_22calibration_processing_8linearize_spectra[] = " This method interpolate the input spectra with the input list.\n\n    Args:\n        :param spectra: OCT spectra of mirror.\n        :type spectra1: list\n\n        :name x_klinear: The fractional indexes.\n        :type list\n\n    Return:\n        :rname: klinear_spectra: The interpolated spectra.\n        :rtype: list\n\n    ";
+static PyMethodDef __pyx_mdef_22calibration_processing_9linearize_spectra = {"linearize_spectra", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_22calibration_processing_9linearize_spectra, METH_VARARGS|METH_KEYWORDS, __pyx_doc_22calibration_processing_8linearize_spectra};
+static PyObject *__pyx_pw_22calibration_processing_9linearize_spectra(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_spectra = 0;
   PyObject *__pyx_v_x_klinear = 0;
   PyObject *__pyx_r = 0;
@@ -4405,18 +4405,18 @@ static PyObject *__pyx_pw_29cython_calibration_processing_9linearize_spectra(PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("linearize_spectra", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 217, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_calibration_processing.linearize_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.linearize_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_29cython_calibration_processing_8linearize_spectra(__pyx_self, __pyx_v_spectra, __pyx_v_x_klinear);
+  __pyx_r = __pyx_pf_22calibration_processing_8linearize_spectra(__pyx_self, __pyx_v_spectra, __pyx_v_x_klinear);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_x_klinear) {
+static PyObject *__pyx_pf_22calibration_processing_8linearize_spectra(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_x_klinear) {
   PyObject *__pyx_v_x = NULL;
   PyObject *__pyx_v_interpolation = NULL;
   PyObject *__pyx_v_klinear_spectra = NULL;
@@ -4429,7 +4429,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYT
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("linearize_spectra", 0);
 
-  /* "src/toolbox/calibration_processing.pyx":232
+  /* "calibration_processing.pyx":232
  * 
  *     """
  *     x = np.arange( len(spectra) )             # <<<<<<<<<<<<<<
@@ -4463,7 +4463,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYT
   __pyx_v_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":234
+  /* "calibration_processing.pyx":234
  *     x = np.arange( len(spectra) )
  * 
  *     interpolation = interp1d(x, spectra, kind='cubic', fill_value="extrapolate")             # <<<<<<<<<<<<<<
@@ -4492,7 +4492,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYT
   __pyx_v_interpolation = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":236
+  /* "calibration_processing.pyx":236
  *     interpolation = interp1d(x, spectra, kind='cubic', fill_value="extrapolate")
  * 
  *     klinear_spectra = interpolation(x_klinear[:])             # <<<<<<<<<<<<<<
@@ -4521,7 +4521,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYT
   __pyx_v_klinear_spectra = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":238
+  /* "calibration_processing.pyx":238
  *     klinear_spectra = interpolation(x_klinear[:])
  * 
  *     return klinear_spectra             # <<<<<<<<<<<<<<
@@ -4533,7 +4533,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYT
   __pyx_r = __pyx_v_klinear_spectra;
   goto __pyx_L0;
 
-  /* "src/toolbox/calibration_processing.pyx":217
+  /* "calibration_processing.pyx":217
  * 
  * 
  * def linearize_spectra(spectra, x_klinear):             # <<<<<<<<<<<<<<
@@ -4547,7 +4547,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYT
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_calibration_processing.linearize_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.linearize_spectra", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_x);
@@ -4558,7 +4558,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYT
   return __pyx_r;
 }
 
-/* "src/toolbox/calibration_processing.pyx":241
+/* "calibration_processing.pyx":241
  * 
  * 
  * def compensate_dispersion(spectra, Pdispersion):             # <<<<<<<<<<<<<<
@@ -4567,10 +4567,10 @@ static PyObject *__pyx_pf_29cython_calibration_processing_8linearize_spectra(CYT
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_29cython_calibration_processing_11compensate_dispersion(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_29cython_calibration_processing_10compensate_dispersion[] = " This method compensate the input spectra with the input phase dispersion.\n\n    Args:\n        :param spectra: OCT spectra of mirror.\n        :type spectra1: list\n\n        :name Pdispersion: The phase dispersion.\n        :type list\n\n    Return:\n        :rname: compensated_spectra : The compensated spectra.\n        :rtype: list\n\n    ";
-static PyMethodDef __pyx_mdef_29cython_calibration_processing_11compensate_dispersion = {"compensate_dispersion", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_29cython_calibration_processing_11compensate_dispersion, METH_VARARGS|METH_KEYWORDS, __pyx_doc_29cython_calibration_processing_10compensate_dispersion};
-static PyObject *__pyx_pw_29cython_calibration_processing_11compensate_dispersion(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_22calibration_processing_11compensate_dispersion(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_22calibration_processing_10compensate_dispersion[] = " This method compensate the input spectra with the input phase dispersion.\n\n    Args:\n        :param spectra: OCT spectra of mirror.\n        :type spectra1: list\n\n        :name Pdispersion: The phase dispersion.\n        :type list\n\n    Return:\n        :rname: compensated_spectra : The compensated spectra.\n        :rtype: list\n\n    ";
+static PyMethodDef __pyx_mdef_22calibration_processing_11compensate_dispersion = {"compensate_dispersion", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_22calibration_processing_11compensate_dispersion, METH_VARARGS|METH_KEYWORDS, __pyx_doc_22calibration_processing_10compensate_dispersion};
+static PyObject *__pyx_pw_22calibration_processing_11compensate_dispersion(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_spectra = 0;
   PyObject *__pyx_v_Pdispersion = 0;
   PyObject *__pyx_r = 0;
@@ -4618,18 +4618,18 @@ static PyObject *__pyx_pw_29cython_calibration_processing_11compensate_dispersio
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("compensate_dispersion", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 241, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_calibration_processing.compensate_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.compensate_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_29cython_calibration_processing_10compensate_dispersion(__pyx_self, __pyx_v_spectra, __pyx_v_Pdispersion);
+  __pyx_r = __pyx_pf_22calibration_processing_10compensate_dispersion(__pyx_self, __pyx_v_spectra, __pyx_v_Pdispersion);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_29cython_calibration_processing_10compensate_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_Pdispersion) {
+static PyObject *__pyx_pf_22calibration_processing_10compensate_dispersion(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spectra, PyObject *__pyx_v_Pdispersion) {
   PyObject *__pyx_v_j = NULL;
   PyObject *__pyx_v_compensated_spectra = NULL;
   PyObject *__pyx_r = NULL;
@@ -4643,7 +4643,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_10compensate_dispersio
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("compensate_dispersion", 0);
 
-  /* "src/toolbox/calibration_processing.pyx":256
+  /* "calibration_processing.pyx":256
  * 
  *     """
  *     j = complex(0,1)             # <<<<<<<<<<<<<<
@@ -4655,7 +4655,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_10compensate_dispersio
   __pyx_v_j = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":258
+  /* "calibration_processing.pyx":258
  *     j = complex(0,1)
  * 
  *     compensated_spectra = np.real( hilbert(spectra) * np.exp( j * Pdispersion ) )             # <<<<<<<<<<<<<<
@@ -4730,7 +4730,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_10compensate_dispersio
   __pyx_v_compensated_spectra = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":260
+  /* "calibration_processing.pyx":260
  *     compensated_spectra = np.real( hilbert(spectra) * np.exp( j * Pdispersion ) )
  * 
  *     return compensated_spectra             # <<<<<<<<<<<<<<
@@ -4742,7 +4742,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_10compensate_dispersio
   __pyx_r = __pyx_v_compensated_spectra;
   goto __pyx_L0;
 
-  /* "src/toolbox/calibration_processing.pyx":241
+  /* "calibration_processing.pyx":241
  * 
  * 
  * def compensate_dispersion(spectra, Pdispersion):             # <<<<<<<<<<<<<<
@@ -4759,7 +4759,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_10compensate_dispersio
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("cython_calibration_processing.compensate_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.compensate_dispersion", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_j);
@@ -4769,7 +4769,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_10compensate_dispersio
   return __pyx_r;
 }
 
-/* "src/toolbox/calibration_processing.pyx":264
+/* "calibration_processing.pyx":264
  * 
  * 
  * def compute_PSF(aline):             # <<<<<<<<<<<<<<
@@ -4778,20 +4778,20 @@ static PyObject *__pyx_pf_29cython_calibration_processing_10compensate_dispersio
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_29cython_calibration_processing_13compute_PSF(PyObject *__pyx_self, PyObject *__pyx_v_aline); /*proto*/
-static PyMethodDef __pyx_mdef_29cython_calibration_processing_13compute_PSF = {"compute_PSF", (PyCFunction)__pyx_pw_29cython_calibration_processing_13compute_PSF, METH_O, 0};
-static PyObject *__pyx_pw_29cython_calibration_processing_13compute_PSF(PyObject *__pyx_self, PyObject *__pyx_v_aline) {
+static PyObject *__pyx_pw_22calibration_processing_13compute_PSF(PyObject *__pyx_self, PyObject *__pyx_v_aline); /*proto*/
+static PyMethodDef __pyx_mdef_22calibration_processing_13compute_PSF = {"compute_PSF", (PyCFunction)__pyx_pw_22calibration_processing_13compute_PSF, METH_O, 0};
+static PyObject *__pyx_pw_22calibration_processing_13compute_PSF(PyObject *__pyx_self, PyObject *__pyx_v_aline) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("compute_PSF (wrapper)", 0);
-  __pyx_r = __pyx_pf_29cython_calibration_processing_12compute_PSF(__pyx_self, ((PyObject *)__pyx_v_aline));
+  __pyx_r = __pyx_pf_22calibration_processing_12compute_PSF(__pyx_self, ((PyObject *)__pyx_v_aline));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_aline) {
+static PyObject *__pyx_pf_22calibration_processing_12compute_PSF(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_aline) {
   PyObject *__pyx_v_N_max = NULL;
   PyObject *__pyx_v_N_start = NULL;
   PyObject *__pyx_v_N_end = NULL;
@@ -4807,7 +4807,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("compute_PSF", 0);
 
-  /* "src/toolbox/calibration_processing.pyx":266
+  /* "calibration_processing.pyx":266
  * def compute_PSF(aline):
  * 
  *     N_max = np.argmax(aline)             # <<<<<<<<<<<<<<
@@ -4837,7 +4837,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   __pyx_v_N_max = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":268
+  /* "calibration_processing.pyx":268
  *     N_max = np.argmax(aline)
  * 
  *     N_start = N_max - 12             # <<<<<<<<<<<<<<
@@ -4849,7 +4849,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   __pyx_v_N_start = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":269
+  /* "calibration_processing.pyx":269
  * 
  *     N_start = N_max - 12
  *     N_end = N_max + 12             # <<<<<<<<<<<<<<
@@ -4861,7 +4861,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   __pyx_v_N_end = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":271
+  /* "calibration_processing.pyx":271
  *     N_end = N_max + 12
  * 
  *     kernel = aline[N_start:N_end]             # <<<<<<<<<<<<<<
@@ -4873,7 +4873,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   __pyx_v_kernel = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":273
+  /* "calibration_processing.pyx":273
  *     kernel = aline[N_start:N_end]
  * 
  *     x = np.arange(len(kernel))             # <<<<<<<<<<<<<<
@@ -4907,7 +4907,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   __pyx_v_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":275
+  /* "calibration_processing.pyx":275
  *     x = np.arange(len(kernel))
  * 
  *     fit_kernel = make_poly_fit( x=x, y = kernel, order = 8 )             # <<<<<<<<<<<<<<
@@ -4928,7 +4928,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   __pyx_v_fit_kernel = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":277
+  /* "calibration_processing.pyx":277
  *     fit_kernel = make_poly_fit( x=x, y = kernel, order = 8 )
  * 
  *     kernel = fit_kernel( x )             # <<<<<<<<<<<<<<
@@ -4954,7 +4954,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   __Pyx_DECREF_SET(__pyx_v_kernel, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":279
+  /* "calibration_processing.pyx":279
  *     kernel = fit_kernel( x )
  * 
  *     return kernel             # <<<<<<<<<<<<<<
@@ -4966,7 +4966,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   __pyx_r = __pyx_v_kernel;
   goto __pyx_L0;
 
-  /* "src/toolbox/calibration_processing.pyx":264
+  /* "calibration_processing.pyx":264
  * 
  * 
  * def compute_PSF(aline):             # <<<<<<<<<<<<<<
@@ -4980,7 +4980,7 @@ static PyObject *__pyx_pf_29cython_calibration_processing_12compute_PSF(CYTHON_U
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cython_calibration_processing.compute_PSF", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("calibration_processing.compute_PSF", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_N_max);
@@ -5001,17 +5001,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_cython_calibration_processing(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_calibration_processing(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_cython_calibration_processing},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_calibration_processing},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "cython_calibration_processing",
+    "calibration_processing",
     __pyx_k_Standard_imports, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -5057,6 +5057,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_argmax, __pyx_k_argmax, sizeof(__pyx_k_argmax), 0, 0, 1, 1},
   {&__pyx_n_s_butter_highpass_filter, __pyx_k_butter_highpass_filter, sizeof(__pyx_k_butter_highpass_filter), 0, 0, 1, 1},
   {&__pyx_n_s_butter_lowpass_filter, __pyx_k_butter_lowpass_filter, sizeof(__pyx_k_butter_lowpass_filter), 0, 0, 1, 1},
+  {&__pyx_n_s_calibration_processing, __pyx_k_calibration_processing, sizeof(__pyx_k_calibration_processing), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_coeff1, __pyx_k_coeff1, sizeof(__pyx_k_coeff1), 0, 0, 1, 1},
   {&__pyx_n_s_coeff2, __pyx_k_coeff2, sizeof(__pyx_k_coeff2), 0, 0, 1, 1},
@@ -5068,7 +5069,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_compute_dispersion, __pyx_k_compute_dispersion, sizeof(__pyx_k_compute_dispersion), 0, 0, 1, 1},
   {&__pyx_n_s_cubic, __pyx_k_cubic, sizeof(__pyx_k_cubic), 0, 0, 1, 1},
   {&__pyx_n_s_curve_fit, __pyx_k_curve_fit, sizeof(__pyx_k_curve_fit), 0, 0, 1, 1},
-  {&__pyx_n_s_cython_calibration_processing, __pyx_k_cython_calibration_processing, sizeof(__pyx_k_cython_calibration_processing), 0, 0, 1, 1},
   {&__pyx_n_s_dB_plot, __pyx_k_dB_plot, sizeof(__pyx_k_dB_plot), 0, 0, 1, 1},
   {&__pyx_n_s_exp, __pyx_k_exp, sizeof(__pyx_k_exp), 0, 0, 1, 1},
   {&__pyx_n_s_extrapolate, __pyx_k_extrapolate, sizeof(__pyx_k_extrapolate), 0, 0, 1, 1},
@@ -5172,7 +5172,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "src/toolbox/calibration_processing.pyx":45
+  /* "calibration_processing.pyx":45
  *     L = len(spectra1)
  *     x = np.arange(L)
  *     j = complex(0,1)             # <<<<<<<<<<<<<<
@@ -5183,7 +5183,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "src/toolbox/calibration_processing.pyx":207
+  /* "calibration_processing.pyx":207
  *     coefs3 = np.polynomial.polynomial.polyfit(x_klinear, x, 5)
  * 
  *     ffit3 = np.poly1d(coefs3[::-1])             # <<<<<<<<<<<<<<
@@ -5194,7 +5194,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__2);
   __Pyx_GIVEREF(__pyx_slice__2);
 
-  /* "src/toolbox/calibration_processing.pyx":209
+  /* "calibration_processing.pyx":209
  *     ffit3 = np.poly1d(coefs3[::-1])
  * 
  *     x_klinear = ffit3(x)[0:]             # <<<<<<<<<<<<<<
@@ -5205,7 +5205,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
 
-  /* "src/toolbox/calibration_processing.pyx":236
+  /* "calibration_processing.pyx":236
  *     interpolation = interp1d(x, spectra, kind='cubic', fill_value="extrapolate")
  * 
  *     klinear_spectra = interpolation(x_klinear[:])             # <<<<<<<<<<<<<<
@@ -5216,7 +5216,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__4);
   __Pyx_GIVEREF(__pyx_slice__4);
 
-  /* "src/toolbox/calibration_processing.pyx":19
+  /* "calibration_processing.pyx":19
  * 
  * 
  * def shift_spectra(spectra1, spectra2, N_pad):             # <<<<<<<<<<<<<<
@@ -5228,7 +5228,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__6);
   __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(3, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_calibration_processi, __pyx_n_s_shift_spectra, 19, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 19, __pyx_L1_error)
 
-  /* "src/toolbox/calibration_processing.pyx":87
+  /* "calibration_processing.pyx":87
  * 
  * 
  * def shift_1_spectra(spectra, shift):             # <<<<<<<<<<<<<<
@@ -5240,7 +5240,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__8);
   __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_calibration_processi, __pyx_n_s_shift_1_spectra, 87, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 87, __pyx_L1_error)
 
-  /* "src/toolbox/calibration_processing.pyx":116
+  /* "calibration_processing.pyx":116
  * 
  * 
  * def compute_dispersion(spectra1, spectra2, shift_1, shift_2):             # <<<<<<<<<<<<<<
@@ -5252,7 +5252,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__10);
   __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(4, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_calibration_processi, __pyx_n_s_compute_dispersion, 116, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 116, __pyx_L1_error)
 
-  /* "src/toolbox/calibration_processing.pyx":159
+  /* "calibration_processing.pyx":159
  * 
  * 
  * def k_linearization(spectra1, spectra2):             # <<<<<<<<<<<<<<
@@ -5264,7 +5264,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__12);
   __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(2, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_calibration_processi, __pyx_n_s_k_linearization, 159, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 159, __pyx_L1_error)
 
-  /* "src/toolbox/calibration_processing.pyx":217
+  /* "calibration_processing.pyx":217
  * 
  * 
  * def linearize_spectra(spectra, x_klinear):             # <<<<<<<<<<<<<<
@@ -5276,7 +5276,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__14);
   __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_calibration_processi, __pyx_n_s_linearize_spectra, 217, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 217, __pyx_L1_error)
 
-  /* "src/toolbox/calibration_processing.pyx":241
+  /* "calibration_processing.pyx":241
  * 
  * 
  * def compensate_dispersion(spectra, Pdispersion):             # <<<<<<<<<<<<<<
@@ -5288,7 +5288,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__16);
   __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_calibration_processi, __pyx_n_s_compensate_dispersion, 241, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 241, __pyx_L1_error)
 
-  /* "src/toolbox/calibration_processing.pyx":264
+  /* "calibration_processing.pyx":264
  * 
  * 
  * def compute_PSF(aline):             # <<<<<<<<<<<<<<
@@ -5405,11 +5405,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initcython_calibration_processing(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initcython_calibration_processing(void)
+__Pyx_PyMODINIT_FUNC initcalibration_processing(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initcalibration_processing(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_cython_calibration_processing(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_cython_calibration_processing(void)
+__Pyx_PyMODINIT_FUNC PyInit_calibration_processing(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_calibration_processing(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -5476,7 +5476,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_calibration_processing(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_calibration_processing(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -5486,7 +5486,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_calibration_processing(PyOb
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'cython_calibration_processing' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'calibration_processing' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -5501,7 +5501,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_cython_calibration_processing(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_calibration_processing(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -5540,7 +5540,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("cython_calibration_processing", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("calibration_processing", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -5558,14 +5558,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cython_calibration_processing) {
+  if (__pyx_module_is_main_calibration_processing) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 2, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cython_calibration_processing")) {
-      if (unlikely(PyDict_SetItemString(modules, "cython_calibration_processing", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "calibration_processing")) {
+      if (unlikely(PyDict_SetItemString(modules, "calibration_processing", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
     }
   }
   #endif
@@ -5586,7 +5586,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
 
-  /* "src/toolbox/calibration_processing.pyx":3
+  /* "calibration_processing.pyx":3
  * 
  * '''_____Standard imports_____'''
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -5598,7 +5598,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":4
+  /* "calibration_processing.pyx":4
  * '''_____Standard imports_____'''
  * import numpy as np
  * import matplotlib.pyplot as plt             # <<<<<<<<<<<<<<
@@ -5616,7 +5616,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plt, __pyx_t_2) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":5
+  /* "calibration_processing.pyx":5
  * import numpy as np
  * import matplotlib.pyplot as plt
  * from scipy.optimize import curve_fit             # <<<<<<<<<<<<<<
@@ -5637,7 +5637,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":6
+  /* "calibration_processing.pyx":6
  * import matplotlib.pyplot as plt
  * from scipy.optimize import curve_fit
  * from numpy import inf             # <<<<<<<<<<<<<<
@@ -5658,7 +5658,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":7
+  /* "calibration_processing.pyx":7
  * from scipy.optimize import curve_fit
  * from numpy import inf
  * from scipy.interpolate import interp1d             # <<<<<<<<<<<<<<
@@ -5679,7 +5679,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":8
+  /* "calibration_processing.pyx":8
  * from numpy import inf
  * from scipy.interpolate import interp1d
  * from numba import jit             # <<<<<<<<<<<<<<
@@ -5700,7 +5700,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":11
+  /* "calibration_processing.pyx":11
  * 
  * '''_____Project imports_____'''
  * from src.toolbox.plottings import interactive_shift, phase_dispersion_plot, plot_klinearization, dB_plot             # <<<<<<<<<<<<<<
@@ -5742,7 +5742,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":12
+  /* "calibration_processing.pyx":12
  * '''_____Project imports_____'''
  * from src.toolbox.plottings import interactive_shift, phase_dispersion_plot, plot_klinearization, dB_plot
  * from src.toolbox.fits import gauss, make_poly_fit, fit_dispersion             # <<<<<<<<<<<<<<
@@ -5777,7 +5777,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":13
+  /* "calibration_processing.pyx":13
  * from src.toolbox.plottings import interactive_shift, phase_dispersion_plot, plot_klinearization, dB_plot
  * from src.toolbox.fits import gauss, make_poly_fit, fit_dispersion
  * from src.toolbox.maths import hilbert, unwrap_phase, apodization, spectra2aline             # <<<<<<<<<<<<<<
@@ -5819,7 +5819,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":14
+  /* "calibration_processing.pyx":14
  * from src.toolbox.fits import gauss, make_poly_fit, fit_dispersion
  * from src.toolbox.maths import hilbert, unwrap_phase, apodization, spectra2aline
  * from src.toolbox.filters import butter_lowpass_filter, butter_highpass_filter, compressor             # <<<<<<<<<<<<<<
@@ -5854,7 +5854,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":15
+  /* "calibration_processing.pyx":15
  * from src.toolbox.maths import hilbert, unwrap_phase, apodization, spectra2aline
  * from src.toolbox.filters import butter_lowpass_filter, butter_highpass_filter, compressor
  * from src.toolbox.loadings import load_calibration             # <<<<<<<<<<<<<<
@@ -5875,7 +5875,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":16
+  /* "calibration_processing.pyx":16
  * from src.toolbox.filters import butter_lowpass_filter, butter_highpass_filter, compressor
  * from src.toolbox.loadings import load_calibration
  * from src.toolbox._arguments import Arguments             # <<<<<<<<<<<<<<
@@ -5896,91 +5896,91 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":19
+  /* "calibration_processing.pyx":19
  * 
  * 
  * def shift_spectra(spectra1, spectra2, N_pad):             # <<<<<<<<<<<<<<
  *     """ This method find the relative position of the FFT of the two spectras
  *     in order to later k-linearize.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_29cython_calibration_processing_1shift_spectra, NULL, __pyx_n_s_cython_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_22calibration_processing_1shift_spectra, NULL, __pyx_n_s_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_shift_spectra, __pyx_t_2) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":87
+  /* "calibration_processing.pyx":87
  * 
  * 
  * def shift_1_spectra(spectra, shift):             # <<<<<<<<<<<<<<
  *     """ This method find the relative position of the FFT of the two spectras
  *     in order to later k-linearize.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_29cython_calibration_processing_3shift_1_spectra, NULL, __pyx_n_s_cython_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_22calibration_processing_3shift_1_spectra, NULL, __pyx_n_s_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_shift_1_spectra, __pyx_t_2) < 0) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":116
+  /* "calibration_processing.pyx":116
  * 
  * 
  * def compute_dispersion(spectra1, spectra2, shift_1, shift_2):             # <<<<<<<<<<<<<<
  *     """ This method compute the dispersion on a k-linearized OCT spectra of
  *     two mirror exactly opposed relative to the zero delay point.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_29cython_calibration_processing_5compute_dispersion, NULL, __pyx_n_s_cython_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_22calibration_processing_5compute_dispersion, NULL, __pyx_n_s_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_dispersion, __pyx_t_2) < 0) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":159
+  /* "calibration_processing.pyx":159
  * 
  * 
  * def k_linearization(spectra1, spectra2):             # <<<<<<<<<<<<<<
  *     """ This method compute the k-linear fractional indexes and interpolate
  *     the two spectras in order to compensate it.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_29cython_calibration_processing_7k_linearization, NULL, __pyx_n_s_cython_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_22calibration_processing_7k_linearization, NULL, __pyx_n_s_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_k_linearization, __pyx_t_2) < 0) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":217
+  /* "calibration_processing.pyx":217
  * 
  * 
  * def linearize_spectra(spectra, x_klinear):             # <<<<<<<<<<<<<<
  *     """ This method interpolate the input spectra with the input list.
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_29cython_calibration_processing_9linearize_spectra, NULL, __pyx_n_s_cython_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_22calibration_processing_9linearize_spectra, NULL, __pyx_n_s_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_linearize_spectra, __pyx_t_2) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":241
+  /* "calibration_processing.pyx":241
  * 
  * 
  * def compensate_dispersion(spectra, Pdispersion):             # <<<<<<<<<<<<<<
  *     """ This method compensate the input spectra with the input phase dispersion.
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_29cython_calibration_processing_11compensate_dispersion, NULL, __pyx_n_s_cython_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 241, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_22calibration_processing_11compensate_dispersion, NULL, __pyx_n_s_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_compensate_dispersion, __pyx_t_2) < 0) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":264
+  /* "calibration_processing.pyx":264
  * 
  * 
  * def compute_PSF(aline):             # <<<<<<<<<<<<<<
  * 
  *     N_max = np.argmax(aline)
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_29cython_calibration_processing_13compute_PSF, NULL, __pyx_n_s_cython_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_22calibration_processing_13compute_PSF, NULL, __pyx_n_s_calibration_processing); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_PSF, __pyx_t_2) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/calibration_processing.pyx":2
+  /* "calibration_processing.pyx":2
  * 
  * '''_____Standard imports_____'''             # <<<<<<<<<<<<<<
  * import numpy as np
@@ -5999,11 +5999,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init cython_calibration_processing", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init calibration_processing", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cython_calibration_processing");
+    PyErr_SetString(PyExc_ImportError, "init calibration_processing");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

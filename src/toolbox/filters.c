@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "cython_filters",
+        "name": "filters",
         "sources": [
             "src/toolbox/filters.pyx"
         ]
     },
-    "module_name": "cython_filters"
+    "module_name": "filters"
 }
 END: Cython Metadata */
 
@@ -602,8 +602,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cython_filters
-#define __PYX_HAVE_API__cython_filters
+#define __PYX_HAVE__filters
+#define __PYX_HAVE_API__filters
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -1173,12 +1173,12 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'cython_filters' */
-#define __Pyx_MODULE_NAME "cython_filters"
-extern int __pyx_module_is_main_cython_filters;
-int __pyx_module_is_main_cython_filters = 0;
+/* Module declarations from 'filters' */
+#define __Pyx_MODULE_NAME "filters"
+extern int __pyx_module_is_main_filters;
+int __pyx_module_is_main_filters = 0;
 
-/* Implementation of 'cython_filters' */
+/* Implementation of 'filters' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_enumerate;
 static const char __pyx_k_a[] = "a";
@@ -1225,6 +1225,7 @@ static const char __pyx_k_half_h[] = "half_h";
 static const char __pyx_k_half_w[] = "half_w";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_signal[] = "signal";
+static const char __pyx_k_filters[] = "filters";
 static const char __pyx_k_fftshift[] = "fftshift";
 static const char __pyx_k_filtfilt[] = "filtfilt";
 static const char __pyx_k_enumerate[] = "enumerate";
@@ -1235,7 +1236,6 @@ static const char __pyx_k_denoise_Bscan[] = "denoise_Bscan";
 static const char __pyx_k_normal_cutoff[] = "normal_cutoff";
 static const char __pyx_k_scipy_fftpack[] = "scipy.fftpack";
 static const char __pyx_k_butter_lowpass[] = "butter_lowpass";
-static const char __pyx_k_cython_filters[] = "cython_filters";
 static const char __pyx_k_butter_highpass[] = "butter_highpass";
 static const char __pyx_k_image_high_pass[] = "image_high_pass";
 static const char __pyx_k_Standard_imports[] = "_____Standard imports_____";
@@ -1263,13 +1263,13 @@ static PyObject *__pyx_n_s_butter_lowpass_filter;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_compressor;
 static PyObject *__pyx_n_s_cutoff;
-static PyObject *__pyx_n_s_cython_filters;
 static PyObject *__pyx_n_s_data;
 static PyObject *__pyx_n_s_denoise_Bscan;
 static PyObject *__pyx_n_s_enumerate;
 static PyObject *__pyx_n_s_factor;
 static PyObject *__pyx_n_s_fft2;
 static PyObject *__pyx_n_s_fftshift;
+static PyObject *__pyx_n_s_filters;
 static PyObject *__pyx_n_s_filtfilt;
 static PyObject *__pyx_n_s_fp;
 static PyObject *__pyx_n_s_fs;
@@ -1304,13 +1304,13 @@ static PyObject *__pyx_n_s_threshold;
 static PyObject *__pyx_n_s_tmp;
 static PyObject *__pyx_n_s_w;
 static PyObject *__pyx_n_s_y;
-static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order); /* proto */
-static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order); /* proto */
-static PyObject *__pyx_pf_14cython_filters_4butter_highpass_filter(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order); /* proto */
-static PyObject *__pyx_pf_14cython_filters_6butter_lowpass_filter(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order); /* proto */
-static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, CYTHON_UNUSED PyObject *__pyx_v_axis); /* proto */
-static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Bscan); /* proto */
-static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_factor, PyObject *__pyx_v_threshold); /* proto */
+static PyObject *__pyx_pf_7filters_butter_highpass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order); /* proto */
+static PyObject *__pyx_pf_7filters_2butter_lowpass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order); /* proto */
+static PyObject *__pyx_pf_7filters_4butter_highpass_filter(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order); /* proto */
+static PyObject *__pyx_pf_7filters_6butter_lowpass_filter(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order); /* proto */
+static PyObject *__pyx_pf_7filters_8image_high_pass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, CYTHON_UNUSED PyObject *__pyx_v_axis); /* proto */
+static PyObject *__pyx_pf_7filters_10denoise_Bscan(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Bscan); /* proto */
+static PyObject *__pyx_pf_7filters_12compressor(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_factor, PyObject *__pyx_v_threshold); /* proto */
 static PyObject *__pyx_float_0_1;
 static PyObject *__pyx_float_0_5;
 static PyObject *__pyx_int_0;
@@ -1342,7 +1342,7 @@ static PyObject *__pyx_codeobj__17;
 static PyObject *__pyx_codeobj__19;
 /* Late includes */
 
-/* "src/toolbox/filters.pyx":10
+/* "filters.pyx":10
  * 
  * 
  * def butter_highpass(cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -1351,9 +1351,9 @@ static PyObject *__pyx_codeobj__19;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_14cython_filters_1butter_highpass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_14cython_filters_1butter_highpass = {"butter_highpass", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_14cython_filters_1butter_highpass, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_14cython_filters_1butter_highpass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7filters_1butter_highpass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7filters_1butter_highpass = {"butter_highpass", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7filters_1butter_highpass, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7filters_1butter_highpass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_cutoff = 0;
   PyObject *__pyx_v_fs = 0;
   PyObject *__pyx_v_order = 0;
@@ -1416,18 +1416,18 @@ static PyObject *__pyx_pw_14cython_filters_1butter_highpass(PyObject *__pyx_self
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("butter_highpass", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 10, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_filters.butter_highpass", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.butter_highpass", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_14cython_filters_butter_highpass(__pyx_self, __pyx_v_cutoff, __pyx_v_fs, __pyx_v_order);
+  __pyx_r = __pyx_pf_7filters_butter_highpass(__pyx_self, __pyx_v_cutoff, __pyx_v_fs, __pyx_v_order);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order) {
+static PyObject *__pyx_pf_7filters_butter_highpass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order) {
   PyObject *__pyx_v_nyq = NULL;
   PyObject *__pyx_v_normal_cutoff = NULL;
   PyObject *__pyx_v_b = NULL;
@@ -1441,7 +1441,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   PyObject *(*__pyx_t_5)(PyObject *);
   __Pyx_RefNannySetupContext("butter_highpass", 0);
 
-  /* "src/toolbox/filters.pyx":12
+  /* "filters.pyx":12
  * def butter_highpass(cutoff, fs, order=5):
  * 
  *     nyq = 0.5 * fs             # <<<<<<<<<<<<<<
@@ -1453,7 +1453,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   __pyx_v_nyq = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":13
+  /* "filters.pyx":13
  * 
  *     nyq = 0.5 * fs
  *     normal_cutoff = cutoff / nyq             # <<<<<<<<<<<<<<
@@ -1465,7 +1465,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   __pyx_v_normal_cutoff = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":14
+  /* "filters.pyx":14
  *     nyq = 0.5 * fs
  *     normal_cutoff = cutoff / nyq
  *     b, a = signal.butter(order,             # <<<<<<<<<<<<<<
@@ -1478,7 +1478,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":15
+  /* "filters.pyx":15
  *     normal_cutoff = cutoff / nyq
  *     b, a = signal.butter(order,
  *                          normal_cutoff,             # <<<<<<<<<<<<<<
@@ -1494,7 +1494,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   __Pyx_GIVEREF(__pyx_v_normal_cutoff);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_normal_cutoff);
 
-  /* "src/toolbox/filters.pyx":16
+  /* "filters.pyx":16
  *     b, a = signal.butter(order,
  *                          normal_cutoff,
  *                          btype='high',             # <<<<<<<<<<<<<<
@@ -1505,7 +1505,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_btype, __pyx_n_s_high) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":17
+  /* "filters.pyx":17
  *                          normal_cutoff,
  *                          btype='high',
  *                          analog=False)             # <<<<<<<<<<<<<<
@@ -1514,7 +1514,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
  */
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_analog, Py_False) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":14
+  /* "filters.pyx":14
  *     nyq = 0.5 * fs
  *     normal_cutoff = cutoff / nyq
  *     b, a = signal.butter(order,             # <<<<<<<<<<<<<<
@@ -1577,7 +1577,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   __pyx_v_a = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":18
+  /* "filters.pyx":18
  *                          btype='high',
  *                          analog=False)
  *     return b, a             # <<<<<<<<<<<<<<
@@ -1597,7 +1597,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/filters.pyx":10
+  /* "filters.pyx":10
  * 
  * 
  * def butter_highpass(cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -1611,7 +1611,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_filters.butter_highpass", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.butter_highpass", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_nyq);
@@ -1623,7 +1623,7 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "src/toolbox/filters.pyx":21
+/* "filters.pyx":21
  * 
  * 
  * def butter_lowpass(cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -1632,9 +1632,9 @@ static PyObject *__pyx_pf_14cython_filters_butter_highpass(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_14cython_filters_3butter_lowpass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_14cython_filters_3butter_lowpass = {"butter_lowpass", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_14cython_filters_3butter_lowpass, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_14cython_filters_3butter_lowpass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7filters_3butter_lowpass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7filters_3butter_lowpass = {"butter_lowpass", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7filters_3butter_lowpass, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7filters_3butter_lowpass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_cutoff = 0;
   PyObject *__pyx_v_fs = 0;
   PyObject *__pyx_v_order = 0;
@@ -1697,18 +1697,18 @@ static PyObject *__pyx_pw_14cython_filters_3butter_lowpass(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("butter_lowpass", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 21, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_filters.butter_lowpass", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.butter_lowpass", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_14cython_filters_2butter_lowpass(__pyx_self, __pyx_v_cutoff, __pyx_v_fs, __pyx_v_order);
+  __pyx_r = __pyx_pf_7filters_2butter_lowpass(__pyx_self, __pyx_v_cutoff, __pyx_v_fs, __pyx_v_order);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order) {
+static PyObject *__pyx_pf_7filters_2butter_lowpass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order) {
   PyObject *__pyx_v_nyq = NULL;
   PyObject *__pyx_v_normal_cutoff = NULL;
   PyObject *__pyx_v_b = NULL;
@@ -1722,7 +1722,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   PyObject *(*__pyx_t_5)(PyObject *);
   __Pyx_RefNannySetupContext("butter_lowpass", 0);
 
-  /* "src/toolbox/filters.pyx":23
+  /* "filters.pyx":23
  * def butter_lowpass(cutoff, fs, order=5):
  * 
  *     nyq = 0.5 * fs             # <<<<<<<<<<<<<<
@@ -1734,7 +1734,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   __pyx_v_nyq = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":24
+  /* "filters.pyx":24
  * 
  *     nyq = 0.5 * fs
  *     normal_cutoff = cutoff / nyq             # <<<<<<<<<<<<<<
@@ -1746,7 +1746,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   __pyx_v_normal_cutoff = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":25
+  /* "filters.pyx":25
  *     nyq = 0.5 * fs
  *     normal_cutoff = cutoff / nyq
  *     b, a = signal.butter(order,             # <<<<<<<<<<<<<<
@@ -1759,7 +1759,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":26
+  /* "filters.pyx":26
  *     normal_cutoff = cutoff / nyq
  *     b, a = signal.butter(order,
  *                          normal_cutoff,             # <<<<<<<<<<<<<<
@@ -1775,7 +1775,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   __Pyx_GIVEREF(__pyx_v_normal_cutoff);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_normal_cutoff);
 
-  /* "src/toolbox/filters.pyx":27
+  /* "filters.pyx":27
  *     b, a = signal.butter(order,
  *                          normal_cutoff,
  *                          btype='low',             # <<<<<<<<<<<<<<
@@ -1786,7 +1786,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_btype, __pyx_n_s_low) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":28
+  /* "filters.pyx":28
  *                          normal_cutoff,
  *                          btype='low',
  *                          analog=False)             # <<<<<<<<<<<<<<
@@ -1795,7 +1795,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
  */
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_analog, Py_False) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":25
+  /* "filters.pyx":25
  *     nyq = 0.5 * fs
  *     normal_cutoff = cutoff / nyq
  *     b, a = signal.butter(order,             # <<<<<<<<<<<<<<
@@ -1858,7 +1858,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   __pyx_v_a = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":29
+  /* "filters.pyx":29
  *                          btype='low',
  *                          analog=False)
  *     return b, a             # <<<<<<<<<<<<<<
@@ -1878,7 +1878,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "src/toolbox/filters.pyx":21
+  /* "filters.pyx":21
  * 
  * 
  * def butter_lowpass(cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -1892,7 +1892,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_filters.butter_lowpass", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.butter_lowpass", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_nyq);
@@ -1904,7 +1904,7 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "src/toolbox/filters.pyx":32
+/* "filters.pyx":32
  * 
  * 
  * def butter_highpass_filter(data, cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -1913,9 +1913,9 @@ static PyObject *__pyx_pf_14cython_filters_2butter_lowpass(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_14cython_filters_5butter_highpass_filter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_14cython_filters_5butter_highpass_filter = {"butter_highpass_filter", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_14cython_filters_5butter_highpass_filter, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_14cython_filters_5butter_highpass_filter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7filters_5butter_highpass_filter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7filters_5butter_highpass_filter = {"butter_highpass_filter", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7filters_5butter_highpass_filter, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7filters_5butter_highpass_filter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_data = 0;
   PyObject *__pyx_v_cutoff = 0;
   PyObject *__pyx_v_fs = 0;
@@ -1989,18 +1989,18 @@ static PyObject *__pyx_pw_14cython_filters_5butter_highpass_filter(PyObject *__p
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("butter_highpass_filter", 0, 3, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 32, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_filters.butter_highpass_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.butter_highpass_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_14cython_filters_4butter_highpass_filter(__pyx_self, __pyx_v_data, __pyx_v_cutoff, __pyx_v_fs, __pyx_v_order);
+  __pyx_r = __pyx_pf_7filters_4butter_highpass_filter(__pyx_self, __pyx_v_data, __pyx_v_cutoff, __pyx_v_fs, __pyx_v_order);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_14cython_filters_4butter_highpass_filter(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order) {
+static PyObject *__pyx_pf_7filters_4butter_highpass_filter(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order) {
   PyObject *__pyx_v_b = NULL;
   PyObject *__pyx_v_a = NULL;
   PyObject *__pyx_v_y = NULL;
@@ -2014,7 +2014,7 @@ static PyObject *__pyx_pf_14cython_filters_4butter_highpass_filter(CYTHON_UNUSED
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("butter_highpass_filter", 0);
 
-  /* "src/toolbox/filters.pyx":34
+  /* "filters.pyx":34
  * def butter_highpass_filter(data, cutoff, fs, order=5):
  * 
  *     b, a = butter_highpass(cutoff, fs, order=order)             # <<<<<<<<<<<<<<
@@ -2090,7 +2090,7 @@ static PyObject *__pyx_pf_14cython_filters_4butter_highpass_filter(CYTHON_UNUSED
   __pyx_v_a = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/filters.pyx":35
+  /* "filters.pyx":35
  * 
  *     b, a = butter_highpass(cutoff, fs, order=order)
  *     y = signal.filtfilt(b, a, data)             # <<<<<<<<<<<<<<
@@ -2153,7 +2153,7 @@ static PyObject *__pyx_pf_14cython_filters_4butter_highpass_filter(CYTHON_UNUSED
   __pyx_v_y = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/filters.pyx":36
+  /* "filters.pyx":36
  *     b, a = butter_highpass(cutoff, fs, order=order)
  *     y = signal.filtfilt(b, a, data)
  *     return y             # <<<<<<<<<<<<<<
@@ -2165,7 +2165,7 @@ static PyObject *__pyx_pf_14cython_filters_4butter_highpass_filter(CYTHON_UNUSED
   __pyx_r = __pyx_v_y;
   goto __pyx_L0;
 
-  /* "src/toolbox/filters.pyx":32
+  /* "filters.pyx":32
  * 
  * 
  * def butter_highpass_filter(data, cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -2179,7 +2179,7 @@ static PyObject *__pyx_pf_14cython_filters_4butter_highpass_filter(CYTHON_UNUSED
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_filters.butter_highpass_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.butter_highpass_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_b);
@@ -2190,7 +2190,7 @@ static PyObject *__pyx_pf_14cython_filters_4butter_highpass_filter(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "src/toolbox/filters.pyx":39
+/* "filters.pyx":39
  * 
  * 
  * def butter_lowpass_filter(data, cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -2199,9 +2199,9 @@ static PyObject *__pyx_pf_14cython_filters_4butter_highpass_filter(CYTHON_UNUSED
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_14cython_filters_7butter_lowpass_filter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_14cython_filters_7butter_lowpass_filter = {"butter_lowpass_filter", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_14cython_filters_7butter_lowpass_filter, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_14cython_filters_7butter_lowpass_filter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7filters_7butter_lowpass_filter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7filters_7butter_lowpass_filter = {"butter_lowpass_filter", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7filters_7butter_lowpass_filter, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7filters_7butter_lowpass_filter(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_data = 0;
   PyObject *__pyx_v_cutoff = 0;
   PyObject *__pyx_v_fs = 0;
@@ -2275,18 +2275,18 @@ static PyObject *__pyx_pw_14cython_filters_7butter_lowpass_filter(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("butter_lowpass_filter", 0, 3, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 39, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_filters.butter_lowpass_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.butter_lowpass_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_14cython_filters_6butter_lowpass_filter(__pyx_self, __pyx_v_data, __pyx_v_cutoff, __pyx_v_fs, __pyx_v_order);
+  __pyx_r = __pyx_pf_7filters_6butter_lowpass_filter(__pyx_self, __pyx_v_data, __pyx_v_cutoff, __pyx_v_fs, __pyx_v_order);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_14cython_filters_6butter_lowpass_filter(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order) {
+static PyObject *__pyx_pf_7filters_6butter_lowpass_filter(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_cutoff, PyObject *__pyx_v_fs, PyObject *__pyx_v_order) {
   PyObject *__pyx_v_b = NULL;
   PyObject *__pyx_v_a = NULL;
   PyObject *__pyx_v_y = NULL;
@@ -2300,7 +2300,7 @@ static PyObject *__pyx_pf_14cython_filters_6butter_lowpass_filter(CYTHON_UNUSED 
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("butter_lowpass_filter", 0);
 
-  /* "src/toolbox/filters.pyx":41
+  /* "filters.pyx":41
  * def butter_lowpass_filter(data, cutoff, fs, order=5):
  * 
  *     b, a = butter_lowpass(cutoff, fs, order=order)             # <<<<<<<<<<<<<<
@@ -2376,7 +2376,7 @@ static PyObject *__pyx_pf_14cython_filters_6butter_lowpass_filter(CYTHON_UNUSED 
   __pyx_v_a = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/filters.pyx":42
+  /* "filters.pyx":42
  * 
  *     b, a = butter_lowpass(cutoff, fs, order=order)
  *     y = signal.filtfilt(b, a, data)             # <<<<<<<<<<<<<<
@@ -2439,7 +2439,7 @@ static PyObject *__pyx_pf_14cython_filters_6butter_lowpass_filter(CYTHON_UNUSED 
   __pyx_v_y = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "src/toolbox/filters.pyx":43
+  /* "filters.pyx":43
  *     b, a = butter_lowpass(cutoff, fs, order=order)
  *     y = signal.filtfilt(b, a, data)
  *     return y             # <<<<<<<<<<<<<<
@@ -2451,7 +2451,7 @@ static PyObject *__pyx_pf_14cython_filters_6butter_lowpass_filter(CYTHON_UNUSED 
   __pyx_r = __pyx_v_y;
   goto __pyx_L0;
 
-  /* "src/toolbox/filters.pyx":39
+  /* "filters.pyx":39
  * 
  * 
  * def butter_lowpass_filter(data, cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -2465,7 +2465,7 @@ static PyObject *__pyx_pf_14cython_filters_6butter_lowpass_filter(CYTHON_UNUSED 
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cython_filters.butter_lowpass_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.butter_lowpass_filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_b);
@@ -2476,7 +2476,7 @@ static PyObject *__pyx_pf_14cython_filters_6butter_lowpass_filter(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "src/toolbox/filters.pyx":46
+/* "filters.pyx":46
  * 
  * 
  * def image_high_pass(data, axis):             # <<<<<<<<<<<<<<
@@ -2485,9 +2485,9 @@ static PyObject *__pyx_pf_14cython_filters_6butter_lowpass_filter(CYTHON_UNUSED 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_14cython_filters_9image_high_pass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_14cython_filters_9image_high_pass = {"image_high_pass", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_14cython_filters_9image_high_pass, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_14cython_filters_9image_high_pass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7filters_9image_high_pass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7filters_9image_high_pass = {"image_high_pass", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7filters_9image_high_pass, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7filters_9image_high_pass(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_data = 0;
   CYTHON_UNUSED PyObject *__pyx_v_axis = 0;
   PyObject *__pyx_r = 0;
@@ -2535,18 +2535,18 @@ static PyObject *__pyx_pw_14cython_filters_9image_high_pass(PyObject *__pyx_self
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("image_high_pass", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 46, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_filters.image_high_pass", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.image_high_pass", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_14cython_filters_8image_high_pass(__pyx_self, __pyx_v_data, __pyx_v_axis);
+  __pyx_r = __pyx_pf_7filters_8image_high_pass(__pyx_self, __pyx_v_data, __pyx_v_axis);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, CYTHON_UNUSED PyObject *__pyx_v_axis) {
+static PyObject *__pyx_pf_7filters_8image_high_pass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, CYTHON_UNUSED PyObject *__pyx_v_axis) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -2560,7 +2560,7 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
   __Pyx_RefNannySetupContext("image_high_pass", 0);
   __Pyx_INCREF(__pyx_v_data);
 
-  /* "src/toolbox/filters.pyx":48
+  /* "filters.pyx":48
  * def image_high_pass(data, axis):
  * 
  *     data = np.array(data)             # <<<<<<<<<<<<<<
@@ -2590,7 +2590,7 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
   __Pyx_DECREF_SET(__pyx_v_data, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":49
+  /* "filters.pyx":49
  * 
  *     data = np.array(data)
  *     for i in range(len(data)):             # <<<<<<<<<<<<<<
@@ -2602,7 +2602,7 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
   for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
     __pyx_v_i = __pyx_t_6;
 
-    /* "src/toolbox/filters.pyx":50
+    /* "filters.pyx":50
  *     data = np.array(data)
  *     for i in range(len(data)):
  *         data[i] = butter_highpass_filter(data[i],             # <<<<<<<<<<<<<<
@@ -2619,7 +2619,7 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/toolbox/filters.pyx":51
+    /* "filters.pyx":51
  *     for i in range(len(data)):
  *         data[i] = butter_highpass_filter(data[i],
  *                                            cutoff=0.1,             # <<<<<<<<<<<<<<
@@ -2632,7 +2632,7 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
     if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_fs, __pyx_int_80000) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
     if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_int_1) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
 
-    /* "src/toolbox/filters.pyx":50
+    /* "filters.pyx":50
  *     data = np.array(data)
  *     for i in range(len(data)):
  *         data[i] = butter_highpass_filter(data[i],             # <<<<<<<<<<<<<<
@@ -2648,7 +2648,7 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
 
-  /* "src/toolbox/filters.pyx":57
+  /* "filters.pyx":57
  * 
  * 
  *     return data             # <<<<<<<<<<<<<<
@@ -2660,7 +2660,7 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
   __pyx_r = __pyx_v_data;
   goto __pyx_L0;
 
-  /* "src/toolbox/filters.pyx":46
+  /* "filters.pyx":46
  * 
  * 
  * def image_high_pass(data, axis):             # <<<<<<<<<<<<<<
@@ -2674,7 +2674,7 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("cython_filters.image_high_pass", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.image_high_pass", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_data);
@@ -2683,7 +2683,7 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "src/toolbox/filters.pyx":60
+/* "filters.pyx":60
  * 
  * 
  * def denoise_Bscan(Bscan):             # <<<<<<<<<<<<<<
@@ -2692,20 +2692,20 @@ static PyObject *__pyx_pf_14cython_filters_8image_high_pass(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_14cython_filters_11denoise_Bscan(PyObject *__pyx_self, PyObject *__pyx_v_Bscan); /*proto*/
-static PyMethodDef __pyx_mdef_14cython_filters_11denoise_Bscan = {"denoise_Bscan", (PyCFunction)__pyx_pw_14cython_filters_11denoise_Bscan, METH_O, 0};
-static PyObject *__pyx_pw_14cython_filters_11denoise_Bscan(PyObject *__pyx_self, PyObject *__pyx_v_Bscan) {
+static PyObject *__pyx_pw_7filters_11denoise_Bscan(PyObject *__pyx_self, PyObject *__pyx_v_Bscan); /*proto*/
+static PyMethodDef __pyx_mdef_7filters_11denoise_Bscan = {"denoise_Bscan", (PyCFunction)__pyx_pw_7filters_11denoise_Bscan, METH_O, 0};
+static PyObject *__pyx_pw_7filters_11denoise_Bscan(PyObject *__pyx_self, PyObject *__pyx_v_Bscan) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("denoise_Bscan (wrapper)", 0);
-  __pyx_r = __pyx_pf_14cython_filters_10denoise_Bscan(__pyx_self, ((PyObject *)__pyx_v_Bscan));
+  __pyx_r = __pyx_pf_7filters_10denoise_Bscan(__pyx_self, ((PyObject *)__pyx_v_Bscan));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Bscan) {
+static PyObject *__pyx_pf_7filters_10denoise_Bscan(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_Bscan) {
   PyObject *__pyx_v_F1 = NULL;
   PyObject *__pyx_v_F2 = NULL;
   PyObject *__pyx_v_w = NULL;
@@ -2725,7 +2725,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   __Pyx_RefNannySetupContext("denoise_Bscan", 0);
   __Pyx_INCREF(__pyx_v_Bscan);
 
-  /* "src/toolbox/filters.pyx":62
+  /* "filters.pyx":62
  * def denoise_Bscan(Bscan):
  * 
  *     F1 = fp.fft2((Bscan).astype(float))             # <<<<<<<<<<<<<<
@@ -2773,7 +2773,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   __pyx_v_F1 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":64
+  /* "filters.pyx":64
  *     F1 = fp.fft2((Bscan).astype(float))
  * 
  *     F2 = fp.fftshift(F1)             # <<<<<<<<<<<<<<
@@ -2803,7 +2803,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   __pyx_v_F2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":66
+  /* "filters.pyx":66
  *     F2 = fp.fftshift(F1)
  * 
  *     F2[500:530,:] = 0             # <<<<<<<<<<<<<<
@@ -2812,7 +2812,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
  */
   if (unlikely(PyObject_SetItem(__pyx_v_F2, __pyx_tuple__3, __pyx_int_0) < 0)) __PYX_ERR(0, 66, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":68
+  /* "filters.pyx":68
  *     F2[500:530,:] = 0
  * 
  *     (w, h) = Bscan.shape             # <<<<<<<<<<<<<<
@@ -2872,7 +2872,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   __pyx_v_h = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/filters.pyx":70
+  /* "filters.pyx":70
  *     (w, h) = Bscan.shape
  * 
  *     half_w, half_h = int(w/2), int(h/2)             # <<<<<<<<<<<<<<
@@ -2894,7 +2894,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   __pyx_v_half_h = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/toolbox/filters.pyx":72
+  /* "filters.pyx":72
  *     half_w, half_h = int(w/2), int(h/2)
  * 
  *     F2[0 :1024, half_h -1 : half_h + 1] = 0             # <<<<<<<<<<<<<<
@@ -2920,7 +2920,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   if (unlikely(PyObject_SetItem(__pyx_v_F2, __pyx_t_3, __pyx_int_0) < 0)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/filters.pyx":74
+  /* "filters.pyx":74
  *     F2[0 :1024, half_h -1 : half_h + 1] = 0
  * 
  *     Bscan = np.abs(fp.ifft2(fp.ifftshift(F2)).real)             # <<<<<<<<<<<<<<
@@ -2995,7 +2995,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   __Pyx_DECREF_SET(__pyx_v_Bscan, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/filters.pyx":76
+  /* "filters.pyx":76
  *     Bscan = np.abs(fp.ifft2(fp.ifftshift(F2)).real)
  * 
  *     return Bscan             # <<<<<<<<<<<<<<
@@ -3007,7 +3007,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_Bscan;
   goto __pyx_L0;
 
-  /* "src/toolbox/filters.pyx":60
+  /* "filters.pyx":60
  * 
  * 
  * def denoise_Bscan(Bscan):             # <<<<<<<<<<<<<<
@@ -3024,7 +3024,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("cython_filters.denoise_Bscan", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.denoise_Bscan", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_F1);
@@ -3039,7 +3039,7 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "src/toolbox/filters.pyx":78
+/* "filters.pyx":78
  *     return Bscan
  * 
  * def compressor(data, factor=3, threshold=None):             # <<<<<<<<<<<<<<
@@ -3048,9 +3048,9 @@ static PyObject *__pyx_pf_14cython_filters_10denoise_Bscan(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_14cython_filters_13compressor(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_14cython_filters_13compressor = {"compressor", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_14cython_filters_13compressor, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_14cython_filters_13compressor(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7filters_13compressor(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7filters_13compressor = {"compressor", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7filters_13compressor, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7filters_13compressor(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_data = 0;
   PyObject *__pyx_v_factor = 0;
   PyObject *__pyx_v_threshold = 0;
@@ -3115,18 +3115,18 @@ static PyObject *__pyx_pw_14cython_filters_13compressor(PyObject *__pyx_self, Py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("compressor", 0, 1, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 78, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_filters.compressor", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.compressor", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_14cython_filters_12compressor(__pyx_self, __pyx_v_data, __pyx_v_factor, __pyx_v_threshold);
+  __pyx_r = __pyx_pf_7filters_12compressor(__pyx_self, __pyx_v_data, __pyx_v_factor, __pyx_v_threshold);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_factor, PyObject *__pyx_v_threshold) {
+static PyObject *__pyx_pf_7filters_12compressor(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_data, PyObject *__pyx_v_factor, PyObject *__pyx_v_threshold) {
   PyObject *__pyx_v_max = NULL;
   PyObject *__pyx_v_min = NULL;
   PyObject *__pyx_v_tmp = NULL;
@@ -3146,7 +3146,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
   __Pyx_INCREF(__pyx_v_data);
   __Pyx_INCREF(__pyx_v_threshold);
 
-  /* "src/toolbox/filters.pyx":80
+  /* "filters.pyx":80
  * def compressor(data, factor=3, threshold=None):
  * 
  *     data = np.array(data)             # <<<<<<<<<<<<<<
@@ -3176,7 +3176,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
   __Pyx_DECREF_SET(__pyx_v_data, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":82
+  /* "filters.pyx":82
  *     data = np.array(data)
  * 
  *     max = np.max(data)             # <<<<<<<<<<<<<<
@@ -3206,7 +3206,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
   __pyx_v_max = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":83
+  /* "filters.pyx":83
  * 
  *     max = np.max(data)
  *     min = np.min(data)             # <<<<<<<<<<<<<<
@@ -3236,7 +3236,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
   __pyx_v_min = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":84
+  /* "filters.pyx":84
  *     max = np.max(data)
  *     min = np.min(data)
  *     if threshold is None:             # <<<<<<<<<<<<<<
@@ -3247,7 +3247,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
   __pyx_t_5 = (__pyx_t_4 != 0);
   if (__pyx_t_5) {
 
-    /* "src/toolbox/filters.pyx":85
+    /* "filters.pyx":85
  *     min = np.min(data)
  *     if threshold is None:
  *         threshold = (max - min) / 3             # <<<<<<<<<<<<<<
@@ -3262,7 +3262,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
     __Pyx_DECREF_SET(__pyx_v_threshold, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/toolbox/filters.pyx":84
+    /* "filters.pyx":84
  *     max = np.max(data)
  *     min = np.min(data)
  *     if threshold is None:             # <<<<<<<<<<<<<<
@@ -3271,7 +3271,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
  */
   }
 
-  /* "src/toolbox/filters.pyx":87
+  /* "filters.pyx":87
  *         threshold = (max - min) / 3
  * 
  *     tmp = []             # <<<<<<<<<<<<<<
@@ -3283,7 +3283,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
   __pyx_v_tmp = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/toolbox/filters.pyx":89
+  /* "filters.pyx":89
  *     tmp = []
  * 
  *     for i, array in enumerate(data):             # <<<<<<<<<<<<<<
@@ -3341,7 +3341,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
     __pyx_t_3 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "src/toolbox/filters.pyx":90
+    /* "filters.pyx":90
  * 
  *     for i, array in enumerate(data):
  *         if array < threshold:             # <<<<<<<<<<<<<<
@@ -3353,7 +3353,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_5) {
 
-      /* "src/toolbox/filters.pyx":91
+      /* "filters.pyx":91
  *     for i, array in enumerate(data):
  *         if array < threshold:
  *             array /= factor             # <<<<<<<<<<<<<<
@@ -3365,7 +3365,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
       __Pyx_DECREF_SET(__pyx_v_array, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "src/toolbox/filters.pyx":90
+      /* "filters.pyx":90
  * 
  *     for i, array in enumerate(data):
  *         if array < threshold:             # <<<<<<<<<<<<<<
@@ -3374,7 +3374,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
  */
     }
 
-    /* "src/toolbox/filters.pyx":93
+    /* "filters.pyx":93
  *             array /= factor
  * 
  *         tmp.append(array)             # <<<<<<<<<<<<<<
@@ -3383,7 +3383,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
  */
     __pyx_t_8 = __Pyx_PyList_Append(__pyx_v_tmp, __pyx_v_array); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 93, __pyx_L1_error)
 
-    /* "src/toolbox/filters.pyx":89
+    /* "filters.pyx":89
  *     tmp = []
  * 
  *     for i, array in enumerate(data):             # <<<<<<<<<<<<<<
@@ -3394,7 +3394,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/toolbox/filters.pyx":95
+  /* "filters.pyx":95
  *         tmp.append(array)
  * 
  *     return tmp             # <<<<<<<<<<<<<<
@@ -3406,7 +3406,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
   __pyx_r = __pyx_v_tmp;
   goto __pyx_L0;
 
-  /* "src/toolbox/filters.pyx":78
+  /* "filters.pyx":78
  *     return Bscan
  * 
  * def compressor(data, factor=3, threshold=None):             # <<<<<<<<<<<<<<
@@ -3419,7 +3419,7 @@ static PyObject *__pyx_pf_14cython_filters_12compressor(CYTHON_UNUSED PyObject *
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cython_filters.compressor", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filters.compressor", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_max);
@@ -3441,17 +3441,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_cython_filters(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_filters(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_cython_filters},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_filters},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "cython_filters",
+    "filters",
     __pyx_k_Standard_imports, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -3500,13 +3500,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_compressor, __pyx_k_compressor, sizeof(__pyx_k_compressor), 0, 0, 1, 1},
   {&__pyx_n_s_cutoff, __pyx_k_cutoff, sizeof(__pyx_k_cutoff), 0, 0, 1, 1},
-  {&__pyx_n_s_cython_filters, __pyx_k_cython_filters, sizeof(__pyx_k_cython_filters), 0, 0, 1, 1},
   {&__pyx_n_s_data, __pyx_k_data, sizeof(__pyx_k_data), 0, 0, 1, 1},
   {&__pyx_n_s_denoise_Bscan, __pyx_k_denoise_Bscan, sizeof(__pyx_k_denoise_Bscan), 0, 0, 1, 1},
   {&__pyx_n_s_enumerate, __pyx_k_enumerate, sizeof(__pyx_k_enumerate), 0, 0, 1, 1},
   {&__pyx_n_s_factor, __pyx_k_factor, sizeof(__pyx_k_factor), 0, 0, 1, 1},
   {&__pyx_n_s_fft2, __pyx_k_fft2, sizeof(__pyx_k_fft2), 0, 0, 1, 1},
   {&__pyx_n_s_fftshift, __pyx_k_fftshift, sizeof(__pyx_k_fftshift), 0, 0, 1, 1},
+  {&__pyx_n_s_filters, __pyx_k_filters, sizeof(__pyx_k_filters), 0, 0, 1, 1},
   {&__pyx_n_s_filtfilt, __pyx_k_filtfilt, sizeof(__pyx_k_filtfilt), 0, 0, 1, 1},
   {&__pyx_n_s_fp, __pyx_k_fp, sizeof(__pyx_k_fp), 0, 0, 1, 1},
   {&__pyx_n_s_fs, __pyx_k_fs, sizeof(__pyx_k_fs), 0, 0, 1, 1},
@@ -3555,7 +3555,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "src/toolbox/filters.pyx":66
+  /* "filters.pyx":66
  *     F2 = fp.fftshift(F1)
  * 
  *     F2[500:530,:] = 0             # <<<<<<<<<<<<<<
@@ -3572,7 +3572,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "src/toolbox/filters.pyx":72
+  /* "filters.pyx":72
  *     half_w, half_h = int(w/2), int(h/2)
  * 
  *     F2[0 :1024, half_h -1 : half_h + 1] = 0             # <<<<<<<<<<<<<<
@@ -3583,7 +3583,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__4);
   __Pyx_GIVEREF(__pyx_slice__4);
 
-  /* "src/toolbox/filters.pyx":10
+  /* "filters.pyx":10
  * 
  * 
  * def butter_highpass(cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -3595,7 +3595,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__6);
   __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(3, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_filters_pyx, __pyx_n_s_butter_highpass, 10, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 10, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":21
+  /* "filters.pyx":21
  * 
  * 
  * def butter_lowpass(cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -3607,7 +3607,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__8);
   __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(3, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_filters_pyx, __pyx_n_s_butter_lowpass, 21, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 21, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":32
+  /* "filters.pyx":32
  * 
  * 
  * def butter_highpass_filter(data, cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -3619,7 +3619,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__10);
   __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_filters_pyx, __pyx_n_s_butter_highpass_filter, 32, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 32, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":39
+  /* "filters.pyx":39
  * 
  * 
  * def butter_lowpass_filter(data, cutoff, fs, order=5):             # <<<<<<<<<<<<<<
@@ -3631,7 +3631,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__12);
   __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_filters_pyx, __pyx_n_s_butter_lowpass_filter, 39, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 39, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":46
+  /* "filters.pyx":46
  * 
  * 
  * def image_high_pass(data, axis):             # <<<<<<<<<<<<<<
@@ -3643,7 +3643,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__14);
   __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_filters_pyx, __pyx_n_s_image_high_pass, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 46, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":60
+  /* "filters.pyx":60
  * 
  * 
  * def denoise_Bscan(Bscan):             # <<<<<<<<<<<<<<
@@ -3655,7 +3655,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__16);
   __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_toolbox_filters_pyx, __pyx_n_s_denoise_Bscan, 60, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 60, __pyx_L1_error)
 
-  /* "src/toolbox/filters.pyx":78
+  /* "filters.pyx":78
  *     return Bscan
  * 
  * def compressor(data, factor=3, threshold=None):             # <<<<<<<<<<<<<<
@@ -3772,11 +3772,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initcython_filters(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initcython_filters(void)
+__Pyx_PyMODINIT_FUNC initfilters(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initfilters(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_cython_filters(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_cython_filters(void)
+__Pyx_PyMODINIT_FUNC PyInit_filters(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_filters(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -3843,7 +3843,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_filters(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_filters(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -3853,7 +3853,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_filters(PyObject *__pyx_pyi
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'cython_filters' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'filters' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -3868,7 +3868,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_cython_filters(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_filters(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -3907,7 +3907,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("cython_filters", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("filters", __pyx_methods, __pyx_k_Standard_imports, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -3925,14 +3925,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cython_filters) {
+  if (__pyx_module_is_main_filters) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 3, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cython_filters")) {
-      if (unlikely(PyDict_SetItemString(modules, "cython_filters", __pyx_m) < 0)) __PYX_ERR(0, 3, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "filters")) {
+      if (unlikely(PyDict_SetItemString(modules, "filters", __pyx_m) < 0)) __PYX_ERR(0, 3, __pyx_L1_error)
     }
   }
   #endif
@@ -3953,7 +3953,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   #endif
 
-  /* "src/toolbox/filters.pyx":4
+  /* "filters.pyx":4
  * 
  * '''_____Standard imports_____'''
  * from scipy import signal             # <<<<<<<<<<<<<<
@@ -3974,7 +3974,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/filters.pyx":5
+  /* "filters.pyx":5
  * '''_____Standard imports_____'''
  * from scipy import signal
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -3986,7 +3986,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/toolbox/filters.pyx":6
+  /* "filters.pyx":6
  * from scipy import signal
  * import numpy as np
  * import scipy.fftpack as fp             # <<<<<<<<<<<<<<
@@ -4004,91 +4004,91 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fp, __pyx_t_1) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":10
+  /* "filters.pyx":10
  * 
  * 
  * def butter_highpass(cutoff, fs, order=5):             # <<<<<<<<<<<<<<
  * 
  *     nyq = 0.5 * fs
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_14cython_filters_1butter_highpass, NULL, __pyx_n_s_cython_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7filters_1butter_highpass, NULL, __pyx_n_s_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_butter_highpass, __pyx_t_1) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":21
+  /* "filters.pyx":21
  * 
  * 
  * def butter_lowpass(cutoff, fs, order=5):             # <<<<<<<<<<<<<<
  * 
  *     nyq = 0.5 * fs
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_14cython_filters_3butter_lowpass, NULL, __pyx_n_s_cython_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7filters_3butter_lowpass, NULL, __pyx_n_s_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_butter_lowpass, __pyx_t_1) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":32
+  /* "filters.pyx":32
  * 
  * 
  * def butter_highpass_filter(data, cutoff, fs, order=5):             # <<<<<<<<<<<<<<
  * 
  *     b, a = butter_highpass(cutoff, fs, order=order)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_14cython_filters_5butter_highpass_filter, NULL, __pyx_n_s_cython_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7filters_5butter_highpass_filter, NULL, __pyx_n_s_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_butter_highpass_filter, __pyx_t_1) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":39
+  /* "filters.pyx":39
  * 
  * 
  * def butter_lowpass_filter(data, cutoff, fs, order=5):             # <<<<<<<<<<<<<<
  * 
  *     b, a = butter_lowpass(cutoff, fs, order=order)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_14cython_filters_7butter_lowpass_filter, NULL, __pyx_n_s_cython_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7filters_7butter_lowpass_filter, NULL, __pyx_n_s_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_butter_lowpass_filter, __pyx_t_1) < 0) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":46
+  /* "filters.pyx":46
  * 
  * 
  * def image_high_pass(data, axis):             # <<<<<<<<<<<<<<
  * 
  *     data = np.array(data)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_14cython_filters_9image_high_pass, NULL, __pyx_n_s_cython_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7filters_9image_high_pass, NULL, __pyx_n_s_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_image_high_pass, __pyx_t_1) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":60
+  /* "filters.pyx":60
  * 
  * 
  * def denoise_Bscan(Bscan):             # <<<<<<<<<<<<<<
  * 
  *     F1 = fp.fft2((Bscan).astype(float))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_14cython_filters_11denoise_Bscan, NULL, __pyx_n_s_cython_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7filters_11denoise_Bscan, NULL, __pyx_n_s_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_denoise_Bscan, __pyx_t_1) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":78
+  /* "filters.pyx":78
  *     return Bscan
  * 
  * def compressor(data, factor=3, threshold=None):             # <<<<<<<<<<<<<<
  * 
  *     data = np.array(data)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_14cython_filters_13compressor, NULL, __pyx_n_s_cython_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7filters_13compressor, NULL, __pyx_n_s_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_compressor, __pyx_t_1) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/toolbox/filters.pyx":3
+  /* "filters.pyx":3
  * 
  * 
  * '''_____Standard imports_____'''             # <<<<<<<<<<<<<<
@@ -4108,11 +4108,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init cython_filters", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init filters", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cython_filters");
+    PyErr_SetString(PyExc_ImportError, "init filters");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

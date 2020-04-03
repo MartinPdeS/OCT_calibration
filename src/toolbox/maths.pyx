@@ -5,12 +5,12 @@ cimport numpy as cnp
 
 ctypedef cnp.cdouble_t CDTYPE_t
 ctypedef cnp.double_t DTYPE_t
-
+ctypedef double complex complex128_t
 
 
 cpdef hilbert(cnp.ndarray[DTYPE_t, ndim=1] spectra):
 
-    cdef cnp.ndarray[cnp.cdouble_t, ndim=1] temp
+    cdef complex128_t[1024] temp
 
     temp = np.fft.fft(np.array(spectra))
 

@@ -7,9 +7,9 @@ import scipy
 cimport numpy as cnp
 
 '''_____Project imports_____'''
-from src.toolbox.cython_filters import butter_highpass_filter
-from src.toolbox.cython_calibration_processing import linearize_spectra, compensate_dispersion
-from src.toolbox.cython_maths import spectra2aline, hilbert
+from src.toolbox.cython.filters import butter_highpass_filter
+from src.toolbox.cython.calibration_processing import linearize_spectra, compensate_dispersion
+from src.toolbox.cython.maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
 
 
@@ -43,17 +43,13 @@ cpdef process_Bscan(cnp.ndarray Bscan_spectra, calibration, shift=0):
     CPU based
     """
 
-    cdef cnp.ndarray[cnp.float_t, ndim=2] Bscan = np.zeros((Arguments.dimension[0], Arguments.dimension[-1]//2)).astype(np.float)
+    cdef cnp.ndarray[cnp.float_t, ndim=2] Bscan = np.zeros((Arguments.dimension[1], Arguments.dimension[2]//2)).astype(np.float)
 
     Bscan_spectra = scipy.signal.detrend(Bscan_spectra, axis=0)
 
     for i, spectrum in enumerate(Bscan_spectra):
 
-        Aline = process_Aline(spectrum, calibration, shift= shift)
-
-        Bscan[i,:] = Aline
-
-    Bscan = np.array(Bscan)
+        Bscan[i,:] = process_Aline(spectrum, calibration, shift= shift)
 
     return Bscan
 
