@@ -10,7 +10,6 @@ ext_modules=[
     Extension("fits",                     ["src/toolbox/fits.pyx"]),
     Extension("filters",                  ["src/toolbox/filters.pyx"]),
     Extension("maths",                    ["src/toolbox/maths.pyx"]),
-    Extension("loadings",                 ["src/toolbox/loadings.pyx"]),
     Extension("main_processing_cpu",      ["src/toolbox/main_processing_cpu.pyx"]),
     Extension("main_processing_gpu",      ["src/toolbox/main_processing_gpu.pyx"]),
     Extension("plottings",                ["src/toolbox/plottings.pyx"]),

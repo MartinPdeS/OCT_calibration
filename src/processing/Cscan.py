@@ -20,20 +20,19 @@ from src.toolbox._arguments import Arguments
 
 
 '''_____Project imports_____'''
+from src.toolbox.loadings import load_calibration
 
 if Arguments.compiled:
-    from src.toolbox.cython.loadings import load_calibration
     if Arguments.gpu:
         from src.toolbox.cython.main_processing_gpu import process_Bscan
     else:
         from src.toolbox.cython.main_processing_cpu import process_Bscan
 else:
-    from src.toolbox.loadings import load_calibration
+
     if Arguments.gpu:
         from src.toolbox.main_processing_gpu import process_Bscan
     else:
         from src.toolbox.main_processing_cpu import process_Bscan
-
 
 calibration = load_calibration(dir = Arguments.calibration_file)
 
@@ -41,33 +40,38 @@ Bscan_list = os.listdir(Arguments.input_directory)
 
 Bscan_list = [os.path.join(Arguments.input_directory, s) for s in Bscan_list]
 
+length = len(Bscan_list)
+
+Cscan = np.empty( Arguments.dimension )
+
+for n_i, Bscan_dir in enumerate(Bscan_list):
+
+    sys.stdout.write('Loading data: {0} [{1}/{2}] \n'.format(Bscan_dir, n_i, length ) )
+
+    Cscan[n_i,:,:] = np.load(Bscan_dir)
+
+sys.stdout.write('Processing ... \n')
+
+temp = process_Bscan(Cscan, calibration)
+
+sys.stdout.write('Saving into {0} file \n'.format(Arguments.output_file ) )
+"""
 f = tables.open_file(Arguments.output_file, mode='w')
 
 atom = tables.Float64Atom()
 
 array_c = f.create_earray(f.root, 'data', atom, (0, Arguments.dimension[1], Arguments.dimension[2]/2))
 
-length = len(Bscan_list)
-
-for n_i, Bscan_spectra in enumerate(Bscan_list):
-    print(Bscan_spectra)
-
-    sys.stdout.write('Bscan processing ... [{0}/{1}] \n'.format(n_i, length ) )
-
-    temp = np.load(Bscan_spectra)
-
-    array_c.append([process_Bscan(temp, calibration)])
-
-sys.stdout.write(' saving into {0} file \n'.format(Arguments.output_file ) )
-
-if not Arguments.silent:
-    from src.toolbox.plottings import Bscan_plots
-    from src.toolbox.filters import denoise_Bscan
-    Bscan_plots( denoise_Bscan( f.root.data[-1,:,:] ) )
-
+array_c.append(temp)
 
 f.close()
+"""
+print(np.shape(temp), np.min(temp), np.max(temp),None in temp)
 
+import napari
+napari.gui_qt()
 
+with napari.gui_qt():
+    viewer = napari.view_image(temp)
 
 #-

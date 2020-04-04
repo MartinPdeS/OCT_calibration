@@ -27,4 +27,4 @@ calibration = load_calibration(dir =  arguments.calibration_file)
 Aline = process_Aline(spectra, calibration, shift=0, arguments=arguments)
 
 dB_plot(data1=Aline,
-        data2=spectra2aline(spectra)[0:len(spectra)//2])
+        data2=spectra2aline(spectra)
