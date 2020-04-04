@@ -30,16 +30,16 @@ test_Bscan_gpu_compiled:
 
 #####Cscan test#####
 test_Cscan_cpu_compiled:
-		python src/processing/Cscan.py --silent --compiled --dispersion=1 --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 1 100 1024
+		python src/processing/Cscan.py --silent --compiled --dispersion=1 --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
 
 test_Cscan_cpu:
-		python src/processing/Cscan.py --silent --dispersion=1 --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 1 100 1024
+		python src/processing/_Cscan.py --silent --dispersion=1 --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
 
 test_Cscan_gpu:
-		python src/processing/Cscan.py --silent --dispersion=1 -gpu --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 1 100 1024
+		python src/processing/_Cscan.py --silent --dispersion=1 -gpu --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
 
 test_Cscan_gpu_compiled:
-		python src/processing/Cscan.py --silent --compiled --dispersion=1 -gpu --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 1 100 1024
+		python src/processing/Cscan.py --silent --compiled --dispersion=1 -gpu --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
 
 
 

@@ -2,15 +2,15 @@
 
 '''_____Standard imports_____'''
 import numpy as np
+import scipy.signal
+
+'''_____Project imports_____'''
+from src.toolbox._arguments import Arguments
 
 
 def hilbert(spectra: np.array):
 
-    temp = np.fft.fft(np.array(spectra))
-
-    temp[0: len(temp)//2] = 0
-
-    return np.fft.fft(temp)
+    return scipy.signal.hilbert(spectra)
 
 
 def unwrap_phase(spectra: np.array):
@@ -39,6 +39,4 @@ def spectra2aline(spectra: np.array):
 
     ctemp = np.fft.fft(spectra)
 
-    ctemp = np.fft.fftshift( ctemp )
-
-    return np.abs( ctemp )
+    return np.abs( ctemp[:,:,0:Arguments.dimension[2]//2] )

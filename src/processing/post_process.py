@@ -28,7 +28,7 @@ class Segment(object):
     def load_data(self, dir):
         f = tables.open_file(dir)
         data = f.root.data
-        data = np.array(data) - np.min(data) + 1
+        data = np.array(data) - np.min(data) + 0.1
         print(np.max(data), np.min(data))
         data = np.log(data)
         data = data/np.max(data)*255

@@ -12,7 +12,7 @@ from src.toolbox.maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
 
 
-def process_Aline(spectra: np.ndarray, calibration: dict, shift: int):
+def process(spectra: np.ndarray, calibration: dict, shift: float):
     """
     CPU based
     """
@@ -25,13 +25,15 @@ def process_Aline(spectra: np.ndarray, calibration: dict, shift: int):
 
     j = complex(0,1)
 
-    spectra = np.real( hilbert(spectra) * np.exp(j * np.arange(len(spectra)) * shift ) )
+    if Arguments.shift:
 
-    spectra = compensate_dispersion( np.array(spectra), Arguments.dispersion * np.array( calibration['dispersion'] ) )
+        shift = calibration['peak_shift1']
+
+        spectra = np.real( spectra * np.exp(j * np.ones(Arguments.dimension[2]) * shift ) )
+
+    spectra = compensate_dispersion( spectra, Arguments.dispersion * np.array( calibration['dispersion'] ) )
 
     Aline = spectra2aline(spectra)
-
-    Aline = Aline[0:len(Aline)//2]
 
     return Aline
 
@@ -41,17 +43,9 @@ def process_Bscan(Bscan_spectra: np.ndarray, calibration: dict, shift: int=0):
     CPU based
     """
 
-    Bscan = []
-
     Bscan_spectra = scipy.signal.detrend(Bscan_spectra, axis=0)
 
-    for i, spectrum in enumerate(Bscan_spectra):
-
-        Bscan.append( process_Aline(spectrum, calibration, shift=shift) )
-
-    Bscan = np.array(Bscan)
-
-    return Bscan
+    return process(Bscan_spectra, calibration, shift=shift)
 
 
 

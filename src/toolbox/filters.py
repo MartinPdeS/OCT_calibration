@@ -32,7 +32,10 @@ def butter_lowpass(cutoff, fs, order=5):
 def butter_highpass_filter(data, cutoff, fs, order=5):
 
     b, a = butter_highpass(cutoff, fs, order=order)
-    y = signal.filtfilt(b, a, data)
+    y = signal.filtfilt(b,
+                        a,
+                        data,
+                        axis=-1)
     return y
 
 

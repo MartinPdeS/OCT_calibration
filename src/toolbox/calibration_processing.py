@@ -99,18 +99,22 @@ def shift_1_spectra(spectra, shift):
 
 
     """
+
     L = len(spectra)
+
     mean = np.max(spectra)
+
     x = np.arange(L)
+
     j = complex(0,1)
 
     shifted_spectra = np.real( hilbert(spectra) * np.exp(j * x * shift ) )
+
     shift_mean = np.max(shifted_spectra)
+
     shifted_spectra = (shifted_spectra / shift_mean) * mean
 
     return shifted_spectra
-
-
 
 
 def compute_dispersion(spectra1, spectra2, shift_1, shift_2):
@@ -214,7 +218,7 @@ def k_linearization(spectra1, spectra2):
     return x_klinear, interpolated_spectra1, interpolated_spectra2
 
 
-def linearize_spectra(spectra, x_klinear):
+def linearize_spectra(spectra: np.ndarray, x_klinear):
     """ This method interpolate the input spectra with the input list.
 
     Args:
@@ -229,23 +233,25 @@ def linearize_spectra(spectra, x_klinear):
         :rtype: list
 
     """
-    x = np.arange( len(spectra) )
+    x = np.arange( Arguments.dimension[2] )
 
-    interpolation = interp1d(x, spectra, kind='cubic', fill_value="extrapolate")
+    interpolation = interp1d(x,
+                             spectra,
+                             kind='cubic',
+                             fill_value="extrapolate",
+                             axis=-1)
 
-    klinear_spectra = interpolation(x_klinear[:])
-
-    return klinear_spectra
+    return interpolation(x_klinear[:])
 
 
-def compensate_dispersion(spectra, Pdispersion):
+def compensate_dispersion(spectra: np.ndarray, Pdispersion):
     """ This method compensate the input spectra with the input phase dispersion.
 
     Args:
         :param spectra: OCT spectra of mirror.
         :type spectra1: list
 
-        :name Pdispersion: The phase dispersion.
+        :name Pdispersion: Phase dispersion.
         :type list
 
     Return:
