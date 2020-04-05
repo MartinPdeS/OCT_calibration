@@ -36,9 +36,7 @@ else:
 
 calibration = load_calibration(dir = Arguments.calibration_file)
 
-Bscan_list = os.listdir(Arguments.input_directory)
-
-Bscan_list = [os.path.join(Arguments.input_directory, s) for s in Bscan_list]
+Bscan_list = [os.path.join(Arguments.input_directory, s) for s in os.listdir(Arguments.input_directory)]
 
 length = len(Bscan_list)
 
@@ -66,12 +64,15 @@ array_c.append(temp)
 
 f.close()
 """
-print(np.shape(temp), np.min(temp), np.max(temp),None in temp)
 
-import napari
-napari.gui_qt()
+if not Arguments.silent:
 
-with napari.gui_qt():
-    viewer = napari.view_image(temp)
+    import napari
+
+    napari.gui_qt()
+
+    with napari.gui_qt():
+
+        viewer = napari.view_image(temp)
 
 #-
