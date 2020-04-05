@@ -30,7 +30,7 @@ class Spectra(object):
 
         self.raw = []
 
-        self.raw = np.load(self.data_dir)
+        self.raw = [[np.load(self.data_dir)]]
 
 
     def get_phase(self):
@@ -70,8 +70,8 @@ class Spectra(object):
 
     def plot(self):
 
-        plots_signals(self.raw,
-                      self.sub_raw,
+        plots_signals(self.raw[0][0],
+                      self.sub_raw[0][0],
                       self.ref,
                       self.sample,
                       self.background)

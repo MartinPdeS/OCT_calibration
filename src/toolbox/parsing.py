@@ -27,6 +27,13 @@ def Calibration_parse_arguments():
                         default="temp_calibration.json",
                         required=False)
 
+    parser.add_argument('-dim',
+                        '--dimension',
+                        help="dimension",
+                        dest="dimension",
+                        required=True,
+                        nargs=3)
+
     parser.add_argument('-i',
                         '--interactive_shift-plots',
                         help='interactive_shift',
@@ -51,6 +58,8 @@ def Calibration_parse_arguments():
 
 
     arguments = parser.parse_args()
+
+    arguments.dimension = tuple(map(int,arguments.dimension))
 
     if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')

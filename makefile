@@ -12,7 +12,7 @@ build_project:
 test: test_Calibration test_Bscan_gpu test_Cscan_cpu test_Cscan_gpu
 
 test_calibration:
-		python src/processing/calibration.py --dispersion=1 --input-dir=data/calibration/example/ --output-file=data/calibration/example/calib.json
+		python src/processing/calibration.py --dispersion=1 --input-dir=data/calibration/example/ --output-file=data/calibration/example/calib.json -dim 1 1 1024
 
 #####Bscan test#####
 test_Bscan_cpu:

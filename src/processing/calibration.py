@@ -54,28 +54,28 @@ if Arguments.silent is False:
     Mirror2.plot()
 
 
-x_new, interpolated_spectra_1, interpolated_spectra_2 = k_linearization(Mirror1.sub_raw,
-                                                                        Mirror2.sub_raw)
+x_new, interpolated_spectra_1, interpolated_spectra_2 = k_linearization(Mirror1.sub_raw[0][0],
+                                                                        Mirror2.sub_raw[0][0])
 
 if Arguments.silent is False:
 
-    dB_plot(data1=spectra2aline(interpolated_spectra_1),
-            data2=spectra2aline(Mirror1.sub_raw)
+    dB_plot(data1=spectra2aline(interpolated_spectra_1)[0][0],
+            data2=spectra2aline(Mirror1.sub_raw)[0][0]
             )
 
-    dB_plot(data1=spectra2aline(interpolated_spectra_2),
-            data2=spectra2aline(Mirror2.sub_raw)
+    dB_plot(data1=spectra2aline(interpolated_spectra_2)[0][0],
+            data2=spectra2aline(Mirror2.sub_raw)[0][0]
             )
 
 
 sys.stdout.write('Procesing spectral shift')
-z_space, shifted_spectra_1, shifted_spectra_2, shift_1, shift_2 = shift_spectra(interpolated_spectra_1,
-                                                                                interpolated_spectra_2,
+z_space, shifted_spectra_1, shifted_spectra_2, shift_1, shift_2 = shift_spectra(interpolated_spectra_1[0][0],
+                                                                                interpolated_spectra_2[0][0],
                                                                                 N_pad=100)
 
 sys.stdout.write('Computing dispersion ...')
-Pdispersion = compute_dispersion(interpolated_spectra_1,
-                                 interpolated_spectra_2,
+Pdispersion = compute_dispersion(interpolated_spectra_1[0][0],
+                                 interpolated_spectra_2[0][0],
                                  shift_1,
                                  shift_2)
 
