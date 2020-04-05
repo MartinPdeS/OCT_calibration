@@ -20,12 +20,13 @@ if p not in sys.path:
 from src.toolbox.PySpectra import Spectra
 from src.toolbox.parsing import Calibration_parse_arguments
 Calibration_parse_arguments()
+from src.toolbox._arguments import Arguments
 from src.toolbox.calibration_processing import compute_dispersion, k_linearization, shift_spectra, compensate_dispersion, compute_PSF, shift_1_spectra
 from src.toolbox.loadings import load_data
 from src.toolbox.plottings import dB_plot
 from src.toolbox.maths import spectra2aline, apodization
 import src.toolbox.directories as directories
-from src.toolbox._arguments import Arguments
+
 
 
 Mirror1 = Spectra(data_dir      = Arguments.input_dir + "mirror1.npy",

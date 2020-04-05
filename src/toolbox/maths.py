@@ -28,7 +28,7 @@ def unwrap_phase(spectra: np.array):
 
 def apodization(spectra: np.array):
 
-    hanning = np.hanning( len(spectra) )
+    hanning = np.hanning( Arguments.dimensions[2] )
 
     spectra = hanning *  spectra
 
@@ -37,6 +37,6 @@ def apodization(spectra: np.array):
 
 def spectra2aline(spectra: np.array):
 
-    ctemp = np.fft.fft(spectra)
+    ctemp = np.fft.rfft(spectra)
 
     return np.abs( ctemp[:,:,0:Arguments.dimension[2]//2] )

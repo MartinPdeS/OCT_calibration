@@ -19,23 +19,14 @@ def process(spectra: np.ndarray, calibration: dict, shift: float):
 
     #spectra = np.array(spectra) + np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) - np.array(calibration['dark_sample'])
 
-    spectra = butter_highpass_filter(spectra, cutoff=180, fs=30000, order=5)
+    spectra = compensate_dispersion( spectra, Arguments.dispersion * np.array( calibration['dispersion'] ) )
 
     spectra = linearize_spectra(spectra, calibration['klinear'])
 
-    j = complex(0,1)
-
     if Arguments.shift:
+        spectra = shift_spectra()
 
-        shift = calibration['peak_shift1']
-
-        spectra = np.real( spectra * np.exp(j * np.ones(Arguments.dimension[2]) * shift ) )
-
-    spectra = compensate_dispersion( spectra, Arguments.dispersion * np.array( calibration['dispersion'] ) )
-
-    Aline = spectra2aline(spectra)
-
-    return Aline
+    return spectra2aline(spectra)
 
 
 def process_Bscan(Bscan_spectra: np.ndarray, calibration: dict, shift: int=0):
@@ -48,5 +39,12 @@ def process_Bscan(Bscan_spectra: np.ndarray, calibration: dict, shift: int=0):
     return process(Bscan_spectra, calibration, shift=shift)
 
 
+def shift_spectra(spectra: np.ndarray, calibration: dict):
+
+    j = complex(0,1)
+
+    shift = calibration['peak_shift1']
+
+    return np.real( spectra * np.exp(j * np.arange(Arguments.dimension[2]) * shift ) )
 
 # ---
