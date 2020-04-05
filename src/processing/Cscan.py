@@ -30,9 +30,9 @@ if Arguments.compiled:
 else:
 
     if Arguments.gpu:
-        from src.toolbox.main_processing_gpu import process_Bscan
+        from src.toolbox.main_processing_gpu import process_volume
     else:
-        from src.toolbox.main_processing_cpu import process_Bscan
+        from src.toolbox.main_processing_cpu import process_volume
 
 calibration = load_calibration(dir = Arguments.calibration_file)
 
@@ -50,7 +50,7 @@ for n_i, Bscan_dir in enumerate(Bscan_list):
 
 sys.stdout.write('Processing ... \n')
 
-temp = process_Bscan(Cscan, calibration)
+temp = process_volume(Cscan, calibration)
 
 sys.stdout.write('Saving into {0} file \n'.format(Arguments.output_file ) )
 """
@@ -65,7 +65,7 @@ array_c.append(temp)
 f.close()
 """
 
-if not Arguments.silent:
+if Arguments.silent:
 
     import napari
 

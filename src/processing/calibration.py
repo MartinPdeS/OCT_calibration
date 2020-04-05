@@ -17,10 +17,10 @@ if p not in sys.path:
 
 
 '''_____Project imports_____'''
-from src.toolbox.PySpectra import Spectra
 from src.toolbox.parsing import Calibration_parse_arguments
 Calibration_parse_arguments()
 from src.toolbox._arguments import Arguments
+from src.toolbox.PySpectra import Spectra
 from src.toolbox.calibration_processing import compute_dispersion, k_linearization, shift_spectra, compensate_dispersion, compute_PSF, shift_1_spectra
 from src.toolbox.loadings import load_data
 from src.toolbox.plottings import dB_plot
