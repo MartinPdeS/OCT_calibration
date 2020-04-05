@@ -206,7 +206,7 @@ def k_linearization(spectra1, spectra2):
 
     x_klinear = fit_x( np.linspace( Plin[0], Plin[-1], len(Plin) ) )
 
-    coefs3 = np.polynomial.polynomial.polyfit(x_klinear, x, 5)
+    coefs3 = np.polynomial.polynomial.polyfit(x, x_klinear, 5)
 
     ffit3 = np.poly1d(coefs3[::-1])
 

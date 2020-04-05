@@ -69,13 +69,13 @@ if Arguments.silent is False:
 
 
 sys.stdout.write('Procesing spectral shift')
-z_space, shifted_spectra_1, shifted_spectra_2, shift_1, shift_2 = shift_spectra(interpolated_spectra_1[0][0],
-                                                                                interpolated_spectra_2[0][0],
+z_space, shifted_spectra_1, shifted_spectra_2, shift_1, shift_2 = shift_spectra(interpolated_spectra_1,
+                                                                                interpolated_spectra_2,
                                                                                 N_pad=100)
 
 sys.stdout.write('Computing dispersion ...')
-Pdispersion = compute_dispersion(interpolated_spectra_1[0][0],
-                                 interpolated_spectra_2[0][0],
+Pdispersion = compute_dispersion(interpolated_spectra_1,
+                                 interpolated_spectra_2,
                                  shift_1,
                                  shift_2)
 
@@ -87,15 +87,14 @@ compensated_spectra_1 = compensate_dispersion(interpolated_spectra_1,
 compensated_spectra_2 = compensate_dispersion(interpolated_spectra_2,
                                              -Arguments.dispersion * Pdispersion)
 
-kernel = compute_PSF(spectra2aline(compensated_spectra_1))
 
 if Arguments.silent is False:
 
-    dB_plot(data1=spectra2aline(compensated_spectra_1),
-            data2=spectra2aline(Mirror1.sub_raw))
+    dB_plot(data1=spectra2aline([[compensated_spectra_1]])[0][0],
+            data2=spectra2aline(Mirror1.sub_raw)[0][0])
 
-    dB_plot(data1=spectra2aline(compensated_spectra_2),
-            data2=spectra2aline(Mirror2.sub_raw))
+    dB_plot(data1=spectra2aline([[compensated_spectra_2]])[0][0],
+            data2=spectra2aline(Mirror2.sub_raw)[0][0])
 
 
 calib_dict = {"klinear":     list(x_new),
@@ -104,8 +103,7 @@ calib_dict = {"klinear":     list(x_new),
               "dark_ref":    list(load_data(Arguments.input_dir + "dark_ref.npy")),
               "dark_sample": list(load_data(Arguments.input_dir + "dark_sample1.npy")),
               "peak_shift1": shift_1,
-              "peak_shift2": shift_2,
-              "psf_kernel" : list(kernel)
+              "peak_shift2": shift_2
               }
 if Arguments.output_file:
     sys.stdout.write('Writting json file to {0}...'.format(Arguments.output_file))
