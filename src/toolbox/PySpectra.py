@@ -29,7 +29,7 @@ class Spectra(object):
 
         """
 
-        self.raw = [[np.load(self.data_dir)]]
+        self.raw = np.load(self.data_dir)[np.newaxis, np.newaxis,:]
 
 
     def get_phase(self):

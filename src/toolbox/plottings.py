@@ -14,6 +14,8 @@ import src.toolbox.directories as directories
 
 
 def dB_plot(data1, data2=None):
+    data1 = np.squeeze(data1)
+    data2 = np.squeeze(data2)
 
     fig = plt.figure(figsize=(15, 6))
 

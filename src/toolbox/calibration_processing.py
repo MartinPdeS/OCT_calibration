@@ -40,7 +40,11 @@ def shift_spectra(spectra1, spectra2, N_pad):
         :rname: shift_2: spectral relative shift for mirror_2
         :rtype: float
     """
-    L = len(spectra1)
+    spectra1 = spectra1[0,0,:]
+
+    spectra2 = spectra2[0,0,:]
+
+    L = Arguments.dimension[2]
     x = np.arange(L)
     j = complex(0,1)
 
@@ -48,7 +52,9 @@ def shift_spectra(spectra1, spectra2, N_pad):
     z_space = z_space[len(z_space)//2:-1]
 
     ff1 = np.abs( np.fft.fftshift( np.fft.fft(spectra1, L * N_pad ) ) )
-    ff2 = np.abs( np.fft.fftshift( np.fft.fft(spectra2, L * N_pad ) ) )
+
+
+    ff2 = np.abs( np.fft.fftshift( np.fft.fft(spectra2, L * N_pad) ) )
 
     ff1 = ff1[len(ff1)//2:-1]
     ff2 = ff2[len(ff2)//2:-1]
@@ -78,7 +84,7 @@ def shift_spectra(spectra1, spectra2, N_pad):
     shifted_spectra1 = np.real( hilbert(spectra1) * np.exp(j * x * shift_1 ) )
     shifted_spectra2 = np.real( hilbert(spectra2) * np.exp(j * x * shift_2 ) )
 
-    return z_space, shifted_spectra1, shifted_spectra2, shift_1, shift_2
+    return z_space, [[shifted_spectra1]], [[shifted_spectra2]], shift_1, shift_2
 
 
 
@@ -138,11 +144,15 @@ def compute_dispersion(spectra1, spectra2, shift_1, shift_2):
         :rname: Pdispersion: The phase dispersion.
         :rtype: list
     """
-    j = complex(0,1)
-    x = np.arange( len(spectra1) )
 
-    p1 = unwrap_phase(spectra1) + np.arange(len(spectra2))*shift_1
-    p2 = unwrap_phase(spectra2) + np.arange(len(spectra2))*shift_2
+    spectra1 = spectra1[0,0,:]
+    spectra2 = spectra2[0,0,:]
+    j = complex(0,1)
+    length = Arguments.dimension[2]
+    x = np.arange( length )
+
+    p1 = unwrap_phase(spectra1) + np.arange(length)*shift_1
+    p2 = unwrap_phase(spectra2) + np.arange(length)*shift_2
 
     Pdisp = (p1-p2)/2
     Pdisp -= Pdisp[0]
@@ -183,7 +193,8 @@ def k_linearization(spectra1, spectra2):
         :rtype: list
 
     """
-    phase1, phase2 = unwrap_phase(spectra1), unwrap_phase(spectra2)
+
+    phase1, phase2 = unwrap_phase(spectra1[0][0]), unwrap_phase(spectra2[0][0])
 
     phase1 -= phase1[0]
     phase2 -= phase2[0]
@@ -214,6 +225,7 @@ def k_linearization(spectra1, spectra2):
 
     interpolated_spectra1 = linearize_spectra(spectra1, x_klinear)
     interpolated_spectra2 = linearize_spectra(spectra2, x_klinear)
+
 
     return x_klinear, interpolated_spectra1, interpolated_spectra2
 
