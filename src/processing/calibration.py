@@ -59,11 +59,11 @@ x_new, interpolated_spectra_1, interpolated_spectra_2 = k_linearization(Mirror1.
 
 if Arguments.silent is False:
 
-    dB_plot(data1=spectra2aline(interpolated_spectra_1)[0][0],
+    dB_plot(data1=spectra2aline([[interpolated_spectra_1]])[0][0],
             data2=spectra2aline(Mirror1.sub_raw)[0][0]
             )
 
-    dB_plot(data1=spectra2aline(interpolated_spectra_2)[0][0],
+    dB_plot(data1=spectra2aline([[interpolated_spectra_2]])[0][0],
             data2=spectra2aline(Mirror2.sub_raw)[0][0]
             )
 

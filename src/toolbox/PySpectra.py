@@ -1,6 +1,7 @@
 
 '''_____Standard imports_____'''
 import numpy as np
+import copy
 
 '''_____Project imports_____'''
 from src.toolbox.maths import unwrap_phase
@@ -28,8 +29,6 @@ class Spectra(object):
 
         """
 
-        self.raw = []
-
         self.raw = [[np.load(self.data_dir)]]
 
 
@@ -48,20 +47,20 @@ class Spectra(object):
 
         """
 
-        self.sub_raw = self.raw
-
+        self.sub_raw = copy.copy(self.raw)
 
         if self.background_dir:
             self.background = load_data(self.background_dir)
-            self.sub_raw += self.background
+            self.sub_raw[0][0] += self.background
 
         if self.sample_dir:
             self.sample = load_data(self.sample_dir)
-            self.sub_raw -= self.sample
+
+            self.sub_raw[0][0] -= self.sample
 
         if self.ref_dir:
             self.ref = load_data(self.ref_dir)
-            self.sub_raw -= self.ref
+            self.sub_raw[0][0] -= self.ref
 
         self.sub_raw = butter_highpass_filter(self.sub_raw,
                                               cutoff=280,

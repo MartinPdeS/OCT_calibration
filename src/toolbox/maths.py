@@ -40,6 +40,7 @@ def apodization(spectra: np.array):
 
 
 def spectra2aline(spectra: np.array):
+    print(np.shape(spectra))
 
     ctemp = np.fft.fft(spectra)
 
