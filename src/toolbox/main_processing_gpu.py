@@ -12,26 +12,15 @@ import cupyx.scipy.ndimage
 from src.toolbox._arguments import Arguments
 from src.toolbox.filters import butter_highpass_filter
 
-def process_Bscan(Volume_spectra: np.ndarray, calibration: dict):
+def process_volume(Volume_spectra: np.ndarray, calibration: dict):
     """
     GPU accelerated
     """
 
-    x = np.arange(start=0,
-                  stop=Arguments.dimension[2])
+    Volume_spectra = scipy.signal.detrend(Volume_spectra, axis=1, type='linear').astype("float64")
 
-    j = complex(0,1)
-    print(np.shape(Volume_spectra))
-    import matplotlib.pyplot as plt
-    plt.plot(Volume_spectra[1,1,:])
-    plt.show()
-    temp = scipy.signal.detrend(Volume_spectra, axis=(0,1), type='constant').astype("float64")
-    #temp = butter_highpass_filter(Volume_spectra, cutoff=1000, fs=30000, order=5)
-    plt.plot(temp[1,1,:])
-    plt.show()
-    interpolation = interp1d(x, temp, axis=2, kind='cubic', fill_value="extrapolate")
+    Volume_spectra = linearize_spectra(Volume_spectra, calibration)
 
-    temp = interpolation(calibration['klinear'][:])
 
     """ CUPY solution can't choose axis!
     temp = cupyx.scipy.ndimage.map_coordinates(input=temp,
@@ -41,46 +30,63 @@ def process_Bscan(Volume_spectra: np.ndarray, calibration: dict):
                                                mode='nearest')
     """
 
+    temp = cp.array(Volume_spectra)
 
-    temp = cp.array(temp)
-
-    temp = compute_analytical(temp)
+    temp = compensate_dispersion(temp, calibration)
 
     if Arguments.shift:
 
         temp = spectrum_shift(temp)
 
-    temp = cp.real(temp)
+    temp  = cp.fft.rfft(temp, axis=2)[:,:,:Arguments.dimension[2]//2]
 
-    temp  = cp.fft.fft(temp, axis=2)
-
-    temp = temp[:,:,:Arguments.dimension[2]//2]
-
-    temp = cp.absolute(temp)
+    temp = cp.absolute(temp * 2)
 
     cp.cuda.Device().synchronize()
 
-    temp = cp.asnumpy(temp)
+    return cp.asnumpy(temp)
 
-    return temp
+
+def linearize_spectra(temp: np.ndarray, calibration: dict):
+
+    x = np.arange(start=0, stop=Arguments.dimension[2])
+
+    interpolation = interp1d(x,
+                             temp,
+                             axis=2,
+                             kind='cubic',
+                             fill_value="extrapolate")
+
+    return interpolation(calibration['klinear'][:])
 
 
 def spectrum_shift(temp: cp.ndarray):
 
-    spectrum_shift = np.exp(j * np.arange( Arguments.dimension[2] ) * shift )
+    spectrum_shift = cp.exp(complex(0,1) * cp.arange( start=0, stop=Arguments.dimension[2] ) * shift )
 
     temp = cp.multiply(temp, spectrum_shift)
 
+    temp = cp.real(temp)
 
-def compute_analytical(temp: cp.ndarray):
 
-    temp = cp.fft.fft(temp, axis=2)
+def hilbert(temp: cp.ndarray):
 
-    temp[:,:,:Arguments.dimension[2]//2] = 0
+    temp = cp.fft.rfft(temp, axis=2)[:,:,:Arguments.dimension[2]//2]
 
-    temp = cp.fft.ifft(temp, axis=2)
+    dum =  cp.zeros_like(temp)
 
-    return temp
+    temp = cp.concatenate( (temp*2,dum), axis=2)
+
+    return cp.fft.ifft(temp, axis=2)
+
+
+def compensate_dispersion(spectra: np.ndarray, calibration: dict):
+
+    calib = cp.asarray(calibration['dispersion'])
+
+    Pdispersion = cp.asarray( calib * complex(0,1) * Arguments.dispersion )
+
+    return cp.real( hilbert(spectra) * cp.exp( Pdispersion ) )
 
 
 # ---

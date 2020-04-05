@@ -24,9 +24,9 @@ from src.toolbox.loadings import load_calibration
 
 if Arguments.compiled:
     if Arguments.gpu:
-        from src.toolbox.cython.main_processing_gpu import process_Bscan
+        from src.toolbox.cython.main_processing_gpu import process_volume
     else:
-        from src.toolbox.cython.main_processing_cpu import process_Bscan
+        from src.toolbox.cython.main_processing_cpu import process_volume
 else:
 
     if Arguments.gpu:
