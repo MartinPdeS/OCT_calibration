@@ -16,9 +16,9 @@ def process_volume(Volume_spectra: np.ndarray, calibration: dict) -> np.array:
     GPU accelerated
     """
 
-    Volume_spectra = scipy.signal.detrend(cp.asnumpy(Volume_spectra), axis=1, type='linear').astype("float64")
+    Volume_spectra = detrend(Volume_spectra)
 
-    Volume_spectra = linearize_spectra(Volume_spectra, calibration)
+    Volume_spectra = linearize_spectra(cp.asnumpy(Volume_spectra), calibration)
 
     temp = cp.array(Volume_spectra)
 
@@ -68,6 +68,18 @@ def hilbert(temp: cp.ndarray) -> cp.array:
     temp = cp.concatenate( (temp*2,dum), axis=2)
 
     return cp.fft.ifft(temp, axis=2)
+
+
+def detrend(Volume_spectra):
+
+     Volume_spectra = cp.fft.rfft(Volume_spectra, axis=1)
+
+     Volume_spectra[:,:10,:] = 0
+
+     Volume_spectra = cp.fft.irfft(Volume_spectra, axis=1)
+
+     return Volume_spectra
+
 
 
 def compensate_dispersion(spectra: np.ndarray, calibration: dict) -> cp.array:

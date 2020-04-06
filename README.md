@@ -50,12 +50,15 @@ The folder architecture is presented as :
 
 ```
     - setup.py                          (setup installation tool for compilation)
+
     - makefile                          (for tests and installation)
+
     - data/                             (contain all data)
         - calibration/
         - Aline/
         - Bscan/
         - Cscan/
+
     - src/
         - processing/                
             - calibration.py            (compute calibration parameters)
@@ -63,15 +66,17 @@ The folder architecture is presented as :
             - Bscan.py                  (process one Bscan)
             - Cscan.py                  (process one Cscan)
             - post_processing.py        (3D rendering of Cscan volume)
-        - toolbox/                      (contain tools to do all the processing)
+
+       - toolbox/                      (contain tools to do all the processing)
 
         - Doc/                          (not yet fully developped)
             - images/                   (images for README.md)
             - profiling/                (for optimization endings)
+
     - README.md                         (literally this)
 
 ```
-Python init.py and compiled files are not represented here.
+###### Python init.py and compiled files are not represented here.
 
 ## Run example
 

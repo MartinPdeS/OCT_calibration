@@ -78,7 +78,7 @@ if Arguments.save:
 sys.stdout.write('Processing finished \n')
 
 
-if not Arguments.silent:
+if Arguments.silent:
 
     import napari
 
