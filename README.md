@@ -5,10 +5,10 @@ The processing is based on Attendu et al. "Simple and robust calibration procedu
 
 By calibrate I mean substracting background - k-linearize spectra - evaluate and compensate dispersion. In order to compute the calibration the algorithm need multiple measurements:
 > * mirror1.npy         (OCT interferogram with mirror in one side of the zero delay as sample)
-* dark_sample.npy     (OCT interferogram with ref arm blocked)
-* mirror2.npy         (OCT interferogram with mirror in the other side of the zero delay as sample)
-* dark_ref.npy        (OCT interferogram with sample arm blocked)
-* dark_not.npy        (OCT interferogram with both arm blocked)
+>* dark_sample.npy     (OCT interferogram with ref arm blocked)
+>* mirror2.npy         (OCT interferogram with mirror in the other side of the zero delay as sample)
+>* dark_ref.npy        (OCT interferogram with sample arm blocked)
+>* dark_not.npy        (OCT interferogram with both arm blocked)
 
 Those .npy file should be saved into a file in data/calibration/<your-name> directory.
 
@@ -87,8 +87,8 @@ In order to run a calibration example one can tape the following command on comm
 Arguments for src/processing/calibration.py are:
 
 >* --dispersion : [1] for normal dispersion, [-1] for anormal
-* --input-dir : directory of the input files for calibration
-* --output-file : name of the output .json file containing all the calibration parameters which is saved in same directory as input-dir
+>* --input-dir : directory of the input files for calibration
+>* --output-file : name of the output .json file containing all the calibration parameters which is saved in same directory as input-dir
 
 #### Denoising process:
 
@@ -123,9 +123,9 @@ In order to process one example of Aline, one can tape the following command on 
 Arguments for src/processing/Aline.py are:
 
 >* --dispersion : [1] for normal dispersion, [-1] for anormal
-* --input-file : directory of the input Aline file
-* --calibration : directory for the output .json file containing all the calibration parameters
-* --output-file : directory for the processed Aline file
+>* --input-file : directory of the input Aline file
+>* --calibration : directory for the output .json file containing all the calibration parameters
+>* --output-file : directory for the processed Aline file
 
 
 
@@ -142,9 +142,9 @@ In order to process one example of Bscan, one can tape the following command on 
 Arguments for src/processing/Bscan.py are:
 
 >* --dispersion : [1] for normal dispersion, [-1] for anormal
-* --input-file : directory of the input Bscan file
-* --calibration : directory for the output .json file containing all the calibration parameters
-* --output-file : directory for the processed Bscan file
+>* --input-file : directory of the input Bscan file
+>* --calibration : directory for the output .json file containing all the calibration parameters
+>* --output-file : directory for the processed Bscan file
 
 <img src=".\doc\images\Figure_3.png"
      alt="spectrum de-noising"
@@ -164,9 +164,9 @@ In order to process one example of Cscan, one can tape the following command on 
 Arguments for src/processing/Cscan.py are:
 
 >* --dispersion : [1] for normal dispersion, [-1] for anormal
-* --input-file : directory of the input Aline file
-* --calibration : directory for the output .json file containing all the calibration parameters
-* --output-file : directory for the processed Cscan file
+>* --input-file : directory of the input Aline file
+>* --calibration : directory for the output .json file containing all the calibration parameters
+>* --output-file : directory for the processed Cscan file
 
 
 ## For citing this project in scientific papers
