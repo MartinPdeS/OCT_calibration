@@ -52,10 +52,10 @@ The folder architecture is presented as :
     - setup.py                          (setup installation tool for compilation)
     - makefile                          (for tests and installation)
     - data/                             (contain all data)
-                - calibration/
-                - Aline/
-                - Bscan/
-                - Cscan/
+        - calibration/
+        - Aline/
+        - Bscan/
+        - Cscan/
     - src/
         - processing/                
             - calibration.py            (compute calibration parameters)
@@ -71,7 +71,7 @@ The folder architecture is presented as :
     - README.md                         (literally this)
 
 ```
-Python init.py files are not depicted here.
+Python init.py and compiled files are not represented here.
 
 ## Run example
 
