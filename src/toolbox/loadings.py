@@ -23,6 +23,4 @@ def load_Bscan_spectra(file_dir: str, dimension=(1,1024,3147)):
 
 def load_calibration(dir: str=None):
 
-    calibration = pickle.load( open( dir, "rb" ) )
-
-    return calibration
+    return  pickle.load( open( dir, "rb" ) )

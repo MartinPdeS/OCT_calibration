@@ -1,11 +1,12 @@
 
 '''_____Standard imports_____'''
 import numpy as np
+import cupy as cp
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from numpy import inf
 from scipy.interpolate import interp1d
-from numba import jit
+
 
 '''_____Project imports_____'''
 from src.toolbox.plottings import interactive_shift, phase_dispersion_plot, plot_klinearization, dB_plot
@@ -273,9 +274,7 @@ def compensate_dispersion(spectra: np.ndarray, Pdispersion):
     """
     j = complex(0,1)
 
-    compensated_spectra = np.real( hilbert(spectra) * np.exp( j * Pdispersion ) )
-
-    return compensated_spectra
+    return np.real( hilbert(spectra) * np.exp( j * Pdispersion ) )
 
 
 
@@ -297,11 +296,11 @@ def compute_PSF(aline):
     return kernel
 
 
-
-
-
-
-
+def resampling_2Dmapping(coordinates):
+    a = np.concatenate([coordinates]*Arguments.dimension[1])
+    b = np.repeat(np.arange(Arguments.dimension[1]), Arguments.dimension[2])
+    c = np.swapaxes( list(zip(b,a)), 1,0 )
+    return cp.asarray(c)
 
 
 

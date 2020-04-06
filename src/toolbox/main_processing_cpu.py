@@ -12,12 +12,14 @@ from src.toolbox.maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
 
 
-def process(Volume_spectra: np.ndarray, calibration: dict, shift: float):
+
+
+def process_2D(Volume_spectra: np.ndarray, calibration: dict, shift: int=0):
     """
     CPU based
     """
 
-    #spectra = np.array(spectra) + np.array(calibration['dark_not']) - np.array(calibration['dark_ref']) - np.array(calibration['dark_sample'])
+    Volume_spectra = scipy.signal.detrend(Volume_spectra, axis=0, type='linear')
 
     Volume_spectra = compensate_dispersion(Volume_spectra, Arguments.dispersion * np.array( calibration['dispersion'] ))
 
@@ -26,17 +28,7 @@ def process(Volume_spectra: np.ndarray, calibration: dict, shift: float):
     if Arguments.shift:
         spectra = shift_spectra(Volume_spectra, calibration)
 
-    return spectra2aline(Volume_spectra)
-
-
-def process_volume(Volume_spectra: np.ndarray, calibration: dict, shift: int=0):
-    """
-    CPU based
-    """
-
-    Volume_spectra = scipy.signal.detrend(Volume_spectra, axis=0, type='linear')
-
-    return process(Volume_spectra, calibration, shift=shift)
+    return spectra2aline([Volume_spectra])[0,:,:Arguments.dimension[2]//2]
 
 
 def shift_spectra(Volume_spectra: np.ndarray, calibration: dict):
@@ -46,5 +38,7 @@ def shift_spectra(Volume_spectra: np.ndarray, calibration: dict):
     shift = calibration['peak_shift1']
 
     return np.real( Volume_spectra * np.exp(j * np.arange(Arguments.dimension[2]) * shift ) )
+
+
 
 # ---
