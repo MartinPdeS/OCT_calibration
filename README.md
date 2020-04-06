@@ -10,7 +10,7 @@ By calibrate I mean substracting background - k-linearize spectra - evaluate and
 >* dark_ref.npy        (OCT interferogram with sample arm blocked)
 >* dark_not.npy        (OCT interferogram with both arm blocked)
 
-Those .npy file should be saved into a file in data/calibration/<your-name> directory.
+Those .npy file should be saved into a file in data/calibration/\<your-name\> directory.
 
 ## Packages dependencies
 
