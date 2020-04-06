@@ -21,6 +21,7 @@ In order to use the Py-OCT-Calibration Library, one must have installed the foll
     - Scipy
     - json
     - matplotlib
+    - Cupy (fot Nvidia GPU acceleration)
     - sphynx (for developer only)
     - git (for developer only)
     - Napari (for 3D-rendering)
