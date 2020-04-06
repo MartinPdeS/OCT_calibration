@@ -4,6 +4,7 @@
 import numpy as np
 import scipy.signal
 
+
 '''_____Project imports_____'''
 from src.toolbox._arguments import Arguments
 

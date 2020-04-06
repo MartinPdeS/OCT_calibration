@@ -10,25 +10,15 @@ import cupyx.scipy.ndimage
 
 '''_____Project imports_____'''
 from src.toolbox._arguments import Arguments
-from src.toolbox.filters import butter_highpass_filter
 
-def process_volume(Volume_spectra: np.ndarray, calibration: dict):
+def process_volume(Volume_spectra: np.ndarray, calibration: dict) -> np.array:
     """
     GPU accelerated
     """
 
-    Volume_spectra = scipy.signal.detrend(Volume_spectra, axis=1, type='linear').astype("float64")
+    Volume_spectra = scipy.signal.detrend(cp.asnumpy(Volume_spectra), axis=1, type='linear').astype("float64")
 
     Volume_spectra = linearize_spectra(Volume_spectra, calibration)
-
-
-    """ CUPY solution can't choose axis!
-    temp = cupyx.scipy.ndimage.map_coordinates(input=temp,
-                                               coordinates=x,
-                                               output=None,
-                                               order=1,
-                                               mode='nearest')
-    """
 
     temp = cp.array(Volume_spectra)
 
@@ -40,7 +30,7 @@ def process_volume(Volume_spectra: np.ndarray, calibration: dict):
 
     temp  = cp.fft.rfft(temp, axis=2)[:,:,:Arguments.dimension[2]//2]
 
-    temp = cp.absolute(temp * 2)
+    temp = cp.absolute(temp)
 
     cp.cuda.Device().synchronize()
 
@@ -69,7 +59,7 @@ def spectrum_shift(temp: cp.ndarray):
     temp = cp.real(temp)
 
 
-def hilbert(temp: cp.ndarray):
+def hilbert(temp: cp.ndarray) -> cp.array:
 
     temp = cp.fft.rfft(temp, axis=2)[:,:,:Arguments.dimension[2]//2]
 
@@ -80,7 +70,7 @@ def hilbert(temp: cp.ndarray):
     return cp.fft.ifft(temp, axis=2)
 
 
-def compensate_dispersion(spectra: np.ndarray, calibration: dict):
+def compensate_dispersion(spectra: np.ndarray, calibration: dict) -> cp.array:
 
     calib = cp.asarray(calibration['dispersion'])
 

@@ -2,6 +2,7 @@
 
 '''_____Standard imports_____'''
 import numpy as np
+import cupy as cp
 import os
 import tables
 import sys
@@ -40,32 +41,44 @@ Bscan_list = [os.path.join(Arguments.input_directory, s) for s in os.listdir(Arg
 
 length = len(Bscan_list)
 
-Cscan = np.empty( Arguments.dimension )
+if Arguments.gpu:
+    Cscan = cp.ndarray( Arguments.dimension )
+else:
+    Cscan = np.empty( Arguments.dimension )
+
 
 for n_i, Bscan_dir in enumerate(Bscan_list):
 
     sys.stdout.write('Loading data: {0} [{1}/{2}] \n'.format(Bscan_dir, n_i, length ) )
 
-    Cscan[n_i,:,:] = np.load(Bscan_dir)
+    if Arguments.gpu:
+        Cscan[n_i,:,:] = cp.load(Bscan_dir)
+    else:
+        Cscan[n_i,:,:] = np.load(Bscan_dir)
 
 sys.stdout.write('Processing ... \n')
 
 temp = process_volume(Cscan, calibration)
 
-sys.stdout.write('Saving into {0} file \n'.format(Arguments.output_file ) )
-"""
-f = tables.open_file(Arguments.output_file, mode='w')
 
-atom = tables.Float64Atom()
+if Arguments.save:
 
-array_c = f.create_earray(f.root, 'data', atom, (0, Arguments.dimension[1], Arguments.dimension[2]/2))
+    sys.stdout.write('Saving into {0} file \n'.format(Arguments.output_file ) )
 
-array_c.append(temp)
+    f = tables.open_file(Arguments.output_file, mode='w')
 
-f.close()
-"""
+    atom = tables.Float64Atom()
 
-if Arguments.silent:
+    array_c = f.create_earray(f.root, 'data', atom, (0, Arguments.dimension[1], Arguments.dimension[2]/2))
+
+    array_c.append(temp)
+
+    f.close()
+
+sys.stdout.write('Processing finished \n')
+
+
+if not Arguments.silent:
 
     import napari
 
@@ -74,5 +87,6 @@ if Arguments.silent:
     with napari.gui_qt():
 
         viewer = napari.view_image(temp)
+
 
 #-

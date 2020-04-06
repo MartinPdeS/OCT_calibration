@@ -257,6 +257,11 @@ def Cscan_parse_arguments():
                         dest='silent',
                         action="store_true")
 
+    parser.add_argument('--save',
+                        help='Save .h5 output file',
+                        dest='save',
+                        action="store_true")
+
 
 
     arguments = parser.parse_args()

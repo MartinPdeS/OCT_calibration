@@ -50,6 +50,10 @@ cython_html:
 		cython -a src/toolbox/main_processing_gpu.pyx
 
 
+profiling:
+		python -m cProfile -o ./doc/profiling/Cscan_gpu.prof src/processing/Cscan.py --silent --dispersion=1 -gpu --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
+		runsnake ./doc/profiling/Cscan_gpu.prof
+
 clean:
 		rm -rf ./build/
 		rm -rf ./src/toolbox/*.c
