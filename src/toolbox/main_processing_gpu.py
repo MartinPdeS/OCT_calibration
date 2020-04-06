@@ -103,19 +103,19 @@ def process_2D(Volume_spectra: np.ndarray, calibration: dict, coordinates) -> np
 
     Volume_spectra = linearize_spectra_2D(Volume_spectra, coordinates)
 
-    temp = compensate_dispersion_2D(Volume_spectra, calibration)
+    Volume_spectra = compensate_dispersion_2D(Volume_spectra, calibration)
 
     if Arguments.shift:
 
-        temp = spectrum_shift(temp)
+        temp = spectrum_shift(Volume_spectra)
 
-    temp  = cp.fft.rfft(temp, axis=1)[:,:Arguments.dimension[2]//2]
+    Volume_spectra  = cp.fft.rfft(Volume_spectra, axis=1)[:,:Arguments.dimension[2]//2]
 
-    temp = cp.absolute(temp)
+    Volume_spectra = cp.absolute(Volume_spectra)
 
     cp.cuda.Device().synchronize()
 
-    return temp
+    return Volume_spectra
 
 
 def linearize_spectra_2D(temp: cp.ndarray, coordinates: cp.ndarray) -> cp.ndarray:
