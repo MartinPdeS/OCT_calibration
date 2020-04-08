@@ -8,6 +8,9 @@ import tables
 import sys
 import time
 
+import pandas
+
+
 '''_____Add package_____'''
 p = os.path.abspath('.')
 if p not in sys.path:
@@ -17,6 +20,7 @@ if p not in sys.path:
 from src.toolbox.parsing import Cscan_parse_arguments
 arguments = Cscan_parse_arguments()
 from src.toolbox._arguments import Arguments
+from src.toolbox.loadings import make_dataframe
 from src.toolbox.calibration_processing import resampling_2Dmapping
 
 
@@ -36,63 +40,63 @@ else:
     else:
         from src.toolbox.main_processing_cpu import process_2D
 
-calibration = load_calibration(dir = Arguments.calibration_file)
 
-Bscan_list = [os.path.join(Arguments.input_directory, s) for s in os.listdir(Arguments.input_directory)]
+def main():
 
-if Arguments.gpu:
-    Cscan = cp.ndarray( (Arguments.dimension[0], Arguments.dimension[1], Arguments.dimension[2]//2) )
-    resampling = resampling_2Dmapping(calibration['klinear'])
-else:
-    Cscan = np.ndarray( (Arguments.dimension[0], Arguments.dimension[1], Arguments.dimension[2]//2) )
+    calibration = load_calibration(dir = Arguments.calibration_file)
 
-
-
-T0 = time.time()
-sys.stdout.write('Processing ... \n')
-
-for n_i, Bscan_dir in enumerate(Bscan_list):
-
-    sys.stdout.write('Loading data: {0} [{1}/{2}] \n'.format(Bscan_dir, n_i, len(Bscan_list) ) )
+    Bscan_list = [os.path.join(Arguments.input_directory, s) for s in os.listdir(Arguments.input_directory)]
 
     if Arguments.gpu:
-        Cscan[n_i,:,:] = process_2D(cp.load(Bscan_dir), calibration, resampling)
-    else:
-        Cscan[n_i,:,:] = process_2D(np.load(Bscan_dir), calibration)
+        resampling = resampling_2Dmapping(calibration['klinear'])
+        dispersion = cp.asarray(calibration['dispersion'])
+
+    sys.stdout.write('Processing ... \n')
+
+    dataframe = make_dataframe(Arguments.dimension[0],
+                               Arguments.dimension[1],
+                               Arguments.dimension[2]//2)
+
+    for n_i, Bscan_dir in enumerate(Bscan_list):
+
+        if n_i % 10 == 0:
+            sys.stdout.write('Loading data: {0} [{1}/{2}] \n'.format(Bscan_dir, n_i, len(Bscan_list) ) )
+
+        if Arguments.gpu:
+            test = process_2D(cp.load(Bscan_dir).astype(cp.float32),
+                              calibration,
+                              resampling,
+                              dispersion)
+            dataframe.loc[n_i] = test
+
+        else:
+            dataframe.loc[0] = process_2D(np.load(Bscan_dir), calibration)
+
+    if Arguments.gpu:
+        cp.cuda.Device().synchronize()
 
 
 
-Cscan = cp.asnumpy(Cscan)
-
-T1 = time.time()
-sys.stdout.write('Processing finished in [ {0:7.5f} seconde] \n'.format(T1-T0))
-
-if Arguments.save:
-
-    sys.stdout.write('Saving into {0} file \n'.format(Arguments.output_file ) )
-
-    f = tables.open_file(Arguments.output_file, mode='w')
-
-    atom = tables.Float64Atom()
-
-    array_c = f.create_earray(f.root, 'data', atom, (0, Arguments.dimension[1], Arguments.dimension[2]/2))
-
-    array_c.append(temp)
-
-    f.close()
 
 
+if __name__ == "__main__":
 
+    T0 = time.time()
 
-if Arguments.silent:
+    main()
 
-    import napari
+    T1 = time.time()
 
-    napari.gui_qt()
+    sys.stdout.write('Processing finished in [ {0:7.5f} seconde] \n'.format(T1-T0))
 
-    with napari.gui_qt():
+    if not Arguments.silent:
 
-        viewer = napari.view_image(Cscan)
+        import napari
 
+        napari.gui_qt()
+
+        with napari.gui_qt():
+
+            viewer = napari.view_image(Cscan)
 
 #-
