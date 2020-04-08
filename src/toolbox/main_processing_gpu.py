@@ -94,9 +94,16 @@ def compensate_dispersion_3D(spectra: np.ndarray, calibration: dict) -> cp.array
 ###############______2D_______##################################################
 
 
-def process_2D(Volume_spectra: cp.ndarray, calibration: dict, coordinates, dispersion) -> np.array:
+def process_2D(Volume_spectra: cp.ndarray, coordinates: cp.ndarray, dispersion: cp.array) -> np.array:
     """
-    GPU accelerated
+    This function process 2D array of spectrum to return adjusted Bscan.
+
+    :param Volume_spectra: 2nd order tensor containing spectras raw data. Last dimension is depth encoding.
+    :type Volume_spectra: cp.ndarray
+    :param coordinates: 2D array containing coordinates for k-linearization interpolation.
+    :type coordinates: cp.ndarray
+    :param dispersion: Array with value for dispersion compensation.
+    :type dispersion: cp.array
     """
 
     dtype = Volume_spectra.dtype
@@ -118,25 +125,24 @@ def process_2D(Volume_spectra: cp.ndarray, calibration: dict, coordinates, dispe
     return cp.asnumpy( Volume_spectra[:,:Arguments.dimension[2]//2] )
 
 
-def linearize_spectra_2D(temp: cp.ndarray, coordinates: cp.ndarray) -> cp.ndarray:
+def linearize_spectra_2D(Volume_spectra: cp.ndarray, coordinates: cp.ndarray) -> cp.ndarray:
 
-    res = cupyx.scipy.ndimage.map_coordinates(temp,
+    res = cupyx.scipy.ndimage.map_coordinates(Volume_spectra,
                                               coordinates=coordinates,
                                               output=None,
                                               order=1,
-                                              mode='constant',
-                                              cval=0)
+                                              mode='nearest')
 
     return cp.reshape(res,(Arguments.dimension[1],Arguments.dimension[2]))
 
 
-def spectrum_shift_2D(temp: cp.ndarray):
+def spectrum_shift_2D(Volume_spectra: cp.ndarray):
 
     spectrum_shift = cp.exp(complex(0,1) * cp.arange( start=0, stop=Arguments.dimension[2] ) * shift )
 
-    temp = cp.multiply(temp, spectrum_shift)
+    Volume_spectra = cp.multiply(Volume_spectra, spectrum_shift)
 
-    temp = cp.real(temp)
+    Volume_spectra = cp.real(Volume_spectra)
 
 
 def hilbert_2D(Volume_spectra: cp.ndarray) -> cp.array:

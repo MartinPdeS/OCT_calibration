@@ -13,6 +13,7 @@ test: test_Calibration test_Bscan_gpu test_Cscan_cpu test_Cscan_gpu
 
 test_calibration:
 		python src/processing/calibration.py --dispersion=1 --input-dir=data/calibration/example/ --output-file=data/calibration/example/calib.json -dim 1 1 1024
+		rm temp_calibration.json
 
 #####Bscan test#####
 test_Bscan_cpu:
@@ -36,7 +37,7 @@ test_Cscan_cpu:
 		python src/processing/Cscan.py --silent --dispersion=1 --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
 
 test_Cscan_gpu:
-		python src/processing/Cscan.py --silent --dispersion=1 -gpu --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
+		python src/processing/Cscan.py --dispersion=1 -gpu --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024
 
 test_Cscan_gpu_compiled:
 		python src/processing/Cscan.py --silent --compiled --dispersion=1 -gpu --input-dir=data/Cscan/example --calibration=./data/calibration/example/calib.json -dim 100 100 1024

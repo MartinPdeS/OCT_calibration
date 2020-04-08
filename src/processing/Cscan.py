@@ -64,7 +64,6 @@ def main():
 
         if Arguments.gpu:
             test = process_2D(cp.load(Bscan_dir).astype(cp.float32),
-                              calibration,
                               resampling,
                               dispersion)
             dataframe.loc[n_i] = test
@@ -75,6 +74,7 @@ def main():
     if Arguments.gpu:
         cp.cuda.Device().synchronize()
 
+    return dataframe
 
 
 
@@ -83,7 +83,7 @@ if __name__ == "__main__":
 
     T0 = time.time()
 
-    main()
+    dataframe = main()
 
     T1 = time.time()
 
@@ -97,6 +97,6 @@ if __name__ == "__main__":
 
         with napari.gui_qt():
 
-            viewer = napari.view_image(Cscan)
+            viewer = napari.view_image(dataframe.values.reshape(100,100,512))
 
 #-

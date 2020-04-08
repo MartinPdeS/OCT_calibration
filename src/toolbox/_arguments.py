@@ -1,3 +1,3 @@
 from argparse import Namespace 
 global Arguments 
-Arguments = Namespace(dimension=(1, 1, 1024), dispersion=1.0, input_dir='data/calibration/example/', interactive=False, output_file='data/calibration/example/calib.json', silent=False)
+Arguments = Namespace(calibration_file='./data/calibration/example/calib.json', compiled=False, dimension=(100, 100, 1024), dispersion=1, gpu=True, input_directory='data/Cscan/example', output_file='Cscan_temp.h5', save=False, shift=False, silent=False)
