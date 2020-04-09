@@ -69,9 +69,10 @@ The folder architecture is presented as :
 
        - toolbox/                      (contain tools to do all the processing)
 
-        - Doc/                          (not yet fully developped)
+       - Doc/                           (not yet fully developped)
             - images/                   (images for README.md)
             - profiling/                (for optimization endings)
+            - documentation/            (auto-generated documentation)           
 
     - README.md                         (literally this)
 
@@ -108,13 +109,13 @@ Arguments for src/processing/calibration.py are:
 
 #### Denoising process:
 
-<img src=".\doc\images\calibration1.png"
+<img src=".\docs\images\calibration1.png"
      alt="spectrum de-noising"
      style="float: left; margin-right: 10px;" />
 
 #### Phase computing:
 
-<img src=".\doc\images\calibration2.png"
+<img src=".\docs\images\calibration2.png"
     alt="spectrum de-noising"
     style="float: left; margin-right: 10px;" />
 
@@ -122,7 +123,7 @@ Arguments for src/processing/calibration.py are:
 
 
 
-<img src=".\doc\images\calibration3.png"
+<img src=".\docs\images\calibration3.png"
    alt="spectrum de-noising"
    style="float: left; margin-right: 10px;" />
 
@@ -162,7 +163,7 @@ Arguments for src/processing/Bscan.py are:
 >* --calibration : directory for the output .json file containing all the calibration parameters
 >* --output-file : directory for the processed Bscan file
 
-<img src=".\doc\images\Figure_3.png"
+<img src=".\docs\images\Figure_3.png"
      alt="spectrum de-noising"
      style="float: left; margin-right: 10px;" />
 
