@@ -7,8 +7,10 @@ from scipy.interpolate import interp1d
 import cupyx
 import cupyx.scipy.ndimage
 
+
 '''_____Project imports_____'''
 from src.toolbox._arguments import Arguments
+from src.toolbox.gpu.algorithm import detrend_2D, compensate_dispersion_2D, linearize_spectra_2D, spectrum_shift_2D
 
 def process_3D(Volume_spectra: np.ndarray, calibration: dict) -> np.array:
     """
@@ -125,54 +127,7 @@ def process_2D(Volume_spectra: cp.ndarray, coordinates: cp.ndarray, dispersion: 
     return cp.asnumpy( Volume_spectra[:,:Arguments.dimension[2]//2] )
 
 
-def linearize_spectra_2D(Volume_spectra: cp.ndarray, coordinates: cp.ndarray) -> cp.ndarray:
 
-    res = cupyx.scipy.ndimage.map_coordinates(Volume_spectra,
-                                              coordinates=coordinates,
-                                              output=None,
-                                              order=1,
-                                              mode='nearest')
-
-    return cp.reshape(res,(Arguments.dimension[1],Arguments.dimension[2]))
-
-
-def spectrum_shift_2D(Volume_spectra: cp.ndarray):
-
-    spectrum_shift = cp.exp(complex(0,1) * cp.arange( start=0, stop=Arguments.dimension[2] ) * shift )
-
-    Volume_spectra = cp.multiply(Volume_spectra, spectrum_shift)
-
-    Volume_spectra = cp.real(Volume_spectra)
-
-
-def hilbert_2D(Volume_spectra: cp.ndarray) -> cp.array:
-
-    Volume_spectra = cp.fft.rfft(Volume_spectra, axis=1)[:,:Arguments.dimension[2]//2]
-
-    dum =  cp.zeros_like(Volume_spectra)
-
-    Volume_spectra = cp.concatenate( (Volume_spectra*2,dum), axis=1)
-
-    return cp.fft.ifft(Volume_spectra, axis=1)
-
-
-def detrend_2D(Volume_spectra):
-
-     Volume_spectra = cp.fft.rfft(Volume_spectra, axis=0)
-
-     Volume_spectra[:10,:] = 0
-
-     Volume_spectra = cp.fft.irfft(Volume_spectra, axis=0)
-
-     return Volume_spectra
-
-
-
-def compensate_dispersion_2D(Volume_spectra: np.ndarray, dispersion) -> cp.array:
-
-    Pdispersion = cp.asarray( dispersion * complex(0,1) * Arguments.dispersion )
-
-    return cp.real( hilbert_2D(Volume_spectra) * cp.exp( Pdispersion ) )
 
 
 

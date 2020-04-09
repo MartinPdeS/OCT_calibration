@@ -3,9 +3,7 @@
 '''_____Standard imports_____'''
 import numpy as np
 import cupy as cp
-import os
-import tables
-import sys
+import os, sys
 import time
 
 import pandas
@@ -21,8 +19,7 @@ from src.toolbox.parsing import Cscan_parse_arguments
 arguments = Cscan_parse_arguments()
 from src.toolbox._arguments import Arguments
 from src.toolbox.loadings import make_dataframe
-from src.toolbox.calibration_processing import resampling_2Dmapping
-
+from src.toolbox.gpu.algorithm import resampling_2Dmapping
 
 
 '''_____Project imports_____'''
@@ -36,9 +33,9 @@ if Arguments.compiled:
 else:
 
     if Arguments.gpu:
-        from src.toolbox.main_processing_gpu import process_2D
+        from src.toolbox.gpu.processing import process_2D
     else:
-        from src.toolbox.main_processing_cpu import process_2D
+        from src.toolbox.cpu.processing import process_2D
 
 
 def main():
@@ -63,10 +60,9 @@ def main():
             sys.stdout.write('Loading data: {0} [{1}/{2}] \n'.format(Bscan_dir, n_i, len(Bscan_list) ) )
 
         if Arguments.gpu:
-            test = process_2D(cp.load(Bscan_dir).astype(cp.float32),
-                              resampling,
-                              dispersion)
-            dataframe.loc[n_i] = test
+            dataframe.loc[n_i] =  process_2D(cp.load(Bscan_dir).astype(cp.float32),
+                                             resampling,
+                                             dispersion)
 
         else:
             dataframe.loc[0] = process_2D(np.load(Bscan_dir), calibration)

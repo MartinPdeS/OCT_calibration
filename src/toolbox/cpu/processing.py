@@ -7,10 +7,10 @@ import scipy
 
 '''_____Project imports_____'''
 from src.toolbox.filters import butter_highpass_filter
-from src.toolbox.calibration_processing import linearize_spectra, compensate_dispersion
+#from src.toolbox.calibration_processing import linearize_spectra, compensate_dispersion
 from src.toolbox.maths import spectra2aline, hilbert
 from src.toolbox._arguments import Arguments
-
+from src.toolbox.cpu.algorithm import linearize_spectra, compensate_dispersion
 
 
 

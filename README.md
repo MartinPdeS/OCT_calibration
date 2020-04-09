@@ -78,6 +78,16 @@ The folder architecture is presented as :
 ```
 ###### Python init.py and compiled files are not represented here.
 
+## Run tests
+
+Verify installation is correct by running some tests:
+```console
+
+>>> make test_calibration
+>>> make test_Cscan_cpu
+>>> make test_Cscan_gpu      (only with CUDA installed)
+```
+
 ## Run example
 
 ### Calibration
@@ -174,6 +184,9 @@ Arguments for src/processing/Cscan.py are:
 >* --calibration : directory for the output .json file containing all the calibration parameters
 >* --output-file : directory for the processed Cscan file
 
+
+## Documentation
+Documentation on project is available in a html file "docs/documentation/build/index.html"
 
 ## For citing this project in scientific papers
 
