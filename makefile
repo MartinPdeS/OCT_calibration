@@ -9,6 +9,10 @@ build_project:
 		python setup.py build_ext --inplace
 		mv ./src/toolbox/*.html ./doc/cython
 
+build_doc:
+		$(MAKE) -C docs/documentation clean
+		$(MAKE) -C docs/documentation html
+
 test: test_Calibration test_Bscan_gpu test_Cscan_cpu test_Cscan_gpu
 
 test_calibration:

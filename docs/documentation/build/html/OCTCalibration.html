@@ -5,30 +5,38 @@
   <head>
     <meta charset="utf-8" />
     <title>PyOCTCalibration package &#8212; PyOCTCalibration 1.3 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to PyOCTCalibration’s documentation!" href="index.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="prev" title="Welcome to PyOCTCalibration’s documentation!" href="index.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to PyOCTCalibration’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyOCTCalibration 1.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="pyoctcalibration-package">
@@ -44,26 +52,112 @@
 <dl class="function">
 <dt id="src.toolbox.gpu.algorithm.detrend_2D">
 <code class="sig-prename descclassname">src.toolbox.gpu.algorithm.</code><code class="sig-name descname">detrend_2D</code><span class="sig-paren">(</span><em class="sig-param">Volume_spectra</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.gpu.algorithm.detrend_2D" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This methode remove lateral DC component of Bscan, this way it get     rid of recurent noise from one Aline to the other.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param Volume_spectra</dt>
+<dd class="field-odd"><p>2nd order tensor containing spectras raw data. Last dimension is depth encoding.</p>
+</dd>
+<dt class="field-even">type Volume_spectra</dt>
+<dd class="field-even"><p>cp.ndarray</p>
+</dd>
+</dl>
+</dd>
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rparam</dt>
+<dd class="field-odd"><p>Laterally DC-removed Volume_spectra.</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>cp.ndarray</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="src.toolbox.gpu.algorithm.hilbert_2D">
 <code class="sig-prename descclassname">src.toolbox.gpu.algorithm.</code><code class="sig-name descname">hilbert_2D</code><span class="sig-paren">(</span><em class="sig-param">Volume_spectra: cupy.core.core.ndarray</em><span class="sig-paren">)</span> &#x2192; cupy.creation.from_data.array<a class="headerlink" href="#src.toolbox.gpu.algorithm.hilbert_2D" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Compute the analytic signal, using the Hilbert transform.     The transformation is done along the last axis.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>Volume_spectra::cp.ndarray
+2nd order tensor containing spectras raw data. Last dimension is depth encoding.</p>
+</dd>
+<dt>Returns:</dt><dd><p>Analytical signal of Volume_spectra::cp.ndarray
+:rtype: cp.ndarray</p>
+</dd>
+</dl>
+<p>The analytic signal <code class="docutils literal notranslate"><span class="pre">x_a(t)</span></code> of signal <code class="docutils literal notranslate"><span class="pre">x(t)</span></code> is:
+.. math:: x_a = F^{-1}(F(x) 2U) = x + i y</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="src.toolbox.gpu.algorithm.linearize_spectra_2D">
 <code class="sig-prename descclassname">src.toolbox.gpu.algorithm.</code><code class="sig-name descname">linearize_spectra_2D</code><span class="sig-paren">(</span><em class="sig-param">Volume_spectra: cupy.core.core.ndarray</em>, <em class="sig-param">coordinates: cupy.core.core.ndarray</em><span class="sig-paren">)</span> &#x2192; cupy.core.core.ndarray<a class="headerlink" href="#src.toolbox.gpu.algorithm.linearize_spectra_2D" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This methode resample each of the spectrum of the Bscan simultaneously     in order to compensate for nonk-linear spectrum.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param Volume_spectra</dt>
+<dd class="field-odd"><p>2nd order tensor containing spectras raw data. Last dimension is depth encoding.</p>
+</dd>
+<dt class="field-even">type Volume_spectra</dt>
+<dd class="field-even"><p>cp.ndarray</p>
+</dd>
+<dt class="field-odd">param coordinates</dt>
+<dd class="field-odd"><p>2D array containing coordinates for k-linearization interpolation.</p>
+</dd>
+<dt class="field-even">type coordinates</dt>
+<dd class="field-even"><p>cp.ndarray</p>
+</dd>
+<dt class="field-odd">param dispersion</dt>
+<dd class="field-odd"><p>Array with value for dispersion compensation.</p>
+</dd>
+<dt class="field-even">type dispersion</dt>
+<dd class="field-even"><p>cp.array</p>
+</dd>
+</dl>
+</dd>
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rparam</dt>
+<dd class="field-odd"><p>Resampled (linearized) array of spectrum.</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>cp.ndarray</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="src.toolbox.gpu.algorithm.resampling_2Dmapping">
 <code class="sig-prename descclassname">src.toolbox.gpu.algorithm.</code><code class="sig-name descname">resampling_2Dmapping</code><span class="sig-paren">(</span><em class="sig-param">coordinates</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.gpu.algorithm.resampling_2Dmapping" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Knowing resampling fractionale indices this methode generate the 2-D list     for the methode map_coordinates to use.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param coordinates</dt>
+<dd class="field-odd"><p>2D array containing coordinates for k-linearization interpolation.</p>
+</dd>
+<dt class="field-even">type coordinates</dt>
+<dd class="field-even"><p>cp.ndarray</p>
+</dd>
+</dl>
+</dd>
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rparam</dt>
+<dd class="field-odd"><p>Array of 2D coordinates for interpolation.</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>cp.ndarray</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="src.toolbox.gpu.algorithm.spectrum_shift_2D">
-<code class="sig-prename descclassname">src.toolbox.gpu.algorithm.</code><code class="sig-name descname">spectrum_shift_2D</code><span class="sig-paren">(</span><em class="sig-param">Volume_spectra: cupy.core.core.ndarray</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.gpu.algorithm.spectrum_shift_2D" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">src.toolbox.gpu.algorithm.</code><code class="sig-name descname">spectrum_shift_2D</code><span class="sig-paren">(</span><em class="sig-param">Volume_spectra: cupy.core.core.ndarray</em><span class="sig-paren">)</span> &#x2192; cupy.core.core.ndarray<a class="headerlink" href="#src.toolbox.gpu.algorithm.spectrum_shift_2D" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -72,7 +166,7 @@
 <p>_____Standard imports_____</p>
 <dl class="function">
 <dt id="src.toolbox.cpu.algorithm.compensate_dispersion">
-<code class="sig-prename descclassname">src.toolbox.cpu.algorithm.</code><code class="sig-name descname">compensate_dispersion</code><span class="sig-paren">(</span><em class="sig-param">spectra: numpy.ndarray</em>, <em class="sig-param">Pdispersion</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.cpu.algorithm.compensate_dispersion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">src.toolbox.cpu.algorithm.</code><code class="sig-name descname">compensate_dispersion</code><span class="sig-paren">(</span><em class="sig-param">spectra: numpy.ndarray</em>, <em class="sig-param">Pdispersion: numpy.ndarray</em><span class="sig-paren">)</span> &#x2192; numpy.array<a class="headerlink" href="#src.toolbox.cpu.algorithm.compensate_dispersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method compensate the input spectra with the input phase dispersion.</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="field-list simple">
@@ -104,8 +198,8 @@
 
 <dl class="function">
 <dt id="src.toolbox.cpu.algorithm.linearize_spectra">
-<code class="sig-prename descclassname">src.toolbox.cpu.algorithm.</code><code class="sig-name descname">linearize_spectra</code><span class="sig-paren">(</span><em class="sig-param">spectra: numpy.ndarray</em>, <em class="sig-param">x_klinear</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.cpu.algorithm.linearize_spectra" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method interpolate the input spectra with the input list.</p>
+<code class="sig-prename descclassname">src.toolbox.cpu.algorithm.</code><code class="sig-name descname">linearize_spectra</code><span class="sig-paren">(</span><em class="sig-param">spectra: numpy.ndarray</em>, <em class="sig-param">x_klinear: list</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.toolbox.cpu.algorithm.linearize_spectra" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method interpolate the input spectra with the input x_klinear.</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="field-list simple">
 <dt class="field-odd">param spectra</dt>
@@ -159,43 +253,277 @@
 <dd></dd></dl>
 
 </div>
+<div class="section" id="module-src.toolbox.calibration_processing">
+<span id="src-toolbox-calibration-processing"></span><h2>src.toolbox.calibration_processing<a class="headerlink" href="#module-src.toolbox.calibration_processing" title="Permalink to this headline">¶</a></h2>
+<p>_____Standard imports_____</p>
+<dl class="function">
+<dt id="src.toolbox.calibration_processing.compensate_dispersion">
+<code class="sig-prename descclassname">src.toolbox.calibration_processing.</code><code class="sig-name descname">compensate_dispersion</code><span class="sig-paren">(</span><em class="sig-param">spectra: numpy.ndarray</em>, <em class="sig-param">Pdispersion</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.calibration_processing.compensate_dispersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method compensate the input spectra with the input phase dispersion.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param spectra</dt>
+<dd class="field-odd"><p>OCT spectra of mirror.</p>
+</dd>
+<dt class="field-even">type spectra1</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">name Pdispersion</dt>
+<dd class="field-odd"><p>Phase dispersion.</p>
+</dd>
+<dt class="field-even">type Pdispersion</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd>
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rname</dt>
+<dd class="field-odd"><p>Compensated spectra.</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.toolbox.calibration_processing.compute_PSF">
+<code class="sig-prename descclassname">src.toolbox.calibration_processing.</code><code class="sig-name descname">compute_PSF</code><span class="sig-paren">(</span><em class="sig-param">aline</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.calibration_processing.compute_PSF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="src.toolbox.calibration_processing.compute_dispersion">
+<code class="sig-prename descclassname">src.toolbox.calibration_processing.</code><code class="sig-name descname">compute_dispersion</code><span class="sig-paren">(</span><em class="sig-param">spectra1</em>, <em class="sig-param">spectra2</em>, <em class="sig-param">shift_1</em>, <em class="sig-param">shift_2</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.calibration_processing.compute_dispersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method compute the dispersion on a k-linearized OCT spectra of     two mirror exactly opposed relative to the zero delay point.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param spectra1</dt>
+<dd class="field-odd"><p>OCT spectra of first mirror.</p>
+</dd>
+<dt class="field-even">type spectra1</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param spectra2</dt>
+<dd class="field-odd"><p>OCT spectra of second mirror.</p>
+</dd>
+<dt class="field-even">type spectra2</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param shift_1</dt>
+<dd class="field-odd"><p>spectral relative shift for mirror_1.</p>
+</dd>
+<dt class="field-even">type shift_1</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+<dt class="field-odd">name shift_2</dt>
+<dd class="field-odd"><p>spectral relative shift for mirror_2.</p>
+</dd>
+<dt class="field-even">type shift_2</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd>
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rname Pdispersion</dt>
+<dd class="field-odd"><p>The phase dispersion.</p>
+</dd>
+<dt class="field-even">rtype Pdispersion</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.toolbox.calibration_processing.k_linearization">
+<code class="sig-prename descclassname">src.toolbox.calibration_processing.</code><code class="sig-name descname">k_linearization</code><span class="sig-paren">(</span><em class="sig-param">spectra1</em>, <em class="sig-param">spectra2</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.calibration_processing.k_linearization" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method compute the k-linear fractional indexes and interpolate     the two spectras in order to compensate it.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param spectra1</dt>
+<dd class="field-odd"><p>OCT spectra of first mirror.</p>
+</dd>
+<dt class="field-even">type spectra1</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param spectra2</dt>
+<dd class="field-odd"><p>OCT spectra of second mirror.</p>
+</dd>
+<dt class="field-even">type spectra2</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd>
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rname x_klinear</dt>
+<dd class="field-odd"><p>The fractional indexes.</p>
+</dd>
+<dt class="field-even">rtype x_klinear</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">rname</dt>
+<dd class="field-odd"><p>interpolated_spectra1: First k-linear intepolated spectra.</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">rname</dt>
+<dd class="field-odd"><p>interpolated_spectra2: Second k-linear intepolated spectra.</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.toolbox.calibration_processing.linearize_spectra">
+<code class="sig-prename descclassname">src.toolbox.calibration_processing.</code><code class="sig-name descname">linearize_spectra</code><span class="sig-paren">(</span><em class="sig-param">spectra: numpy.ndarray</em>, <em class="sig-param">x_klinear</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.calibration_processing.linearize_spectra" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method interpolate the input spectra with the input list.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param spectra</dt>
+<dd class="field-odd"><p>OCT spectra of mirror.</p>
+</dd>
+<dt class="field-even">type spectra1</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">name x_klinear</dt>
+<dd class="field-odd"><p>The fractional indexes.</p>
+</dd>
+<dt class="field-even">type x_klinear</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd>
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rname</dt>
+<dd class="field-odd"><p>klinear_spectra The interpolated spectra.</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.toolbox.calibration_processing.resampling_2Dmapping">
+<code class="sig-prename descclassname">src.toolbox.calibration_processing.</code><code class="sig-name descname">resampling_2Dmapping</code><span class="sig-paren">(</span><em class="sig-param">coordinates</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.calibration_processing.resampling_2Dmapping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="src.toolbox.calibration_processing.shift_1_spectra">
+<code class="sig-prename descclassname">src.toolbox.calibration_processing.</code><code class="sig-name descname">shift_1_spectra</code><span class="sig-paren">(</span><em class="sig-param">spectra</em>, <em class="sig-param">shift</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.calibration_processing.shift_1_spectra" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method find the relative position of the FFT of the two spectras     in order to later k-linearize.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param spectra1</dt>
+<dd class="field-odd"><p>OCT spectra of first mirror.</p>
+</dd>
+<dt class="field-even">type spectra1</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd>
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rname</dt>
+<dd class="field-odd"><p>Zspace: - pi to pi linear vector space</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.toolbox.calibration_processing.shift_spectra">
+<code class="sig-prename descclassname">src.toolbox.calibration_processing.</code><code class="sig-name descname">shift_spectra</code><span class="sig-paren">(</span><em class="sig-param">spectra1</em>, <em class="sig-param">spectra2</em>, <em class="sig-param">N_pad</em><span class="sig-paren">)</span><a class="headerlink" href="#src.toolbox.calibration_processing.shift_spectra" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method find the relative position of the FFT of the two spectras     in order to later k-linearize.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param spectra1</dt>
+<dd class="field-odd"><p>OCT spectra of first mirror.</p>
+</dd>
+<dt class="field-even">type spectra1</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param spectra2</dt>
+<dd class="field-odd"><p>OCT spectra of second mirror.</p>
+</dd>
+<dt class="field-even">type spectra2</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param N_pad</dt>
+<dd class="field-odd"><p>Padding for the FFT.</p>
+</dd>
+<dt class="field-even">type N_pad</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd>
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rname</dt>
+<dd class="field-odd"><p>Zspace: - pi to pi linear vector space</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">rname</dt>
+<dd class="field-odd"><p>shift_1: spectral relative shift for mirror_1</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+<dt class="field-odd">rname</dt>
+<dd class="field-odd"><p>shift_2: spectral relative shift for mirror_2</p>
+</dd>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 </div>
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">PyOCTCalibration</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">PyOCTCalibration package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-src.toolbox.gpu.algorithm">src.toolbox.gpu.algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-src.toolbox.cpu.algorithm">src.toolbox.cpu.algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-src.toolbox.maths">src.toolbox.maths</a></li>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PyOCTCalibration package</a><ul>
+<li><a class="reference internal" href="#module-src.toolbox.gpu.algorithm">src.toolbox.gpu.algorithm</a></li>
+<li><a class="reference internal" href="#module-src.toolbox.cpu.algorithm">src.toolbox.cpu.algorithm</a></li>
+<li><a class="reference internal" href="#module-src.toolbox.maths">src.toolbox.maths</a></li>
+<li><a class="reference internal" href="#module-src.toolbox.calibration_processing">src.toolbox.calibration_processing</a></li>
 </ul>
 </li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to PyOCTCalibration’s documentation!</a></li>
-  </ul></li>
-</ul>
-</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to PyOCTCalibration’s documentation!</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/OCTCalibration.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -206,32 +534,28 @@
     </div>
 </div>
 <script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2020, Martin Poinsinet de Sivry-Houle.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/OCTCalibration.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to PyOCTCalibration’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyOCTCalibration 1.3 documentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Martin Poinsinet de Sivry-Houle.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
+    </div>
   </body>
 </html>

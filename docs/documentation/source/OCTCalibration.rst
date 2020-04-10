@@ -19,7 +19,7 @@ src.toolbox.cpu.algorithm
     :show-inheritance:
 
 src.toolbox.maths
--------------------------
+-----------------
 .. automodule:: src.toolbox.maths
     :members:
     :undoc-members:
@@ -27,7 +27,7 @@ src.toolbox.maths
 
 
 src.toolbox.calibration_processing
--------------------------
+----------------------------------
 .. automodule:: src.toolbox.calibration_processing
     :members:
     :undoc-members:

@@ -18,7 +18,7 @@ from src.toolbox._arguments import Arguments
 
 
 def shift_spectra(spectra1, spectra2, N_pad):
-    """ This method find the relative position of the FFT of the two spectras
+    """ This method find the relative position of the FFT of the two spectras \
     in order to later k-linearize.
 
     Args:
@@ -92,7 +92,7 @@ def shift_spectra(spectra1, spectra2, N_pad):
 
 
 def shift_1_spectra(spectra, shift):
-    """ This method find the relative position of the FFT of the two spectras
+    """ This method find the relative position of the FFT of the two spectras \
     in order to later k-linearize.
 
     Args:
@@ -125,25 +125,23 @@ def shift_1_spectra(spectra, shift):
 
 
 def compute_dispersion(spectra1, spectra2, shift_1, shift_2):
-    """ This method compute the dispersion on a k-linearized OCT spectra of
+    """
+    This method compute the dispersion on a k-linearized OCT spectra of \
     two mirror exactly opposed relative to the zero delay point.
 
     Args:
         :param spectra1: OCT spectra of first mirror.
         :type spectra1: list
-
         :param spectra2: OCT spectra of second mirror.
         :type spectra2: list
-
         :param shift_1: spectral relative shift for mirror_1.
-        :type float
-
+        :type shift_1: float
         :name shift_2: spectral relative shift for mirror_2.
-        :type float
+        :type shift_2: float
 
     Return:
-        :rname: Pdispersion: The phase dispersion.
-        :rtype: list
+        :rname Pdispersion: The phase dispersion.
+        :rtype Pdispersion: list
     """
 
     spectra1 = spectra1[0,0,:]
@@ -172,7 +170,7 @@ def compute_dispersion(spectra1, spectra2, shift_1, shift_2):
 
 
 def k_linearization(spectra1, spectra2):
-    """ This method compute the k-linear fractional indexes and interpolate
+    """ This method compute the k-linear fractional indexes and interpolate \
     the two spectras in order to compensate it.
 
     Args:
@@ -184,8 +182,8 @@ def k_linearization(spectra1, spectra2):
 
 
     Return:
-        :rname: x_klinear: The fractional indexes.
-        :rtype: list
+        :rname x_klinear: The fractional indexes.
+        :rtype x_klinear: list
 
         :rname: interpolated_spectra1: First k-linear intepolated spectra.
         :rtype: list
@@ -239,10 +237,10 @@ def linearize_spectra(spectra: np.ndarray, x_klinear):
         :type spectra1: list
 
         :name x_klinear: The fractional indexes.
-        :type list
+        :type x_klinear: list
 
     Return:
-        :rname: klinear_spectra: The interpolated spectra.
+        :rname: klinear_spectra The interpolated spectra.
         :rtype: list
 
     """
@@ -258,19 +256,17 @@ def linearize_spectra(spectra: np.ndarray, x_klinear):
 
 
 def compensate_dispersion(spectra: np.ndarray, Pdispersion):
-    """ This method compensate the input spectra with the input phase dispersion.
+    """
+    This method compensate the input spectra with the input phase dispersion.
 
     Args:
         :param spectra: OCT spectra of mirror.
         :type spectra1: list
-
         :name Pdispersion: Phase dispersion.
-        :type list
-
+        :type Pdispersion: list
     Return:
-        :rname: compensated_spectra : The compensated spectra.
+        :rname: Compensated spectra.
         :rtype: list
-
     """
     j = complex(0,1)
 
@@ -297,9 +293,13 @@ def compute_PSF(aline):
 
 
 def resampling_2Dmapping(coordinates):
+
     a = np.concatenate([coordinates]*Arguments.dimension[1])
+
     b = np.repeat(np.arange(Arguments.dimension[1]), Arguments.dimension[2])
+
     c = np.swapaxes( list(zip(b,a)), 1,0 )
+
     return cp.asarray(c)
 
 

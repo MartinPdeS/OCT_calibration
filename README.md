@@ -87,6 +87,7 @@ Verify installation is correct by running some tests:
 >>> make test_calibration
 >>> make test_Cscan_cpu
 >>> make test_Cscan_gpu      (only with CUDA installed)
+>>> make build_doc           (generating html documentation)
 ```
 
 ## Run example

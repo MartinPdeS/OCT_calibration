@@ -85,7 +85,7 @@ if __name__ == "__main__":
 
     sys.stdout.write('Processing finished in [ {0:7.5f} seconde] \n'.format(T1-T0))
 
-    if not Arguments.silent:
+    if Arguments.silent:
 
         import napari
 
