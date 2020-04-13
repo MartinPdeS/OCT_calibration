@@ -16,7 +16,7 @@ build_doc:
 test: test_Calibration test_Bscan_gpu test_Cscan_cpu test_Cscan_gpu
 
 test_calibration:
-		python src/processing/calibration.py --silent --dispersion=1 --input-dir=data/calibration/example/ --output-file=temp_calibration.json -dim 1 1 1024
+		python src/processing/calibration.py  --dispersion=1 --input-dir=data/calibration/example/ --output-file=temp_calibration.json -dim 1 1 1024
 		rm temp_calibration.json
 
 #####Bscan test#####

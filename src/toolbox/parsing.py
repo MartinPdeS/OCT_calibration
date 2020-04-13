@@ -72,125 +72,6 @@ def Calibration_parse_arguments():
         f.write('from argparse import Namespace \nglobal Arguments \nArguments = {0}'.format(arguments))
 
 
-
-def Aline_parse_arguments():
-
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument('-if',
-                        '--input-file',
-                        help='Input .txt Bscan file',
-                        dest='input_file',
-                        type=str,
-                        default='test.txt',
-                        required=False)
-
-    parser.add_argument('-c',
-                        '--calibration-file',
-                        help='Calibration json file.',
-                        dest='calibration_file',
-                        type=str,
-                        default='.calibration/calibration_parameters.json',
-                        required=False)
-
-    parser.add_argument('-d',
-                        '--dispersion',
-                        help='Dispersion normal[1] or anormal[-1]',
-                        dest='dispersion',
-                        type=float,
-                        default=1,
-                        required=False)
-
-    parser.add_argument('--silent',
-                        help='No verbose mode',
-                        dest='silent',
-                        action="store_true")
-
-    arguments = parser.parse_args()
-
-    if arguments.dispersion not in [-1,1]:
-        raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
-
-
-    return arguments
-
-
-def Bscan_parse_arguments():
-
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument('-if',
-                        '--input-file',
-                        help='Input .Raw Bscan file',
-                        dest='input_file',
-                        type=str,
-                        required=True)
-
-    parser.add_argument('--compiled',
-                        help='Use compiled C lib',
-                        dest='compiled',
-                        action="store_true")
-
-    parser.add_argument('-m',
-                        '--mean',
-                        help='Number of Bscan',
-                        dest='mean_number',
-                        type=int,
-                        default=1,
-                        required=False)
-
-    parser.add_argument('-gpu',
-                        '--gpu-accelerated',
-                        help='CUDA coding for accelerating, NVIDIA or NOT',
-                        dest='gpu',
-                        action="store_true")
-
-    parser.add_argument('-c',
-                        '--calibration-file',
-                        help='Calibration json file.',
-                        dest='calibration_file',
-                        type=str,
-                        required=True)
-
-    parser.add_argument('-dim',
-                        '--dimension',
-                        help="dimension",
-                        dest="dimension",
-                        required=True,
-                        nargs=2)
-
-    parser.add_argument('-s',
-                        '--shift',
-                        help="shifting spectum",
-                        dest="shift",
-                        required=False,
-                        action="store_true")
-
-    parser.add_argument('-d',
-                        '--dispersion',
-                        help='Dispersion normal[1] or anormal[-1]',
-                        dest='dispersion',
-                        type=int,
-                        default=1,
-                        required=True)
-
-    parser.add_argument('--silent',
-                        help='No verbose mode',
-                        dest='silent',
-                        action="store_true")
-
-    arguments = parser.parse_args()
-
-    arguments.dimension = tuple(map(int,arguments.dimension))
-
-    if arguments.dispersion not in [-1,1]:
-        raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')
-
-    with open('src/toolbox/_arguments.py', 'w') as f:
-        f.write('from argparse import Namespace \nglobal Arguments \nArguments = {0}'.format(arguments))
-
-
-
 def Cscan_parse_arguments():
 
     parser = argparse.ArgumentParser()
@@ -242,10 +123,11 @@ def Cscan_parse_arguments():
 
     parser.add_argument('-s',
                         '--shift',
-                        help="shifting spectum",
+                        help="scalar value for spectrum shift",
                         dest="shift",
                         required=False,
-                        action="store_true")
+                        type=float,
+                        default=0.)
 
     parser.add_argument('--compiled',
                         help='Use compiled C lib',
@@ -268,6 +150,7 @@ def Cscan_parse_arguments():
 
 
     arguments.dimension = tuple(map(int,arguments.dimension))
+    arguments.output_dimension = (arguments.dimension[0], arguments.dimension[1], arguments.dimension[2]//2)
 
     if arguments.dispersion not in [-1,1]:
         raise ValueError('\n \n Invalide disperions [-d] input. try [-d=normal] or [-d=anormal]\n \n')

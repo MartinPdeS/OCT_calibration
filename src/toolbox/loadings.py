@@ -27,15 +27,15 @@ def load_calibration(dir: str=None):
     return  pickle.load( open( dir, "rb" ) )
 
 
-def make_dataframe(dim0: int, dim1: int, zdim: int) -> pandas.DataFrame:
+def make_dataframe(dimension: tuple) -> pandas.DataFrame:
 
-    Aline_name = list(range(dim0))*dim1
+    Aline_name = list(range(dimension[0]))*dimension[1]
 
-    Bscan_name = np.repeat( range(dim1),dim0)
+    Bscan_name = np.repeat( range(dimension[1]),dimension[0])
 
     rows_name = list(zip(Bscan_name, Aline_name))
 
-    cols_name = range(zdim)
+    cols_name = range(dimension[2])
 
     index = pandas.MultiIndex.from_tuples(rows_name, names=['Bscan', 'Aline'])
 

@@ -10,7 +10,7 @@ import cupyx.scipy.ndimage
 
 '''_____Project imports_____'''
 from src.toolbox._arguments import Arguments
-from src.toolbox.gpu.algorithm import detrend_2D, compensate_dispersion_2D, linearize_spectra_2D, spectrum_shift_2D
+from src.toolbox.gpu.algorithm import detrend_2D, detrend_1D, compensate_dispersion_2D, linearize_spectra_2D, linearize_spectra_1D, spectrum_shift_2D
 
 ###############______2D_______##################################################
 
@@ -27,25 +27,29 @@ def process_2D(Volume_spectra: cp.ndarray, coordinates: cp.ndarray, dispersion: 
     :type dispersion: cp.array
     """
 
-    dtype = Volume_spectra.dtype
+    if Arguments.dimension[1] == 1:
+        Volume_spectra = cp.expand_dims(Volume_spectra, axis=0)
+        coordinates = cp.array([coordinates[1]])
+        Volume_spectra = detrend_1D(Volume_spectra)
 
-    Volume_spectra = detrend_2D(Volume_spectra)
+    else:
+        Volume_spectra = detrend_2D(Volume_spectra)
 
     Volume_spectra = compensate_dispersion_2D(Volume_spectra, dispersion)
 
-    Volume_spectra = linearize_spectra_2D(Volume_spectra, coordinates)
+    if Arguments.dimension[1] == 1:
+        Volume_spectra = linearize_spectra_1D(Volume_spectra, coordinates)
 
-    if Arguments.shift:
+    else:
+        Volume_spectra = linearize_spectra_2D(Volume_spectra, coordinates)
 
-        temp = spectrum_shift(Volume_spectra)
-
-    Volume_spectra  = fftpack.rfft(Volume_spectra.astype(dtype),
+    Volume_spectra  = fftpack.fft(Volume_spectra,
                                    axis=1,
                                    overwrite_x=True)[:,:Arguments.dimension[2]//2]
 
-    Volume_spectra = cp.absolute(Volume_spectra)
 
-    return cp.asnumpy( Volume_spectra[:,:Arguments.dimension[2]//2] )
+
+    return cp.asnumpy( cp.absolute(Volume_spectra[:,:Arguments.dimension[2]//2] ) )
 
 
 

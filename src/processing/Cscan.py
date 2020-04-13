@@ -48,11 +48,11 @@ def main():
         resampling = resampling_2Dmapping(calibration['klinear'])
         dispersion = cp.asarray(calibration['dispersion'])
 
+
+    print('###################',calibration['peak_shift1'],'###################\n')
     sys.stdout.write('Processing ... \n')
 
-    dataframe = make_dataframe(Arguments.dimension[0],
-                               Arguments.dimension[1],
-                               Arguments.dimension[2]//2)
+    dataframe = make_dataframe(Arguments.output_dimension)
 
     for n_i, Bscan_dir in enumerate(Bscan_list):
 
@@ -60,7 +60,8 @@ def main():
             sys.stdout.write('Loading data: {0} [{1}/{2}] \n'.format(Bscan_dir, n_i, len(Bscan_list) ) )
 
         if Arguments.gpu:
-            dataframe.loc[n_i] =  process_2D(cp.load(Bscan_dir).astype(cp.float32),
+
+            dataframe.loc[n_i] =  process_2D(cp.load(Bscan_dir),
                                              resampling,
                                              dispersion)
 
@@ -69,6 +70,9 @@ def main():
 
     if Arguments.gpu:
         cp.cuda.Device().synchronize()
+
+    if Arguments.output_file:
+        dataframe.to_hdf(Arguments.output_file, key='Cscan')
 
     return dataframe
 
@@ -87,12 +91,23 @@ if __name__ == "__main__":
 
     if Arguments.silent:
 
-        import napari
+        if Arguments.dimension[1] != 1:
 
-        napari.gui_qt()
+            import napari
 
-        with napari.gui_qt():
+            #napari.gui_qt()
 
-            viewer = napari.view_image(dataframe.values.reshape(100,100,512))
+            with napari.gui_qt():
 
+                viewer = napari.view_image(dataframe.values.reshape(Arguments.output_dimension)[:,:,5:-200].astype('float'))
+
+        else:
+            import matplotlib.pyplot as plt
+
+            plt.plot(10*np.log(dataframe.values[0]))
+            plt.grid()
+            plt.title('Aline')
+            plt.ylabel('Intensity [U.A.]')
+            plt.xlabel('Depth [U.A.]')
+            plt.show()
 #-

@@ -5,6 +5,7 @@ import numpy as np
 import cupy as cp
 import cupyx.scipy.ndimage
 import cupyx.scipy.fftpack as fftpack
+from scipy.interpolate import interp1d
 
 '''_____Project imports_____'''
 from src.toolbox._arguments import Arguments
@@ -36,13 +37,39 @@ def linearize_spectra_2D(Volume_spectra: cp.ndarray, coordinates: cp.ndarray) ->
     return cp.reshape(res,(Arguments.dimension[1],Arguments.dimension[2]))
 
 
+def linearize_spectra_1D(Volume_spectra: cp.ndarray, coordinates: cp.ndarray) -> cp.ndarray:
+    """
+    This methode resample each of the spectrum of the Bscan simultaneously \
+    in order to compensate for nonk-linear spectrum.
+
+    Args:
+        :param Volume_spectra: 2nd order tensor containing spectras raw data. Last dimension is depth encoding.
+        :type Volume_spectra: cp.ndarray
+        :param coordinates: 2D array containing coordinates for k-linearization interpolation.
+        :type coordinates: cp.ndarray
+        :param dispersion: Array with value for dispersion compensation.
+        :type dispersion: cp.array
+
+    Return:
+        :rparam: Resampled (linearized) array of spectrum.
+        :rtype: cp.ndarray
+    """
+
+    Volume_spectra[0] = cupyx.scipy.ndimage.map_coordinates(Volume_spectra[0],
+                                              coordinates=coordinates,
+                                              output=None,
+                                              order=1,
+                                              mode='nearest')
+
+    return Volume_spectra
+
 def spectrum_shift_2D(Volume_spectra: cp.ndarray) -> cp.ndarray:
 
-    spectrum_shift = cp.exp(complex(0,1) * cp.arange( start=0, stop=Arguments.dimension[2] ) * shift )
+    spectrum_shift = cp.exp(complex(0,1) * cp.arange( start=0, stop=Arguments.dimension[2] ) * Arguments.shift)
 
     Volume_spectra = cp.multiply(Volume_spectra, spectrum_shift)
 
-    Volume_spectra = cp.real(Volume_spectra)
+    return cp.real(Volume_spectra)
 
 
 def hilbert_2D(Volume_spectra: cp.ndarray) -> cp.array:
@@ -79,7 +106,7 @@ def hilbert_2D(Volume_spectra: cp.ndarray) -> cp.array:
     return cp.fft.ifft(Volume_spectra, axis=1)
 
 
-def detrend_2D(Volume_spectra):
+def detrend_2D(Volume_spectra: cp.ndarray) -> cp.ndarray:
     """
     This methode remove lateral DC component of Bscan, this way it get \
     rid of recurent noise from one Aline to the other.
@@ -107,11 +134,42 @@ def detrend_2D(Volume_spectra):
     return Volume_spectra
 
 
-def compensate_dispersion_2D(Volume_spectra: np.ndarray, dispersion) -> cp.array:
+def detrend_1D(Volume_spectra: cp.ndarray) -> cp.ndarray:
+    """
+    This methode remove lateral DC component of Bscan, this way it get \
+    rid of recurent noise from one Aline to the other.
+
+    Args:
+        :param Volume_spectra: 2nd order tensor containing spectras raw data. Last dimension is depth encoding.
+        :type Volume_spectra: cp.ndarray
+
+    Return:
+        :rparam: Laterally DC-removed Volume_spectra.
+        :rtype: cp.ndarray
+    """
+
+    Volume_spectra = fftpack.rfft(Volume_spectra,
+                                  axis=1,
+                                  overwrite_x=True)
+    Volume_spectra[:,:10] = 0
+    Volume_spectra = fftpack.irfft(Volume_spectra,
+                                   axis=1,
+                                   overwrite_x=True)
+
+    return Volume_spectra
+
+
+def compensate_dispersion_2D(Volume_spectra: cp.ndarray, dispersion) -> cp.ndarray:
 
     Pdispersion = cp.asarray( dispersion * complex(0,1) * Arguments.dispersion )
 
-    return cp.real( hilbert_2D(Volume_spectra) * cp.exp( Pdispersion ) )
+    compensated_spectra =  hilbert_2D(Volume_spectra) * cp.exp( Pdispersion )
+
+    if Arguments.shift:
+
+        compensated_spectra = spectrum_shift_2D(compensated_spectra)
+
+    return cp.real(compensated_spectra)
 
 
 def resampling_2Dmapping(coordinates):

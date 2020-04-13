@@ -53,15 +53,16 @@ def pre_process_data(input_path, output_path, dimension=[1049,1024]):
         data = np.fromfile(input_file, dtype=np.float32)
         data = data.reshape(dimension)
         data = data[25:,:]
+
         np.save(output_file+'.npy', np.array(data))
 
 
 if __name__ == "__main__":
 
     arguments = Pre_processing_parse_arguments()
-    print(arguments.dimension)
 
-    #pre_process_filename(arguments.input_dir)
+
+    pre_process_filename(arguments.input_dir)
     pre_process_data(input_path=arguments.input_dir,
                      output_path=arguments.output_dir,
                      dimension = np.array(arguments.dimension).astype(int))
