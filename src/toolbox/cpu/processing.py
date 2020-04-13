@@ -21,7 +21,7 @@ def process_2D(Volume_spectra: np.ndarray, calibration: dict, shift: int=0):
 
     Volume_spectra = scipy.signal.detrend(Volume_spectra, axis=0, type='linear')
 
-    Volume_spectra = compensate_dispersion(Volume_spectra, Arguments.dispersion * np.array( calibration['dispersion'] ))
+    Volume_spectra = compensate_dispersion(Volume_spectra, Arguments.dispersion * complex(0,1) * np.array( calibration['dispersion'] ))
 
     Volume_spectra = linearize_spectra(Volume_spectra, calibration['klinear'])
 

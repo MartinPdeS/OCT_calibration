@@ -65,6 +65,8 @@ def linearize_spectra_1D(Volume_spectra: cp.ndarray, coordinates: cp.ndarray) ->
 
 def spectrum_shift_2D(Volume_spectra: cp.ndarray) -> cp.ndarray:
 
+    Volume_spectra = hilbert_2D(Volume_spectra)
+
     spectrum_shift = cp.exp(complex(0,1) * cp.arange( start=0, stop=Arguments.dimension[2], dtype=cp.float ) * Arguments.shift)
 
     Volume_spectra = cp.multiply(Volume_spectra, spectrum_shift)
@@ -165,11 +167,9 @@ def compensate_dispersion_2D(Volume_spectra: cp.ndarray, dispersion) -> cp.ndarr
 
     compensated_spectra =  hilbert_2D(Volume_spectra) * cp.exp( Pdispersion )
 
-    if Arguments.shift:
+    compensated_spectra = cp.real(compensated_spectra)
 
-        compensated_spectra = spectrum_shift_2D(compensated_spectra)
-
-    return cp.real(compensated_spectra)
+    return compensated_spectra
 
 
 def resampling_2Dmapping(coordinates):
