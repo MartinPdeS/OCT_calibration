@@ -65,7 +65,7 @@ def linearize_spectra_1D(Volume_spectra: cp.ndarray, coordinates: cp.ndarray) ->
 
 def spectrum_shift_2D(Volume_spectra: cp.ndarray) -> cp.ndarray:
 
-    spectrum_shift = cp.exp(complex(0,1) * cp.arange( start=0, stop=Arguments.dimension[2] ) * Arguments.shift)
+    spectrum_shift = cp.exp(complex(0,1) * cp.arange( start=0, stop=Arguments.dimension[2], dtype=cp.float ) * Arguments.shift)
 
     Volume_spectra = cp.multiply(Volume_spectra, spectrum_shift)
 

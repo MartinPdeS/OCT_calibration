@@ -99,7 +99,7 @@ if __name__ == "__main__":
 
             with napari.gui_qt():
 
-                viewer = napari.view_image(dataframe.values.reshape(Arguments.output_dimension)[:,:,5:-200].astype('float'))
+                napari.view_image(dataframe.values.reshape(Arguments.output_dimension)[:,:,5:-200].astype('float'))
 
         else:
             import matplotlib.pyplot as plt
